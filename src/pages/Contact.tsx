@@ -32,9 +32,12 @@ export default function Contact() {
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <div>
-              <label style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Name</label>
+              <label htmlFor="contact-name" style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Name</label>
               <input
+                id="contact-name"
                 type="text"
+                name="name"
+                autoComplete="name"
                 value={form.name}
                 onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                 placeholder="Your name"
@@ -42,9 +45,12 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Email</label>
+              <label htmlFor="contact-email" style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Email</label>
               <input
+                id="contact-email"
                 type="email"
+                name="email"
+                autoComplete="email"
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                 placeholder="you@example.com"
@@ -52,8 +58,10 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Message</label>
+              <label htmlFor="contact-message" style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', marginBottom: 6, display: 'block' }}>Message</label>
               <textarea
+                id="contact-message"
+                name="message"
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 placeholder="How can we help?"

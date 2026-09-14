@@ -24,6 +24,8 @@ export default function NotFound() {
         <form onSubmit={handleSearch} style={{ display: 'flex', gap: 8, marginTop: 24 }}>
           <input
             type="text"
+            name="q"
+            aria-label="Search for gear"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={NOT_FOUND_CONTENT.searchPlaceholder}

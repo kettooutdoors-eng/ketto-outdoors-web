@@ -55,22 +55,24 @@ export default function Shop() {
       <div style={{ padding: '32px 40px 0', display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         <input
           type="text"
+          name="q"
+          aria-label="Search gear"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search gear..."
           style={{ padding: '10px 14px', border: '2px solid var(--forest)', fontSize: 14, minWidth: 220 }}
         />
-        <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
+        <select aria-label="Filter by difficulty" value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
           {FILTER_DIFFICULTIES.map((d) => (
             <option key={d}>{d}</option>
           ))}
         </select>
-        <select value={type} onChange={(e) => setType(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
+        <select aria-label="Filter by type" value={type} onChange={(e) => setType(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
           {FILTER_TYPES.map((t) => (
             <option key={t}>{t}</option>
           ))}
         </select>
-        <select value={sort} onChange={(e) => setSort(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
+        <select aria-label="Sort by" value={sort} onChange={(e) => setSort(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
           {FILTER_SORTS.map((s) => (
             <option key={s}>{s}</option>
           ))}

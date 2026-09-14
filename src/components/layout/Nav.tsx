@@ -61,6 +61,8 @@ export function Nav() {
         <form onSubmit={handleSearchSubmit}>
           <input
             type="text"
+            name="q"
+            aria-label="Search gear"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search..."

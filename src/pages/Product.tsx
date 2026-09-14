@@ -68,6 +68,8 @@ export default function ProductPage() {
                 {product.colorOptions.map((c) => (
                   <button
                     key={c}
+                    type="button"
+                    aria-pressed={selectedColor === c}
                     onClick={() => setSelectedColor(c)}
                     style={{
                       padding: '8px 14px',
@@ -93,6 +95,8 @@ export default function ProductPage() {
                 {product.sizeOptions.map((s) => (
                   <button
                     key={s}
+                    type="button"
+                    aria-pressed={selectedSize === s}
                     onClick={() => setSelectedSize(s)}
                     style={{
                       padding: '8px 14px',

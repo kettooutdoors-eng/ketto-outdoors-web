@@ -75,6 +75,9 @@ export function Footer() {
         <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: 8, marginTop: 12, width: '100%', maxWidth: 280 }}>
           <input
             type="email"
+            name="newsletter-email"
+            autoComplete="email"
+            aria-label="Email for tips and drops"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email for tips & drops"

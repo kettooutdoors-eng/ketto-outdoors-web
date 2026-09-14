@@ -13,6 +13,9 @@ export function AdminLoginModal() {
         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>Admin login</div>
         <input
           type="password"
+          name="admin-password"
+          autoComplete="current-password"
+          aria-label="Admin password"
           value={pw}
           onChange={(e) => setPw(e.target.value)}
           placeholder="Password"

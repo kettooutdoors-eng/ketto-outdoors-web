@@ -161,18 +161,18 @@ export default function Checkout() {
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--rust)', marginBottom: 12 }}>Shipping</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 28 }}>
             <div style={fieldWrap(true)}>
-              <input style={inputStyle} placeholder="Full name" value={form.name} onChange={(e) => update('name', e.target.value)} />
+              <input style={inputStyle} name="name" autoComplete="name" aria-label="Full name" placeholder="Full name" value={form.name} onChange={(e) => update('name', e.target.value)} />
             </div>
             <div style={fieldWrap(true)}>
-              <input style={inputStyle} type="email" placeholder="Email" value={form.email} onChange={(e) => update('email', e.target.value)} />
+              <input style={inputStyle} type="email" name="email" autoComplete="email" aria-label="Email" placeholder="Email" value={form.email} onChange={(e) => update('email', e.target.value)} />
             </div>
             <div style={fieldWrap(true)}>
-              <input style={inputStyle} placeholder="Street address" value={form.address} onChange={(e) => update('address', e.target.value)} />
+              <input style={inputStyle} name="address" autoComplete="street-address" aria-label="Street address" placeholder="Street address" value={form.address} onChange={(e) => update('address', e.target.value)} />
             </div>
-            <input style={inputStyle} placeholder="City" value={form.city} onChange={(e) => update('city', e.target.value)} />
-            <input style={inputStyle} placeholder="ZIP code" value={form.zip} onChange={(e) => update('zip', e.target.value)} />
+            <input style={inputStyle} name="city" autoComplete="address-level2" aria-label="City" placeholder="City" value={form.city} onChange={(e) => update('city', e.target.value)} />
+            <input style={inputStyle} name="zip" autoComplete="postal-code" aria-label="ZIP code" placeholder="ZIP code" value={form.zip} onChange={(e) => update('zip', e.target.value)} />
             <div style={fieldWrap(true)}>
-              <select style={inputStyle} value={form.state} onChange={(e) => update('state', e.target.value)}>
+              <select style={inputStyle} name="state" autoComplete="address-level1" aria-label="State, for sales tax" value={form.state} onChange={(e) => update('state', e.target.value)}>
                 <option value="">State (for sales tax)</option>
                 {US_STATES.map((s) => (
                   <option key={s.code} value={s.code}>
@@ -186,10 +186,10 @@ export default function Checkout() {
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--rust)', marginBottom: 12 }}>Payment</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             <div style={fieldWrap(true)}>
-              <input style={inputStyle} placeholder="Card number" value={form.card} onChange={(e) => update('card', e.target.value)} />
+              <input style={inputStyle} name="cc-number" autoComplete="cc-number" inputMode="numeric" aria-label="Card number" placeholder="Card number" value={form.card} onChange={(e) => update('card', e.target.value)} />
             </div>
-            <input style={inputStyle} placeholder="MM/YY" value={form.expiry} onChange={(e) => update('expiry', e.target.value)} />
-            <input style={inputStyle} placeholder="CVC" value={form.cvc} onChange={(e) => update('cvc', e.target.value)} />
+            <input style={inputStyle} name="cc-exp" autoComplete="cc-exp" aria-label="Expiry date, MM slash YY" placeholder="MM/YY" value={form.expiry} onChange={(e) => update('expiry', e.target.value)} />
+            <input style={inputStyle} name="cc-csc" autoComplete="cc-csc" inputMode="numeric" aria-label="CVC" placeholder="CVC" value={form.cvc} onChange={(e) => update('cvc', e.target.value)} />
           </div>
 
           {formError && <div style={{ color: 'var(--rust)', fontSize: 13, marginTop: 12 }}>Fill in all fields to place your order.</div>}
