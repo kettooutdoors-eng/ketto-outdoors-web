@@ -7,6 +7,7 @@ import { PriceTag } from '../components/ui/PriceTag';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { useAdmin } from '../state/AdminContext';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const FEATURED_KEY = 'ketto-featured';
 
@@ -54,6 +55,7 @@ const STEPS = [
 ];
 
 export default function Home() {
+  useDocumentMeta('Ketto Outdoors — Fishing Gear That Works', "Beginner-friendly lures, combos, and guides. Gear matched to the fish you're after, not just the price tag.", '/');
   const { isAdmin } = useAdmin();
   const [featured, setFeatured] = useState<string[]>(() => loadFeatured());
 

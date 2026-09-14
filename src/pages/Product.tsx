@@ -10,6 +10,7 @@ import { ProductCard } from '../components/ProductCard';
 import { useCart } from '../state/CartContext';
 import { useInventory } from '../state/InventoryContext';
 import { ALL_SHOP_ITEMS } from '../data/shop';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import NotFound from './NotFound';
 
 export default function ProductPage() {
@@ -19,6 +20,12 @@ export default function ProductPage() {
   const { get } = useInventory();
   const [selectedColor, setSelectedColor] = useState<string | null>(product?.colorOptions?.[0] ?? null);
   const [selectedSize, setSelectedSize] = useState<string | null>(product?.sizeOptions?.[0] ?? null);
+
+  useDocumentMeta(
+    product?.metaTitle ?? 'Product Not Found — Ketto Outdoors',
+    product?.metaDescription ?? 'This product could not be found.',
+    `/product/${id ?? ''}`
+  );
 
   if (!product) return <NotFound />;
 

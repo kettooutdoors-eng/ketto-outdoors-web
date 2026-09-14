@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 interface OrderRecord {
   id: string;
@@ -23,6 +24,7 @@ function loadOrders(): OrderRecord[] {
 }
 
 export default function Orders() {
+  useDocumentMeta('My Orders — Ketto Outdoors', 'View your past orders on this device.', '/orders', true);
   const [orders, setOrders] = useState<OrderRecord[]>([]);
 
   useEffect(() => {

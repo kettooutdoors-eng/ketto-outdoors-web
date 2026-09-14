@@ -1,3 +1,5 @@
+export const SHOP_META = { title: 'Shop All Gear — Ketto Outdoors', description: 'Browse every lure and combo, filtered by difficulty, species, and type.' };
+
 export interface ShopCatalogItem {
   id: string;
   name: string;

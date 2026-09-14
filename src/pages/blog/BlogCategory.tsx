@@ -1,10 +1,16 @@
 import { Link, useParams } from 'react-router-dom';
 import { BLOG_CATEGORIES, BLOG_CATEGORY_NAV, BLOG_ARTICLE } from '../../data/blog';
+import { useDocumentMeta } from '../../hooks/useDocumentMeta';
 import NotFound from '../NotFound';
 
 export default function BlogCategory() {
   const { category } = useParams<{ category: string }>();
   const cat = category ? BLOG_CATEGORIES[category] : undefined;
+  useDocumentMeta(
+    cat?.meta.title ?? 'Page Not Found — Ketto Outdoors',
+    cat?.meta.description ?? "This page doesn't exist, moved, or never got hooked in the first place.",
+    `/blog/${category ?? ''}`
+  );
   if (!cat) return <NotFound />;
 
   return (

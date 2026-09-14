@@ -23,6 +23,8 @@ export interface GuideSection {
   cards?: { kicker: string; heading: string; body: string }[];
 }
 
+export const GUIDE_META = { title: "New to Fishing — Beginner's Guide — Ketto Outdoors", description: 'Gear, casting, reeling, and handling fish — start to finish.' };
+
 export const GUIDE_HERO = {
   eyebrow: "A short beginner's guide",
   heading: 'New to Fishing? Start Here.',

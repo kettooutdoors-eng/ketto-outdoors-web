@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { PageHero } from '../components/ui/PageHero';
 import { BannerButton } from '../components/ui/BannerButton';
 import { CONTACT_CONTENT } from '../data/legal';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Contact() {
+  useDocumentMeta(CONTACT_CONTENT.meta.title, CONTACT_CONTENT.meta.description, '/contact');
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [error, setError] = useState(false);
   const [sent, setSent] = useState(false);

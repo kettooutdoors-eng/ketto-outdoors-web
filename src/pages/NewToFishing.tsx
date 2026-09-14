@@ -1,7 +1,8 @@
-import { GUIDE_HERO, GUIDE_SECTIONS, GUIDE_END_CTA } from '../data/guide';
+import { GUIDE_HERO, GUIDE_SECTIONS, GUIDE_END_CTA, GUIDE_META } from '../data/guide';
 import { BannerButton } from '../components/ui/BannerButton';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { Reveal } from '../components/ui/Misc';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 function StepNumber({ n }: { n: number }) {
   return (
@@ -27,6 +28,7 @@ function StepNumber({ n }: { n: number }) {
 }
 
 export default function NewToFishing() {
+  useDocumentMeta(GUIDE_META.title, GUIDE_META.description, '/new-to-fishing');
   return (
     <div>
       <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>

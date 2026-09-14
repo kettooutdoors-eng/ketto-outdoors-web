@@ -2,9 +2,11 @@ import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ProductCard } from '../components/ProductCard';
 import { BannerButton } from '../components/ui/BannerButton';
-import { ALL_SHOP_ITEMS, FILTER_DIFFICULTIES, FILTER_TYPES, FILTER_SORTS } from '../data/shop';
+import { ALL_SHOP_ITEMS, FILTER_DIFFICULTIES, FILTER_TYPES, FILTER_SORTS, SHOP_META } from '../data/shop';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Shop() {
+  useDocumentMeta(SHOP_META.title, SHOP_META.description, '/shop');
   const [searchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
   const [difficulty, setDifficulty] = useState(searchParams.get('difficulty') || 'All difficulties');

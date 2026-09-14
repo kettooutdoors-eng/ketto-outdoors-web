@@ -2,8 +2,10 @@ import { PageHero } from '../components/ui/PageHero';
 import { BannerButton } from '../components/ui/BannerButton';
 import { Reveal } from '../components/ui/Misc';
 import { ABOUT_CONTENT } from '../data/legal';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function About() {
+  useDocumentMeta(ABOUT_CONTENT.meta.title, ABOUT_CONTENT.meta.description, '/about');
   return (
     <div>
       <PageHero eyebrow={ABOUT_CONTENT.eyebrow} heading={ABOUT_CONTENT.heading} />

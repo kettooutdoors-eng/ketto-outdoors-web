@@ -4,6 +4,7 @@ export interface LegalSection {
 }
 
 export const ABOUT_CONTENT = {
+  meta: { title: 'About Us — Ketto Outdoors', description: 'We build fishermen, not just sell gear. Learn what Ketto Outdoors is about.' },
   eyebrow: 'Gear that teaches',
   heading: 'About Us',
   intro: [
@@ -23,6 +24,7 @@ export const ABOUT_CONTENT = {
 };
 
 export const CONTACT_CONTENT = {
+  meta: { title: 'Contact Us — Ketto Outdoors', description: 'Questions about gear, an order, or a lure request — send it our way.' },
   eyebrow: 'We read every message',
   heading: 'Get in Touch',
   subheading: 'Questions about gear, an order, or a lure request — send it our way.',
@@ -56,7 +58,10 @@ export const FAQ_ENTRIES: FaqEntry[] = [
   { question: 'Still have a question?', answer: 'Reach out through our Contact page or email KettoOutdoors@gmail.com — we read every message.', links: [{ text: 'Contact page', target: '/contact' }, { text: 'KettoOutdoors@gmail.com', target: 'mailto:KettoOutdoors@gmail.com' }] },
 ];
 
+export const FAQ_META = { title: 'FAQ — Ketto Outdoors', description: 'Shipping, returns, and getting started — answered.' };
+
 export const PRIVACY_CONTENT = {
+  meta: { title: 'Privacy Policy — Ketto Outdoors', description: 'How Ketto Outdoors collects and uses your information.' },
   eyebrow: 'Your data, handled plainly',
   heading: 'Privacy Policy',
   lastUpdated: 'Last updated August 2026',
@@ -70,6 +75,7 @@ export const PRIVACY_CONTENT = {
 };
 
 export const TERMS_CONTENT = {
+  meta: { title: 'Terms of Service — Ketto Outdoors', description: 'The terms that apply when you shop with Ketto Outdoors.' },
   eyebrow: 'The fine print',
   heading: 'Terms of Service',
   lastUpdated: 'Last updated August 2026',
@@ -84,6 +90,7 @@ export const TERMS_CONTENT = {
 };
 
 export const SHIPPING_RETURNS_CONTENT = {
+  meta: { title: 'Shipping & Returns — Ketto Outdoors', description: 'Shipping timelines, costs, and our return policy.' },
   eyebrow: 'Getting gear to your door',
   heading: 'Shipping & Returns',
   lastUpdated: 'Last updated August 2026',
@@ -97,6 +104,7 @@ export const SHIPPING_RETURNS_CONTENT = {
 };
 
 export const NOT_FOUND_CONTENT = {
+  meta: { title: 'Page Not Found — Ketto Outdoors', description: "This page doesn't exist, moved, or never got hooked in the first place." },
   heading: 'This one got away.',
   body: "The page you're looking for doesn't exist, moved, or never got hooked in the first place.",
   searchPlaceholder: 'Search for gear...',

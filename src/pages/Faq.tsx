@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/ui/PageHero';
-import { FAQ_ENTRIES } from '../data/legal';
+import { FAQ_ENTRIES, FAQ_META } from '../data/legal';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Faq() {
+  useDocumentMeta(FAQ_META.title, FAQ_META.description, '/faq');
   const [open, setOpen] = useState<number | null>(0);
 
   return (

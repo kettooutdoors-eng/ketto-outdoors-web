@@ -2,8 +2,10 @@ import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BannerButton } from '../components/ui/BannerButton';
 import { NOT_FOUND_CONTENT } from '../data/legal';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function NotFound() {
+  useDocumentMeta(NOT_FOUND_CONTENT.meta.title, NOT_FOUND_CONTENT.meta.description, '', true);
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 

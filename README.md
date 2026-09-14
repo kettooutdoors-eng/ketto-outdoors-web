@@ -56,8 +56,12 @@ design handoff's own notes:
 - **Cart/inventory/orders storage** — currently `localStorage` per the
   original design prototype; move to a real backend/data layer for
   production multi-device use.
-- **SEO meta tags** — `metaTitle`/`metaDescription` are captured per product
-  in `src/data/products.ts` but not yet wired into `<head>` tags per route
-  (no `react-helmet` or equivalent yet).
-- The site domain in `public/sitemap.xml` / `public/robots.txt` is the
-  placeholder `kettooutdoors.com` — swap for the real domain before launch.
+- The site domain in `public/sitemap.xml` / `public/robots.txt` and in
+  `src/hooks/useDocumentMeta.ts` (`SITE_URL`) is the placeholder
+  `kettooutdoors.com` — swap for the real domain before launch.
+- **SEO meta tags** are wired per route via `useDocumentMeta` (title,
+  description, canonical, OG/Twitter tags, robots index/noindex) — but since
+  this is a client-rendered SPA, a crawler that doesn't execute JS only sees
+  the static tags in `index.html` (the Home page's). For real search-engine
+  indexing of every route, add pre-rendering or SSR (e.g. `vite-plugin-ssr`,
+  Next.js) before launch.

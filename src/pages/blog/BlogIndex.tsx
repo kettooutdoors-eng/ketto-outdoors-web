@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
-import { BLOG_ARTICLE, BLOG_CATEGORY_NAV } from '../../data/blog';
+import { BLOG_ARTICLE, BLOG_CATEGORY_NAV, BLOG_INDEX_META } from '../../data/blog';
 import { BannerButton } from '../../components/ui/BannerButton';
 import { ImagePlaceholder } from '../../components/ui/ImagePlaceholder';
 import { Reveal } from '../../components/ui/Misc';
+import { useDocumentMeta } from '../../hooks/useDocumentMeta';
 
 export default function BlogIndex() {
+  useDocumentMeta(BLOG_INDEX_META.title, BLOG_INDEX_META.description, '/blog');
   return (
     <div>
       <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '48px 40px', textAlign: 'center' }}>

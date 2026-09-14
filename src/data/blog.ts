@@ -3,6 +3,8 @@ export interface BlogSection {
   body: string;
 }
 
+export const BLOG_INDEX_META = { title: 'The Ketto Journal — Fishing Blog', description: 'Straight talk on lures, technique, and getting started fishing.' };
+
 export const BLOG_ARTICLE = {
   eyebrow: "Beginner's guide",
   title: 'How to Start Fishing: A No-Nonsense Guide for Your First Trip',
@@ -47,6 +49,7 @@ export interface BlogCategory {
   intro: string;
   hasArticlePreview: boolean;
   comingSoon: { heading: string; body: string };
+  meta: { title: string; description: string };
 }
 
 export const BLOG_CATEGORY_NAV = [
@@ -64,6 +67,7 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     intro: 'First-timer advice on gear, casting, and getting your first bite.',
     hasArticlePreview: true,
     comingSoon: { heading: 'New beginner guide posts are on the way', body: "We're writing more first-timer walkthroughs — check back soon." },
+    meta: { title: 'Beginner Guides — The Ketto Journal', description: 'No-nonsense guides for your first trips on the water.' },
   },
   'gear-and-lures': {
     slug: 'gear-and-lures',
@@ -72,6 +76,7 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     intro: 'Breakdowns of what to tie on, and why it works.',
     hasArticlePreview: false,
     comingSoon: { heading: 'New gear & lures posts are on the way', body: "We're writing lure breakdowns and gear picks — check back soon." },
+    meta: { title: 'Gear & Lures — The Ketto Journal', description: 'What to buy and why, straight from the water.' },
   },
   technique: {
     slug: 'technique',
@@ -80,6 +85,7 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     intro: 'Casting, retrieves, and reading the water like it matters.',
     hasArticlePreview: false,
     comingSoon: { heading: 'New technique posts are on the way', body: "We're writing technique breakdowns — check back soon." },
+    meta: { title: 'Technique — The Ketto Journal', description: 'Casting, retrieves, and reading the bite.' },
   },
   'where-to-fish': {
     slug: 'where-to-fish',
@@ -88,5 +94,6 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     intro: 'Picking water that gives beginners the best shot at a bite.',
     hasArticlePreview: false,
     comingSoon: { heading: 'New where-to-fish posts are on the way', body: "We're writing spot guides — check back soon." },
+    meta: { title: 'Where to Fish — The Ketto Journal', description: 'Finding water that puts fish in casting range.' },
   },
 };

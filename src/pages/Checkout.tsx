@@ -5,6 +5,7 @@ import { useInventory } from '../state/InventoryContext';
 import { US_STATES, TAX_RATES, estimateShipping, generateOrderId } from '../data/checkout';
 import { BannerButton } from '../components/ui/BannerButton';
 import { TinFrame } from '../components/ui/TinFrame';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 interface OrderRecord {
   id: string;
@@ -31,6 +32,7 @@ const inputStyle: CSSProperties = { padding: '11px 12px', border: '2px solid rgb
 const fieldWrap = (span2: boolean): CSSProperties => ({ gridColumn: span2 ? 'span 2' : undefined });
 
 export default function Checkout() {
+  useDocumentMeta('Checkout — Ketto Outdoors', 'Complete your order.', '/checkout', true);
   const { items, cartTotal, hasItems, clearCart } = useCart();
   const { decrement } = useInventory();
 
