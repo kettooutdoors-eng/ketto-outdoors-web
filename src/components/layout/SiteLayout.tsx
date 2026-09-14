@@ -19,11 +19,14 @@ export function SiteLayout() {
 
   return (
     <div style={{ minHeight: '100%' }}>
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <RoughFilterDefs />
       <Nav />
       <RopeDivider />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
-      <main>
+      <main id="main-content" tabIndex={-1} style={{ outline: 'none' }}>
         <Outlet />
       </main>
       <RopeDivider />

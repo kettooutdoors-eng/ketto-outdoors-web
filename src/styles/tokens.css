@@ -101,6 +101,23 @@ textarea:focus {
   outline-offset: 2px;
 }
 
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 100;
+  background: var(--forest);
+  color: var(--cream);
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 0 0 6px 6px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* --- Cut-tin / notch clip shapes --- */
 .notch {
   clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
