@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../../state/CartContext';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 
 export function CartDrawer() {
   const { cartOpen, closeCart, items, hasItems, cartTotal, increment, decrement, removeFromCart } = useCart();
+  useEscapeKey(cartOpen, closeCart);
 
   if (!cartOpen) return null;
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../state/CartContext';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 
 interface MobileMenuProps {
   open: boolean;
@@ -11,6 +12,7 @@ const linkStyle = { color: 'var(--cream)', textDecoration: 'none', fontSize: 16,
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const { hasItems, cartCount, openCart } = useCart();
+  useEscapeKey(open, onClose);
   if (!open) return null;
   return (
     <>

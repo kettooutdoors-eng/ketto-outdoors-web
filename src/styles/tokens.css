@@ -235,6 +235,21 @@ textarea:focus {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .btn,
+  button {
+    transition: none;
+  }
+  .btn:hover {
+    transform: none;
+  }
+}
+
 /* --- Responsive: single breakpoint --- */
 @media (max-width: 760px) {
   .grid-3,

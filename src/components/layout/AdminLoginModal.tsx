@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useAdmin } from '../../state/AdminContext';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 
 export function AdminLoginModal() {
   const { showLogin, closeLogin, submitLogin, loginError } = useAdmin();
   const [pw, setPw] = useState('');
+  useEscapeKey(showLogin, closeLogin);
 
   if (!showLogin) return null;
 
