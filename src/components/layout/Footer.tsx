@@ -95,21 +95,21 @@ export function Footer() {
             ) },
           ].map((s) => (
             <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 34, height: 34, borderRadius: '50%', border: '1px solid rgba(243,239,227,.35)', color: 'var(--cream)' }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
                 {s.icon}
                 {s.label === 'YouTube' && <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />}
               </svg>
             </a>
           ))}
           <a href="https://www.instagram.com/kettooutdoors/" target="_blank" rel="noreferrer" aria-label="Instagram" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 34, height: 34, borderRadius: '50%', border: '1px solid rgba(243,239,227,.35)', color: 'var(--cream)' }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
             </svg>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61592438567565" target="_blank" rel="noreferrer" aria-label="Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 34, height: 34, borderRadius: '50%', border: '1px solid rgba(243,239,227,.35)', color: 'var(--cream)' }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#rough)' }}>
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>

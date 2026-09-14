@@ -76,7 +76,7 @@ export default function Home() {
       {/* Hero */}
       <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--hero-band)', minHeight: 468, display: 'flex', alignItems: 'center', justifyContent: 'center', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(27,67,50,.03), rgba(27,67,50,.14))' }} />
-        <svg viewBox="0 0 800 470" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
+        <svg aria-hidden="true" viewBox="0 0 800 470" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
           <rect width="800" height="470" fill="#e8dcc0" />
           <circle cx="88" cy="90" r="70" fill="#d99a2c" />
           <path d="M0 270 L120 190 L240 250 L360 170 L480 240 L600 180 L720 245 L800 210 L800 270 Z" fill="#1b4332" opacity=".85" />

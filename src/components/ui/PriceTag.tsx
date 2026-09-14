@@ -19,7 +19,7 @@ export function PriceTag({ price, rotate = -3 }: PriceTagProps) {
         overflow: 'visible',
       }}
     >
-      <svg width="34" height="30" viewBox="0 0 34 30" style={{ position: 'absolute', left: -26, top: -4, overflow: 'visible' }}>
+      <svg aria-hidden="true" width="34" height="30" viewBox="0 0 34 30" style={{ position: 'absolute', left: -26, top: -4, overflow: 'visible' }}>
         <path
           d="M17 15 C30 8 32 26 20 24 C10 22 14 6 17 15"
           fill="none"
@@ -51,7 +51,7 @@ export function PriceTag({ price, rotate = -3 }: PriceTagProps) {
           padding: '8px 16px 8px 22px',
         }}
       >
-        <svg width="17" height="17" viewBox="0 0 17 17" style={{ flexShrink: 0, marginRight: 2 }}>
+        <svg aria-hidden="true" width="17" height="17" viewBox="0 0 17 17" style={{ flexShrink: 0, marginRight: 2 }}>
           <circle cx="8.5" cy="8.5" r="8.5" fill="#a9432a" />
           <circle cx="8.5" cy="8.5" r="3.4" fill="var(--ink)" />
         </svg>

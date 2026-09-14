@@ -9,6 +9,7 @@ export function SectionKicker({ children }: { children: ReactNode }) {
   return (
     <div style={{ textAlign: 'center' }}>
       <svg
+        aria-hidden="true"
         width="22"
         height="40"
         viewBox="0 0 26 44"
