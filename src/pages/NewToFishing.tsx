@@ -3,6 +3,29 @@ import { BannerButton } from '../components/ui/BannerButton';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { Reveal } from '../components/ui/Misc';
 
+function StepNumber({ n }: { n: number }) {
+  return (
+    <div
+      style={{
+        flexShrink: 0,
+        width: 30,
+        height: 30,
+        borderRadius: '50%',
+        border: '2px solid var(--ink)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontFamily: 'var(--font-heading)',
+        fontWeight: 800,
+        fontSize: 13,
+        background: 'var(--parchment)',
+      }}
+    >
+      {n}
+    </div>
+  );
+}
+
 export default function NewToFishing() {
   return (
     <div>
@@ -32,6 +55,51 @@ export default function NewToFishing() {
               {s.intro && <p style={{ fontSize: 14, opacity: 0.8, marginBottom: 20 }}>{s.intro}</p>}
 
               {s.body && <p style={{ fontSize: 15, lineHeight: 1.7, maxWidth: '70ch' }}>{s.body}</p>}
+
+              {s.steps && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 20, maxWidth: '70ch' }}>
+                  {s.steps.map((step, i) => (
+                    <div key={step.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+                      <StepNumber n={i + 1} />
+                      <div>
+                        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, marginBottom: 4 }}>{step.title}</div>
+                        <p style={{ fontSize: 14, lineHeight: 1.65 }}>{step.detail}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.qa && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 18, maxWidth: '70ch' }}>
+                  {s.qa.map((item) => (
+                    <div key={item.q} style={{ borderLeft: '3px solid var(--rust)', paddingLeft: 16 }}>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15.5, marginBottom: 4 }}>{item.q}</div>
+                      <p style={{ fontSize: 14, lineHeight: 1.6, opacity: 0.9 }}>{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.checklist && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 32px', maxWidth: 700 }} className="grid-2">
+                  {s.checklist.map((item) => (
+                    <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                      <span style={{ flexShrink: 0, width: 16, height: 16, border: '2px solid var(--ink)', marginTop: 3 }} />
+                      <span style={{ fontSize: 14, lineHeight: 1.5 }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.note && (
+                <div style={{ marginTop: 20, maxWidth: '70ch', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px' }}>
+                  <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0 }}>
+                    <strong style={{ color: 'var(--rust)' }}>Good to know: </strong>
+                    {s.note}
+                  </p>
+                </div>
+              )}
 
               {s.listItems && (
                 <div style={{ display: 'grid', gridTemplateColumns: s.imagePlaceholder ? '1fr 1fr' : '1fr', gap: 32 }} className="grid-2">
