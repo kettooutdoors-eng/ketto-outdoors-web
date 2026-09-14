@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
@@ -25,11 +25,7 @@ function loadOrders(): OrderRecord[] {
 
 export default function Orders() {
   useDocumentMeta('My Orders — Ketto Outdoors', 'View your past orders on this device.', '/orders', true);
-  const [orders, setOrders] = useState<OrderRecord[]>([]);
-
-  useEffect(() => {
-    setOrders(loadOrders());
-  }, []);
+  const [orders] = useState<OrderRecord[]>(() => loadOrders());
 
   return (
     <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 40px' }}>
