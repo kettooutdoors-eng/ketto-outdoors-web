@@ -34,7 +34,7 @@ export default function About() {
       </div>
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>{ABOUT_CONTENT.ctaBanner.heading}</div>
+        <h2 style={{ fontSize: 28, letterSpacing: '-0.03em' }}>{ABOUT_CONTENT.ctaBanner.heading}</h2>
         <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>{ABOUT_CONTENT.ctaBanner.body}</p>
         <BannerButton to={ABOUT_CONTENT.ctaBanner.href} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           {ABOUT_CONTENT.ctaBanner.buttonLabel}

@@ -26,7 +26,7 @@ export default function Contact() {
       <div style={{ maxWidth: 560, margin: '0 auto', padding: '48px 40px' }}>
         {sent ? (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24 }}>Message sent.</div>
+            <h2 style={{ fontSize: 24 }}>Message sent.</h2>
             <p style={{ marginTop: 10, opacity: 0.8 }}>{CONTACT_CONTENT.success.body(form.email)}</p>
           </div>
         ) : (

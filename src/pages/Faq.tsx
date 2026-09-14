@@ -14,29 +14,34 @@ export default function Faq() {
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: 12 }}>
         {FAQ_ENTRIES.map((entry, i) => (
           <div key={entry.question} style={{ border: '2px solid var(--ink)', background: 'var(--parchment)' }}>
-            <button
-              onClick={() => setOpen(open === i ? null : i)}
-              style={{
-                width: '100%',
-                textAlign: 'left',
-                padding: '16px 20px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 800,
-                fontSize: 16,
-                color: 'var(--ink)',
-              }}
-            >
-              {entry.question}
-              <span style={{ fontSize: 20, marginLeft: 12 }}>{open === i ? '−' : '+'}</span>
-            </button>
+            <h2 style={{ margin: 0 }}>
+              <button
+                id={`faq-question-${i}`}
+                aria-expanded={open === i}
+                aria-controls={`faq-panel-${i}`}
+                onClick={() => setOpen(open === i ? null : i)}
+                style={{
+                  width: '100%',
+                  textAlign: 'left',
+                  padding: '16px 20px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  fontFamily: 'var(--font-heading)',
+                  fontWeight: 800,
+                  fontSize: 16,
+                  color: 'var(--ink)',
+                }}
+              >
+                {entry.question}
+                <span aria-hidden="true" style={{ fontSize: 20, marginLeft: 12 }}>{open === i ? '−' : '+'}</span>
+              </button>
+            </h2>
             {open === i && (
-              <div style={{ padding: '0 20px 18px', fontSize: 14, lineHeight: 1.7 }}>
+              <div id={`faq-panel-${i}`} role="region" aria-labelledby={`faq-question-${i}`} style={{ padding: '0 20px 18px', fontSize: 14, lineHeight: 1.7 }}>
                 <p>{entry.answer}</p>
                 {entry.links.length > 0 && (
                   <div style={{ marginTop: 10, display: 'flex', gap: 12, flexWrap: 'wrap' }}>

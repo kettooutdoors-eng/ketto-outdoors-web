@@ -48,14 +48,14 @@ export default function BlogCategory() {
             style={{ display: 'block', background: 'var(--parchment)', border: '3px solid var(--ink)', padding: 28, textDecoration: 'none', color: 'var(--ink)' }}
           >
             <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{BLOG_ARTICLE.eyebrow}</div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22, marginTop: 8 }}>{BLOG_ARTICLE.title}</div>
+            <h2 style={{ fontSize: 22, marginTop: 8 }}>{BLOG_ARTICLE.title}</h2>
             <div style={{ fontSize: 13, opacity: 0.6, marginTop: 6 }}>{BLOG_ARTICLE.byline}</div>
             <p style={{ fontSize: 14, marginTop: 12 }}>{BLOG_ARTICLE.bodyIntro.slice(0, 180)}…</p>
             <div style={{ marginTop: 14, color: 'var(--rust)', fontWeight: 700, fontSize: 13 }}>Read the full post →</div>
           </Link>
         ) : (
           <div style={{ textAlign: 'center', padding: '48px 24px', border: '2px dashed rgba(36,26,16,.3)' }}>
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 20 }}>{cat.comingSoon.heading}</div>
+            <h2 style={{ fontSize: 20 }}>{cat.comingSoon.heading}</h2>
             <p style={{ marginTop: 10, opacity: 0.75, fontSize: 14 }}>{cat.comingSoon.body}</p>
             <Link to="/blog" style={{ display: 'inline-block', marginTop: 18, color: 'var(--rust)', fontWeight: 700, fontSize: 13 }}>
               ← Back to all posts

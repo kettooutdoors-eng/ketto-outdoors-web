@@ -101,7 +101,7 @@ export default function Checkout() {
 
         <TinFrame shadow="sm" style={{ margin: '28px auto 0', maxWidth: 420 }}>
           <div style={{ padding: 24, width: '100%', textAlign: 'left' }}>
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, marginBottom: 14 }}>Order summary</div>
+            <h2 style={{ fontSize: 16, marginBottom: 14 }}>Order summary</h2>
             {confirmedOrder.items.map((i) => (
               <div key={i.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 6 }}>
                 <span>
@@ -201,7 +201,7 @@ export default function Checkout() {
 
         <TinFrame shadow="sm">
           <div style={{ padding: 24, width: '100%' }}>
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18, marginBottom: 16 }}>Your order</div>
+            <h2 style={{ fontSize: 18, marginBottom: 16 }}>Your order</h2>
             {items.map((i) => (
               <div key={i.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 8 }}>
                 <span>

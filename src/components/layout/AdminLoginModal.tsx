@@ -11,8 +11,8 @@ export function AdminLoginModal() {
 
   return (
     <div style={{ position: 'fixed', inset: 0, background: 'rgba(27,67,50,.5)', zIndex: 60, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ background: 'var(--cream)', padding: 32, width: 320, maxWidth: '90vw', borderRadius: 10, boxShadow: '0 10px 40px rgba(0,0,0,.3)', display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>Admin login</div>
+      <div role="dialog" aria-modal="true" aria-labelledby="admin-login-heading" style={{ background: 'var(--cream)', padding: 32, width: 320, maxWidth: '90vw', borderRadius: 10, boxShadow: '0 10px 40px rgba(0,0,0,.3)', display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <h2 id="admin-login-heading" style={{ fontSize: 18 }}>Admin login</h2>
         <input
           type="password"
           name="admin-password"

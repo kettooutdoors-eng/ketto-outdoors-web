@@ -11,9 +11,9 @@ export function CartDrawer() {
   return (
     <>
       <div onClick={closeCart} style={{ position: 'fixed', inset: 0, background: 'rgba(27,67,50,.35)', zIndex: 20 }} />
-      <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 380, maxWidth: '92vw', background: 'var(--cream)', zIndex: 21, boxShadow: '-8px 0 30px rgba(0,0,0,.2)', display: 'flex', flexDirection: 'column' }}>
+      <div role="dialog" aria-modal="true" aria-labelledby="cart-heading" style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 380, maxWidth: '92vw', background: 'var(--cream)', zIndex: 21, boxShadow: '-8px 0 30px rgba(0,0,0,.2)', display: 'flex', flexDirection: 'column' }}>
         <div style={{ padding: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid rgba(27,67,50,.15)' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22 }}>Your Cart</div>
+          <h2 id="cart-heading" style={{ fontSize: 22 }}>Your Cart</h2>
           <button onClick={closeCart} aria-label="Close cart" style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: 'var(--ink)' }}>
             &times;
           </button>

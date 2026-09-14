@@ -134,7 +134,7 @@ export default function NewToFishing() {
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '64px 40px', textAlign: 'center' }}>
         <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.85 }}>{GUIDE_END_CTA.kicker}</div>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 36, letterSpacing: '-0.03em', marginTop: 10 }}>{GUIDE_END_CTA.heading}</div>
+        <h2 style={{ fontSize: 36, letterSpacing: '-0.03em', marginTop: 10 }}>{GUIDE_END_CTA.heading}</h2>
         <BannerButton to={GUIDE_END_CTA.href} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           {GUIDE_END_CTA.buttonLabel}
         </BannerButton>

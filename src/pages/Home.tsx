@@ -157,11 +157,11 @@ export default function Home() {
       {/* Why Ketto */}
       <div style={{ padding: '36px 40px', textAlign: 'center' }}>
         <SectionKicker>Why Ketto</SectionKicker>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 27, letterSpacing: '-0.03em', marginTop: 8, maxWidth: '32ch', marginLeft: 'auto', marginRight: 'auto' }}>
+        <h2 style={{ fontSize: 27, letterSpacing: '-0.03em', marginTop: 8, maxWidth: '32ch', marginLeft: 'auto', marginRight: 'auto' }}>
           Most tackle brands just sell you gear.
           <br />
           We build fishermen.
-        </div>
+        </h2>
         <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 24, marginTop: 28, textAlign: 'left', maxWidth: 920, marginLeft: 'auto', marginRight: 'auto' }}>
           {WHY_KETTO.map((w, i) => (
             <Reveal key={w.title}>
@@ -178,7 +178,7 @@ export default function Home() {
       {/* Featured Gear */}
       <div style={{ background: 'var(--hero-band)', paddingBottom: 8, borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)' }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 44, letterSpacing: '-0.03em' }}>Featured Gear</div>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Featured Gear</h2>
           <p style={{ margin: '12px 0 0', fontSize: 14, opacity: 0.7 }}>We surveyed the fish. They didn't answer, but these three get bit the most anyway.</p>
           <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
         </div>
@@ -233,7 +233,7 @@ export default function Home() {
       <div style={{ padding: '56px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <SectionKicker>Not sure where to start?</SectionKicker>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 44, letterSpacing: '-0.03em', marginTop: 8 }}>Three Steps To Your First Catch</div>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 8 }}>Three Steps To Your First Catch</h2>
         </div>
         <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 32, position: 'relative' }}>
           {STEPS.map((s, i) => (
@@ -259,9 +259,9 @@ export default function Home() {
       {/* Stop guessing CTA */}
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '80px 40px', display: 'flex', flexWrap: 'wrap', gap: 40, alignItems: 'flex-end', justifyContent: 'space-between', position: 'relative' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'var(--rust)' }} />
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 60, lineHeight: 0.96, letterSpacing: '-0.035em', maxWidth: '20ch' }}>
+        <h2 style={{ fontSize: 60, lineHeight: 0.96, letterSpacing: '-0.035em', maxWidth: '20ch' }}>
           STOP GUESSING. START FISHING.
-        </div>
+        </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
           <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>Ketto Outdoors — Full lineup</div>
           <BannerButton to="/shop" background="var(--rust)" color="var(--cream)" style={{ filter: 'drop-shadow(4px 4px 0 rgba(0,0,0,.35))' }} innerStyle={{ padding: '16px 28px 16px 20px' }}>

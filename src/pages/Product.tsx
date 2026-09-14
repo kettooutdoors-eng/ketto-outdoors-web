@@ -137,7 +137,7 @@ export default function ProductPage() {
       <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Cast it with confidence tomorrow</div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>How to Fish It</div>
+          <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>How to Fish It</h2>
         </div>
 
         <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 40 }} className="grid-2">
@@ -188,14 +188,14 @@ export default function ProductPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             <TinFrame shadow="sm" background="var(--parchment)">
               <div style={{ padding: 20, width: '100%' }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15, marginBottom: 8, color: 'var(--rust)' }}>What a bite feels like</div>
+                <h3 style={{ fontSize: 15, marginBottom: 8, color: 'var(--rust)' }}>What a bite feels like</h3>
                 <p style={{ fontSize: 13.5, lineHeight: 1.6 }}>{product.guide.biteFeel}</p>
               </div>
             </TinFrame>
 
             <TinFrame shadow="sm" background="var(--parchment)">
               <div style={{ padding: 20, width: '100%' }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15, marginBottom: 10, color: 'var(--rust)' }}>Common beginner mistakes</div>
+                <h3 style={{ fontSize: 15, marginBottom: 10, color: 'var(--rust)' }}>Common beginner mistakes</h3>
                 <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {product.guide.commonMistakes.map((m) => (
                     <li key={m} style={{ fontSize: 13.5, lineHeight: 1.55 }}>
@@ -218,7 +218,7 @@ export default function ProductPage() {
       {/* Long description + specs */}
       <div style={{ padding: '48px 40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 40 }} className="grid-2">
         <div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22, marginBottom: 12 }}>The details</div>
+          <h2 style={{ fontSize: 22, marginBottom: 12 }}>The details</h2>
           <p style={{ fontSize: 14, lineHeight: 1.7 }}>{product.longDescription}</p>
 
           {product.buildDetails && (
@@ -235,7 +235,7 @@ export default function ProductPage() {
 
           {product.depthChart && (
             <div style={{ marginTop: 28 }}>
-              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, marginBottom: 10 }}>Dive depth</div>
+              <h3 style={{ fontSize: 16, marginBottom: 10 }}>Dive depth</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {product.depthChart.map((d) => (
                   <div
@@ -262,7 +262,7 @@ export default function ProductPage() {
         {Object.keys(product.specs).length > 0 && (
           <TinFrame shadow="sm">
             <div style={{ padding: 24, width: '100%' }}>
-              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, marginBottom: 14 }}>Specs</div>
+              <h3 style={{ fontSize: 16, marginBottom: 14 }}>Specs</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {Object.entries(product.specs).map(([k, v]) => (
                   <div key={k} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, borderBottom: '1px solid rgba(36,26,16,.12)', paddingBottom: 8 }}>
@@ -279,7 +279,7 @@ export default function ProductPage() {
       {/* Related products */}
       {product.relatedProducts.length > 0 && (
         <div style={{ padding: '0 40px 56px' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>You might also like</div>
+          <h2 style={{ fontSize: 24, marginBottom: 20, textAlign: 'center' }}>You might also like</h2>
           <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28 }}>
             {product.relatedProducts.map((rp) => {
               const shopItem = ALL_SHOP_ITEMS.find((s) => s.id === rp.id);

@@ -46,7 +46,7 @@ export default function Shop() {
   return (
     <div>
       <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 44, letterSpacing: '-0.03em' }}>Every Piece of Gear We Make</div>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Every Piece of Gear We Make</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, opacity: 0.8 }}>
           Every lure and combo below is hand-picked before it ships. Difficulty scores show how much technique it takes to fish well.
         </p>
@@ -87,7 +87,7 @@ export default function Shop() {
         </div>
       ) : (
         <div style={{ textAlign: 'center', padding: '64px 40px' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24 }}>Sorry, we don't have anything for that quite yet!</div>
+          <h2 style={{ fontSize: 24 }}>Sorry, we don't have anything for that quite yet!</h2>
           <p style={{ maxWidth: '48ch', margin: '12px auto 0', opacity: 0.8 }}>
             We asked the fish what they'd like to see next, but they just stared at us. Try a different filter in the meantime.
           </p>
@@ -99,7 +99,7 @@ export default function Shop() {
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '64px 40px', textAlign: 'center' }}>
         <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.85 }}>Ketto Outdoors — Beginner guide</div>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 36, letterSpacing: '-0.03em', marginTop: 10 }}>NOT SURE WHICH ONE TO PICK?</div>
+        <h2 style={{ fontSize: 36, letterSpacing: '-0.03em', marginTop: 10 }}>NOT SURE WHICH ONE TO PICK?</h2>
         <BannerButton to="/new-to-fishing" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           See how to start
         </BannerButton>

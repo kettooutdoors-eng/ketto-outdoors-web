@@ -45,7 +45,7 @@ export default function BlogIndex() {
       </Reveal>
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>{BLOG_ARTICLE.endCta.heading}</div>
+        <h2 style={{ fontSize: 28, letterSpacing: '-0.03em' }}>{BLOG_ARTICLE.endCta.heading}</h2>
         <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>{BLOG_ARTICLE.endCta.body}</p>
         <BannerButton to={BLOG_ARTICLE.endCta.href} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           {BLOG_ARTICLE.endCta.buttonLabel}
