@@ -17,6 +17,24 @@ export interface DepthChartPoint {
   highlight?: boolean;
 }
 
+export interface FishingStep {
+  title: string;
+  detail: string;
+}
+
+export interface FishingGuide {
+  /** What to bring/pair this with, beyond the product itself. */
+  gearNeeded: string[];
+  /** Full first-time walkthrough, cast to catch. */
+  steps: FishingStep[];
+  /** What a strike feels like with this specific bait. */
+  biteFeel: string;
+  /** The beginner mistakes that most commonly cost a fish with this bait. */
+  commonMistakes: string[];
+  /** One encouraging, concrete reassurance for a first-timer. */
+  confidenceTip: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -31,7 +49,7 @@ export interface Product {
   bestFor?: string;
   shortDescription: string;
   longDescription: string;
-  howToFish: string[] | null;
+  guide: FishingGuide;
   whyItsEasy?: string;
   learningCurve?: string;
   specs: Record<string, string>;

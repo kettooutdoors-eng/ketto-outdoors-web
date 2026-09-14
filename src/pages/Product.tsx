@@ -123,36 +123,86 @@ export default function ProductPage() {
       </div>
 
       {/* How to fish it */}
-      {product.howToFish && (
-        <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 30, textAlign: 'center', marginBottom: 24 }}>How to fish it</div>
-          <div style={{ maxWidth: 640, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {product.howToFish.map((step, i) => (
-              <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                <div
-                  style={{
-                    flexShrink: 0,
-                    width: 26,
-                    height: 26,
-                    borderRadius: '50%',
-                    border: '2px solid var(--ink)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontFamily: 'var(--font-heading)',
-                    fontWeight: 800,
-                    fontSize: 12,
-                    background: 'var(--parchment)',
-                  }}
-                >
-                  {i + 1}
+      <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 36 }}>
+          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Cast it with confidence tomorrow</div>
+          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>How to Fish It</div>
+        </div>
+
+        <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 40 }} className="grid-2">
+          <div>
+            {product.guide.gearNeeded.length > 0 && (
+              <div style={{ marginBottom: 28 }}>
+                <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 10 }}>What else you'll need</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {product.guide.gearNeeded.map((g) => (
+                    <span key={g} style={{ fontSize: 12.5, fontWeight: 600, background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '6px 12px' }}>
+                      {g}
+                    </span>
+                  ))}
                 </div>
-                <p style={{ fontSize: 14 }}>{step}</p>
               </div>
-            ))}
+            )}
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              {product.guide.steps.map((step, i) => (
+                <div key={step.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+                  <div
+                    style={{
+                      flexShrink: 0,
+                      width: 30,
+                      height: 30,
+                      borderRadius: '50%',
+                      border: '2px solid var(--ink)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontFamily: 'var(--font-heading)',
+                      fontWeight: 800,
+                      fontSize: 13,
+                      background: 'var(--parchment)',
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, marginBottom: 4 }}>{step.title}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.65 }}>{step.detail}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <TinFrame shadow="sm" background="var(--parchment)">
+              <div style={{ padding: 20, width: '100%' }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15, marginBottom: 8, color: 'var(--rust)' }}>What a bite feels like</div>
+                <p style={{ fontSize: 13.5, lineHeight: 1.6 }}>{product.guide.biteFeel}</p>
+              </div>
+            </TinFrame>
+
+            <TinFrame shadow="sm" background="var(--parchment)">
+              <div style={{ padding: 20, width: '100%' }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15, marginBottom: 10, color: 'var(--rust)' }}>Common beginner mistakes</div>
+                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {product.guide.commonMistakes.map((m) => (
+                    <li key={m} style={{ fontSize: 13.5, lineHeight: 1.55 }}>
+                      {m}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </TinFrame>
+
+            <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: 20, position: 'relative' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--rust)' }} />
+              <div style={{ fontSize: 10, letterSpacing: '.1em', textTransform: 'uppercase', opacity: 0.75, marginBottom: 8, fontWeight: 700 }}>Confidence tip</div>
+              <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0 }}>{product.guide.confidenceTip}</p>
+            </div>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Long description + specs */}
       <div style={{ padding: '48px 40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 40 }} className="grid-2">
