@@ -6,6 +6,7 @@ import { Seal, PillSeal } from '../components/ui/Seal';
 import { PriceTag } from '../components/ui/PriceTag';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
+import { StepsProgress } from '../components/StepsProgress';
 import { useAdmin } from '../state/AdminContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -235,19 +236,7 @@ export default function Home() {
           <SectionKicker>Not sure where to start?</SectionKicker>
           <h2 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 8 }}>Three Steps To Your First Catch</h2>
         </div>
-        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 32, position: 'relative' }}>
-          {STEPS.map((s, i) => (
-            <Reveal key={s.title}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <Seal size={30} background="var(--parchment)" color="var(--ink)" rotate={0} style={{ border: '2px solid rgba(36,26,16,.35)', boxShadow: 'none' }}>
-                  {i + 1}
-                </Seal>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22, letterSpacing: '-0.02em' }}>{s.title}</div>
-                <p style={{ fontSize: 14 }}>{s.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <StepsProgress steps={STEPS} />
         <p style={{ textAlign: 'center', fontSize: 13, maxWidth: '60ch', margin: '32px auto 0', opacity: 0.8 }}>
           New to fishing? Every Ketto lure is hand-picked so it works right out of the package — no tuning, no guesswork.{' '}
           <Link to="/new-to-fishing" style={{ color: 'var(--rust)', fontWeight: 600 }}>
