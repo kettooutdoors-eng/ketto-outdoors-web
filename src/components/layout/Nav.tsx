@@ -32,7 +32,7 @@ export function Nav() {
     >
       <Link to="/" style={{ marginRight: 'auto', display: 'flex' }}>
         <TinFrame background="var(--parchment)" padding={3} innerStyle={{ padding: '6px 14px' }}>
-          <img src="/assets/ketto-lockup.png" alt="Ketto Outdoors" className="nav-logo-img" style={{ height: 56, display: 'block' }} />
+          <img src={`${import.meta.env.BASE_URL}assets/ketto-lockup.png`} alt="Ketto Outdoors" className="nav-logo-img" style={{ height: 56, display: 'block' }} />
         </TinFrame>
       </Link>
 
