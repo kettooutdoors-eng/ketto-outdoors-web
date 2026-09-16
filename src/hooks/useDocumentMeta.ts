@@ -24,7 +24,7 @@ const SITE_NAME = 'Ketto Outdoors';
 // TODO: switch to the real domain (e.g. https://www.kettooutdoors.com) once it's registered
 // and pointed at the site — kettooutdoors.com doesn't resolve yet, so these tags target the
 // actual live URL in the meantime so link previews and canonical tags aren't broken.
-const SITE_URL = 'https://kettooutdoors-eng.github.io/ketto-outdoors-web';
+export const SITE_URL = 'https://kettooutdoors-eng.github.io/ketto-outdoors-web';
 
 /** Sets document title, meta description, canonical URL, and OG/Twitter tags for the current route. */
 export function useDocumentMeta(title: string, description: string, path = '', noIndex = false) {

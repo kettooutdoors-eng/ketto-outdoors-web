@@ -11,6 +11,7 @@ import { useCart } from '../state/CartContext';
 import { useInventory } from '../state/InventoryContext';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { useProductSchema } from '../hooks/useProductSchema';
 import { submitLead } from '../lib/leads';
 import { getProductImageSrc } from '../data/productImages';
 import NotFound from './NotFound';
@@ -77,10 +78,12 @@ export default function ProductPage() {
     `/product/${id ?? ''}`
   );
 
+  const qty = product ? get(product.id) : 0;
+  const inStock = qty > 0;
+  useProductSchema(product, product ? getProductImageSrc(product.id) : undefined, inStock);
+
   if (!product) return <NotFound />;
 
-  const qty = get(product.id);
-  const inStock = qty > 0;
   const needsSelection = (product.colorOptions && !selectedColor) || (product.sizeOptions && !selectedSize);
 
   return (
