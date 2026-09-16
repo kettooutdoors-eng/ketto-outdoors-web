@@ -83,9 +83,33 @@ export default function Home() {
         <img
           src={`${import.meta.env.BASE_URL}assets/hero-photo.jpg`}
           alt="An angler standing at the water's edge at sunset"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '67% 55%' }}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '67% 55%',
+            filter: 'sepia(.4) saturate(1.6) contrast(1.08) brightness(.9) hue-rotate(-6deg)',
+          }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(20,30,22,.25), rgba(20,30,22,.55))' }} />
+        {/* Warm duotone wash to pull the photo into the site's mustard/forest palette */}
+        <div style={{ position: 'absolute', inset: 0, background: 'var(--forest)', mixBlendMode: 'color', opacity: 0.35 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 35%, rgba(217,154,44,.25), transparent 60%)', mixBlendMode: 'overlay' }} />
+        {/* Film grain, matching the site's body-texture noise */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            opacity: 0.5,
+            mixBlendMode: 'overlay',
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+          }}
+        />
+        {/* Vignette */}
+        <div style={{ position: 'absolute', inset: 0, boxShadow: 'inset 0 0 140px rgba(20,15,8,.55)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(20,30,22,.15), rgba(20,30,22,.5))' }} />
 
         <TinFrame
           background="rgba(247,236,208,.95)"
