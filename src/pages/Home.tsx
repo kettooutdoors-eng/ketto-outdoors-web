@@ -193,18 +193,15 @@ export default function Home() {
           </p>
           <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
         </div>
-        <div style={{ maxWidth: 400, margin: '36px auto 0', padding: '0 40px' }}>
-          {BUNDLES[0] ? (
-            <BundleCard bundle={BUNDLES[0]} />
-          ) : (
-            <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
-          )}
-        </div>
-        <p style={{ textAlign: 'center', marginTop: 24 }}>
-          <Link to="/kits" style={{ fontSize: 13, fontWeight: 700, color: 'var(--rust)' }}>
-            See all kits →
-          </Link>
-        </p>
+        {BUNDLES.length > 0 ? (
+          <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, maxWidth: 1080, margin: '36px auto 0', padding: '0 40px' }}>
+            {BUNDLES.map((b) => (
+              <BundleCard key={b.id} bundle={b} />
+            ))}
+          </div>
+        ) : (
+          <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
+        )}
       </div>
 
       {/* Individual gear — secondary path */}
