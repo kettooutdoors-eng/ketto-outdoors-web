@@ -79,49 +79,13 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--hero-band)', minHeight: 468, display: 'flex', alignItems: 'center', justifyContent: 'center', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(27,67,50,.03), rgba(27,67,50,.14))' }} />
-        <svg aria-hidden="true" viewBox="0 0 800 470" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-          <rect width="800" height="470" fill="#e8dcc0" />
-          <circle cx="88" cy="90" r="70" fill="#d99a2c" />
-          <path d="M0 270 L120 190 L240 250 L360 170 L480 240 L600 180 L720 245 L800 210 L800 270 Z" fill="#1b4332" opacity=".85" />
-          <rect x="0" y="270" width="800" height="200" fill="#3f6e6b" />
-          <path d="M0 270 L800 270 L800 300 Q600 282 400 300 T0 285 Z" fill="#4c8481" opacity=".7" />
-          <path d="M0 320 Q200 305 400 323 T800 317 L800 470 L0 470 Z" fill="#345c59" opacity=".55" />
-          <path d="M0 360 Q200 348 400 362 T800 356 L800 470 L0 470 Z" fill="#2a4c49" opacity=".5" />
-          <g stroke="#d7e6dd" strokeWidth="2.5" fill="none" opacity=".55" strokeLinecap="round">
-            <path d="M40 300 Q90 296 140 300" />
-            <path d="M300 310 Q350 306 400 310" />
-            <path d="M560 296 Q610 292 660 296" />
-            <path d="M120 340 Q170 336 220 340" />
-            <path d="M440 350 Q490 346 540 350" />
-            <path d="M660 336 Q710 332 760 336" />
-          </g>
-          <g transform="translate(190,0)">
-            <rect x="470" y="330" width="70" height="14" fill="#8a6a3a" />
-            <rect x="474" y="344" width="8" height="30" fill="#6b4f27" />
-            <rect x="524" y="344" width="8" height="30" fill="#6b4f27" />
-            <path d="M500 300 c-16 0 -28 12 -28 30 c0 20 14 34 14 46 l4 2 l4 -2 c0 -12 14 -26 14 -46 c0 -18 -12 -30 -28 -30 Z" fill="#1b4332" stroke="#241a10" strokeWidth="4.5" />
-            <circle cx="500" cy="288" r="13" fill="#e8c98a" stroke="#241a10" strokeWidth="4.5" />
-            <path d="M488 282 q12 -14 26 0" fill="none" stroke="#241a10" strokeWidth="4" />
-            <path d="M486 372 l-6 34" stroke="#241a10" strokeWidth="6" strokeLinecap="round" />
-            <path d="M514 372 l6 34" stroke="#241a10" strokeWidth="6" strokeLinecap="round" />
-            <path d="M512 320 l70 -46" stroke="#241a10" strokeWidth="5" strokeLinecap="round" />
-            <path d="M582 274 L640 380" stroke="#241a10" strokeWidth="1.5" fill="none" />
-            <g transform="translate(560,380)">
-              <ellipse cx="80" cy="0" rx="40" ry="6" fill="none" stroke="#d7e6dd" strokeWidth="2" opacity=".6" />
-              <ellipse cx="80" cy="0" rx="58" ry="9" fill="none" stroke="#d7e6dd" strokeWidth="2" opacity=".4" />
-              <path d="M48 0 C60 -16 84 -18 100 -6 L116 -12 L110 0 L116 12 L100 6 C84 18 60 16 48 0 Z" fill="#c1502e" stroke="#241a10" strokeWidth="4.5" strokeLinejoin="round" />
-              <path d="M76 -10 C82 -14 90 -14 94 -8" fill="none" stroke="#241a10" strokeWidth="3" strokeLinecap="round" />
-              <circle cx="62" cy="-4" r="2.4" fill="#241a10" />
-              <g fill="#d7e6dd" stroke="#241a10" strokeWidth="1.5">
-                <path d="M20 -28 q4 -8 10 -6 q-2 8 -10 6 Z" />
-                <path d="M2 -34 q4 -6 9 -4 q-2 6 -9 4 Z" />
-                <path d="M-14 -20 q4 -7 9 -5 q-2 7 -9 5 Z" />
-              </g>
-            </g>
-          </g>
-        </svg>
+      <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--hero-band)', minHeight: 520, display: 'flex', alignItems: 'center', justifyContent: 'center', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)' }}>
+        <img
+          src={`${import.meta.env.BASE_URL}assets/hero-photo.jpg`}
+          alt="An angler standing at the water's edge at sunset"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '67% 55%' }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(20,30,22,.25), rgba(20,30,22,.55))' }} />
 
         <TinFrame
           background="rgba(247,236,208,.95)"
