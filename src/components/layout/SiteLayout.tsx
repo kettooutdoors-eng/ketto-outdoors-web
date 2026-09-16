@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Nav } from './Nav';
@@ -27,7 +27,9 @@ export function SiteLayout() {
       <RopeDivider />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       <main id="main-content" tabIndex={-1} style={{ outline: 'none' }}>
-        <Outlet />
+        <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
+          <Outlet />
+        </Suspense>
       </main>
       <RopeDivider />
       <Footer />

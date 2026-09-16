@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './state/CartContext';
 import { AdminProvider } from './state/AdminContext';
@@ -5,24 +6,24 @@ import { InventoryProvider } from './state/InventoryContext';
 import { SiteLayout } from './components/layout/SiteLayout';
 
 import Home from './pages/Home';
-import Kits from './pages/Kits';
-import Kit from './pages/Kit';
-import BitingNow from './pages/BitingNow';
-import GearByState from './pages/GearByState';
-import Shop from './pages/Shop';
-import ProductPage from './pages/Product';
-import NewToFishing from './pages/NewToFishing';
-import BlogIndex from './pages/blog/BlogIndex';
-import BlogCategory from './pages/blog/BlogCategory';
-import Checkout from './pages/Checkout';
-import Orders from './pages/Orders';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Faq from './pages/Faq';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import ShippingReturns from './pages/ShippingReturns';
-import NotFound from './pages/NotFound';
+const Kits = lazy(() => import('./pages/Kits'));
+const Kit = lazy(() => import('./pages/Kit'));
+const BitingNow = lazy(() => import('./pages/BitingNow'));
+const GearByState = lazy(() => import('./pages/GearByState'));
+const Shop = lazy(() => import('./pages/Shop'));
+const ProductPage = lazy(() => import('./pages/Product'));
+const NewToFishing = lazy(() => import('./pages/NewToFishing'));
+const BlogIndex = lazy(() => import('./pages/blog/BlogIndex'));
+const BlogCategory = lazy(() => import('./pages/blog/BlogCategory'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const Orders = lazy(() => import('./pages/Orders'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Faq = lazy(() => import('./pages/Faq'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const ShippingReturns = lazy(() => import('./pages/ShippingReturns'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
