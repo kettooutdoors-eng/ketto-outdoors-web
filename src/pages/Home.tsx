@@ -12,6 +12,7 @@ import { BUNDLES } from '../data/bundles';
 import { BITING_NOW_SEASON } from '../data/bitingNow';
 import { useAdmin } from '../state/AdminContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { getProductImageSrc } from '../data/productImages';
 
 const FEATURED_KEY = 'ketto-featured';
 
@@ -265,7 +266,7 @@ export default function Home() {
                       ))}
                     </select>
                   )}
-                  <ImagePlaceholder label={card.name} />
+                  <ImagePlaceholder label={card.name} src={getProductImageSrc(card.key)} />
                   <div className="card-kicker">{card.kicker}</div>
                   <PillSeal rotate={-2}>{card.badge}</PillSeal>
                   <Link to={card.href} style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24, letterSpacing: '-0.02em', color: '#1c1c1a' }}>
