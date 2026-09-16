@@ -43,6 +43,8 @@ export interface BundleComponent {
   /** Plain-English "why this is in here" trust line — not a spec restated. */
   whyThis: string;
   sourced: 'anchor-brand' | 'private-label';
+  /** Product id, if this piece can also be bought on its own to replace/top off the kit. */
+  productId?: string;
 }
 
 export interface Bundle {
@@ -61,8 +63,10 @@ export interface Bundle {
   /** Short trust-building explanation of the sourcing decision. */
   sourcingNote: string;
   components: BundleComponent[];
-  /** Short "how to rig this" pointer — expand into a real guide/QR code later. */
+  /** Short "how to rig this" pointer shown above the step-by-step. */
   riggingNote: string;
+  /** Full step-by-step rigging walkthrough for this specific kit. */
+  riggingSteps: FishingStep[];
   imagePlaceholderAlt: string;
 }
 

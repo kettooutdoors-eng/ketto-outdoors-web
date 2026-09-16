@@ -276,11 +276,14 @@ export const PRODUCTS: Product[] = [
       "confidenceTip": "Hooks are the one piece of gear that's genuinely hard to mess up — match the size to your bait and you're set."
     },
     "specs": {
-      "sizes": "1/0 - 4/0",
+      "sizes": "#6 - 4/0",
       "packaging": "sold in packs of 10"
     },
     "colorOptions": null,
     "sizeOptions": [
+      "#6",
+      "#8",
+      "#10",
       "1/0",
       "2/0",
       "3/0",
@@ -1843,6 +1846,1270 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "reviewsSectionPresent": false
+  },
+  {
+    "id": "flipping-jig",
+    "name": "Flipping Jig",
+    "displayNameFull": "Flipping Jig",
+    "price": 5.5,
+    "category": "Jig",
+    "kicker": "Jig",
+    "metaTitle": "Flipping Jig — Ketto Outdoors",
+    "metaDescription": "The jig you tie on when you don't know what else to throw. 3/8 oz, painted head, 3/0 hook.",
+    "difficulty": {
+      "label": "Intermediate",
+      "number": 5,
+      "outOf": 10
+    },
+    "targetSpecies": "Largemouth & smallmouth bass",
+    "shortDescription": "This is the jig you tie on when you don't know what else to throw. Works almost everywhere cover reaches.",
+    "longDescription": "Flip it into laydowns, docks, and weed edges and let it fall on a semi-slack line, then hop it back slowly. A painted head with eyes and a stout 3/0 hook make it the one lure that’s always a reasonable option.",
+    "guide": {
+      "gearNeeded": [
+        "Soft plastic trailer (a craw or creature bait pairs well)",
+        "Medium-heavy rod recommended for pulling fish out of cover"
+      ],
+      "steps": [
+        {
+          "title": "Add a trailer",
+          "detail": "Thread a soft plastic craw or creature bait onto the hook for extra bulk and action — the jig alone works, but a trailer usually outfishes it."
+        },
+        {
+          "title": "Flip or pitch it into cover",
+          "detail": "Underhand-flip it tight against docks, laydowns, or weed edges rather than casting overhand — accuracy matters more than distance here."
+        },
+        {
+          "title": "Let it fall on a controlled line",
+          "detail": "Keep light contact with the line as it sinks. Most bites happen on the fall, and a fully slack line means you won't feel it."
+        },
+        {
+          "title": "Hop it back slowly",
+          "detail": "Lift the rod tip a few inches to hop it, then let it fall again, working it back toward you."
+        },
+        {
+          "title": "Set the hook hard",
+          "detail": "Jig bites often feel like a sudden, heavy weight. Reel down and set with a firm upward sweep."
+        }
+      ],
+      "biteFeel": "A heavy, sudden weight on the fall, or the line simply stops sinking when it should still be dropping.",
+      "commonMistakes": [
+        "Casting it into open water instead of flipping it tight to cover, where it earns its keep",
+        "Losing contact with the line on the fall and missing the bite entirely",
+        "Setting the hook too softly — this hook can take a firm sweep"
+      ],
+      "confidenceTip": "When nothing else in the box is working, this is the one to tie back on. It's built to be the default, not the specialist."
+    },
+    "specs": {
+      "weight": "3/8 oz",
+      "head": "painted, with eyes",
+      "hook": "3/0",
+      "skirt": "silicone"
+    },
+    "colorOptions": [
+      "Color A",
+      "Color B",
+      "Color C",
+      "Color D"
+    ],
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Flipping jig",
+    "relatedProducts": [
+      {
+        "id": "crawdaddy",
+        "name": "Crawdaddy",
+        "blurb": "A natural trailer for this jig.",
+        "price": 6.75
+      },
+      {
+        "id": "bottomjig",
+        "name": "Bottomjig",
+        "blurb": "A lighter jig for open bottom instead of heavy cover.",
+        "price": 5.75
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "medium-crankbait",
+    "name": "Medium Crankbait",
+    "displayNameFull": "Medium Crankbait",
+    "price": 8.5,
+    "category": "Crankbait",
+    "kicker": "Crankbait",
+    "metaTitle": "Medium Crankbait — Ketto Outdoors",
+    "metaDescription": "A medium-diving crankbait with an internal rattle. Cast it, reel it back steady — the bait does the rest.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 2,
+      "outOf": 10
+    },
+    "targetSpecies": "Largemouth & smallmouth bass",
+    "shortDescription": "Cast it out and reel it back steady — the internal rattle and wobble do the work of getting a bass’s attention for you.",
+    "longDescription": "A medium-diving body, 66mm / 14g with roughly 100mm total length including the hook, built to run a consistent depth on a steady retrieve with a rattle that carries in stained water.",
+    "guide": {
+      "gearNeeded": [
+        "Spinning or baitcasting rod & reel",
+        "10-12 lb line"
+      ],
+      "steps": [
+        {
+          "title": "Cast past your target",
+          "detail": "Cast a few feet beyond docks, points, or rock so the bait is already swimming by the time it reaches the spot."
+        },
+        {
+          "title": "Reel at a steady pace",
+          "detail": "Close the bail and reel immediately at a consistent, moderate speed — no pausing."
+        },
+        {
+          "title": "Feel for the wobble",
+          "detail": "You should feel a light, rhythmic thump through the rod the whole retrieve. If you feel nothing, speed up slightly."
+        },
+        {
+          "title": "Let it bump cover",
+          "detail": "A deflection off rock or wood reads as a direction change, not a snag — keep reeling through it."
+        }
+      ],
+      "biteFeel": "A hard, sudden weight that interrupts the steady thump of the retrieve.",
+      "commonMistakes": [
+        "Reeling too slowly, which lets it dig into the bottom instead of deflecting off cover",
+        "Stopping the retrieve mid-cast — a steady pace is what makes it forgiving"
+      ],
+      "confidenceTip": "Cast, reel steady, repeat. This is one of the simplest lures in the kit to fish correctly on the very first cast."
+    },
+    "specs": {
+      "diveDepth": "5-6 ft",
+      "weight": "14g / 1/2 oz",
+      "length": "~100mm with hook",
+      "rattle": "internal"
+    },
+    "colorOptions": [
+      "Color A",
+      "Color B",
+      "Color C",
+      "Color D"
+    ],
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Medium diving crankbait",
+    "relatedProducts": [
+      {
+        "id": "deep-six",
+        "name": "Deep Six",
+        "blurb": "A squarebill crankbait for shallower, snaggier water.",
+        "price": 14.5
+      },
+      {
+        "id": "ratlin",
+        "name": "Ratlin",
+        "blurb": "A lipless crankbait for covering water fast.",
+        "price": 10.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "wacky-worm",
+    "name": "Wacky Worm",
+    "displayNameFull": "Wacky Worm",
+    "price": 6.25,
+    "category": "Soft Plastic (Wacky Worm)",
+    "kicker": "Soft plastic — wacky-rigged worm",
+    "metaTitle": "Wacky Worm — Ketto Outdoors",
+    "metaDescription": "Rig it through the middle, cast it, let it sink and shimmy. About as close to a sure thing as soft plastics get.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 2,
+      "outOf": 10
+    },
+    "targetSpecies": "Bass & panfish",
+    "shortDescription": "Rig it, cast it, let it sink and shimmy on a slack line. About as close to a sure thing as soft plastics get.",
+    "longDescription": "13.5cm / 5in, 7.5g, in green pumpkin and watermelon, hooked through the middle so both ends flutter on the fall — the \"wacky rig\" is one of the easiest presentations in fishing to get right on the first try.",
+    "guide": {
+      "gearNeeded": [
+        "1/0 wacky hook + O-ring (included)",
+        "Spinning rod & reel",
+        "8-10 lb fluorocarbon line"
+      ],
+      "steps": [
+        {
+          "title": "Ring it and hook it",
+          "detail": "Roll the O-ring onto the middle of the worm, then hook through the ring so the worm hangs horizontally off the hook."
+        },
+        {
+          "title": "Cast near cover",
+          "detail": "Cast past docks, laydowns, or weed edges and let it sink on a slack line."
+        },
+        {
+          "title": "Watch it fall",
+          "detail": "Both ends of the worm flutter independently as it sinks — most bites happen right here, before you do anything."
+        },
+        {
+          "title": "Twitch and pause",
+          "detail": "Once it's near bottom, twitch the rod tip gently and let it sit for several seconds before twitching again."
+        }
+      ],
+      "biteFeel": "The line jumping sideways or going slack unexpectedly during the fall, or a soft tap once it settles.",
+      "commonMistakes": [
+        "Skipping the O-ring, which tears the worm in half on the first cast",
+        "Not pausing long enough — the fall is doing most of the work here"
+      ],
+      "confidenceTip": "If you only fish one soft plastic all day, this is the one that's hardest to fish wrong."
+    },
+    "specs": {
+      "length": "13.5cm / 5in",
+      "weight": "7.5g",
+      "colors": "green pumpkin & watermelon"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Wacky-rigged worm",
+    "relatedProducts": [
+      {
+        "id": "ribtail",
+        "name": "Ribtail",
+        "blurb": "A curl-tail worm for a different presentation.",
+        "price": 5.25
+      },
+      {
+        "id": "driftworm",
+        "name": "Driftworm",
+        "blurb": "A slower, drag-along-bottom worm.",
+        "price": 6.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "chatterbait",
+    "name": "Chatterbait",
+    "displayNameFull": "Chatterbait",
+    "price": 7.75,
+    "category": "Bladed Jig",
+    "kicker": "Chatterbait / bladed jig",
+    "metaTitle": "Chatterbait — Ketto Outdoors",
+    "metaDescription": "Vibrates as you reel, so fish can find it even when the water is stained or cloudy. 3/8 oz.",
+    "difficulty": {
+      "label": "Intermediate",
+      "number": 4,
+      "outOf": 10
+    },
+    "targetSpecies": "Largemouth bass",
+    "shortDescription": "Vibrates as you reel, which means fish can find it even when the water’s stained or cloudy.",
+    "longDescription": "3/8 oz in green pumpkin and chartreuse/white — a small metal blade on the nose makes the whole bait shimmy and thump at any steady retrieve speed, covering the gap between a jig and a spinnerbait.",
+    "guide": {
+      "gearNeeded": [
+        "Soft plastic trailer (a paddle tail or craw works well)",
+        "Baitcasting or spinning rod & reel",
+        "12-15 lb line"
+      ],
+      "steps": [
+        {
+          "title": "Add a trailer",
+          "detail": "Thread on a paddle tail swimbait or craw trailer for extra bulk and thump."
+        },
+        {
+          "title": "Cast past your target",
+          "detail": "Cast beyond grass lines, docks, or stained-water banks."
+        },
+        {
+          "title": "Reel at a steady pace",
+          "detail": "Close the bail and reel immediately at a consistent speed — the blade does the vibrating on its own."
+        },
+        {
+          "title": "Slow down through grass",
+          "detail": "If it's dragging through vegetation, slow down slightly to keep it from fouling on weeds."
+        }
+      ],
+      "biteFeel": "A hard, thumping strike that cuts the bait’s vibration off mid-retrieve — usually unmistakable.",
+      "commonMistakes": [
+        "Reeling too fast through heavy grass, which fouls the blade with weeds",
+        "Fishing it on gin-clear water where a more subtle bait usually works better"
+      ],
+      "confidenceTip": "Cast it, reel steady, and trust the blade to do the attracting — no twitching or special technique required."
+    },
+    "specs": {
+      "weight": "3/8 oz",
+      "blade": "stamped metal",
+      "colors": "green pumpkin & chartreuse/white"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Chatterbait / bladed jig",
+    "relatedProducts": [
+      {
+        "id": "longshot",
+        "name": "Longshot",
+        "blurb": "A spinnerbait for a similar murky-water search.",
+        "price": 11
+      },
+      {
+        "id": "ratlin",
+        "name": "Ratlin",
+        "blurb": "A lipless crankbait for covering more water.",
+        "price": 10.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "urchin-finesse-bait",
+    "name": "Urchin Finesse Bait",
+    "displayNameFull": "Urchin Finesse Bait",
+    "price": 4.95,
+    "category": "Soft Plastic (Finesse)",
+    "kicker": "Soft plastic — finesse",
+    "metaTitle": "Urchin Finesse Bait — Ketto Outdoors",
+    "metaDescription": "A small, subtle finesse bait for the days nothing else gets bit. 17mm, nail/push weighted.",
+    "difficulty": {
+      "label": "Advanced",
+      "number": 6,
+      "outOf": 10
+    },
+    "targetSpecies": "Largemouth & smallmouth bass",
+    "shortDescription": "A finesse option for the days the rest of the box doesn’t get bit — small, subtle, and easy to drop right next to cover.",
+    "longDescription": "17mm, in green pumpkin, watermelon seed, and chartreuse, rigged with a 1/16 oz or 3/32 oz nail/push weight for a slow, subtle fall right next to cover where bigger baits spook wary fish.",
+    "guide": {
+      "gearNeeded": [
+        "Light spinning rod & reel",
+        "6-8 lb fluorocarbon line"
+      ],
+      "steps": [
+        {
+          "title": "Insert the weight",
+          "detail": "Push the nail/push weight into the nose of the bait — 1/16 oz for a slower fall, 3/32 oz to get down faster."
+        },
+        {
+          "title": "Rig it weedless",
+          "detail": "Texas-rig it on a small hook so it can be dropped right into cover without snagging."
+        },
+        {
+          "title": "Drop it next to cover",
+          "detail": "Pitch it right up against a dock post, laydown, or weed edge rather than casting it into open water."
+        },
+        {
+          "title": "Shake it in place",
+          "detail": "Let it settle, then shake the rod tip gently without moving it far — this is a finesse bait, not a search bait."
+        }
+      ],
+      "biteFeel": "Subtle — a light tick or the line feeling slightly heavier than a moment ago.",
+      "commonMistakes": [
+        "Fishing it fast like a search bait instead of slow and subtle right next to cover",
+        "Skipping this bait on tough days when it’s exactly the one built for them"
+      ],
+      "confidenceTip": "Save this one for when the other seven baits in the kit go quiet — that’s exactly the day it’s built for."
+    },
+    "specs": {
+      "size": "17mm",
+      "weight": "1/16 oz or 3/32 oz nail/push weight",
+      "colors": "green pumpkin, watermelon seed, chartreuse"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Small finesse soft plastic bait",
+    "relatedProducts": [
+      {
+        "id": "finessedrop",
+        "name": "Finesse Drop",
+        "blurb": "A drop-shot rig for the same tough, pressured bites.",
+        "price": 8
+      },
+      {
+        "id": "flukeshad",
+        "name": "Flukeshad",
+        "blurb": "A weightless option for cover this bait can’t reach.",
+        "price": 5.95
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "bulk-sinkers",
+    "name": "Bulk Sinkers",
+    "displayNameFull": "Bulk Fishing Weights",
+    "price": 4.5,
+    "category": "Terminal Tackle (Weights)",
+    "kicker": "Weights",
+    "metaTitle": "Bulk Sinkers — Ketto Outdoors",
+    "metaDescription": "An assorted 10-pack of basic fishing weights. Nothing fancy — exactly what you need.",
+    "difficulty": null,
+    "targetSpecies": "Any species",
+    "shortDescription": "Basic, boring, and exactly what you need to get a bait down to where the fish actually are.",
+    "longDescription": "An assorted 10-pack of split-shot and slip weights covering the range most freshwater rigs call for — no need to guess which size to grab.",
+    "guide": {
+      "gearNeeded": [],
+      "steps": [
+        {
+          "title": "Match the weight to the rig",
+          "detail": "Use just enough weight to get your bait to depth without killing its natural action — start light and add more only if you need to."
+        },
+        {
+          "title": "Pinch or thread it on",
+          "detail": "Split shot pinches directly onto the line; slip weights thread on above a swivel or bead."
+        }
+      ],
+      "biteFeel": "Depends entirely on what you rig it with — the weight itself has no feel, it just gets your bait to the fish.",
+      "commonMistakes": [
+        "Using more weight than the rig actually needs, which makes the bait sink unnaturally fast"
+      ],
+      "confidenceTip": "A pack of weights is hard to get wrong — when in doubt, start with the lightest one that still gets your bait down."
+    },
+    "specs": {
+      "packaging": "assorted, 10-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Assorted bulk sinkers",
+    "relatedProducts": [
+      {
+        "id": "baithooks",
+        "name": "Baithooks",
+        "blurb": "Pair these weights with a hook for any bait rig.",
+        "price": 4.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "bobbers",
+    "name": "Bobbers",
+    "displayNameFull": "Snap-On Bobbers",
+    "price": 4.75,
+    "category": "Terminal Tackle (Float)",
+    "kicker": "Float",
+    "metaTitle": "Bobbers — Ketto Outdoors",
+    "metaDescription": "Round snap-on floats, assorted sizes, 5-pack. The bobber going under is the easiest bite you’ll ever learn to read.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 1,
+      "outOf": 10
+    },
+    "targetSpecies": "Panfish & bass",
+    "shortDescription": "The bobber going under is the easiest bite you’ll ever learn to read — no guessing whether that was a fish or the current.",
+    "longDescription": "Round snap-on floats in assorted sizes. Clip one onto your line above a hook and weight, and it holds your bait at a set depth while giving you an unmistakable visual signal the moment a fish takes it.",
+    "guide": {
+      "gearNeeded": [
+        "Hook and split shot weight",
+        "Bait (live worm or a scented soft bait)"
+      ],
+      "steps": [
+        {
+          "title": "Set your depth",
+          "detail": "Clip the bobber onto your line above the hook — the distance between bobber and hook is roughly how deep your bait will hang."
+        },
+        {
+          "title": "Cast it out",
+          "detail": "Cast near a dock, weed edge, or drop-off and let it settle."
+        },
+        {
+          "title": "Watch, don’t reel",
+          "detail": "Leave the bail open or the line slack and just watch the bobber sit."
+        },
+        {
+          "title": "Set the hook when it goes under",
+          "detail": "When the bobber dips or slides sideways and stays down, reel down to remove slack and set the hook."
+        }
+      ],
+      "biteFeel": "Visual, not physical — the bobber twitches, dips, or disappears under the surface.",
+      "commonMistakes": [
+        "Setting the hook on every little bobber wiggle instead of waiting for it to actually go under and stay",
+        "Using a bobber too big for the bait, which lets fish feel resistance and drop it"
+      ],
+      "confidenceTip": "This is the most forgiving way to fish that exists — you genuinely just watch and wait."
+    },
+    "specs": {
+      "style": "round, snap-on",
+      "packaging": "assorted sizes, 5-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Snap-on bobbers",
+    "relatedProducts": [
+      {
+        "id": "baithooks",
+        "name": "Baithooks",
+        "blurb": "Small hooks sized for a bobber rig.",
+        "price": 4.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "split-shot-weights",
+    "name": "Split Shot Weights",
+    "displayNameFull": "Split Shot Weights",
+    "price": 3.95,
+    "category": "Terminal Tackle (Weights)",
+    "kicker": "Weights",
+    "metaTitle": "Split Shot Weights — Ketto Outdoors",
+    "metaDescription": "Reusable split shot weights, assorted sizes, pack of 20 — pinch one on above the hook to sink a bobber rig.",
+    "difficulty": null,
+    "targetSpecies": "Any species",
+    "shortDescription": "Pinch one on above the hook so your bait sinks just enough to hang below the bobber instead of floating uselessly on top.",
+    "longDescription": "Reusable, removable split shot in assorted sizes — pinch on with your fingers or pliers, and pinch off again to adjust.",
+    "guide": {
+      "gearNeeded": [
+        "A bobber rig or any light line rig"
+      ],
+      "steps": [
+        {
+          "title": "Pick a size",
+          "detail": "Start with the smallest shot — just enough to sink the bait without dragging your bobber under."
+        },
+        {
+          "title": "Pinch it onto the line",
+          "detail": "Squeeze it closed onto the line 6-12 inches above the hook."
+        },
+        {
+          "title": "Adjust as needed",
+          "detail": "If your bait is floating up too much, add another; if your bobber is sitting too low, remove one."
+        }
+      ],
+      "biteFeel": "No feel of its own — it just gets your bait to hang at the right depth.",
+      "commonMistakes": [
+        "Using one size for every rig instead of adjusting to how the bobber is sitting"
+      ],
+      "confidenceTip": "You can’t really get this wrong — add or remove one until your bobber floats the way you want."
+    },
+    "specs": {
+      "style": "reusable, removable",
+      "packaging": "assorted sizes, pack of 20"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Split shot weights",
+    "relatedProducts": [
+      {
+        "id": "bobbers",
+        "name": "Bobbers",
+        "blurb": "Pair these weights with a float rig.",
+        "price": 4.75
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "scented-soft-bait",
+    "name": "Scented Soft Bait",
+    "displayNameFull": "Scented Soft Bait",
+    "price": 5.25,
+    "category": "Soft Plastic (Scented)",
+    "kicker": "Scented bait — no live bait needed",
+    "metaTitle": "Scented Soft Bait — Ketto Outdoors",
+    "metaDescription": "A trout-worm style scented soft bait — works like a real worm without a trip to dig for one.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 1,
+      "outOf": 10
+    },
+    "targetSpecies": "Panfish, trout & bass",
+    "shortDescription": "Works like a real worm without a trip to dig for one or a stop at the bait shop. Thread it on and go.",
+    "longDescription": "A pre-scented, trout-worm style soft bait that fish key in on by smell as much as sight — thread it onto a small hook under a bobber, or fish it plain on the bottom.",
+    "guide": {
+      "gearNeeded": [
+        "Small hook (size 6-10)",
+        "Bobber and split shot, or fish it plain on the bottom"
+      ],
+      "steps": [
+        {
+          "title": "Thread it onto the hook",
+          "detail": "Push the hook through the head of the bait and out the side, leaving most of the body free to move."
+        },
+        {
+          "title": "Fish it under a bobber or on the bottom",
+          "detail": "Under a bobber near cover for panfish, or let it sink and sit on the bottom for anything cruising along it."
+        },
+        {
+          "title": "Be patient",
+          "detail": "The scent does a lot of the work — let it sit in one spot for a while before recasting."
+        }
+      ],
+      "biteFeel": "Same as fishing live bait — a bobber dipping under, or a steady pull if fished on the bottom.",
+      "commonMistakes": [
+        "Recasting too often instead of letting the scent sit and work an area"
+      ],
+      "confidenceTip": "If you're not ready to dig up worms or visit a bait shop, this is the honest substitute — it works."
+    },
+    "specs": {
+      "style": "trout-worm, pre-scented"
+    },
+    "colorOptions": [
+      "Color A",
+      "Color B",
+      "Color C"
+    ],
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Scented soft bait",
+    "relatedProducts": [
+      {
+        "id": "baithooks",
+        "name": "Baithooks",
+        "blurb": "Small hooks sized for this bait.",
+        "price": 4.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "bobber-stops",
+    "name": "Bobber Stops & Beads",
+    "displayNameFull": "Bobber Stops & Beads",
+    "price": 3.5,
+    "category": "Terminal Tackle (Rigging)",
+    "kicker": "Rigging",
+    "metaTitle": "Bobber Stops & Beads — Ketto Outdoors",
+    "metaDescription": "Adjustable bobber stops with beads, pack of 20 — set exactly how deep your bait hangs.",
+    "difficulty": null,
+    "targetSpecies": "Any species",
+    "shortDescription": "Lets you set exactly how deep your bait hangs, and slide it up or down as you figure out where the fish are holding.",
+    "longDescription": "Small adjustable stops paired with beads — thread the stop onto your main line above the bobber, and the bead keeps it from sliding through the bobber’s hole.",
+    "guide": {
+      "gearNeeded": [
+        "A slip-bobber rig"
+      ],
+      "steps": [
+        {
+          "title": "Thread the stop onto the line",
+          "detail": "Slide it on before you tie on anything else, then snug the knot down."
+        },
+        {
+          "title": "Add the bead",
+          "detail": "Thread a bead on after the stop so it can’t slip through your bobber."
+        },
+        {
+          "title": "Slide it to set depth",
+          "detail": "Slide the whole stop up or down the line to change how deep your bait hangs, then reel in — the stop passes through the rod guides fine."
+        }
+      ],
+      "biteFeel": "No feel of its own — it just controls how deep your bait sits below the bobber.",
+      "commonMistakes": [
+        "Setting it too tight to slide, making it impossible to adjust depth on the water"
+      ],
+      "confidenceTip": "Once it’s on the line, changing depth takes five seconds — experiment until you find where the fish are."
+    },
+    "specs": {
+      "packaging": "adjustable stops with beads, pack of 20"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Bobber stops and beads",
+    "relatedProducts": [
+      {
+        "id": "bobbers",
+        "name": "Bobbers",
+        "blurb": "Pair these stops with a slip-bobber rig.",
+        "price": 4.75
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "junior-spinning-combo",
+    "name": "Junior Spinning Combo",
+    "displayNameFull": "Junior Spinning Rod & Reel Combo",
+    "price": 39.99,
+    "category": "Combo / Rod & Reel",
+    "kicker": "Combo — 5'6\" Light-Action Rod + Spinning Reel",
+    "metaTitle": "Junior Spinning Combo — Ketto Outdoors",
+    "metaDescription": "A shorter, lighter spinning combo, spooled and ready — easier for a first-timer or a kid to actually hold and reel.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 1,
+      "outOf": 10
+    },
+    "targetSpecies": null,
+    "bestFor": "First-ever trips, kids, bobber-and-bait fishing",
+    "shortDescription": "A shorter, lighter rod and reel, spooled and ready — easier to actually hold and reel than a full-size combo on a first trip.",
+    "longDescription": "A 5–6 ft light-action spinning combo, matched and spooled so there’s nothing to figure out before your first cast. Lighter in the hand than our standard spinning combo, which matters more than people expect on someone’s very first trip.",
+    "guide": {
+      "gearNeeded": [
+        "A hook, bobber, and bait — see our Never Fished Before Starter Kit"
+      ],
+      "steps": [
+        {
+          "title": "Hold it correctly",
+          "detail": "Grip the rod with the reel hanging below your hand and your index finger resting near the bail."
+        },
+        {
+          "title": "Open the bail",
+          "detail": "Hook the line with your index finger, then flip the bail open with your other hand."
+        },
+        {
+          "title": "Cast underhand or overhand",
+          "detail": "A short underhand lob works fine for bobber fishing near the bank — you don’t need distance."
+        },
+        {
+          "title": "Close the bail and wait",
+          "detail": "Turn the handle once to close the bail, then watch your bobber."
+        }
+      ],
+      "biteFeel": "Depends entirely on what you rig it with — this combo is built to make holding and casting easier, not to change what a bite feels like.",
+      "commonMistakes": [
+        "Over-gripping the rod, which tires small hands out fast on a longer trip"
+      ],
+      "confidenceTip": "A lighter, shorter rod is genuinely easier to control for a first trip — this isn’t a toy version, it’s the right tool for the job."
+    },
+    "specs": {
+      "rodLength": "5-6'",
+      "rodPower": "light",
+      "reelSize": "1000-size",
+      "gearRatio": "5.0:1"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Junior spinning combo",
+    "relatedProducts": [
+      {
+        "id": "bobbers",
+        "name": "Bobbers",
+        "blurb": "Set up a simple bobber rig with this combo.",
+        "price": 4.75
+      },
+      {
+        "id": "scented-soft-bait",
+        "name": "Scented Soft Bait",
+        "blurb": "No live bait needed to get started.",
+        "price": 5.25
+      }
+    ],
+    "reviewsSectionPresent": true,
+    "reviewsSectionLabel": "What anglers say"
+  },
+  {
+    "id": "circle-hooks",
+    "name": "Circle Hooks",
+    "displayNameFull": "Circle Hooks",
+    "price": 5.95,
+    "category": "Terminal Tackle (Hooks)",
+    "kicker": "Hooks — circle style",
+    "metaTitle": "Circle Hooks — Ketto Outdoors",
+    "metaDescription": "Circle hooks, 5/0-7/0, 10-pack — hook catfish in the corner of the mouth almost on their own.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 2,
+      "outOf": 10
+    },
+    "targetSpecies": "Catfish",
+    "shortDescription": "Circle hooks hook catfish in the corner of the mouth almost on their own, so you’re not gut-hooking fish while you’re still learning to feel a bite.",
+    "longDescription": "Sized 5/0 through 7/0, assorted. Bait it and let the fish hook itself as it swims off with the bait — pulling straight back on a circle hook, the way you would with a normal hook, actually pulls it out of the fish’s mouth instead of setting it.",
+    "guide": {
+      "gearNeeded": [
+        "Cut bait or live/prepared bait",
+        "Egg or bank sinker rig"
+      ],
+      "steps": [
+        {
+          "title": "Bait it through the point",
+          "detail": "Thread cut bait onto the hook so the point stays mostly exposed."
+        },
+        {
+          "title": "Cast and let it sit",
+          "detail": "Cast near structure and place the rod in a holder or against something stable — this is a wait-and-watch bait."
+        },
+        {
+          "title": "Don’t set the hook the normal way",
+          "detail": "When the rod bends or line starts steadily peeling out, just start reeling — don’t yank back."
+        },
+        {
+          "title": "Let the reel do the hooking",
+          "detail": "As the fish turns and swims off, the circle shape slides into the corner of the jaw and hooks itself."
+        }
+      ],
+      "biteFeel": "The rod tip bending steadily or line peeling off the reel — not a sharp tap.",
+      "commonMistakes": [
+        "Setting the hook hard like you would with a normal hook, which usually pulls it right out of the fish’s mouth",
+        "Using a hook too small for the bait, which hides the point"
+      ],
+      "confidenceTip": "The whole point of a circle hook is that you have to do less, not more — resist the instinct to set hard and just start reeling."
+    },
+    "specs": {
+      "sizes": "5/0-7/0",
+      "packaging": "assorted, 10-pack"
+    },
+    "sizeOptions": [
+      "5/0",
+      "6/0",
+      "7/0"
+    ],
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Circle hooks",
+    "relatedProducts": [
+      {
+        "id": "sliding-egg-sinkers",
+        "name": "Sliding Egg Sinkers",
+        "blurb": "The standard rig weight to pair with these hooks.",
+        "price": 4.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "dip-bait-treble-hooks",
+    "name": "Dip Bait Treble Hooks",
+    "displayNameFull": "Dip Bait Treble Hooks",
+    "price": 5.5,
+    "category": "Terminal Tackle (Hooks)",
+    "kicker": "Hooks — treble, bait-holder spring",
+    "metaTitle": "Dip Bait Treble Hooks — Ketto Outdoors",
+    "metaDescription": "Bait-holder spring treble hooks built to hold prepared stink/dip bait, 10-pack.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 1,
+      "outOf": 10
+    },
+    "targetSpecies": "Catfish",
+    "shortDescription": "Prepared stink or dip bait needs a hook built to hold paste bait — a regular hook just lets it slide off on the cast.",
+    "longDescription": "A small treble hook with a bait-holder spring wrapped around the shank — twist the spring into a wad of dip bait and it holds through the cast and the sink instead of washing off.",
+    "guide": {
+      "gearNeeded": [
+        "Prepared catfish stink/dip bait"
+      ],
+      "steps": [
+        {
+          "title": "Load the spring",
+          "detail": "Pack a wad of dip bait around the spring, twisting it in so it holds together."
+        },
+        {
+          "title": "Cast gently",
+          "detail": "A smooth, controlled cast keeps the bait from flying off the spring — no need to cast hard."
+        },
+        {
+          "title": "Let it sit",
+          "detail": "This is a wait-and-watch bait — leave it in one spot and let the scent do the work."
+        },
+        {
+          "title": "Reload as needed",
+          "detail": "Dip bait washes off over time — check and reload every so often, especially in current."
+        }
+      ],
+      "biteFeel": "A steady pull or the rod tip bending down — set the hook firmly once you feel real weight.",
+      "commonMistakes": [
+        "Casting hard, which flings the bait off the spring before it even hits the water",
+        "Leaving it too long without checking — the bait washes off eventually"
+      ],
+      "confidenceTip": "No cut bait or chicken liver required to start — just dip the hook in and cast."
+    },
+    "specs": {
+      "style": "treble, bait-holder spring",
+      "packaging": "10-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Dip bait treble hooks",
+    "relatedProducts": [
+      {
+        "id": "catfish-stink-bait",
+        "name": "Catfish Stink Bait",
+        "blurb": "The prepared bait these hooks are built for.",
+        "price": 6.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "sliding-egg-sinkers",
+    "name": "Sliding Egg Sinkers",
+    "displayNameFull": "Sliding Egg Sinkers",
+    "price": 4.5,
+    "category": "Terminal Tackle (Weights)",
+    "kicker": "Weights — slip-sinker rig",
+    "metaTitle": "Sliding Egg Sinkers — Ketto Outdoors",
+    "metaDescription": "1 oz sliding egg sinkers, 10-pack — the standard slip-sinker rig weight for calmer catfish water.",
+    "difficulty": null,
+    "targetSpecies": "Catfish",
+    "shortDescription": "Lets a catfish pick up the bait and swim off without feeling the weight — the standard slip-sinker rig for calmer water.",
+    "longDescription": "1 oz, egg-shaped with a hole through the middle so your main line slides freely through it, stopped by a swivel above your leader.",
+    "guide": {
+      "gearNeeded": [
+        "Barrel swivel",
+        "Leader line and circle hook"
+      ],
+      "steps": [
+        {
+          "title": "Thread it onto the main line",
+          "detail": "Slide the sinker onto your main line before tying on anything else."
+        },
+        {
+          "title": "Tie a swivel below it",
+          "detail": "Tie a barrel swivel to the main line below the sinker so it can’t slide down to the hook."
+        },
+        {
+          "title": "Add leader and hook",
+          "detail": "Tie your leader line and circle hook to the other end of the swivel."
+        }
+      ],
+      "biteFeel": "No feel of its own by design — a fish can pick up the bait and the line slides freely through the sinker instead of feeling resistance.",
+      "commonMistakes": [
+        "Using a bank sinker instead in current, where it won’t hold bottom as well as a flatter no-roll sinker"
+      ],
+      "confidenceTip": "Still water, calm bank, slower current — this is the right sinker. For moving water, reach for the no-roll sinkers instead."
+    },
+    "specs": {
+      "weight": "1 oz",
+      "style": "sliding egg",
+      "packaging": "10-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Sliding egg sinkers",
+    "relatedProducts": [
+      {
+        "id": "no-roll-bank-sinkers",
+        "name": "No-Roll Bank Sinkers",
+        "blurb": "The current-water alternative to this rig weight.",
+        "price": 4.75
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "no-roll-bank-sinkers",
+    "name": "No-Roll Bank Sinkers",
+    "displayNameFull": "No-Roll Bank Sinkers",
+    "price": 4.75,
+    "category": "Terminal Tackle (Weights)",
+    "kicker": "Weights — current fishing",
+    "metaTitle": "No-Roll Bank Sinkers — Ketto Outdoors",
+    "metaDescription": "Flat, 2 oz no-roll sinkers, 10-pack — hold bottom in current instead of rolling away.",
+    "difficulty": null,
+    "targetSpecies": "Catfish",
+    "shortDescription": "Flat sinkers that hold bottom in current instead of rolling away — what you want fishing a river bank instead of a still pond.",
+    "longDescription": "2 oz, flat-sided so current pushes them into the bottom instead of rolling them downstream — pair with a swivel and leader the same way as an egg sinker rig.",
+    "guide": {
+      "gearNeeded": [
+        "Barrel swivel",
+        "Leader line and circle hook"
+      ],
+      "steps": [
+        {
+          "title": "Rig it above a swivel",
+          "detail": "Same rig as the egg sinker — thread it on the main line, then tie a swivel below it, then your leader and hook."
+        },
+        {
+          "title": "Cast upstream of your target",
+          "detail": "In current, cast slightly upstream so the rig settles where you actually want it."
+        },
+        {
+          "title": "Check that it’s holding",
+          "detail": "Feel for steady resistance — if the rig keeps sliding downstream, go up a size."
+        }
+      ],
+      "biteFeel": "A steady pull or the rod tip loading up — current fishing tends to feel more constant than still water.",
+      "commonMistakes": [
+        "Using a round egg sinker in real current, where it rolls downstream instead of holding"
+      ],
+      "confidenceTip": "Moving water, river banks, current seams — this is the sinker built for exactly that, where the egg sinker would just roll away."
+    },
+    "specs": {
+      "weight": "2 oz",
+      "style": "no-roll, flat",
+      "packaging": "10-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "No-roll bank sinkers",
+    "relatedProducts": [
+      {
+        "id": "sliding-egg-sinkers",
+        "name": "Sliding Egg Sinkers",
+        "blurb": "The still-water alternative to this rig weight.",
+        "price": 4.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "barrel-swivels",
+    "name": "Barrel Swivels",
+    "displayNameFull": "Heavy-Duty Barrel Swivels",
+    "price": 4.25,
+    "category": "Terminal Tackle (Rigging)",
+    "kicker": "Rigging",
+    "metaTitle": "Barrel Swivels — Ketto Outdoors",
+    "metaDescription": "Heavy-duty barrel swivels, 10-pack — keeps your leader from twisting and connects a rig without a bulky knot.",
+    "difficulty": null,
+    "targetSpecies": "Catfish",
+    "shortDescription": "Keeps your leader from twisting up on itself and connects your rig without a bulky knot.",
+    "longDescription": "Heavy-duty barrel swivels sized for catfish rigs — tie your main line to one end and your leader to the other.",
+    "guide": {
+      "gearNeeded": [
+        "Main line and leader line"
+      ],
+      "steps": [
+        {
+          "title": "Tie main line to one end",
+          "detail": "Use a simple clinch knot to attach your main line (with sinker already threaded on) to one eye of the swivel."
+        },
+        {
+          "title": "Tie leader to the other end",
+          "detail": "Attach your leader line and hook to the opposite eye."
+        },
+        {
+          "title": "Check it spins freely",
+          "detail": "A good connection lets the swivel spin on its own — that’s what stops line twist during the fight."
+        }
+      ],
+      "biteFeel": "No feel of its own — it’s a connector, not a bait or weight.",
+      "commonMistakes": [
+        "Skipping the swivel entirely and tying the sinker directly to the leader, which twists line up fast"
+      ],
+      "confidenceTip": "A small, easy-to-overlook piece that quietly prevents a very common, very annoying problem — tangled, twisted line."
+    },
+    "specs": {
+      "style": "heavy-duty barrel",
+      "packaging": "10-pack"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Heavy-duty barrel swivels",
+    "relatedProducts": [
+      {
+        "id": "fluorocarbon-leader",
+        "name": "Fluorocarbon Leader Line",
+        "blurb": "Pair with these swivels for a full catfish rig.",
+        "price": 8.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "fluorocarbon-leader",
+    "name": "Fluorocarbon Leader Line",
+    "displayNameFull": "Fluorocarbon Leader Line",
+    "price": 8.5,
+    "category": "Terminal Tackle (Line)",
+    "kicker": "Line — 30 lb leader",
+    "metaTitle": "Fluorocarbon Leader Line — Ketto Outdoors",
+    "metaDescription": "30 lb fluorocarbon leader line — abrasion-resistant enough for catfish dragging your rig across the bottom.",
+    "difficulty": null,
+    "targetSpecies": "Catfish",
+    "shortDescription": "Abrasion-resistant enough to survive catfish dragging your rig across rocks and structure on the bottom.",
+    "longDescription": "30 lb test fluorocarbon, spooled and ready to cut leader lengths from — tie it between your swivel and hook for the abrasion resistance a straight main-line rig doesn’t have.",
+    "guide": {
+      "gearNeeded": [
+        "Barrel swivel and circle hook"
+      ],
+      "steps": [
+        {
+          "title": "Cut a leader length",
+          "detail": "Cut roughly 12-18 inches for a standard bottom rig — longer in clearer water, shorter in murkier water."
+        },
+        {
+          "title": "Tie to the swivel",
+          "detail": "Attach one end to your swivel with a clinch knot."
+        },
+        {
+          "title": "Tie on your hook",
+          "detail": "Attach a circle hook or dip-bait treble to the other end."
+        }
+      ],
+      "biteFeel": "No feel of its own — it’s there to survive the fight, not signal the bite.",
+      "commonMistakes": [
+        "Using your regular main line as the leader instead, which frays and breaks on rock and structure much faster"
+      ],
+      "confidenceTip": "This is the piece that keeps a good fish from breaking off on the one rock you didn’t see — cheap insurance."
+    },
+    "specs": {
+      "test": "30 lb",
+      "material": "fluorocarbon"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Fluorocarbon leader line spool",
+    "relatedProducts": [
+      {
+        "id": "barrel-swivels",
+        "name": "Barrel Swivels",
+        "blurb": "Connects this leader to your main line.",
+        "price": 4.25
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "catfish-stink-bait",
+    "name": "Catfish Stink Bait",
+    "displayNameFull": "Prepared Catfish Dip Bait",
+    "price": 6.5,
+    "category": "Natural Bait / Prepared Bait",
+    "kicker": "Bait — prepared dip/paste",
+    "metaTitle": "Catfish Stink Bait — Ketto Outdoors",
+    "metaDescription": "Prepared dip/paste bait for catfish. No cut bait or chicken liver required to start.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 1,
+      "outOf": 10
+    },
+    "targetSpecies": "Catfish",
+    "shortDescription": "No cut bait or chicken liver required to start — just dip the treble hook in and cast.",
+    "longDescription": "A prepared, ready-to-use dip/paste bait built for use with a bait-holder spring treble hook — catfish locate it by smell, so it works even in murky or muddy water.",
+    "guide": {
+      "gearNeeded": [
+        "Dip bait treble hook (spring style)"
+      ],
+      "steps": [
+        {
+          "title": "Load the spring hook",
+          "detail": "Dip and pack the spring on your treble hook with bait until it holds a solid wad."
+        },
+        {
+          "title": "Cast gently",
+          "detail": "A smooth cast keeps the bait on the hook — no need to power through the cast."
+        },
+        {
+          "title": "Let it sit and work",
+          "detail": "Leave it in place — the scent spreads through the water and draws fish in over time."
+        },
+        {
+          "title": "Reload periodically",
+          "detail": "Check every 20-30 minutes and reload if the bait has washed off."
+        }
+      ],
+      "biteFeel": "A steady pull or the rod tip loading down — this is a wait-and-watch bait.",
+      "commonMistakes": [
+        "Recasting too often instead of letting one spot build scent over time"
+      ],
+      "confidenceTip": "This is genuinely the simplest way to start catfishing — no bait prep, no cutting, just dip and cast."
+    },
+    "specs": {
+      "style": "prepared dip/paste bait"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Prepared catfish dip bait",
+    "relatedProducts": [
+      {
+        "id": "dip-bait-treble-hooks",
+        "name": "Dip Bait Treble Hooks",
+        "blurb": "The hook this bait is built for.",
+        "price": 5.5
+      }
+    ],
+    "reviewsSectionPresent": false
+  },
+  {
+    "id": "catfish-spinning-combo",
+    "name": "Catfish Spinning Combo",
+    "displayNameFull": "Medium-Heavy Catfish Spinning Combo",
+    "price": 54.99,
+    "category": "Combo / Rod & Reel",
+    "kicker": "Combo — 7' Medium-Heavy Rod + Spinning Reel",
+    "metaTitle": "Catfish Spinning Combo — Ketto Outdoors",
+    "metaDescription": "A name-brand medium-heavy spinning combo built for catfish, spooled with heavier line and ready to fish.",
+    "difficulty": {
+      "label": "Beginner",
+      "number": 2,
+      "outOf": 10
+    },
+    "targetSpecies": "Catfish",
+    "bestFor": "Bank and dock fishing for catfish",
+    "shortDescription": "Catfish pull harder than standard bass gear is built for — this is rated for the fight and the weight of a full catfish rig.",
+    "longDescription": "A 7 ft, medium-heavy spinning combo spooled with heavier line — built with more backbone and drag than our standard spinning combo, so it can handle both bigger fish and the heavier sinkers a catfish rig needs to cast.",
+    "guide": {
+      "gearNeeded": [
+        "A full catfish rig — see our First Catfish Kit"
+      ],
+      "steps": [
+        {
+          "title": "Check the drag",
+          "detail": "Set your drag firm enough to fight a strong fish but loose enough to give line under a hard run — tighten until you can still pull line by hand with steady pressure."
+        },
+        {
+          "title": "Cast the heavier rig",
+          "detail": "The extra backbone in this rod is built to cast heavier sinkers than a standard spinning rod comfortably handles."
+        },
+        {
+          "title": "Let the rod load up on a bite",
+          "detail": "With circle hooks, let the rod bend and the fish hook itself, then start reeling steadily."
+        }
+      ],
+      "biteFeel": "Depends on the rig — this combo is built to handle the fight once you’re hooked up, not to change what the bite itself feels like.",
+      "commonMistakes": [
+        "Using light bass tackle for catfish, which gets outmatched fast by both the fish and the heavier terminal tackle"
+      ],
+      "confidenceTip": "This is a genuine step up in backbone from our bass combo, not just a bigger label — it’s built for this specific job."
+    },
+    "specs": {
+      "rodLength": "7'",
+      "rodPower": "medium-heavy",
+      "reelSize": "4000-size",
+      "gearRatio": "5.2:1"
+    },
+    "colorOptions": null,
+    "trustBadges": [
+      "Ships in 1-2 business days",
+      "30-day returns on unused gear"
+    ],
+    "imagePlaceholderAlt": "Catfish spinning combo",
+    "relatedProducts": [
+      {
+        "id": "circle-hooks",
+        "name": "Circle Hooks",
+        "blurb": "Rig this combo with a proper catfish hook.",
+        "price": 5.95
+      },
+      {
+        "id": "sliding-egg-sinkers",
+        "name": "Sliding Egg Sinkers",
+        "blurb": "The standard catfish rig weight.",
+        "price": 4.5
+      }
+    ],
+    "reviewsSectionPresent": true,
+    "reviewsSectionLabel": "What anglers say"
   }
 ];
 
