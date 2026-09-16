@@ -22,8 +22,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           &times;
         </button>
         <Link to="/" onClick={onClose} style={linkStyle}>Home</Link>
+        <Link to="/kits" onClick={onClose} style={linkStyle}>Shop Kits</Link>
+        <Link to="/shop" onClick={onClose} style={linkStyle}>All Gear</Link>
         <Link to="/new-to-fishing" onClick={onClose} style={linkStyle}>New to Fishing</Link>
-        <Link to="/shop" onClick={onClose} style={linkStyle}>Shop Gear</Link>
         <button
           onClick={() => {
             onClose();

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../../state/CartContext';
 import { useEscapeKey } from '../../hooks/useEscapeKey';
+import { BUNDLES } from '../../data/bundles';
 
 export function CartDrawer() {
   const { cartOpen, closeCart, items, hasItems, cartTotal, increment, decrement, removeFromCart } = useCart();
@@ -41,11 +42,15 @@ export function CartDrawer() {
           ) : (
             <>
               <p style={{ opacity: 0.7, fontSize: 14, margin: '0 0 14px' }}>Your cart is empty.</p>
-              <Link to="/product/deep-six" onClick={closeCart} style={{ display: 'block', background: 'var(--cream)', padding: '14px 16px', borderRadius: 8, textDecoration: 'none' }}>
-                <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Beginner pick</div>
-                <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--ink)', marginTop: 2 }}>Deep Six — $14.50</div>
-                <div style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.65 }}>Cast it out and reel steady. Great first lure.</div>
-              </Link>
+              {BUNDLES[0] && (
+                <Link to={`/kits/${BUNDLES[0].slug}`} onClick={closeCart} style={{ display: 'block', background: 'var(--cream)', padding: '14px 16px', borderRadius: 8, textDecoration: 'none' }}>
+                  <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Not sure where to start?</div>
+                  <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--ink)', marginTop: 2 }}>
+                    {BUNDLES[0].name} — ${BUNDLES[0].price.toFixed(2)}
+                  </div>
+                  <div style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.65 }}>{BUNDLES[0].tagline}</div>
+                </Link>
+              )}
             </>
           )}
         </div>

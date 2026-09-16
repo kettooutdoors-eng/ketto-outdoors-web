@@ -35,6 +35,37 @@ export interface FishingGuide {
   confidenceTip: string;
 }
 
+export interface BundleComponent {
+  /** Short name shown in the kit contents list, e.g. "Flipping jig". */
+  label: string;
+  /** Spec line, e.g. "3/8 oz, painted head with eyes, 3/0 hook". */
+  detail: string;
+  /** Plain-English "why this is in here" trust line — not a spec restated. */
+  whyThis: string;
+  sourced: 'anchor-brand' | 'private-label';
+}
+
+export interface Bundle {
+  id: string;
+  slug: string;
+  /** Scenario/outcome name, e.g. "First Bass Kit" — never just "Kit 1". */
+  name: string;
+  tagline: string;
+  price: number;
+  metaTitle: string;
+  metaDescription: string;
+  /** Who this kit is for and when you'd reach for it. */
+  scenario: string;
+  /** The "you don't need more than this to start" reassurance line. */
+  reassurance: string;
+  /** Short trust-building explanation of the sourcing decision. */
+  sourcingNote: string;
+  components: BundleComponent[];
+  /** Short "how to rig this" pointer — expand into a real guide/QR code later. */
+  riggingNote: string;
+  imagePlaceholderAlt: string;
+}
+
 export interface Product {
   id: string;
   name: string;

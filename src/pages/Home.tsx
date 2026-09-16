@@ -7,6 +7,8 @@ import { PriceTag } from '../components/ui/PriceTag';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { StepsProgress } from '../components/StepsProgress';
+import { BundleCard } from '../components/BundleCard';
+import { BUNDLES } from '../data/bundles';
 import { useAdmin } from '../state/AdminContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -134,7 +136,7 @@ export default function Home() {
             OUTDOORS
           </div>
           <div style={{ display: 'flex', flexDirection: 'column-reverse', gap: 16 }}>
-            <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Fisherman-friendly tackle</div>
+            <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>One confident answer, not fifty opinions</div>
             <h1
               style={{
                 fontSize: 58,
@@ -149,9 +151,14 @@ export default function Home() {
               WORKS.
             </h1>
           </div>
-          <BannerButton to="/shop" background="var(--rust)" color="var(--parchment)" innerStyle={{ padding: '16px 28px 16px 20px', fontSize: 14 }} style={{ filter: 'drop-shadow(4px 4px 0 rgba(36,26,16,.55))', whiteSpace: 'nowrap' }}>
-            Shop Gear
-          </BannerButton>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
+            <BannerButton to="/kits" background="var(--rust)" color="var(--parchment)" innerStyle={{ padding: '16px 28px 16px 20px', fontSize: 14 }} style={{ filter: 'drop-shadow(4px 4px 0 rgba(36,26,16,.55))', whiteSpace: 'nowrap' }}>
+              Shop Kits
+            </BannerButton>
+            <Link to="/shop" style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', opacity: 0.7 }}>
+              or browse gear individually
+            </Link>
+          </div>
         </TinFrame>
       </div>
 
@@ -176,19 +183,42 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Featured Gear */}
-      <div style={{ background: 'var(--hero-band)', paddingBottom: 8, borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)' }}>
+      {/* Kits — the primary shopping path */}
+      <div style={{ background: 'var(--hero-band)', paddingBottom: 56, borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)' }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Featured Gear</h2>
-          <p style={{ margin: '12px 0 0', fontSize: 14, opacity: 0.7 }}>We surveyed the fish. They didn't answer, but these three get bit the most anyway.</p>
+          <div className="card-kicker" style={{ fontSize: 11 }}>One decision, not fifty</div>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 8 }}>Stop Guessing What You Need</h2>
+          <p style={{ margin: '12px auto 0', maxWidth: '56ch', fontSize: 14, opacity: 0.75 }}>
+            Every kit is matched gear, not a random pile of parts — a rod, hooks, weights, and lures that are all meant to work together, picked by us so you don't have to guess.
+          </p>
           <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
         </div>
+        <div style={{ maxWidth: 400, margin: '36px auto 0', padding: '0 40px' }}>
+          {BUNDLES[0] ? (
+            <BundleCard bundle={BUNDLES[0]} />
+          ) : (
+            <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
+          )}
+        </div>
+        <p style={{ textAlign: 'center', marginTop: 24 }}>
+          <Link to="/kits" style={{ fontSize: 13, fontWeight: 700, color: 'var(--rust)' }}>
+            See all kits →
+          </Link>
+        </p>
+      </div>
+
+      {/* Individual gear — secondary path */}
+      <div style={{ paddingBottom: 8 }}>
+        <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 32, letterSpacing: '-0.03em' }}>Already know what you're after?</h2>
+          <p style={{ margin: '12px 0 0', fontSize: 14, opacity: 0.7 }}>Shop individual gear piece by piece — these three get picked the most.</p>
+        </div>
         {isAdmin && (
-          <div style={{ textAlign: 'center', paddingBottom: 12, fontSize: 12, color: 'var(--rust)', fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase' }}>
+          <div style={{ textAlign: 'center', paddingTop: 12, fontSize: 12, color: 'var(--rust)', fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase' }}>
             Admin mode — pick featured products below
           </div>
         )}
-        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, padding: '0 40px 56px' }}>
+        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, padding: '28px 40px 56px' }}>
           {featured.map((key, i) => {
             const card = FEATURED_CATALOG[key];
             if (!card) return null;
@@ -252,9 +282,9 @@ export default function Home() {
           STOP GUESSING. START FISHING.
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
-          <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>Ketto Outdoors — Full lineup</div>
-          <BannerButton to="/shop" background="var(--rust)" color="var(--cream)" style={{ filter: 'drop-shadow(4px 4px 0 rgba(0,0,0,.35))' }} innerStyle={{ padding: '16px 28px 16px 20px' }}>
-            Shop all gear
+          <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit, one price, no guessing</div>
+          <BannerButton to="/kits" background="var(--rust)" color="var(--cream)" style={{ filter: 'drop-shadow(4px 4px 0 rgba(0,0,0,.35))' }} innerStyle={{ padding: '16px 28px 16px 20px' }}>
+            Shop kits
           </BannerButton>
         </div>
       </div>

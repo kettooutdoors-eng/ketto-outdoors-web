@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { PRODUCTS } from '../data/products';
+import { BUNDLES } from '../data/bundles';
 
 const CART_KEY = 'ketto-cart';
 
@@ -89,7 +90,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const items = useMemo<CartLineItem[]>(() => {
     return Object.entries(cart)
       .map(([id, qty]) => {
-        const product = PRODUCTS.find((p) => p.id === id);
+        const product = PRODUCTS.find((p) => p.id === id) ?? BUNDLES.find((b) => b.id === id);
         if (!product) return null;
         return {
           id,

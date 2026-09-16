@@ -37,6 +37,23 @@ export function Nav() {
       </Link>
 
       <Link
+        to="/shop"
+        className="nav-link-desktop"
+        style={{
+          fontSize: 12,
+          letterSpacing: '.1em',
+          textTransform: 'uppercase',
+          color: 'var(--ink)',
+          fontWeight: 800,
+          background: 'var(--parchment)',
+          border: '2px solid var(--ink)',
+          padding: '8px 14px',
+        }}
+      >
+        All Gear
+      </Link>
+
+      <Link
         to="/new-to-fishing"
         className="nav-link-desktop"
         style={{
@@ -53,8 +70,8 @@ export function Nav() {
         New to Fishing
       </Link>
 
-      <BannerButton to="/shop" background="var(--forest)" color="var(--cream)">
-        Shop Gear
+      <BannerButton to="/kits" background="var(--forest)" color="var(--cream)">
+        Shop Kits
       </BannerButton>
 
       {searchOpen && (
