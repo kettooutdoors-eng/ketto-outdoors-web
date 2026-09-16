@@ -5,6 +5,8 @@ import { getBundle } from '../data/bundles';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { BundleCard } from '../components/BundleCard';
 import { ProductCard } from '../components/ProductCard';
+import { TinFrame } from '../components/ui/TinFrame';
+import { UsStateMap } from '../components/UsStateMap';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function GearByState() {
@@ -46,20 +48,35 @@ export default function GearByState() {
         <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, opacity: 0.8 }}>
           Pick your state and we'll show you the freshwater fish beginners there usually go after, and the gear that matches.
         </p>
+      </div>
 
-        <select
-          aria-label="Select your state"
-          value={state}
-          onChange={(e) => handleSelect(e.target.value)}
-          style={{ marginTop: 24, padding: '12px 18px', border: '2px solid var(--forest)', fontSize: 15, fontWeight: 700, background: 'var(--cream)', minWidth: 260 }}
-        >
-          <option value="">Choose your state...</option>
-          {STATE_LIST.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
+      <div style={{ padding: '40px 40px 8px', maxWidth: 900, margin: '0 auto' }}>
+        <TinFrame shadow="lg">
+          <div style={{ padding: '32px 28px', width: '100%', textAlign: 'center' }}>
+            <div className="card-kicker" style={{ marginBottom: 4 }}>Tap your state</div>
+            <h2 style={{ fontSize: 24, marginBottom: 18 }}>{state ? `You picked ${state}` : 'Where do you fish?'}</h2>
+            <UsStateMap selected={state} onSelect={handleSelect} />
+            <div style={{ marginTop: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, flexWrap: 'wrap' }}>
+              <label htmlFor="state-select" style={{ fontSize: 12, opacity: 0.65, fontWeight: 700 }}>
+                Or choose from the list:
+              </label>
+              <select
+                id="state-select"
+                aria-label="Select your state"
+                value={state}
+                onChange={(e) => handleSelect(e.target.value)}
+                style={{ padding: '10px 14px', border: '2px solid var(--forest)', fontSize: 14, fontWeight: 700, background: 'var(--cream)', minWidth: 220 }}
+              >
+                <option value="">Choose your state...</option>
+                {STATE_LIST.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </TinFrame>
       </div>
 
       {profile && bundle ? (
