@@ -102,7 +102,7 @@ export const BUNDLES: Bundle[] = [
     scenario: 'You’ve genuinely never done this before — no rod, no idea what half the words mean, and you’d rather just go stand by the water with your kid or a friend and catch something than research technique first.',
     reassurance: 'This is the whole thing. Tie on a hook, clip on a bobber, drop it in near a dock or some weeds, and wait for the bobber to go under. You don’t need to know how to cast far or work a lure for this to work.',
     sourcingNote: 'A shorter, lighter rod is genuinely easier to handle for a first trip — that’s the name-brand piece, so you’re not learning on something flimsy. Everything else here is ours: sized-down hooks and a scented soft bait so nobody has to go dig worms out of the backyard first.',
-    riggingNote: 'One rig, one knot, four steps. This is the entire setup — there’s nothing else in this kit to figure out.',
+    riggingNote: 'One rig, one knot, five steps. This is the entire setup — there’s nothing else in this kit to figure out.',
     riggingSteps: [
       { title: 'Tie on the hook', detail: 'Thread your line through the hook’s eye and tie an improved clinch knot: wrap the tag end around the main line 5–6 times, pass it back through the loop, wet it, and pull tight.' },
       { title: 'Pinch on a split shot', detail: 'Pinch one split shot weight onto the line about 6–12 inches above the hook — just enough to sink the bait, not so much it drags the bobber under.' },
