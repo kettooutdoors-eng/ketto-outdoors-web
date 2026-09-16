@@ -9,6 +9,7 @@ import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { StepsProgress } from '../components/StepsProgress';
 import { BundleCard } from '../components/BundleCard';
 import { BUNDLES } from '../data/bundles';
+import { BITING_NOW_SEASON } from '../data/bitingNow';
 import { useAdmin } from '../state/AdminContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -202,6 +203,20 @@ export default function Home() {
         ) : (
           <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
         )}
+      </div>
+
+      {/* What's Biting Now teaser */}
+      <div style={{ background: 'var(--ink)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <div>
+          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--mustard)', fontWeight: 700 }}>{BITING_NOW_SEASON} picks</span>{' '}
+          <span style={{ fontSize: 15, marginLeft: 8 }}>Don't want to pick at all? See what's biting right now.</span>
+        </div>
+        <Link
+          to="/biting-now"
+          style={{ fontSize: 13, fontWeight: 800, color: 'var(--cream)', background: 'var(--rust)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
+        >
+          What's Biting Now →
+        </Link>
       </div>
 
       {/* Individual gear — secondary path */}

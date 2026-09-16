@@ -40,6 +40,7 @@ export function Footer() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginTop: 4, alignItems: 'center' }}>
           <Link to="/" style={linkStyle}>Home</Link>
           <Link to="/kits" style={linkStyle}>Shop kits</Link>
+          <Link to="/biting-now" style={linkStyle}>What's biting now</Link>
           <Link to="/shop" style={linkStyle}>Shop all gear</Link>
           <Link to="/new-to-fishing" style={linkStyle}>New to fishing guide</Link>
           <Link to="/blog" style={linkStyle}>Blog</Link>

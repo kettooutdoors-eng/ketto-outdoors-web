@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ProductCard } from '../components/ProductCard';
 import { BannerButton } from '../components/ui/BannerButton';
-import { ALL_SHOP_ITEMS, FILTER_DIFFICULTIES, FILTER_TYPES, FILTER_SORTS, SHOP_META } from '../data/shop';
+import { ALL_SHOP_ITEMS, FILTER_DIFFICULTIES, FILTER_TYPES, FILTER_FISH, FILTER_SORTS, SHOP_META } from '../data/shop';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Shop() {
@@ -11,6 +11,7 @@ export default function Shop() {
   const [query, setQuery] = useState(searchParams.get('q') || '');
   const [difficulty, setDifficulty] = useState(searchParams.get('difficulty') || 'All difficulties');
   const [type, setType] = useState('All types');
+  const [fish, setFish] = useState(searchParams.get('fish') || 'All fish');
   const [sort, setSort] = useState('Featured');
 
   const items = useMemo(() => {
@@ -18,6 +19,9 @@ export default function Shop() {
       if (query && !`${item.name} ${item.kicker} ${item.type}`.toLowerCase().includes(query.toLowerCase())) return false;
       if (difficulty !== 'All difficulties' && item.difficultyLabel !== difficulty) return false;
       if (type !== 'All types' && item.type !== type) return false;
+      // Species-agnostic items (empty species[]) always pass a fish filter —
+      // they're not wrong for that species, just not specific to it.
+      if (fish !== 'All fish' && item.species.length > 0 && !item.species.includes(fish)) return false;
       return true;
     });
     list = list.slice();
@@ -41,7 +45,7 @@ export default function Shop() {
         break;
     }
     return list;
-  }, [query, difficulty, type, sort]);
+  }, [query, difficulty, type, fish, sort]);
 
   return (
     <div>
@@ -70,6 +74,11 @@ export default function Shop() {
         <select aria-label="Filter by type" value={type} onChange={(e) => setType(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
           {FILTER_TYPES.map((t) => (
             <option key={t}>{t}</option>
+          ))}
+        </select>
+        <select aria-label="Filter by target fish" value={fish} onChange={(e) => setFish(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
+          {FILTER_FISH.map((f) => (
+            <option key={f}>{f}</option>
           ))}
         </select>
         <select aria-label="Sort by" value={sort} onChange={(e) => setSort(e.target.value)} style={{ padding: '10px 12px', border: '2px solid var(--forest)', fontSize: 13, fontWeight: 700, background: 'var(--cream)' }}>
@@ -103,6 +112,11 @@ export default function Shop() {
         <BannerButton to="/new-to-fishing" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           See how to start
         </BannerButton>
+        <p style={{ marginTop: 18 }}>
+          <Link to="/biting-now" style={{ fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}>
+            Or see what's biting right now →
+          </Link>
+        </p>
       </div>
     </div>
   );
