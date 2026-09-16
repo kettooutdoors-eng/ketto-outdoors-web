@@ -1,4 +1,4 @@
-import { STATE_GRID, GRID_COLS } from '../data/stateGrid';
+import { US_STATE_PATHS, US_MAP_VIEWBOX } from '../data/usStatePaths';
 
 interface UsStateMapProps {
   selected: string;
@@ -7,60 +7,50 @@ interface UsStateMapProps {
 
 export function UsStateMap({ selected, onSelect }: UsStateMapProps) {
   return (
-    <div style={{ overflowX: 'auto', padding: '4px 4px 12px' }}>
-      <div
-        className="us-state-map"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${GRID_COLS}, 34px)`,
-          gridAutoRows: '34px',
-          gap: 3,
-          width: 'max-content',
-          margin: '0 auto',
-        }}
-      >
-        {STATE_GRID.map((s) => {
-          const isSelected = s.name === selected;
-          const isInset = s.row === 8;
-          return (
-            <button
-              key={s.code}
-              type="button"
-              aria-pressed={isSelected}
-              aria-label={s.name}
-              title={s.name}
-              onClick={() => onSelect(s.name)}
-              style={{
-                gridColumn: s.col,
-                gridRow: s.row,
-                marginTop: isInset ? 14 : 0,
-                width: 34,
-                height: 34,
-                fontSize: 10.5,
-                fontWeight: 800,
-                fontFamily: 'var(--font-body)',
-                letterSpacing: '.01em',
-                border: `2px solid var(--ink)`,
-                background: isSelected ? 'var(--rust)' : 'var(--parchment)',
-                color: isSelected ? 'var(--cream)' : 'var(--ink)',
-                cursor: 'pointer',
-                transition: 'transform .1s ease, background .15s ease',
-                transform: isSelected ? 'scale(1.12)' : 'scale(1)',
-                zIndex: isSelected ? 1 : 0,
-                boxShadow: isSelected ? '2px 2px 0 rgba(36,26,16,.4)' : 'none',
-              }}
-              onMouseEnter={(e) => {
-                if (!isSelected) e.currentTarget.style.background = 'var(--mustard)';
-              }}
-              onMouseLeave={(e) => {
-                if (!isSelected) e.currentTarget.style.background = 'var(--parchment)';
-              }}
-            >
-              {s.code}
-            </button>
-          );
-        })}
-      </div>
-    </div>
+    <svg viewBox={US_MAP_VIEWBOX} role="group" aria-label="Map of the United States — select your state" style={{ width: '100%', height: 'auto', maxHeight: 480, display: 'block', margin: '0 auto' }}>
+      {Object.entries(US_STATE_PATHS).map(([name, { d }]) => {
+        const isSelected = name === selected;
+        return (
+          <path
+            key={name}
+            d={d}
+            role="button"
+            tabIndex={0}
+            aria-label={name}
+            aria-pressed={isSelected}
+            onClick={() => onSelect(name)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onSelect(name);
+              }
+            }}
+            style={{
+              fill: isSelected ? 'var(--rust)' : 'var(--parchment)',
+              stroke: 'var(--ink)',
+              strokeWidth: isSelected ? 2 : 1,
+              strokeLinejoin: 'round',
+              cursor: 'pointer',
+              outline: 'none',
+              transition: 'fill .12s ease',
+            }}
+            onMouseEnter={(e) => {
+              if (!isSelected) e.currentTarget.style.fill = 'var(--mustard)';
+            }}
+            onMouseLeave={(e) => {
+              if (!isSelected) e.currentTarget.style.fill = 'var(--parchment)';
+            }}
+            onFocus={(e) => {
+              if (!isSelected) e.currentTarget.style.fill = 'var(--mustard)';
+            }}
+            onBlur={(e) => {
+              if (!isSelected) e.currentTarget.style.fill = 'var(--parchment)';
+            }}
+          >
+            <title>{name}</title>
+          </path>
+        );
+      })}
+    </svg>
   );
 }
