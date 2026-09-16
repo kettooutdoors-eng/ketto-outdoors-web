@@ -45,47 +45,11 @@ export const INVENTORY_PRODUCTS: InventoryProduct[] = [
   { id: 'catfish-spinning-combo', name: 'Catfish Spinning Combo' },
 ];
 
-export const INVENTORY_DEFAULTS: Record<string, number> = {
-  'deep-six': 42,
-  driftworm: 65,
-  baithooks: 90,
-  'spinning-combo': 4,
-  baitcaster: 18,
-  longshot: 24,
-  chugger: 16,
-  ripple: 20,
-  bottomjig: 38,
-  buzzrunner: 22,
-  swimshad: 30,
-  ratlin: 27,
-  padhopper: 12,
-  flutterspoon: 33,
-  finessedrop: 9,
-  ribtail: 48,
-  crawdaddy: 26,
-  flukeshad: 35,
-  tubehead: 29,
-  'urchin-bait': 21,
-  'flipping-jig': 34,
-  'medium-crankbait': 31,
-  'wacky-worm': 52,
-  chatterbait: 28,
-  'urchin-finesse-bait': 19,
-  'bulk-sinkers': 88,
-  bobbers: 60,
-  'split-shot-weights': 95,
-  'scented-soft-bait': 44,
-  'bobber-stops': 70,
-  'junior-spinning-combo': 11,
-  'circle-hooks': 75,
-  'dip-bait-treble-hooks': 58,
-  'sliding-egg-sinkers': 66,
-  'no-roll-bank-sinkers': 54,
-  'barrel-swivels': 80,
-  'fluorocarbon-leader': 40,
-  'catfish-stink-bait': 37,
-  'catfish-spinning-combo': 8,
-};
+// Everything is out of stock until real inventory is sourced and received —
+// update these once actual stock counts exist.
+export const INVENTORY_DEFAULTS: Record<string, number> = Object.fromEntries(
+  INVENTORY_PRODUCTS.map((p) => [p.id, 0])
+);
 
 export function stockLabel(qty: number): string {
   if (qty <= 0) return 'Out of stock';
