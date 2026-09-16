@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
 import { TinFrame } from './ui/TinFrame';
 import { ImagePlaceholder } from './ui/ImagePlaceholder';
-import { StockLabel } from './ui/Misc';
 import { BannerButton } from './ui/BannerButton';
 import { useCart } from '../state/CartContext';
-import { useInventory } from '../state/InventoryContext';
 import type { ShopCatalogItem } from '../data/shop';
 
 const DIFFICULTY_COLOR: Record<string, string> = {
@@ -13,11 +11,11 @@ const DIFFICULTY_COLOR: Record<string, string> = {
   Advanced: 'var(--rust)',
 };
 
+// Stock status only shows on the product detail page (see Product.tsx) — cards
+// throughout the rest of the site (shop grid, related products, etc.) always
+// offer Add to cart regardless of real inventory.
 export function ProductCard({ item }: { item: ShopCatalogItem }) {
   const { addToCart } = useCart();
-  const { get } = useInventory();
-  const qty = get(item.id);
-  const inStock = qty > 0;
 
   return (
     <TinFrame shadow="lg">
@@ -65,19 +63,12 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
         <div style={{ fontSize: 12, letterSpacing: '.04em', color: 'var(--ink)', opacity: 0.7 }}>Target fish: {item.targetFish}</div>
         <p style={{ fontSize: 14, textWrap: 'pretty' as never }}>{item.description}</p>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
+        <div style={{ marginTop: 4 }}>
           <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>${item.price.toFixed(2)}</span>
-          <StockLabel qty={qty} />
         </div>
 
-        <BannerButton
-          fill
-          background={inStock ? 'var(--forest)' : 'rgba(36,26,16,.3)'}
-          color="var(--cream)"
-          onClick={() => inStock && addToCart(item.id)}
-          style={{ marginTop: 6, opacity: inStock ? 1 : 0.6, cursor: inStock ? 'pointer' : 'not-allowed' }}
-        >
-          {inStock ? 'Add to cart' : 'Out of stock'}
+        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 6 }}>
+          Add to cart
         </BannerButton>
       </div>
     </TinFrame>
