@@ -23,7 +23,6 @@ export const INVENTORY_PRODUCTS: InventoryProduct[] = [
   { id: 'crawdaddy', name: 'Crawdaddy' },
   { id: 'flukeshad', name: 'Flukeshad' },
   { id: 'tubehead', name: 'Tubehead' },
-  { id: 'urchin-bait', name: 'Urchin Bait' },
   { id: 'flipping-jig', name: 'Flipping Jig' },
   { id: 'medium-crankbait', name: 'Medium Crankbait' },
   { id: 'wacky-worm', name: 'Wacky Worm' },

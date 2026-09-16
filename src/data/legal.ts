@@ -4,22 +4,24 @@ export interface LegalSection {
 }
 
 export const ABOUT_CONTENT = {
-  meta: { title: 'About Us — Ketto Outdoors', description: 'We build fishermen, not just sell gear. Learn what Ketto Outdoors is about.' },
-  eyebrow: 'Gear that teaches',
+  meta: { title: 'About Us — Ketto Outdoors', description: 'Beginner-friendly fishing kits, matched and explained so you’re never guessing. Learn what Ketto Outdoors is about.' },
+  eyebrow: 'One answer, not fifty opinions',
   heading: 'About Us',
   intro: [
-    "Ketto Outdoors started with a simple frustration: most tackle shops sell gear to people who already know what they're doing, and leave everyone else to figure it out alone.",
-    "So we built something different — lures and combos chosen and labeled for exactly who they're for, with a real difficulty score, the species they actually catch, and a full beginner's guide to back it up. No jargon, no gatekeeping, no forty-dollar box of gear you'll never use.",
+    "Ketto Outdoors started with a simple frustration: ask what gear to buy in any fishing forum and you'll get fifty replies and forty conflicting opinions. Most tackle shops aren't much better — they sell gear to people who already know what they're doing, and leave everyone else to figure it out alone.",
+    "So we built something different: complete kits matched by scenario — what you're targeting, where you're fishing, how much you already know — so you get one confident answer instead of a shopping list of guesses. Every piece inside is chosen and labeled for exactly who it's for, with a real difficulty score and a full beginner's guide behind it. No jargon, no gatekeeping, no forty-dollar box of gear you'll never use.",
   ],
   sections: [
-    { heading: 'What we believe', body: "Gear should teach you something. Every product page tells you not just what a lure is, but how to fish it — retrieve speed, target species, and what a strike feels like. We'd rather sell you one lure you'll actually use than ten you won't." },
+    { heading: 'One confident answer', body: "We'd rather hand you a kit that's already matched — rod, line, hooks, bait — than a wall of options and a difficulty score you have to decode yourself. Buy the kit, follow the rigging guide, go fishing. That's the whole idea." },
+    { heading: 'How we pick what goes in the box', body: "Every kit mixes trusted name-brand gear with pieces we source and label ourselves — always disclosed, never dressed up as something it's not. The goal isn't to sell you the most expensive rod on the wall; it's to sell you the one that actually works for what you're doing." },
+    { heading: 'Freshwater first', body: "Right now we're all in on lakes, streams, and freshwater fishing — bass, catfish, panfish, and the water most beginners actually start on. We'd rather do freshwater right than do everything halfway." },
     { heading: 'Who we are', body: "We're a small team of anglers who got tired of watching new fishermen get overwhelmed at the tackle counter. Ketto Outdoors is our answer — gear that works, explained plainly." },
   ] as LegalSection[],
   ctaBanner: {
-    heading: 'New to fishing?',
-    body: "Start with our full beginner's guide — gear, casting, reeling, and handling fish.",
-    buttonLabel: 'Read the guide →',
-    href: '/new-to-fishing',
+    heading: 'Ready to stop guessing?',
+    body: "Pick the kit that matches what you're after — every piece inside is already chosen to work together.",
+    buttonLabel: 'Shop kits →',
+    href: '/kits',
   },
 };
 

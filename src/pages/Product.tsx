@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getProduct } from '../data/products';
 import { TinFrame } from '../components/ui/TinFrame';
@@ -12,6 +12,64 @@ import { useInventory } from '../state/InventoryContext';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import NotFound from './NotFound';
+
+function saveStockNotifyRequest(productId: string, productName: string, email: string) {
+  try {
+    const list = JSON.parse(localStorage.getItem('ketto-stock-notify') || '[]');
+    list.push({ productId, productName, email, date: new Date().toISOString() });
+    localStorage.setItem('ketto-stock-notify', JSON.stringify(list));
+  } catch {
+    /* ignore */
+  }
+}
+
+function NotifyWhenBackForm({ productId, productName }: { productId: string; productName: string }) {
+  const [email, setEmail] = useState('');
+  const [done, setDone] = useState(false);
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!email) return;
+    saveStockNotifyRequest(productId, productName, email);
+    setDone(true);
+    setEmail('');
+  }
+
+  if (done) {
+    return (
+      <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--forest)', border: '2px solid var(--forest)', padding: '10px 14px' }}>
+        Got it — we'll email you the second this is back.
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.04em', color: 'var(--kicker)' }}>
+        Notify me when it's back
+      </div>
+      <div style={{ display: 'flex', gap: 8 }}>
+        <input
+          type="email"
+          name="notify-email"
+          autoComplete="email"
+          required
+          aria-label="Email for restock notice"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@email.com"
+          style={{ flex: 1, padding: '10px 12px', border: '2px solid var(--ink)', background: 'var(--cream)', fontSize: 13 }}
+        />
+        <button
+          type="submit"
+          style={{ padding: '10px 16px', background: 'var(--rust)', color: '#fff', border: 'none', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
+        >
+          Notify me
+        </button>
+      </div>
+    </form>
+  );
+}
 
 export default function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -124,6 +182,8 @@ export default function ProductPage() {
           >
             {!inStock ? 'Out of stock' : needsSelection ? 'Select options' : 'Add to cart'}
           </BannerButton>
+
+          {!inStock && <NotifyWhenBackForm productId={product.id} productName={product.name} />}
 
           <div style={{ display: 'flex', gap: 16, marginTop: 8, fontSize: 12, opacity: 0.7 }}>
             {product.trustBadges.map((b) => (

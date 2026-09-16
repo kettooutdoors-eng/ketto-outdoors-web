@@ -21,7 +21,6 @@ export const SHOP_CATALOG: ShopCatalogItem[] = [
   { id: 'baithooks', name: 'Baithooks', kicker: 'Hooks — Sharp, reliable, sized for beginners', type: 'Hooks', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Any species — pick a hook to match your bait', species: [], description: 'A basic assortment of sized hooks for rigging soft plastics and live bait. Start here if you need hooks for the Driftworm.', price: 4.25 },
   { id: 'spinning-combo', name: 'Spinning Rod & Reel Combo', kicker: "Combo — 5'6\" rod + spinning reel", type: 'Combo', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'First-time casters, lighter lures', species: [], description: 'A matched rod and reel, spooled and ready to cast out of the box — the easiest way to start.', price: 54.99 },
   { id: 'baitcaster', name: 'Baitcaster Combo', kicker: "Combo — 6'6\" medium-heavy rod + baitcaster reel", type: 'Combo', difficultyLabel: 'Intermediate', difficultyScore: 6, targetFish: 'Heavier lures, pinpoint casts', species: [], description: 'A matched rod and baitcaster reel — more accurate and more power once you have the thumb control down.', price: 72.99 },
-  { id: 'urchin-bait', name: 'Urchin Bait', kicker: 'Natural bait — Cut bait for structure feeders', type: 'Natural Bait', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Sheepshead, tautog & black drum', species: [], description: "Dried, cut chunks of urchin that bottom feeders around rocks, pilings, and jetties can't resist.", price: 5.5 },
 
   // Kit components, also sold individually to replace or top off a kit.
   { id: 'flipping-jig', name: 'Flipping Jig', kicker: 'Jig — Works almost everywhere', type: 'Jig', difficultyLabel: 'Intermediate', difficultyScore: 5, targetFish: 'Largemouth & smallmouth bass', species: ['Largemouth Bass', 'Smallmouth Bass'], description: "This is the jig you tie on when you don't know what else to throw.", price: 5.5 },
@@ -66,6 +65,6 @@ export const SHOP_ARCHIVE: ShopCatalogItem[] = [
 export const ALL_SHOP_ITEMS: ShopCatalogItem[] = [...SHOP_CATALOG, ...SHOP_ARCHIVE];
 
 export const FILTER_DIFFICULTIES = ['All difficulties', 'Beginner', 'Intermediate', 'Advanced'];
-export const FILTER_TYPES = ['All types', 'Crankbait', 'Soft Plastic', 'Hooks', 'Combo', 'Spinnerbait', 'Topwater', 'Jerkbait', 'Jig', 'Bladed Jig', 'Buzzbait', 'Swimbait', 'Frog', 'Spoon', 'Drop-shot', 'Tube', 'Natural Bait', 'Prepared Bait', 'Weights', 'Float', 'Rigging'];
+export const FILTER_TYPES = ['All types', 'Crankbait', 'Soft Plastic', 'Hooks', 'Combo', 'Spinnerbait', 'Topwater', 'Jerkbait', 'Jig', 'Bladed Jig', 'Buzzbait', 'Swimbait', 'Frog', 'Spoon', 'Drop-shot', 'Tube', 'Prepared Bait', 'Weights', 'Float', 'Rigging'];
 export const FILTER_FISH = ['All fish', 'Largemouth Bass', 'Smallmouth Bass', 'Panfish', 'Catfish', 'Trout', 'Walleye', 'Pike', 'Crappie', 'Striped Bass'];
 export const FILTER_SORTS = ['Featured', 'Price: Low to High', 'Price: High to Low', 'Difficulty: Easiest First', 'Difficulty: Hardest First', 'Name: A–Z'];
