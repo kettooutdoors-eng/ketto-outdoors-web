@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Kits from './pages/Kits';
 import Kit from './pages/Kit';
 import BitingNow from './pages/BitingNow';
+import GearByState from './pages/GearByState';
 import Shop from './pages/Shop';
 import ProductPage from './pages/Product';
 import NewToFishing from './pages/NewToFishing';
@@ -35,6 +36,7 @@ function App() {
                 <Route path="kits" element={<Kits />} />
                 <Route path="kits/:slug" element={<Kit />} />
                 <Route path="biting-now" element={<BitingNow />} />
+                <Route path="gear-by-state" element={<GearByState />} />
                 <Route path="shop" element={<Shop />} />
                 <Route path="product/:id" element={<ProductPage />} />
                 <Route path="new-to-fishing" element={<NewToFishing />} />

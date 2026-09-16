@@ -219,6 +219,20 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* Gear by State teaser */}
+      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <div>
+          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--mustard)', fontWeight: 700 }}>New to your state's water?</span>{' '}
+          <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state and see the fish and gear beginners there start with.</span>
+        </div>
+        <Link
+          to="/gear-by-state"
+          style={{ fontSize: 13, fontWeight: 800, color: 'var(--ink)', background: 'var(--mustard)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
+        >
+          Gear for Your State →
+        </Link>
+      </div>
+
       {/* Individual gear — secondary path */}
       <div style={{ paddingBottom: 8 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>

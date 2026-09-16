@@ -112,9 +112,12 @@ export default function Shop() {
         <BannerButton to="/new-to-fishing" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           See how to start
         </BannerButton>
-        <p style={{ marginTop: 18 }}>
+        <p style={{ marginTop: 18, display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link to="/biting-now" style={{ fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}>
             Or see what's biting right now →
+          </Link>
+          <Link to="/gear-by-state" style={{ fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}>
+            Or find gear for your state →
           </Link>
         </p>
       </div>
