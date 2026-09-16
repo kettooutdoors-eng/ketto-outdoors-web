@@ -39,7 +39,11 @@ export const USED_GEAR_META = {
   description: 'Quality-checked used fishing gear, priced below new.',
 };
 
-export const TRADE_IN_CATEGORIES = ['Rod & reel combo', 'Rod only', 'Reel only', 'Lures / terminal tackle', 'Tackle box or bag', 'Other gear'];
+export const TRADE_IN_CATEGORIES = ['Lures / terminal tackle', 'Tackle box or bag', 'Line, leaders & accessories', 'Nets, pliers & tools', 'Other gear (no clothing)'];
+
+// Rods, reels, and combos ship for enough that the numbers rarely work out for either
+// side — and we're not set up to grade/resell apparel yet.
+export const TRADE_IN_EXCLUDED = "We don't currently take rods, reels, or rod & reel combos — they're too expensive to ship for the trade-in value to make sense — or any clothing/apparel. Everything else fishing-related is fair game.";
 
 export const TRADE_IN_META = {
   title: 'Trade In Your Gear — Ketto Outdoors',

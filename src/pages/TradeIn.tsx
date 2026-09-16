@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
-import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META, MIN_TRADE_IN_VALUE } from '../data/usedGear';
+import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META, TRADE_IN_EXCLUDED, MIN_TRADE_IN_VALUE } from '../data/usedGear';
 import { submitLead } from '../lib/leads';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -40,8 +40,9 @@ export default function TradeIn() {
         <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Free shipping, real inspection, store credit</div>
         <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 }}>Trade In Your Gear</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, opacity: 0.8 }}>
-          Rods, reels, and lures you're not using anymore don't have to end up in a drawer or the trash. Send them in — we'll pay for shipping, check them out, and pay you in store credit if they pass.
+          Lures, terminal tackle, and other gear you're not using anymore don't have to end up in a drawer or the trash. Send it in — we'll pay for shipping, check it out, and pay you in store credit if it passes.
         </p>
+        <p style={{ margin: '14px auto 0', maxWidth: '54ch', fontSize: 13, opacity: 0.65, fontStyle: 'italic' }}>{TRADE_IN_EXCLUDED}</p>
       </div>
 
       <div style={{ padding: '48px 40px 0', maxWidth: 900, margin: '0 auto' }}>
@@ -104,8 +105,8 @@ export default function TradeIn() {
               For example
             </div>
             <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0, textAlign: 'center' }}>
-              A spinning combo that sells new for <strong>$54.99</strong>, sent in and graded <strong>Like New</strong>, would earn roughly{' '}
-              <strong>$18–19 in store credit</strong>.
+              A tackle box of lures and terminal tackle worth about <strong>$50</strong> new, sent in and graded <strong>Good</strong>, would earn roughly{' '}
+              <strong>$10–12 in store credit</strong>.
             </p>
           </div>
         </TinFrame>
@@ -183,7 +184,7 @@ export default function TradeIn() {
                     id="ti-description"
                     value={form.description}
                     onChange={(e) => update('description', e.target.value)}
-                    placeholder="e.g. Ugly Stik 6'6 spinning combo, used a handful of times, reel works fine, a couple scuffs on the rod."
+                    placeholder="e.g. Tackle box with about 15 assorted lures — mostly crankbaits and soft plastics, most look barely used."
                     rows={4}
                     style={{ padding: '11px 12px', border: '2px solid rgba(27,67,50,.25)', fontSize: 14, width: '100%', fontFamily: 'inherit', resize: 'vertical' }}
                   />
