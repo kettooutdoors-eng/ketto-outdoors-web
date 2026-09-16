@@ -3,51 +3,192 @@ export interface BlogSection {
   body: string;
 }
 
+export interface BlogEndCta {
+  heading: string;
+  body: string;
+  buttonLabel: string;
+  href: string;
+}
+
+export interface BlogArticle {
+  slug: string;
+  /** Matches a BlogCategory slug. */
+  category: string;
+  eyebrow: string;
+  title: string;
+  byline: string;
+  heroImagePlaceholder: string;
+  bodyIntro: string;
+  sections: BlogSection[];
+  endCta: BlogEndCta;
+}
+
 export const BLOG_INDEX_META = { title: 'The Ketto Journal — Fishing Blog', description: 'Straight talk on lures, technique, and getting started fishing.' };
 
-export const BLOG_ARTICLE = {
-  eyebrow: "Beginner's guide",
-  title: 'How to Start Fishing: A No-Nonsense Guide for Your First Trip',
-  byline: 'By Ketto Outdoors · 6 min read',
-  heroImagePlaceholder: 'Drop a photo of a beginner casting from shore',
-  bodyIntro:
-    "Every angler who's ever landed a fish started exactly where you are now: standing at the water's edge, rod in hand, not totally sure what happens next. Good news — fishing is one of the few outdoor skills you can pick up in an afternoon and spend the rest of your life getting better at. Here's what actually matters for trip one.",
-  sections: [
-    {
-      heading: 'Start with one rod, one reel, one lure',
-      body: "You don't need a tackle box full of gear to catch your first fish. A spinning combo (the easiest setup to learn on) and a single beginner-friendly lure — a crankbait or a soft plastic on a jighead — will out-fish an overloaded box every time. Simplicity means fewer decisions and more casts in the water.",
+export const BLOG_ARTICLES: BlogArticle[] = [
+  {
+    slug: 'how-to-start-fishing',
+    category: 'beginner-guides',
+    eyebrow: "Beginner's guide",
+    title: 'How to Start Fishing: A No-Nonsense Guide for Your First Trip',
+    byline: 'By Ketto Outdoors · 6 min read',
+    heroImagePlaceholder: 'Drop a photo of a beginner casting from shore',
+    bodyIntro:
+      "Every angler who's ever landed a fish started exactly where you are now: standing at the water's edge, rod in hand, not totally sure what happens next. Good news — fishing is one of the few outdoor skills you can pick up in an afternoon and spend the rest of your life getting better at. Here's what actually matters for trip one.",
+    sections: [
+      {
+        heading: 'Start with one rod, one reel, one lure',
+        body: "You don't need a tackle box full of gear to catch your first fish. A spinning combo (the easiest setup to learn on) and a single beginner-friendly lure — a crankbait or a soft plastic on a jighead — will out-fish an overloaded box every time. Simplicity means fewer decisions and more casts in the water.",
+      },
+      {
+        heading: 'The cast is a rhythm, not a launch',
+        body: "Open the bail, swing the rod back over your shoulder, then forward, and let go of the line right as the rod passes vertical. Your first few casts will land short or off to the side — that's universal, not a sign you're doing it wrong. Distance comes with reps, not effort.",
+      },
+      {
+        heading: 'Reel steady, and match the pace to your lure',
+        body: 'Most beginner mistakes happen on the retrieve — reeling too fast, too slow, or inconsistently. Every Ketto lure lists a recommended retrieve speed right on its page, so check that before you buy and again before you cast. A steady, even pace beats anything fancy while you’re still learning what a bite feels like.',
+      },
+      {
+        heading: 'Know what a strike feels like',
+        body: "It's usually a sharp tap, a sudden weight, or your line going tight and moving on its own. When it happens, don't yank — just keep reeling at that same steady pace. The hook does the work; your job is to stay calm and keep tension on the line.",
+      },
+      {
+        heading: "Pick water that's forgiving",
+        body: "A local pond, a calm section of lake shoreline, or a slow-moving stream are all better first stops than a big open reservoir or fast current. Smaller, calmer water means more fish within casting range and fewer variables to manage while you're still building feel for the gear.",
+      },
+    ],
+    endCta: {
+      heading: 'Ready for the full walkthrough?',
+      body: 'Our New to Fishing guide covers gear, casting, reeling, and handling fish — start to finish.',
+      buttonLabel: 'Read the guide →',
+      href: '/new-to-fishing',
     },
-    {
-      heading: 'The cast is a rhythm, not a launch',
-      body: "Open the bail, swing the rod back over your shoulder, then forward, and let go of the line right as the rod passes vertical. Your first few casts will land short or off to the side — that's universal, not a sign you're doing it wrong. Distance comes with reps, not effort.",
-    },
-    {
-      heading: 'Reel steady, and match the pace to your lure',
-      body: 'Most beginner mistakes happen on the retrieve — reeling too fast, too slow, or inconsistently. Every Ketto lure lists a recommended retrieve speed right on its page, so check that before you buy and again before you cast. A steady, even pace beats anything fancy while you’re still learning what a bite feels like.',
-    },
-    {
-      heading: 'Know what a strike feels like',
-      body: "It's usually a sharp tap, a sudden weight, or your line going tight and moving on its own. When it happens, don't yank — just keep reeling at that same steady pace. The hook does the work; your job is to stay calm and keep tension on the line.",
-    },
-    {
-      heading: "Pick water that's forgiving",
-      body: "A local pond, a calm section of lake shoreline, or a slow-moving stream are all better first stops than a big open reservoir or fast current. Smaller, calmer water means more fish within casting range and fewer variables to manage while you're still building feel for the gear.",
-    },
-  ] as BlogSection[],
-  endCta: {
-    heading: 'Ready for the full walkthrough?',
-    body: 'Our New to Fishing guide covers gear, casting, reeling, and handling fish — start to finish.',
-    buttonLabel: 'Read the guide →',
-    href: '/new-to-fishing',
   },
-};
+  {
+    slug: 'how-to-pick-your-first-lure',
+    category: 'gear-and-lures',
+    eyebrow: 'Gear & Lures',
+    title: 'How to Pick Your First Lure (Without Reading Twenty Reviews)',
+    byline: 'By Ketto Outdoors · 5 min read',
+    heroImagePlaceholder: 'Drop a photo of a handful of beginner lures laid out',
+    bodyIntro:
+      "Search \"best lure for beginners\" and you'll get fifty answers, most of them written by people who forgot what it's like to not know the difference between a jig and a jerkbait. Here's the actual, short answer.",
+    sections: [
+      {
+        heading: "Start with what you're targeting, not what looks cool",
+        body: "The flashiest lure in the aisle isn't the one that catches fish for you — the one matched to your target species and water is. Largemouth bass in a weedy pond want something different than crappie suspended over brush. Every lure on our site lists its target species up front for exactly this reason — check that before anything else.",
+      },
+      {
+        heading: "Forgiving beats \"advanced\" every time",
+        body: "Every lure has a difficulty score for a reason: some genuinely fish themselves (cast, reel steady, done), and some take months of practice to work a bite out of. A squarebill crankbait or a wacky-rigged worm will out-fish a finesse jig in your hands on week one, even if the finesse jig catches more fish in an expert's hands. Buy for where you are now, not where you'll be in a year.",
+      },
+      {
+        heading: 'One good lure beats a tackle box of maybes',
+        body: "You don't need six colors of the same crankbait or a lure for every condition on day one. A single beginner-friendly crankbait or soft plastic, fished confidently, will out-fish an overstuffed box you're afraid to actually use. Add variety once you know what you're doing with the first one.",
+      },
+      {
+        heading: "Read the \"How to Fish It\" section before you buy, not after",
+        body: "Every product page on our site tells you the retrieve speed, what a strike feels like, and the most common beginner mistake with that specific lure — before you've spent a dollar. If a product page can't tell you exactly how to fish it, that's a sign to keep looking.",
+      },
+      {
+        heading: 'Still stuck? Let a kit make the call',
+        body: "If you genuinely don't know where to start, that's what our kits are for — every piece already matched to a specific scenario (first bass, first catfish, never fished before) so you're not making six separate gear decisions before your first cast.",
+      },
+    ],
+    endCta: {
+      heading: 'Ready to pick one?',
+      body: 'Browse gear filtered by difficulty and target fish, or let a kit make the decision for you.',
+      buttonLabel: 'Shop all gear →',
+      href: '/shop',
+    },
+  },
+  {
+    slug: 'retrieve-speed-101',
+    category: 'technique',
+    eyebrow: 'Technique',
+    title: 'Retrieve Speed 101: The One Skill That Fixes Most Beginner Mistakes',
+    byline: 'By Ketto Outdoors · 5 min read',
+    heroImagePlaceholder: 'Drop a photo of someone mid-retrieve, rod loaded up',
+    bodyIntro:
+      "Ask ten experienced anglers what separates a good angler from a beginner and most won't say knot-tying or casting distance — they'll say retrieve speed. It's the single most common thing beginners get wrong, and it's completely fixable.",
+    sections: [
+      {
+        heading: 'Every lure has a "right" speed, and it\'s not a guess',
+        body: 'A crankbait needs a steady pace that keeps its bill digging and wobbling — too slow and it just drags, too fast and it blows out of the strike zone. A soft plastic worm wants the opposite: slow, patient, almost boring. We list the exact recommended pace on every product page precisely because "reel it in" isn\'t specific enough to actually work.',
+      },
+      {
+        heading: "The rod tip tells you if you're doing it right",
+        body: "For a crankbait or spinnerbait, you should feel a steady rhythmic thump or vibration through the rod the entire retrieve — that's the lure working correctly. Feel nothing? You're probably too slow. Feel it disappear partway through? You've reeled out of the lure's effective depth or speed range.",
+      },
+      {
+        heading: 'Consistency beats speed',
+        body: "A slow, dead-even retrieve will out-fish an erratic fast one almost every time you're still learning. Fish key in on rhythm — an inconsistent retrieve reads as unnatural in a way that's hard to fake your way through as a beginner. Pick a pace and hold it for the whole cast before you start experimenting.",
+      },
+      {
+        heading: 'When to actually change something',
+        body: "If you've fished a spot for fifteen or twenty casts with zero action, that's the signal to change speed or lure — not before. Give a retrieve a real chance before deciding it isn't working; most \"dead\" water just needed three more casts at a different pace.",
+      },
+    ],
+    endCta: {
+      heading: 'Want the exact pace for your lure?',
+      body: 'Every product page lists the retrieve speed and what a strike feels like under "How to Fish It."',
+      buttonLabel: 'Browse gear →',
+      href: '/shop',
+    },
+  },
+  {
+    slug: 'how-to-read-new-water',
+    category: 'where-to-fish',
+    eyebrow: 'Where to Fish',
+    title: 'How to Read a New Pond or Lake in Five Minutes',
+    byline: 'By Ketto Outdoors · 4 min read',
+    heroImagePlaceholder: 'Drop a photo of a shoreline with docks or weed edges visible',
+    bodyIntro:
+      "Show up at water you've never fished and it can look like one big guessing game. It isn't — freshwater fish relate to the same handful of features almost everywhere, and you can spot most of them from the bank in under five minutes.",
+    sections: [
+      {
+        heading: 'Structure beats open water, always',
+        body: 'Docks, fallen trees, rock piles, and weed lines all give fish a place to ambush prey and hide from predators — open, featureless water rarely holds fish in any real numbers. Walk the bank and note every piece of visible structure before you make a single cast.',
+      },
+      {
+        heading: 'Weed edges are usually the easiest read',
+        body: "Where visible weeds or lily pads meet open water is one of the most reliable spots on any pond or lake — cast parallel to the edge instead of straight into the weeds where you'll snag constantly.",
+      },
+      {
+        heading: 'Depth changes concentrate fish',
+        body: "A point, a drop-off, a creek channel, or the deep end of a dock all mark a change in depth — fish stack up along these edges more than on a flat, uniform bottom. If you can see a color change in the water (lighter to darker), that's often a depth change.",
+      },
+      {
+        heading: 'Time of day matters as much as the spot',
+        body: 'The best-looking structure in the world fishes slow at high noon in bright sun. Early morning and evening — low light, cooler water — consistently outproduce the middle of the day, especially as a beginner still learning to read subtler bites.',
+      },
+      {
+        heading: "Don't overthink public water",
+        body: "You don't need a boat or a secret spot. Most city and state parks with any pond or lake allow shore fishing, and a public boat ramp or pier is often the single best piece of structure at that entire body of water — it's already concentrating fish for you.",
+      },
+    ],
+    endCta: {
+      heading: 'Know your water, not sure about your state?',
+      body: 'See the freshwater species and gear beginners in your state typically start with.',
+      buttonLabel: 'Find gear for your state →',
+      href: '/gear-by-state',
+    },
+  },
+];
+
+export function getArticle(category: string, slug: string): BlogArticle | undefined {
+  return BLOG_ARTICLES.find((a) => a.category === category && a.slug === slug);
+}
+
+export function getArticlesByCategory(category: string): BlogArticle[] {
+  return BLOG_ARTICLES.filter((a) => a.category === category);
+}
 
 export interface BlogCategory {
   slug: string;
   eyebrow: string;
   heading: string;
   intro: string;
-  hasArticlePreview: boolean;
   comingSoon: { heading: string; body: string };
   meta: { title: string; description: string };
 }
@@ -65,7 +206,6 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     eyebrow: 'The Ketto Journal',
     heading: 'Beginner Guides',
     intro: 'First-timer advice on gear, casting, and getting your first bite.',
-    hasArticlePreview: true,
     comingSoon: { heading: 'New beginner guide posts are on the way', body: "We're writing more first-timer walkthroughs — check back soon." },
     meta: { title: 'Beginner Guides — The Ketto Journal', description: 'No-nonsense guides for your first trips on the water.' },
   },
@@ -74,7 +214,6 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     eyebrow: 'The Ketto Journal',
     heading: 'Gear & Lures',
     intro: 'Breakdowns of what to tie on, and why it works.',
-    hasArticlePreview: false,
     comingSoon: { heading: 'New gear & lures posts are on the way', body: "We're writing lure breakdowns and gear picks — check back soon." },
     meta: { title: 'Gear & Lures — The Ketto Journal', description: 'What to buy and why, straight from the water.' },
   },
@@ -83,7 +222,6 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     eyebrow: 'The Ketto Journal',
     heading: 'Technique',
     intro: 'Casting, retrieves, and reading the water like it matters.',
-    hasArticlePreview: false,
     comingSoon: { heading: 'New technique posts are on the way', body: "We're writing technique breakdowns — check back soon." },
     meta: { title: 'Technique — The Ketto Journal', description: 'Casting, retrieves, and reading the bite.' },
   },
@@ -92,7 +230,6 @@ export const BLOG_CATEGORIES: Record<string, BlogCategory> = {
     eyebrow: 'The Ketto Journal',
     heading: 'Where to Fish',
     intro: 'Picking water that gives beginners the best shot at a bite.',
-    hasArticlePreview: false,
     comingSoon: { heading: 'New where-to-fish posts are on the way', body: "We're writing spot guides — check back soon." },
     meta: { title: 'Where to Fish — The Ketto Journal', description: 'Finding water that puts fish in casting range.' },
   },

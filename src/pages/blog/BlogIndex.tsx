@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { BLOG_ARTICLE, BLOG_CATEGORY_NAV, BLOG_INDEX_META } from '../../data/blog';
-import { BannerButton } from '../../components/ui/BannerButton';
-import { ImagePlaceholder } from '../../components/ui/ImagePlaceholder';
+import { BLOG_ARTICLES, BLOG_CATEGORY_NAV, BLOG_INDEX_META } from '../../data/blog';
+import { TinFrame } from '../../components/ui/TinFrame';
+import { BlogHero } from '../../components/BlogHero';
 import { Reveal } from '../../components/ui/Misc';
 import { useDocumentMeta } from '../../hooks/useDocumentMeta';
 
@@ -28,28 +28,25 @@ export default function BlogIndex() {
         </div>
       </div>
 
-      <Reveal>
-        <article style={{ maxWidth: 760, margin: '0 auto', padding: '48px 40px' }}>
-          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{BLOG_ARTICLE.eyebrow}</div>
-          <h2 style={{ fontSize: 32, marginTop: 10, marginBottom: 8 }}>{BLOG_ARTICLE.title}</h2>
-          <div style={{ fontSize: 13, opacity: 0.6, marginBottom: 24 }}>{BLOG_ARTICLE.byline}</div>
-          <ImagePlaceholder label={BLOG_ARTICLE.heroImagePlaceholder} height={280} rotate={0} />
-          <p style={{ fontSize: 16, lineHeight: 1.75, marginTop: 28 }}>{BLOG_ARTICLE.bodyIntro}</p>
-          {BLOG_ARTICLE.sections.map((s) => (
-            <div key={s.heading} style={{ marginTop: 28 }}>
-              <h3 style={{ fontSize: 20, marginBottom: 8 }}>{s.heading}</h3>
-              <p style={{ fontSize: 15, lineHeight: 1.75 }}>{s.body}</p>
-            </div>
-          ))}
-        </article>
-      </Reveal>
-
-      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: 28, letterSpacing: '-0.03em' }}>{BLOG_ARTICLE.endCta.heading}</h2>
-        <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>{BLOG_ARTICLE.endCta.body}</p>
-        <BannerButton to={BLOG_ARTICLE.endCta.href} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          {BLOG_ARTICLE.endCta.buttonLabel}
-        </BannerButton>
+      <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, padding: '48px 40px 56px', maxWidth: 1100, margin: '0 auto' }}>
+        {BLOG_ARTICLES.map((article) => (
+          <Reveal key={article.slug}>
+            <TinFrame shadow="lg">
+              <Link
+                to={`/blog/${article.category}/${article.slug}`}
+                style={{ display: 'block', padding: 28, color: 'var(--ink)', textDecoration: 'none', position: 'relative', width: '100%' }}
+              >
+                <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
+                <BlogHero category={article.category} />
+                <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginTop: 14 }}>{article.eyebrow}</div>
+                <h2 style={{ fontSize: 20, marginTop: 8, lineHeight: 1.3 }}>{article.title}</h2>
+                <div style={{ fontSize: 12, opacity: 0.6, marginTop: 8 }}>{article.byline}</div>
+                <p style={{ fontSize: 13.5, marginTop: 12, lineHeight: 1.6 }}>{article.bodyIntro.slice(0, 140)}…</p>
+                <div style={{ marginTop: 14, color: 'var(--rust)', fontWeight: 700, fontSize: 13 }}>Read the full post →</div>
+              </Link>
+            </TinFrame>
+          </Reveal>
+        ))}
       </div>
     </div>
   );

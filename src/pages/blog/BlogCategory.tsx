@@ -1,11 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
-import { BLOG_CATEGORIES, BLOG_CATEGORY_NAV, BLOG_ARTICLE } from '../../data/blog';
+import { BLOG_CATEGORIES, BLOG_CATEGORY_NAV, getArticlesByCategory } from '../../data/blog';
+import { TinFrame } from '../../components/ui/TinFrame';
 import { useDocumentMeta } from '../../hooks/useDocumentMeta';
 import NotFound from '../NotFound';
 
 export default function BlogCategory() {
   const { category } = useParams<{ category: string }>();
   const cat = category ? BLOG_CATEGORIES[category] : undefined;
+  const articles = category ? getArticlesByCategory(category) : [];
   useDocumentMeta(
     cat?.meta.title ?? 'Page Not Found — Ketto Outdoors',
     cat?.meta.description ?? "This page doesn't exist, moved, or never got hooked in the first place.",
@@ -41,18 +43,22 @@ export default function BlogCategory() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 40px' }}>
-        {cat.hasArticlePreview ? (
-          <Link
-            to="/blog"
-            style={{ display: 'block', background: 'var(--parchment)', border: '3px solid var(--ink)', padding: 28, textDecoration: 'none', color: 'var(--ink)' }}
-          >
-            <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{BLOG_ARTICLE.eyebrow}</div>
-            <h2 style={{ fontSize: 22, marginTop: 8 }}>{BLOG_ARTICLE.title}</h2>
-            <div style={{ fontSize: 13, opacity: 0.6, marginTop: 6 }}>{BLOG_ARTICLE.byline}</div>
-            <p style={{ fontSize: 14, marginTop: 12 }}>{BLOG_ARTICLE.bodyIntro.slice(0, 180)}…</p>
-            <div style={{ marginTop: 14, color: 'var(--rust)', fontWeight: 700, fontSize: 13 }}>Read the full post →</div>
-          </Link>
+      <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: 24 }}>
+        {articles.length > 0 ? (
+          articles.map((article) => (
+            <TinFrame key={article.slug} shadow="sm">
+              <Link
+                to={`/blog/${article.category}/${article.slug}`}
+                style={{ display: 'block', padding: 28, textDecoration: 'none', color: 'var(--ink)', width: '100%' }}
+              >
+                <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{article.eyebrow}</div>
+                <h2 style={{ fontSize: 22, marginTop: 8 }}>{article.title}</h2>
+                <div style={{ fontSize: 13, opacity: 0.6, marginTop: 6 }}>{article.byline}</div>
+                <p style={{ fontSize: 14, marginTop: 12 }}>{article.bodyIntro.slice(0, 180)}…</p>
+                <div style={{ marginTop: 14, color: 'var(--rust)', fontWeight: 700, fontSize: 13 }}>Read the full post →</div>
+              </Link>
+            </TinFrame>
+          ))
         ) : (
           <div style={{ textAlign: 'center', padding: '48px 24px', border: '2px dashed rgba(36,26,16,.3)' }}>
             <h2 style={{ fontSize: 20 }}>{cat.comingSoon.heading}</h2>
