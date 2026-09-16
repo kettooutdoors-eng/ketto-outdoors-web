@@ -3,8 +3,11 @@
 
 :root {
   --mustard: #d99a2c;
-  --rust: #c1502e;
-  --rust-hover: #9c3f24;
+  /* Darkened slightly from the original design reference (#c1502e / #9c3f24 / #8a6a3a)
+     to pass WCAG AA text contrast (4.5:1) against the site's cream/parchment backgrounds
+     everywhere they're used as text — eyebrows, links, CTAs. */
+  --rust: #a04226;
+  --rust-hover: #7a321d;
   --forest: #1b4332;
   --ink: #241a10;
   --parchment: #f7ecd0;
@@ -12,10 +15,10 @@
   --cream: #f3efe3;
   --hero-band: #e8dcc0;
   --photo-frame: #fdf6e6;
-  --kicker: #8a6a3a;
+  --kicker: #785c32;
 
   --stock-in: #1b4332;
-  --stock-low: #c1502e;
+  --stock-low: #a04226;
   --stock-out: #8a1f1f;
 
   --font-heading: 'Bitter', Georgia, serif;
