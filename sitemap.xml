@@ -176,26 +176,50 @@
   </url>
   <url>
     <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/beginner-guides</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/beginner-guides/how-to-start-fishing</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/gear-and-lures</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/gear-and-lures/how-to-pick-your-first-lure</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/technique</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/technique/retrieve-speed-101</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/where-to-fish</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/where-to-fish/how-to-read-new-water</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
