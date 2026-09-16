@@ -36,6 +36,8 @@ export function Footer() {
           <Link to="/biting-now" style={linkStyle}>What's biting now</Link>
           <Link to="/gear-by-state" style={linkStyle}>Gear for your state</Link>
           <Link to="/shop" style={linkStyle}>Shop all gear</Link>
+          <Link to="/used-gear" style={linkStyle}>Used gear</Link>
+          <Link to="/trade-in" style={linkStyle}>Trade in your gear</Link>
           <Link to="/new-to-fishing" style={linkStyle}>New to fishing guide</Link>
           <Link to="/blog" style={linkStyle}>Blog</Link>
           <Link to="/orders" style={linkStyle}>My orders</Link>

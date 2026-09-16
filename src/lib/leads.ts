@@ -5,7 +5,7 @@
 // visitor's own device — you won't see it.
 export const LEAD_FORM_ENDPOINT = '';
 
-export type LeadType = 'newsletter' | 'stock-notify' | 'contact';
+export type LeadType = 'newsletter' | 'stock-notify' | 'contact' | 'trade-in';
 
 interface LeadPayload {
   type: LeadType;

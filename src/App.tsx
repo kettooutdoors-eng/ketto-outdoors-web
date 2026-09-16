@@ -10,6 +10,8 @@ const Kits = lazy(() => import('./pages/Kits'));
 const Kit = lazy(() => import('./pages/Kit'));
 const BitingNow = lazy(() => import('./pages/BitingNow'));
 const GearByState = lazy(() => import('./pages/GearByState'));
+const UsedGear = lazy(() => import('./pages/UsedGear'));
+const TradeIn = lazy(() => import('./pages/TradeIn'));
 const Shop = lazy(() => import('./pages/Shop'));
 const ProductPage = lazy(() => import('./pages/Product'));
 const NewToFishing = lazy(() => import('./pages/NewToFishing'));
@@ -40,6 +42,8 @@ function App() {
                 <Route path="kits/:slug" element={<Kit />} />
                 <Route path="biting-now" element={<BitingNow />} />
                 <Route path="gear-by-state" element={<GearByState />} />
+                <Route path="used-gear" element={<UsedGear />} />
+                <Route path="trade-in" element={<TradeIn />} />
                 <Route path="shop" element={<Shop />} />
                 <Route path="product/:id" element={<ProductPage />} />
                 <Route path="new-to-fishing" element={<NewToFishing />} />

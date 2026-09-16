@@ -222,6 +222,20 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* Used Gear / Trade-In teaser */}
+      <div style={{ background: 'var(--rust)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <div>
+          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--ink)', fontWeight: 700 }}>New: quality-checked used gear</span>{' '}
+          <span style={{ fontSize: 15, marginLeft: 8 }}>Cheaper than new, or send in gear you're not using for store credit.</span>
+        </div>
+        <Link
+          to="/used-gear"
+          style={{ fontSize: 13, fontWeight: 800, color: 'var(--cream)', background: 'var(--ink)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
+        >
+          Shop Used Gear →
+        </Link>
+      </div>
+
       {/* Individual gear — secondary path */}
       <div style={{ paddingBottom: 8 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
