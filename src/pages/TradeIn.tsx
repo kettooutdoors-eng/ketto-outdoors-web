@@ -115,18 +115,7 @@ export default function TradeIn() {
       </div>
 
       <div style={{ padding: '40px 40px 0', maxWidth: 560, margin: '0 auto' }}>
-        <TinFrame shadow="sm" background="var(--hero-band)">
-          <div style={{ padding: 22, width: '100%' }}>
-            <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginBottom: 8, textAlign: 'center' }}>
-              For example
-            </div>
-            <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0, textAlign: 'center' }}>
-              A tackle box of lures and terminal tackle worth about <strong>$50</strong> new, sent in and graded <strong>Good</strong>, would earn roughly{' '}
-              <strong>$10–12 in store credit</strong>.
-            </p>
-          </div>
-        </TinFrame>
-        <p style={{ fontSize: 12.5, opacity: 0.65, marginTop: 14, textAlign: 'center' }}>
+        <p style={{ fontSize: 12.5, opacity: 0.65, textAlign: 'center' }}>
           To keep the numbers making sense for both of us, we're currently only able to take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more —
           smaller items cost more to ship than they're worth crediting.
         </p>
