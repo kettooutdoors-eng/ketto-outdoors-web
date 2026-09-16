@@ -3,6 +3,7 @@ import { TinFrame } from './ui/TinFrame';
 import { ImagePlaceholder } from './ui/ImagePlaceholder';
 import { BannerButton } from './ui/BannerButton';
 import { useCart } from '../state/CartContext';
+import { getProductImageSrc } from '../data/productImages';
 import type { ShopCatalogItem } from '../data/shop';
 
 const DIFFICULTY_COLOR: Record<string, string> = {
@@ -22,7 +23,7 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
       <div style={{ padding: 28, display: 'flex', flexDirection: 'column', gap: 12, position: 'relative', width: '100%' }}>
         <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
 
-        <ImagePlaceholder label={item.name} />
+        <ImagePlaceholder label={item.name} src={getProductImageSrc(item.id)} />
 
         <div className="card-kicker">{item.kicker}</div>
 

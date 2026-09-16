@@ -12,6 +12,7 @@ import { useInventory } from '../state/InventoryContext';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { submitLead } from '../lib/leads';
+import { getProductImageSrc } from '../data/productImages';
 import NotFound from './NotFound';
 
 function NotifyWhenBackForm({ productId, productName }: { productId: string; productName: string }) {
@@ -93,7 +94,7 @@ export default function ProductPage() {
 
       <div style={{ padding: '24px 40px 56px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }} className="grid-2">
         <div>
-          <ImagePlaceholder label={product.imagePlaceholderAlt} height={420} rotate={-1} />
+          <ImagePlaceholder label={product.imagePlaceholderAlt} height={420} rotate={-1} src={getProductImageSrc(product.id)} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
