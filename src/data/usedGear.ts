@@ -41,9 +41,17 @@ export const USED_GEAR_META = {
 
 export const TRADE_IN_CATEGORIES = ['Lures / terminal tackle', 'Tackle box or bag', 'Line, leaders & accessories', 'Nets, pliers & tools', 'Other gear (no clothing)'];
 
-// Rods, reels, and combos ship for enough that the numbers rarely work out for either
-// side — and we're not set up to grade/resell apparel yet.
-export const TRADE_IN_EXCLUDED = "We don't currently take rods, reels, or rod & reel combos — they're too expensive to ship for the trade-in value to make sense — or any clothing/apparel. Everything else fishing-related is fair game.";
+// What we won't take, and why — shown as a plain list on /trade-in so people don't
+// waste time describing gear that's out of scope before finding out.
+export const TRADE_IN_EXCLUDED: string[] = [
+  "Rods, reels, or rod & reel combos — they're too expensive to ship for the trade-in value to make sense.",
+  'Clothing or apparel of any kind.',
+  "Used hooks — loose or already rigged. Once a hook's been fished, we can't resell it safely, no matter the condition.",
+  "Used soft plastics (worms, creature baits, and the like) — they tear, take on odor, and lose their action fast. We can only take these unused, still in their original packaging.",
+];
+
+export const TRADE_IN_VALUE_DISCLAIMER =
+  "One honest heads-up: trade-in credit is often modest, especially for smaller or well-used items — a few dollars for a well-loved lure isn't unusual. We'll always tell you the actual offer before it's final, so nothing's a surprise, but don't expect trade-in value to come close to what you paid new.";
 
 export const TRADE_IN_META = {
   title: 'Trade In Your Gear — Ketto Outdoors',

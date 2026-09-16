@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
-import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META, TRADE_IN_EXCLUDED, MIN_TRADE_IN_VALUE } from '../data/usedGear';
+import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META, TRADE_IN_EXCLUDED, TRADE_IN_VALUE_DISCLAIMER, MIN_TRADE_IN_VALUE } from '../data/usedGear';
 import { submitLead } from '../lib/leads';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -42,7 +42,23 @@ export default function TradeIn() {
         <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, opacity: 0.8 }}>
           Lures, terminal tackle, and other gear you're not using anymore don't have to end up in a drawer or the trash. Send it in — we'll pay for shipping, check it out, and pay you in store credit if it passes.
         </p>
-        <p style={{ margin: '14px auto 0', maxWidth: '54ch', fontSize: 13, opacity: 0.65, fontStyle: 'italic' }}>{TRADE_IN_EXCLUDED}</p>
+      </div>
+
+      <div style={{ padding: '40px 40px 0', maxWidth: 640, margin: '0 auto' }}>
+        <TinFrame shadow="sm">
+          <div style={{ padding: 22, width: '100%' }}>
+            <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginBottom: 10, textAlign: 'center' }}>
+              What we can't take
+            </div>
+            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {TRADE_IN_EXCLUDED.map((rule) => (
+                <li key={rule} style={{ fontSize: 13.5, lineHeight: 1.6 }}>
+                  {rule}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </TinFrame>
       </div>
 
       <div style={{ padding: '48px 40px 0', maxWidth: 900, margin: '0 auto' }}>
@@ -114,6 +130,7 @@ export default function TradeIn() {
           To keep the numbers making sense for both of us, we're currently only able to take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more —
           smaller items cost more to ship than they're worth crediting.
         </p>
+        <p style={{ fontSize: 12.5, opacity: 0.75, marginTop: 12, textAlign: 'center', lineHeight: 1.6 }}>{TRADE_IN_VALUE_DISCLAIMER}</p>
       </div>
 
       <div style={{ padding: '48px 40px 56px', maxWidth: 560, margin: '0 auto' }}>
