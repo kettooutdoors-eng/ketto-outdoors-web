@@ -11,17 +11,8 @@ import { useCart } from '../state/CartContext';
 import { useInventory } from '../state/InventoryContext';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { submitLead } from '../lib/leads';
 import NotFound from './NotFound';
-
-function saveStockNotifyRequest(productId: string, productName: string, email: string) {
-  try {
-    const list = JSON.parse(localStorage.getItem('ketto-stock-notify') || '[]');
-    list.push({ productId, productName, email, date: new Date().toISOString() });
-    localStorage.setItem('ketto-stock-notify', JSON.stringify(list));
-  } catch {
-    /* ignore */
-  }
-}
 
 function NotifyWhenBackForm({ productId, productName }: { productId: string; productName: string }) {
   const [email, setEmail] = useState('');
@@ -30,7 +21,7 @@ function NotifyWhenBackForm({ productId, productName }: { productId: string; pro
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email) return;
-    saveStockNotifyRequest(productId, productName, email);
+    submitLead({ type: 'stock-notify', email, productId, productName });
     setDone(true);
     setEmail('');
   }

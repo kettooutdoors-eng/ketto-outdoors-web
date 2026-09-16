@@ -1,16 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useAdmin } from '../../state/AdminContext';
-
-function saveNewsletterEmail(email: string) {
-  try {
-    const list = JSON.parse(localStorage.getItem('ketto-newsletter') || '[]');
-    list.push(email);
-    localStorage.setItem('ketto-newsletter', JSON.stringify(list));
-  } catch {
-    /* ignore */
-  }
-}
+import { submitLead } from '../../lib/leads';
 
 const linkStyle = { fontSize: 13, fontWeight: 600, color: 'var(--cream)', opacity: 0.75 };
 const headingStyle = { fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18, color: 'var(--cream)', letterSpacing: '-0.02em' };
@@ -23,7 +14,7 @@ export function Footer() {
   function handleSubscribe(e: FormEvent) {
     e.preventDefault();
     if (!email) return;
-    saveNewsletterEmail(email);
+    submitLead({ type: 'newsletter', email });
     setDone(true);
     setEmail('');
   }

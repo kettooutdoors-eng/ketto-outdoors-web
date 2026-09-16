@@ -3,6 +3,7 @@ import { PageHero } from '../components/ui/PageHero';
 import { BannerButton } from '../components/ui/BannerButton';
 import { CONTACT_CONTENT } from '../data/legal';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { submitLead } from '../lib/leads';
 
 export default function Contact() {
   useDocumentMeta(CONTACT_CONTENT.meta.title, CONTACT_CONTENT.meta.description, '/contact');
@@ -16,6 +17,7 @@ export default function Contact() {
       return;
     }
     setError(false);
+    submitLead({ type: 'contact', email: form.email, name: form.name, message: form.message });
     setSent(true);
   }
 
