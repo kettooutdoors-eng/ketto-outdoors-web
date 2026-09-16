@@ -1,6 +1,24 @@
 /* Ketto Outdoors — retro fishing-ad / tin-sign design system
    Extracted from the approved Home Page design reference. */
 
+/* Self-hosted fonts (SIL Open Font License — see public/fonts/OFL.txt) — avoids loading
+   fonts from Google's servers on every page view. Both files are variable fonts covering
+   the full weight range used across the site. */
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+  src: url('../assets/fonts/bitter-variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('../assets/fonts/archivo-variable.woff2') format('woff2');
+}
+
 :root {
   --mustard: #d99a2c;
   /* Darkened slightly from the original design reference (#c1502e / #9c3f24 / #8a6a3a)
