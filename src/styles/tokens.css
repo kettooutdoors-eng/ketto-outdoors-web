@@ -281,6 +281,9 @@ textarea:focus {
   .nav-link-desktop {
     display: none !important;
   }
+  .nav-menu-mobile {
+    display: flex !important;
+  }
   .nav-logo-img {
     height: 48px !important;
   }

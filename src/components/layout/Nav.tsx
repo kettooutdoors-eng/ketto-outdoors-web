@@ -4,7 +4,7 @@ import { TinFrame } from '../ui/TinFrame';
 import { BannerButton } from '../ui/BannerButton';
 import { useCart } from '../../state/CartContext';
 
-export function Nav() {
+export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
   const { hasItems, cartCount, toggleCart } = useCart();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -153,6 +153,31 @@ export function Nav() {
             {cartCount}
           </span>
         )}
+      </button>
+
+      <button
+        onClick={onMenuOpen}
+        aria-label="Menu"
+        className="nav-menu-mobile"
+        style={{
+          display: 'none',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: 40,
+          height: 40,
+          borderRadius: '50%',
+          border: '2px solid var(--ink)',
+          background: 'var(--parchment)',
+          color: 'var(--ink)',
+          cursor: 'pointer',
+          flexShrink: 0,
+        }}
+      >
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" style={{ filter: 'url(#rough)' }}>
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
       </button>
     </nav>
   );

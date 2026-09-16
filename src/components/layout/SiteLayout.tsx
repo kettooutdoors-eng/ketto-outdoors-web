@@ -23,7 +23,7 @@ export function SiteLayout() {
         Skip to content
       </a>
       <RoughFilterDefs />
-      <Nav />
+      <Nav onMenuOpen={() => setMenuOpen(true)} />
       <RopeDivider />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       <main id="main-content" tabIndex={-1} style={{ outline: 'none' }}>
