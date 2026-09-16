@@ -22,6 +22,7 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Faq = lazy(() => import('./pages/Faq'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const Cookies = lazy(() => import('./pages/Cookies'));
 const Terms = lazy(() => import('./pages/Terms'));
 const ShippingReturns = lazy(() => import('./pages/ShippingReturns'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -51,6 +52,7 @@ function App() {
                 <Route path="contact" element={<Contact />} />
                 <Route path="faq" element={<Faq />} />
                 <Route path="privacy" element={<Privacy />} />
+                <Route path="cookies" element={<Cookies />} />
                 <Route path="terms" element={<Terms />} />
                 <Route path="shipping-returns" element={<ShippingReturns />} />
                 <Route path="*" element={<NotFound />} />

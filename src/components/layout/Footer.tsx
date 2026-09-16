@@ -9,14 +9,16 @@ const headingStyle = { fontFamily: 'var(--font-heading)', fontWeight: 800, fontS
 export function Footer() {
   const { isAdmin, logout, openLogin } = useAdmin();
   const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
   const [done, setDone] = useState(false);
 
   function handleSubscribe(e: FormEvent) {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !consent) return;
     submitLead({ type: 'newsletter', email });
     setDone(true);
     setEmail('');
+    setConsent(false);
   }
 
   return (
@@ -48,6 +50,7 @@ export function Footer() {
           <Link to="/contact" style={linkStyle}>Contact us</Link>
           <Link to="/shipping-returns" style={linkStyle}>Shipping &amp; returns</Link>
           <Link to="/privacy" style={linkStyle}>Privacy policy</Link>
+          <Link to="/cookies" style={linkStyle}>Cookie policy</Link>
           <Link to="/terms" style={linkStyle}>Terms of service</Link>
           <a
             onClick={isAdmin ? logout : openLogin}
@@ -66,20 +69,26 @@ export function Footer() {
         <p style={{ margin: 0, fontSize: 12, color: 'var(--cream)', opacity: 0.6, maxWidth: '28ch', lineHeight: 1.5 }}>
           Questions, wholesale orders, or a lure request — we read every email.
         </p>
-        <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: 8, marginTop: 12, width: '100%', maxWidth: 280 }}>
-          <input
-            type="email"
-            name="newsletter-email"
-            autoComplete="email"
-            aria-label="Email for tips and drops"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email for tips & drops"
-            style={{ flex: 1, padding: '9px 10px', border: '1px solid rgba(243,239,227,.35)', background: 'transparent', color: 'var(--cream)', fontSize: 12 }}
-          />
-          <button type="submit" style={{ padding: '9px 14px', background: 'var(--rust)', color: '#fff', border: 'none', fontSize: 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>
-            Sign up
-          </button>
+        <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 12, width: '100%', maxWidth: 280 }}>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <input
+              type="email"
+              name="newsletter-email"
+              autoComplete="email"
+              aria-label="Email for tips and drops"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email for tips & drops"
+              style={{ flex: 1, padding: '9px 10px', border: '1px solid rgba(243,239,227,.35)', background: 'transparent', color: 'var(--cream)', fontSize: 12 }}
+            />
+            <button type="submit" disabled={!consent} style={{ padding: '9px 14px', background: 'var(--rust)', color: '#fff', border: 'none', fontSize: 12, fontWeight: 700, cursor: consent ? 'pointer' : 'not-allowed', opacity: consent ? 1 : 0.5, whiteSpace: 'nowrap' }}>
+              Sign up
+            </button>
+          </div>
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: 7, fontSize: 11, color: 'var(--cream)', opacity: 0.75, textAlign: 'left', cursor: 'pointer' }}>
+            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 2 }} />
+            I'd like occasional emails about new gear and fishing tips. Unsubscribe anytime.
+          </label>
         </form>
         {done && <div style={{ fontSize: 12, color: 'var(--rust)', marginTop: 6 }}>Subscribed! Thanks.</div>}
         <div style={{ display: 'flex', gap: 14, marginTop: 10 }}>

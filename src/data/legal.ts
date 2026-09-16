@@ -69,12 +69,28 @@ export const PRIVACY_CONTENT = {
   meta: { title: 'Privacy Policy — Ketto Outdoors', description: 'How Ketto Outdoors collects and uses your information.' },
   eyebrow: 'Your data, handled plainly',
   heading: 'Privacy Policy',
-  lastUpdated: 'Last updated August 2026',
+  lastUpdated: 'Last updated September 2026',
   sections: [
-    { heading: 'What we collect', body: 'When you shop with Ketto Outdoors, we collect the information you give us directly — your name, email, shipping address, and order details. If you sign up for our newsletter, we keep your email on file until you unsubscribe.' },
-    { heading: 'How we use it', body: "We use your information to process orders, respond to support requests, and — only if you've opted in — send occasional emails about new gear and fishing tips. We do not sell or rent your personal information to third parties." },
-    { heading: 'Cookies & local storage', body: "This site uses your browser's local storage to remember your cart, saved orders, and preferences on this device. No third-party tracking cookies are used." },
+    { heading: 'What we collect', body: "We only collect what you give us directly, and only for a specific reason: your name, email, and shipping address to fulfill an order; your email if you sign up for our newsletter or ask to be notified when something's back in stock; and your name, email, and message if you contact us. We don't collect anything beyond that — no data brokers, no purchased lists, no tracking across other sites." },
+    { heading: 'How we use it', body: "We use your information to process orders, respond to support requests, and — only if you've opted in — send occasional emails about new gear and fishing tips. We do not sell or rent your personal information to third parties, and we never share it except with the vendors we use to actually run the business (like payment or shipping providers), and only as needed to do that job." },
+    { heading: 'Cookies & local storage', body: "This site uses your browser's local storage — not tracking cookies — to remember your cart, saved orders, and preferences on this device; that data stays on your device and never reaches us. We don't run any advertising or analytics scripts unless you've explicitly consented via the cookie banner. See our Cookie Policy for the full breakdown." },
+    { heading: "Children's privacy", body: "Ketto Outdoors is not directed at children, and we do not knowingly collect personal information from anyone under 13. If you believe a child has given us information, email us and we'll delete it." },
+    { heading: 'Accessing or deleting your data', body: "Since most of what we hold on you is either in your own browser's storage (which you can clear anytime in your browser's settings) or an order/contact record tied to your email, you can request a copy or deletion of anything we hold by emailing KettoOutdoors@gmail.com — we'll respond within 30 days. If you're a California resident, this covers your CCPA right to know, delete, and opt out of the sale of personal information (we don't sell personal information, so there's nothing to opt out of)." },
     { heading: 'Your choices', body: "You can unsubscribe from emails at any time using the link in any newsletter, or by contacting us directly. You can clear your cart and saved orders at any time by clearing your browser's site data." },
+    { heading: 'Contact us', body: 'Questions about this policy? Reach us at KettoOutdoors@gmail.com.' },
+  ] as LegalSection[],
+};
+
+export const COOKIE_CONTENT = {
+  meta: { title: 'Cookie Policy — Ketto Outdoors', description: 'What we store in your browser, and what we don’t.' },
+  eyebrow: 'Short version: barely anything',
+  heading: 'Cookie Policy',
+  lastUpdated: 'Last updated September 2026',
+  sections: [
+    { heading: 'What this site actually uses', body: "Ketto Outdoors runs on your browser's local storage, not cookies, for everything functional — your cart contents, saved order history, and a couple of preferences (like whether you're browsing as an admin). None of this is sent to us; it stays on your device until you clear it or clear your browser's site data." },
+    { heading: 'Analytics', body: "We may use Google Analytics to understand overall site traffic, but the script only loads after you accept the cookie banner — it never runs by default. If you decline or ignore the banner, no analytics cookie is set and no data is sent to Google." },
+    { heading: 'No advertising or tracking cookies', body: "We don't run ad pixels, retargeting scripts, or third-party trackers of any kind. We also don't load fonts or other resources from third-party servers — everything, including our fonts, is hosted directly on this site so nothing about your visit is shared with anyone just by loading a page." },
+    { heading: 'Your choices', body: "You can change your analytics choice at any time by clearing this site's data in your browser (which resets the cookie banner), or by using your browser's built-in cookie/tracking controls. Blocking local storage will log you out of your cart between visits, but won't break anything else." },
     { heading: 'Contact us', body: 'Questions about this policy? Reach us at KettoOutdoors@gmail.com.' },
   ] as LegalSection[],
 };
@@ -83,10 +99,11 @@ export const TERMS_CONTENT = {
   meta: { title: 'Terms of Service — Ketto Outdoors', description: 'The terms that apply when you shop with Ketto Outdoors.' },
   eyebrow: 'The fine print',
   heading: 'Terms of Service',
-  lastUpdated: 'Last updated August 2026',
+  lastUpdated: 'Last updated September 2026',
   sections: [
-    { heading: 'Using this site', body: 'By browsing or ordering from Ketto Outdoors, you agree to use this site for lawful purposes only and to provide accurate information when placing an order.' },
+    { heading: 'Using this site', body: 'By browsing or ordering from Ketto Outdoors, you agree to use this site for lawful purposes only and to provide accurate information when placing an order. You must be at least 18, or have a parent or guardian place the order on your behalf, to buy from us.' },
     { heading: 'Orders & pricing', body: 'All prices are listed in USD and are subject to change without notice. We reserve the right to limit quantities, refuse an order, or correct pricing errors.' },
+    { heading: 'Returns & refunds', body: 'See our Shipping & Returns page for the full return window and process — the short version is 30 days on unused, unopened gear.' },
     { heading: 'Product information', body: 'We do our best to describe each lure and its performance accurately, but actual results depend on conditions, technique, and a little luck. Difficulty scores and depth ratings are estimates, not guarantees.' },
     { heading: 'Intellectual property', body: 'All content on this site — text, photos, and branding — belongs to Ketto Outdoors and may not be reproduced without permission.' },
     { heading: 'Limitation of liability', body: 'Ketto Outdoors is not liable for any damages arising from the use of our products, including but not limited to snagged hooks, lost lures, or the one that got away.' },
@@ -95,15 +112,16 @@ export const TERMS_CONTENT = {
 };
 
 export const SHIPPING_RETURNS_CONTENT = {
-  meta: { title: 'Shipping & Returns — Ketto Outdoors', description: 'Shipping timelines, costs, and our return policy.' },
+  meta: { title: 'Shipping, Returns & Refunds — Ketto Outdoors', description: 'Shipping timelines, costs, and our return and refund policy.' },
   eyebrow: 'Getting gear to your door',
-  heading: 'Shipping & Returns',
-  lastUpdated: 'Last updated August 2026',
+  heading: 'Shipping, Returns & Refunds',
+  lastUpdated: 'Last updated September 2026',
   sections: [
     { heading: 'Shipping', body: "Orders ship within 1-2 business days. Standard shipping typically arrives in 4-7 business days within the continental US. You'll receive a confirmation once your order ships." },
     { heading: 'Shipping costs', body: 'Shipping is calculated by weight, package size, and distance from our Provo, UT warehouse. Orders of $35 or more ship free.' },
     { heading: 'Returns', body: "Unused, unopened gear can be returned within 30 days of delivery for a full refund. Lures that show signs of use (scuffs, hook damage, missing packaging) aren't eligible for return — we get it, sometimes a lure just doesn't match your water, but once it's wet it's yours." },
     { heading: 'How to start a return', body: "Email KettoOutdoors@gmail.com with your order number and we'll send return instructions within 1-2 business days." },
+    { heading: 'Refund timing', body: "Once we receive your returned item, we'll inspect it and issue your refund to the original payment method within 5-10 business days. You'll get an email confirmation when it's processed — your bank or card issuer may take a few extra days to post it." },
     { heading: 'Damaged or incorrect items', body: "If your order arrives damaged or you received the wrong item, contact us right away with a photo and we'll send a replacement at no cost." },
   ] as LegalSection[],
 };

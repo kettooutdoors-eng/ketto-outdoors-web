@@ -9,6 +9,7 @@ import { AdminLoginModal } from './AdminLoginModal';
 import { RoughFilterDefs } from '../ui/RoughFilterDefs';
 import { RopeDivider } from '../ui/Misc';
 import { ErrorBoundary } from '../ErrorBoundary';
+import { CookieConsentBanner } from '../CookieConsentBanner';
 
 export function SiteLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ export function SiteLayout() {
       <CartDrawer />
       <AdminLoginModal />
       <MenuFab onOpen={() => setMenuOpen(true)} />
+      <CookieConsentBanner />
     </div>
   );
 }
