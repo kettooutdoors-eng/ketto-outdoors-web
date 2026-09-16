@@ -3,13 +3,19 @@ export type Condition = 'Like New' | 'Good' | 'Fair';
 export interface ConditionGrade {
   label: Condition;
   description: string;
+  /** Rough store-credit payout as a percentage of the item's original new price. */
+  payoutPercent: string;
 }
 
 export const CONDITION_GRADES: ConditionGrade[] = [
-  { label: 'Like New', description: 'Little to no visible use — full function, no cosmetic issues worth mentioning.' },
-  { label: 'Good', description: 'Shows normal wear from real fishing — light scuffs or line marks — but works exactly like it should.' },
-  { label: 'Fair', description: 'Clearly used — visible wear, maybe a repaired guide or a re-tied hook point — still fully functional, priced accordingly.' },
+  { label: 'Like New', description: 'Little to no visible use — full function, no cosmetic issues worth mentioning.', payoutPercent: '~30-35%' },
+  { label: 'Good', description: 'Shows normal wear from real fishing — light scuffs or line marks — but works exactly like it should.', payoutPercent: '~20-25%' },
+  { label: 'Fair', description: 'Clearly used — visible wear, maybe a repaired guide or a re-tied hook point — still fully functional, priced accordingly.', payoutPercent: '~10-15%' },
 ];
+
+// Below this original price, a prepaid shipping label costs more than the trade-in
+// credit would be worth — not worth it for either side.
+export const MIN_TRADE_IN_VALUE = 25;
 
 export interface UsedGearItem {
   id: string;

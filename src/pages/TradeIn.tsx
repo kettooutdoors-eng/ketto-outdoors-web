@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
-import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META } from '../data/usedGear';
+import { CONDITION_GRADES, TRADE_IN_CATEGORIES, TRADE_IN_META, MIN_TRADE_IN_VALUE } from '../data/usedGear';
 import { submitLead } from '../lib/leads';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -77,17 +77,41 @@ export default function TradeIn() {
       </div>
 
       <div style={{ padding: '48px 40px 0', maxWidth: 700, margin: '0 auto' }}>
-        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 18 }}>How we grade it</h2>
+        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 6 }}>How we grade it — and what it's worth</h2>
+        <p style={{ fontSize: 13, textAlign: 'center', opacity: 0.7, marginBottom: 18 }}>
+          Rough store-credit ranges as a share of the item's original price — the exact number depends on the actual inspection.
+        </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {CONDITION_GRADES.map((g) => (
-            <div key={g.label} style={{ display: 'flex', gap: 14, alignItems: 'baseline', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px' }}>
-              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15, flexShrink: 0, minWidth: 90 }}>{g.label}</div>
+            <div key={g.label} style={{ display: 'flex', gap: 14, alignItems: 'center', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px' }}>
+              <div style={{ flexShrink: 0, minWidth: 90 }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15 }}>{g.label}</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--rust)' }}>{g.payoutPercent} credit</div>
+              </div>
               <p style={{ fontSize: 13.5, margin: 0, opacity: 0.85 }}>{g.description}</p>
             </div>
           ))}
         </div>
         <p style={{ fontSize: 12.5, opacity: 0.65, marginTop: 12, textAlign: 'center' }}>
           Gear that's broken, unsafe, or doesn't pass a function check doesn't get relisted — we'll ship it back to you instead of trashing it, if you'd like it returned.
+        </p>
+      </div>
+
+      <div style={{ padding: '40px 40px 0', maxWidth: 560, margin: '0 auto' }}>
+        <TinFrame shadow="sm" background="var(--hero-band)">
+          <div style={{ padding: 22, width: '100%' }}>
+            <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginBottom: 8, textAlign: 'center' }}>
+              For example
+            </div>
+            <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0, textAlign: 'center' }}>
+              A spinning combo that sells new for <strong>$54.99</strong>, sent in and graded <strong>Like New</strong>, would earn roughly{' '}
+              <strong>$18–19 in store credit</strong>.
+            </p>
+          </div>
+        </TinFrame>
+        <p style={{ fontSize: 12.5, opacity: 0.65, marginTop: 14, textAlign: 'center' }}>
+          To keep the numbers making sense for both of us, we're currently only able to take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more —
+          smaller items cost more to ship than they're worth crediting.
         </p>
       </div>
 
