@@ -8,6 +8,7 @@ import { MobileMenu, MenuFab } from './MobileMenu';
 import { AdminLoginModal } from './AdminLoginModal';
 import { RoughFilterDefs } from '../ui/RoughFilterDefs';
 import { RopeDivider } from '../ui/Misc';
+import { ErrorBoundary } from '../ErrorBoundary';
 
 export function SiteLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,9 +28,11 @@ export function SiteLayout() {
       <RopeDivider />
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       <main id="main-content" tabIndex={-1} style={{ outline: 'none' }}>
-        <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
-          <Outlet />
-        </Suspense>
+        <ErrorBoundary key={location.pathname}>
+          <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
+            <Outlet />
+          </Suspense>
+        </ErrorBoundary>
       </main>
       <RopeDivider />
       <Footer />
