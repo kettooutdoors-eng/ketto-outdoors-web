@@ -3,4 +3,4 @@ Allow: /
 Disallow: /checkout
 Disallow: /orders
 
-Sitemap: https://www.kettooutdoors.com/sitemap.xml
+Sitemap: https://kettooutdoors-eng.github.io/ketto-outdoors-web/sitemap.xml
