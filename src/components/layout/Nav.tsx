@@ -75,7 +75,7 @@ export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
       </BannerButton>
 
       {searchOpen && (
-        <form onSubmit={handleSearchSubmit}>
+        <form onSubmit={handleSearchSubmit} style={{ display: 'flex', gap: 6 }}>
           <input
             type="text"
             name="q"
@@ -83,8 +83,31 @@ export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search..."
+            autoFocus
             style={{ fontSize: 13, padding: '8px 10px', border: '2px solid var(--forest)', borderRadius: 6, width: 160 }}
           />
+          <button
+            type="submit"
+            aria-label="Submit search"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 36,
+              height: 36,
+              borderRadius: 6,
+              border: '2px solid var(--forest)',
+              background: 'var(--forest)',
+              color: 'var(--cream)',
+              cursor: 'pointer',
+              flexShrink: 0,
+            }}
+          >
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </form>
       )}
       <button
