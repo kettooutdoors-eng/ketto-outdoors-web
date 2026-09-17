@@ -42,18 +42,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/used-gear</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/trade-in</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- /used-gear and /trade-in are paused (see src/state/FeatureFlagsContext.tsx) and
+       excluded here while off-by-default; re-add once the program is switched on. -->
   <url>
     <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/shop</loc>
     <lastmod>2026-09-14</lastmod>
