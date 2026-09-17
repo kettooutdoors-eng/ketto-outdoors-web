@@ -48,6 +48,9 @@ export interface FaqEntry {
   question: string;
   answer: string;
   links: { text: string; target: string }[];
+  // Set on entries specific to the used-gear/trade-in program, which is paused for now
+  // (see FeatureFlagsContext.usedGear) — Faq.tsx hides these while the flag is off.
+  usedGear?: boolean;
 }
 
 export const FAQ_ENTRIES: FaqEntry[] = [
@@ -60,9 +63,9 @@ export const FAQ_ENTRIES: FaqEntry[] = [
   { question: 'How do I know which lure to buy?', answer: 'Every lure page lists the target species, a difficulty score, and how to fish it — retrieve speed, technique, and what a strike feels like. Not sure where to start? Ask us directly.', links: [{ text: 'Ask us directly', target: '/contact' }] },
   { question: 'Do you ship internationally?', answer: "Right now we only ship within the continental US. If that changes, we'll post it here.", links: [] },
   { question: 'How do I track my order?', answer: 'Check My Orders for order history saved on this device, or email us your order number.', links: [{ text: 'My Orders', target: '/orders' }] },
-  { question: 'How does the used gear trade-in work?', answer: "Tell us what you're sending in, we'll email you a prepaid shipping label if it sounds like a fit, and once it passes a real function check, you get store credit for it — good toward anything on the site. It costs you nothing to send something in.", links: [{ text: 'See how trade-ins work', target: '/trade-in' }] },
-  { question: 'Do I get cash for a trade-in, or store credit?', answer: "Store credit — we don't do cash payouts for trade-ins. Your credit doesn't expire and can be used on anything on the site, including kits.", links: [] },
-  { question: "What if my gear doesn't pass inspection?", answer: "We'll email you either way. If it doesn't pass our function check, we'll ship it back to you if you'd like it returned instead of relisted.", links: [] },
+  { question: 'How does the used gear trade-in work?', answer: "Tell us what you're sending in, we'll email you a prepaid shipping label if it sounds like a fit, and once it passes a real function check, you get store credit for it — good toward anything on the site. It costs you nothing to send something in.", links: [{ text: 'See how trade-ins work', target: '/trade-in' }], usedGear: true },
+  { question: 'Do I get cash for a trade-in, or store credit?', answer: "Store credit — we don't do cash payouts for trade-ins. Your credit doesn't expire and can be used on anything on the site, including kits.", links: [], usedGear: true },
+  { question: "What if my gear doesn't pass inspection?", answer: "We'll email you either way. If it doesn't pass our function check, we'll ship it back to you if you'd like it returned instead of relisted.", links: [], usedGear: true },
   { question: 'Still have a question?', answer: 'Reach out through our Contact page or email KettoOutdoors@gmail.com — we read every message.', links: [{ text: 'Contact page', target: '/contact' }, { text: 'KettoOutdoors@gmail.com', target: 'mailto:KettoOutdoors@gmail.com' }] },
 ];
 

@@ -11,6 +11,7 @@ import { BundleCard } from '../components/BundleCard';
 import { BUNDLES } from '../data/bundles';
 import { BITING_NOW_SEASON } from '../data/bitingNow';
 import { useAdmin } from '../state/AdminContext';
+import { useFeatureFlags } from '../state/FeatureFlagsContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { getProductImageSrc } from '../data/productImages';
 
@@ -62,6 +63,7 @@ const STEPS = [
 export default function Home() {
   useDocumentMeta('Ketto Outdoors — Fishing Gear That Works', "Beginner-friendly lures, combos, and guides. Gear matched to the fish you're after, not just the price tag.", '/');
   const { isAdmin } = useAdmin();
+  const { usedGear } = useFeatureFlags();
   const [featured, setFeatured] = useState<string[]>(() => loadFeatured());
 
   useEffect(() => {
@@ -222,19 +224,23 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Used Gear / Trade-In teaser */}
-      <div style={{ background: 'var(--rust)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <div>
-          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--ink)', fontWeight: 700 }}>New: quality-checked used gear</span>{' '}
-          <span style={{ fontSize: 15, marginLeft: 8 }}>Cheaper than new, or send in gear you're not using for store credit.</span>
+      {/* Used Gear / Trade-In teaser — paused; see FeatureFlagsContext.usedGear */}
+      {(usedGear || isAdmin) && (
+        <div style={{ background: 'var(--rust)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+          <div>
+            <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--ink)', fontWeight: 700 }}>
+              {usedGear ? 'New: quality-checked used gear' : 'Admin preview — hidden from customers'}
+            </span>{' '}
+            <span style={{ fontSize: 15, marginLeft: 8 }}>Cheaper than new, or send in gear you're not using for store credit.</span>
+          </div>
+          <Link
+            to="/used-gear"
+            style={{ fontSize: 13, fontWeight: 800, color: 'var(--cream)', background: 'var(--ink)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
+          >
+            Shop Used Gear →
+          </Link>
         </div>
-        <Link
-          to="/used-gear"
-          style={{ fontSize: 13, fontWeight: 800, color: 'var(--cream)', background: 'var(--ink)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
-        >
-          Shop Used Gear →
-        </Link>
-      </div>
+      )}
 
       {/* Individual gear — secondary path */}
       <div style={{ paddingBottom: 8 }}>

@@ -3,16 +3,21 @@ import { Link } from 'react-router-dom';
 import { PageHero } from '../components/ui/PageHero';
 import { FAQ_ENTRIES, FAQ_META } from '../data/legal';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { useAdmin } from '../state/AdminContext';
+import { useFeatureFlags } from '../state/FeatureFlagsContext';
 
 export default function Faq() {
   useDocumentMeta(FAQ_META.title, FAQ_META.description, '/faq');
   const [open, setOpen] = useState<number | null>(0);
+  const { isAdmin } = useAdmin();
+  const { usedGear } = useFeatureFlags();
+  const entries = FAQ_ENTRIES.filter((entry) => !entry.usedGear || usedGear || isAdmin);
 
   return (
     <div>
       <PageHero eyebrow="Common questions" heading="FAQ" />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {FAQ_ENTRIES.map((entry, i) => (
+        {entries.map((entry, i) => (
           <div key={entry.question} style={{ border: '2px solid var(--ink)', background: 'var(--parchment)' }}>
             <h2 style={{ margin: 0 }}>
               <button

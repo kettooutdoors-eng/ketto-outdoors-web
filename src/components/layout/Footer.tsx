@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useAdmin } from '../../state/AdminContext';
+import { useFeatureFlags } from '../../state/FeatureFlagsContext';
 import { submitLead } from '../../lib/leads';
 
 const linkStyle = { fontSize: 13, fontWeight: 600, color: 'var(--cream)', opacity: 0.75 };
@@ -8,6 +9,7 @@ const headingStyle = { fontFamily: 'var(--font-heading)', fontWeight: 800, fontS
 
 export function Footer() {
   const { isAdmin, logout, openLogin } = useAdmin();
+  const { usedGear, setUsedGear } = useFeatureFlags();
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false);
   const [done, setDone] = useState(false);
@@ -36,8 +38,12 @@ export function Footer() {
           <Link to="/biting-now" style={linkStyle}>What's biting now</Link>
           <Link to="/gear-by-state" style={linkStyle}>Gear for your state</Link>
           <Link to="/shop" style={linkStyle}>Shop all gear</Link>
-          <Link to="/used-gear" style={linkStyle}>Used gear</Link>
-          <Link to="/trade-in" style={linkStyle}>Trade in your gear</Link>
+          {(usedGear || isAdmin) && (
+            <>
+              <Link to="/used-gear" style={linkStyle}>Used gear{!usedGear && ' (admin preview)'}</Link>
+              <Link to="/trade-in" style={linkStyle}>Trade in your gear{!usedGear && ' (admin preview)'}</Link>
+            </>
+          )}
           <Link to="/new-to-fishing" style={linkStyle}>New to fishing guide</Link>
           <Link to="/blog" style={linkStyle}>Blog</Link>
           <Link to="/orders" style={linkStyle}>My orders</Link>
@@ -60,6 +66,12 @@ export function Footer() {
           >
             {isAdmin ? 'Log out of admin' : 'Admin'}
           </a>
+          {isAdmin && (
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 600, color: 'var(--cream)', opacity: 0.6, cursor: 'pointer' }}>
+              <input type="checkbox" checked={usedGear} onChange={(e) => setUsedGear(e.target.checked)} />
+              Used gear program: {usedGear ? 'on' : 'off'}
+            </label>
+          )}
         </div>
       </div>
 

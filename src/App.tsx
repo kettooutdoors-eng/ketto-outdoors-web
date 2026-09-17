@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './state/CartContext';
 import { AdminProvider } from './state/AdminContext';
 import { InventoryProvider } from './state/InventoryContext';
+import { FeatureFlagsProvider } from './state/FeatureFlagsContext';
 import { SiteLayout } from './components/layout/SiteLayout';
+import { UsedGearGate } from './components/UsedGearGate';
 
 import Home from './pages/Home';
 const Kits = lazy(() => import('./pages/Kits'));
@@ -38,37 +40,39 @@ function App() {
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AdminProvider>
         <InventoryProvider>
-          <CartProvider>
-            <Routes>
-              <Route element={<SiteLayout />}>
-                <Route index element={<Home />} />
-                <Route path="kits" element={<Kits />} />
-                <Route path="kits/:slug" element={<Kit />} />
-                <Route path="biting-now" element={<BitingNow />} />
-                <Route path="gear-by-state" element={<GearByState />} />
-                <Route path="used-gear" element={<UsedGear />} />
-                <Route path="trade-in" element={<TradeIn />} />
-                {/* PHASE 2 - Upgrade Credit program, disabled until launch is stable. See src/pages/UpgradeCredit.tsx */}
-                {/* <Route path="upgrade-credit" element={<UpgradeCredit />} /> */}
-                <Route path="shop" element={<Shop />} />
-                <Route path="product/:id" element={<ProductPage />} />
-                <Route path="new-to-fishing" element={<NewToFishing />} />
-                <Route path="blog" element={<BlogIndex />} />
-                <Route path="blog/:category" element={<BlogCategory />} />
-                <Route path="blog/:category/:slug" element={<BlogArticlePage />} />
-                <Route path="checkout" element={<Checkout />} />
-                <Route path="orders" element={<Orders />} />
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="faq" element={<Faq />} />
-                <Route path="privacy" element={<Privacy />} />
-                <Route path="cookies" element={<Cookies />} />
-                <Route path="terms" element={<Terms />} />
-                <Route path="shipping-returns" element={<ShippingReturns />} />
-                <Route path="*" element={<NotFound />} />
-              </Route>
-            </Routes>
-          </CartProvider>
+          <FeatureFlagsProvider>
+            <CartProvider>
+              <Routes>
+                <Route element={<SiteLayout />}>
+                  <Route index element={<Home />} />
+                  <Route path="kits" element={<Kits />} />
+                  <Route path="kits/:slug" element={<Kit />} />
+                  <Route path="biting-now" element={<BitingNow />} />
+                  <Route path="gear-by-state" element={<GearByState />} />
+                  <Route path="used-gear" element={<UsedGearGate><UsedGear /></UsedGearGate>} />
+                  <Route path="trade-in" element={<UsedGearGate><TradeIn /></UsedGearGate>} />
+                  {/* PHASE 2 - Upgrade Credit program, disabled until launch is stable. See src/pages/UpgradeCredit.tsx */}
+                  {/* <Route path="upgrade-credit" element={<UpgradeCredit />} /> */}
+                  <Route path="shop" element={<Shop />} />
+                  <Route path="product/:id" element={<ProductPage />} />
+                  <Route path="new-to-fishing" element={<NewToFishing />} />
+                  <Route path="blog" element={<BlogIndex />} />
+                  <Route path="blog/:category" element={<BlogCategory />} />
+                  <Route path="blog/:category/:slug" element={<BlogArticlePage />} />
+                  <Route path="checkout" element={<Checkout />} />
+                  <Route path="orders" element={<Orders />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="faq" element={<Faq />} />
+                  <Route path="privacy" element={<Privacy />} />
+                  <Route path="cookies" element={<Cookies />} />
+                  <Route path="terms" element={<Terms />} />
+                  <Route path="shipping-returns" element={<ShippingReturns />} />
+                  <Route path="*" element={<NotFound />} />
+                </Route>
+              </Routes>
+            </CartProvider>
+          </FeatureFlagsProvider>
         </InventoryProvider>
       </AdminProvider>
     </BrowserRouter>
