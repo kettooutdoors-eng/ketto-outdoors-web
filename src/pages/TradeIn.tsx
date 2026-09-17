@@ -109,17 +109,25 @@ export default function TradeIn() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: 12.5, opacity: 0.65, marginTop: 12, textAlign: 'center' }}>
-          Gear that's broken, unsafe, or doesn't pass a function check doesn't get relisted — we'll ship it back to you instead of trashing it, if you'd like it returned.
-        </p>
       </div>
 
       <div style={{ padding: '40px 40px 0', maxWidth: 560, margin: '0 auto' }}>
-        <p style={{ fontSize: 12.5, opacity: 0.65, textAlign: 'center' }}>
-          To keep the numbers making sense for both of us, we're currently only able to take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more —
-          smaller items cost more to ship than they're worth crediting.
-        </p>
-        <p style={{ fontSize: 12.5, opacity: 0.75, marginTop: 12, textAlign: 'center', lineHeight: 1.6 }}>{TRADE_IN_VALUE_DISCLAIMER}</p>
+        <TinFrame shadow="sm">
+          <div style={{ padding: 22, width: '100%' }}>
+            <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginBottom: 10, textAlign: 'center' }}>
+              Good to know
+            </div>
+            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
+                Gear that's broken, unsafe, or doesn't pass a function check doesn't get relisted — we'll ship it back to you instead of trashing it, if you'd like it returned.
+              </li>
+              <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
+                We can only take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more — smaller items cost more to ship than they're worth crediting.
+              </li>
+              <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>{TRADE_IN_VALUE_DISCLAIMER}</li>
+            </ul>
+          </div>
+        </TinFrame>
       </div>
 
       <div style={{ padding: '48px 40px 56px', maxWidth: 560, margin: '0 auto' }}>
