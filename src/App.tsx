@@ -12,6 +12,10 @@ const BitingNow = lazy(() => import('./pages/BitingNow'));
 const GearByState = lazy(() => import('./pages/GearByState'));
 const UsedGear = lazy(() => import('./pages/UsedGear'));
 const TradeIn = lazy(() => import('./pages/TradeIn'));
+// PHASE 2 - Upgrade Credit program (rod & reel combo trade-in), disabled until launch is
+// stable. The page is fully built at src/pages/UpgradeCredit.tsx — uncomment this import
+// and the matching <Route> below, then add nav/footer links, when ready to switch it on.
+// const UpgradeCredit = lazy(() => import('./pages/UpgradeCredit'));
 const Shop = lazy(() => import('./pages/Shop'));
 const ProductPage = lazy(() => import('./pages/Product'));
 const NewToFishing = lazy(() => import('./pages/NewToFishing'));
@@ -44,6 +48,8 @@ function App() {
                 <Route path="gear-by-state" element={<GearByState />} />
                 <Route path="used-gear" element={<UsedGear />} />
                 <Route path="trade-in" element={<TradeIn />} />
+                {/* PHASE 2 - Upgrade Credit program, disabled until launch is stable. See src/pages/UpgradeCredit.tsx */}
+                {/* <Route path="upgrade-credit" element={<UpgradeCredit />} /> */}
                 <Route path="shop" element={<Shop />} />
                 <Route path="product/:id" element={<ProductPage />} />
                 <Route path="new-to-fishing" element={<NewToFishing />} />
