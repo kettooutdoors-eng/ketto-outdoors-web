@@ -198,7 +198,7 @@ export default function TradeIn() {
                     id="ti-description"
                     value={form.description}
                     onChange={(e) => update('description', e.target.value)}
-                    placeholder="e.g. Tackle box with about 15 assorted lures — mostly crankbaits and soft plastics, most look barely used."
+                    placeholder="e.g. Tackle box with about 15 assorted hard baits — crankbaits and spinnerbaits, most look barely used."
                     rows={4}
                     style={{ padding: '11px 12px', border: '2px solid rgba(27,67,50,.25)', fontSize: 14, width: '100%', fontFamily: 'inherit', resize: 'vertical' }}
                   />
