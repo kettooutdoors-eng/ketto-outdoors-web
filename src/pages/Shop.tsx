@@ -49,9 +49,9 @@ export default function Shop() {
 
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Every Piece of Gear We Make</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, opacity: 0.8 }}>
+      <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em' , color: 'var(--cream)'}}>Every Piece of Gear We Make</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
           Every lure and combo below is hand-picked before it ships. Difficulty scores show how much technique it takes to fish well.
         </p>
       </div>

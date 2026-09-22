@@ -17,10 +17,10 @@ export default function BlogCategory() {
 
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '48px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{cat.eyebrow}</div>
-        <h1 style={{ fontSize: 40, letterSpacing: '-0.03em', marginTop: 10 }}>{cat.heading}</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, opacity: 0.8 }}>{cat.intro}</p>
+      <div style={{ background: 'var(--hero-band)', padding: '48px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>{cat.eyebrow}</div>
+        <h1 style={{ fontSize: 40, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>{cat.heading}</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>{cat.intro}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginTop: 22 }}>
           {BLOG_CATEGORY_NAV.map((c) => (
             <Link
@@ -32,8 +32,8 @@ export default function BlogCategory() {
                 letterSpacing: '.04em',
                 textTransform: 'uppercase',
                 color: c.slug === cat.slug ? 'var(--cream)' : 'var(--ink)',
-                background: c.slug === cat.slug ? 'var(--forest)' : 'var(--parchment)',
-                border: '2px solid var(--ink)',
+                background: c.slug === cat.slug ? 'var(--forest)' : '#fff',
+                borderRadius: 20,
                 padding: '8px 14px',
               }}
             >

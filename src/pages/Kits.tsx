@@ -8,10 +8,10 @@ export default function Kits() {
 
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>One decision, not fifty</div>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 }}>Kits</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, opacity: 0.8 }}>
+      <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>One decision, not fifty</div>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Kits</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
           We tell you exactly what you need, so you're not gambling on fifty conflicting opinions from the internet. Pick the kit that matches what you're after — everything inside is already matched to work together.
         </p>
       </div>

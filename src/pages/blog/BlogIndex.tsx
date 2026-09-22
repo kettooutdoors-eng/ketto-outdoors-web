@@ -9,10 +9,10 @@ export default function BlogIndex() {
   useDocumentMeta(BLOG_INDEX_META.title, BLOG_INDEX_META.description, '/blog');
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '48px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>The Ketto Journal</div>
-        <h1 style={{ fontSize: 40, letterSpacing: '-0.03em', marginTop: 10 }}>Notes From the Water</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, opacity: 0.8 }}>
+      <div style={{ background: 'var(--hero-band)', padding: '48px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>The Ketto Journal</div>
+        <h1 style={{ fontSize: 40, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Notes From the Water</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
           Straight talk on lures, technique, and getting started — no jargon, no gatekeeping.
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginTop: 22 }}>
@@ -20,7 +20,7 @@ export default function BlogIndex() {
             <Link
               key={c.slug}
               to={`/blog/${c.slug}`}
-              style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--ink)', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '8px 14px' }}
+              style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--ink)', background: '#fff', borderRadius: 20, padding: '8px 14px' }}
             >
               {c.label}
             </Link>
@@ -36,7 +36,6 @@ export default function BlogIndex() {
                 to={`/blog/${article.category}/${article.slug}`}
                 style={{ display: 'block', padding: 28, color: 'var(--ink)', textDecoration: 'none', position: 'relative', width: '100%' }}
               >
-                <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
                 <BlogHero category={article.category} />
                 <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700, marginTop: 14 }}>{article.eyebrow}</div>
                 <h2 style={{ fontSize: 20, marginTop: 8, lineHeight: 1.3 }}>{article.title}</h2>

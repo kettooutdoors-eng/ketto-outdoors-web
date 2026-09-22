@@ -9,15 +9,15 @@ export default function UsedGear() {
 
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Quality-checked &amp; priced below new</div>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 }}>Used Gear</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, opacity: 0.8 }}>
+      <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Quality-checked &amp; priced below new</div>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Used Gear</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
           Real anglers' gear, inspected and graded by us before it's ever relisted. Fewer lures in a landfill, more gear in the water, cheaper than new.
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginTop: 22 }}>
           {CONDITION_GRADES.map((g) => (
-            <div key={g.label} style={{ fontSize: 12, fontWeight: 700, background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '8px 14px' }} title={g.description}>
+            <div key={g.label} style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', background: '#fff', borderRadius: 20, padding: '8px 14px' }} title={g.description}>
               {g.label}
             </div>
           ))}

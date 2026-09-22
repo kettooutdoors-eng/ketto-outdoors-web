@@ -26,8 +26,8 @@ export function CookieConsentBanner() {
         margin: '0 auto',
         background: 'var(--ink)',
         color: 'var(--cream)',
-        border: '2px solid var(--ink)',
-        boxShadow: '4px 4px 0 rgba(36,26,16,.4)',
+        borderRadius: 10,
+        boxShadow: '0 8px 28px rgba(0,0,0,.3)',
         padding: '18px 20px',
         display: 'flex',
         flexDirection: 'column',
@@ -36,7 +36,7 @@ export function CookieConsentBanner() {
     >
       <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6 }}>
         We use your browser's local storage to run your cart — that's not tracking, and it's not optional. Site analytics are off by default; if you say yes below, we'll turn on basic traffic analytics.{' '}
-        <Link to="/cookies" style={{ color: 'var(--mustard)', fontWeight: 700 }}>
+        <Link to="/cookies" style={{ color: '#e8a487', fontWeight: 700 }}>
           Read the Cookie Policy
         </Link>
         .

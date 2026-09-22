@@ -14,7 +14,7 @@ interface BannerButtonProps {
   type?: 'button' | 'submit';
 }
 
-/** The angled banner-shaped CTA button (ink outline + colored fill) used sitewide. */
+/** The plain square CTA button used sitewide. */
 export function BannerButton({
   children,
   to,
@@ -27,55 +27,41 @@ export function BannerButton({
   innerStyle,
   type = 'button',
 }: BannerButtonProps) {
-  const inner = (
-    <span
-      className="banner-cta"
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: fill ? 'center' : undefined,
-        width: fill ? '100%' : undefined,
-        textAlign: fill ? 'center' : undefined,
-        background,
-        color,
-        padding: '10px 18px 10px 12px',
-        ...innerStyle,
-      }}
-    >
-      {children}
-    </span>
-  );
-
-  const outerStyle: CSSProperties = {
+  const combinedStyle: CSSProperties = {
     textDecoration: 'none',
-    background: 'var(--ink)',
-    padding: 2,
-    display: 'inline-flex',
+    display: fill ? 'flex' : 'inline-flex',
+    alignItems: 'center',
+    justifyContent: fill ? 'center' : undefined,
+    width: fill ? '100%' : undefined,
+    textAlign: fill ? 'center' : undefined,
+    background,
+    color,
+    padding: '12px 22px',
     fontWeight: 800,
-    letterSpacing: '.03em',
+    letterSpacing: '.02em',
     border: 'none',
     cursor: 'pointer',
-    width: fill ? '100%' : undefined,
     ...style,
+    ...innerStyle,
   };
 
   if (to) {
     return (
-      <Link to={to} className="btn banner-cta" style={outerStyle}>
-        {inner}
+      <Link to={to} className="btn" style={combinedStyle}>
+        {children}
       </Link>
     );
   }
   if (href) {
     return (
-      <a href={href} className="btn banner-cta" style={outerStyle} onClick={onClick}>
-        {inner}
+      <a href={href} className="btn" style={combinedStyle} onClick={onClick}>
+        {children}
       </a>
     );
   }
   return (
-    <button type={type} className="btn banner-cta" style={outerStyle} onClick={onClick}>
-      {inner}
+    <button type={type} className="btn" style={combinedStyle} onClick={onClick}>
+      {children}
     </button>
   );
 }

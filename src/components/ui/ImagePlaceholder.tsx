@@ -6,25 +6,19 @@ interface ImagePlaceholderProps {
   src?: string;
 }
 
-/** Torn-edge sticker-photo frame. Shows a real photo when `src` is given, otherwise a sketch placeholder standing in for photography not yet sourced. */
-export function ImagePlaceholder({ label, height = 190, rotate = -1.5, src }: ImagePlaceholderProps) {
+/** Plain rounded photo frame. Shows a real photo when `src` is given, otherwise a sketch placeholder standing in for photography not yet sourced. */
+export function ImagePlaceholder({ label, height = 190, src }: ImagePlaceholderProps) {
   return (
     <div
-      className="torn"
       style={{
         height,
-        background: 'var(--photo-frame)',
-        padding: 10,
-        transform: `rotate(${rotate}deg)`,
-        filter: 'drop-shadow(3px 4px 3px rgba(36,26,16,.35))',
+        borderRadius: 10,
+        overflow: 'hidden',
+        border: '1px solid rgba(27,67,50,.12)',
       }}
     >
       {src ? (
-        <img
-          src={src}
-          alt={label}
-          style={{ height: '100%', width: '100%', objectFit: 'contain', background: '#fff' }}
-        />
+        <img src={src} alt={label} style={{ height: '100%', width: '100%', objectFit: 'contain', background: '#fff' }} />
       ) : (
         <div
           style={{
@@ -35,9 +29,7 @@ export function ImagePlaceholder({ label, height = 190, rotate = -1.5, src }: Im
             justifyContent: 'center',
             textAlign: 'center',
             padding: 12,
-            background:
-              'repeating-linear-gradient(135deg, rgba(36,26,16,.05) 0 10px, transparent 10px 20px)',
-            border: '1.5px dashed rgba(36,26,16,.3)',
+            background: 'var(--sage)',
           }}
         >
           <span style={{ fontSize: 11, letterSpacing: '.04em', color: 'var(--kicker)', fontWeight: 600 }}>{label}</span>

@@ -10,16 +10,24 @@ interface SealProps {
   style?: CSSProperties;
 }
 
-export function Seal({ children, size = 30, background = 'var(--mustard)', color = 'var(--ink)', fontSize = 13, rotate = 0, style }: SealProps) {
+export function Seal({ children, size = 30, background = 'var(--forest)', color = 'var(--cream)', fontSize = 13, rotate = 0, style }: SealProps) {
   return (
     <div
-      className="seal"
       style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '50%',
+        border: '2px solid var(--forest)',
         width: size,
         height: size,
         background,
         color,
         fontSize,
+        fontFamily: 'var(--font-heading)',
+        fontWeight: 800,
+        textAlign: 'center',
+        lineHeight: 1.05,
         transform: rotate ? `rotate(${rotate}deg)` : undefined,
         ...style,
       }}
@@ -35,21 +43,21 @@ interface PillSealProps {
   style?: CSSProperties;
 }
 
-export function PillSeal({ children, rotate = -2, style }: PillSealProps) {
+export function PillSeal({ children, style }: PillSealProps) {
   return (
     <div
-      className="seal"
       style={{
         alignSelf: 'flex-start',
+        display: 'inline-flex',
         gap: 6,
         fontSize: 9,
         letterSpacing: '.06em',
         textTransform: 'uppercase',
+        fontWeight: 700,
         background: 'var(--rust)',
-        color: 'var(--parchment)',
+        color: 'var(--cream)',
         padding: '8px 12px',
         borderRadius: 20,
-        transform: `rotate(${rotate}deg)`,
         ...style,
       }}
     >

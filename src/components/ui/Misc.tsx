@@ -1,10 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-export function RopeDivider() {
-  return <div className="rope-divider" />;
-}
-
 export function SectionKicker({ children }: { children: ReactNode }) {
   return (
     <div style={{ textAlign: 'center' }}>

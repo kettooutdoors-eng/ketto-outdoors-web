@@ -43,10 +43,10 @@ export default function UpgradeCredit() {
 
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Free shipping, real inspection, store credit</div>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 }}>Upgrade Credit</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, opacity: 0.8 }}>
+      <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Free shipping, real inspection, store credit</div>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Upgrade Credit</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
           Outgrown your starter combo? Send it back and put it toward the next one. We'll pay for shipping, check it out, and credit your account if it passes.
         </p>
       </div>
@@ -89,14 +89,14 @@ export default function UpgradeCredit() {
                   width: 32,
                   height: 32,
                   borderRadius: '50%',
-                  border: '2px solid var(--ink)',
+                  border: '2px solid rgba(27,67,50,.25)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontFamily: 'var(--font-heading)',
                   fontWeight: 800,
                   fontSize: 14,
-                  background: 'var(--parchment)',
+                  background: '#fff',
                 }}
               >
                 {i + 1}
@@ -117,7 +117,7 @@ export default function UpgradeCredit() {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {UPGRADE_CREDIT_GRADES.map((g) => (
-            <div key={g.label} style={{ display: 'flex', gap: 14, alignItems: 'center', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px' }}>
+            <div key={g.label} style={{ display: 'flex', gap: 14, alignItems: 'center', background: '#fff', boxShadow: 'var(--shadow-sm)', borderRadius: 10, padding: '14px 18px' }}>
               <div style={{ flexShrink: 0, minWidth: 90 }}>
                 <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 15 }}>{g.label}</div>
                 <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--rust)' }}>{g.creditPercent} credit</div>

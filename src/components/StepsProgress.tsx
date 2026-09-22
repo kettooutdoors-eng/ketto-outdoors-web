@@ -5,9 +5,9 @@ interface Step {
   body: string;
 }
 
-const IDLE = { background: 'var(--parchment)', color: 'var(--forest)', borderColor: 'rgba(36,26,16,.35)' };
-const ACTIVE = { background: 'var(--rust)', color: 'var(--parchment)', borderColor: 'var(--rust)' };
-const PASSED = { background: 'var(--forest)', color: 'var(--parchment)', borderColor: 'var(--forest)' };
+const IDLE = { background: '#fff', color: 'var(--forest)', borderColor: 'rgba(27,67,50,.25)' };
+const ACTIVE = { background: 'var(--rust)', color: '#fff', borderColor: 'var(--rust)' };
+const PASSED = { background: 'var(--forest)', color: '#fff', borderColor: 'var(--forest)' };
 
 /**
  * The Home page "Three Steps" section with a scroll-linked progress track:

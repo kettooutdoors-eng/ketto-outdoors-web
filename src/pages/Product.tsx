@@ -51,7 +51,7 @@ function NotifyWhenBackForm({ productId, productName }: { productId: string; pro
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          style={{ flex: 1, padding: '10px 12px', border: '2px solid var(--ink)', background: 'var(--cream)', fontSize: 13 }}
+          style={{ flex: 1, padding: '10px 12px', border: '2px solid rgba(27,67,50,.25)', background: '#fff', fontSize: 13 }}
         />
         <button
           type="submit"
@@ -102,7 +102,7 @@ export default function ProductPage() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <div className="card-kicker">{product.kicker}</div>
-          {product.difficulty && <PillSeal rotate={-2}>{`Difficulty: ${product.difficulty.label} (${product.difficulty.number}/${product.difficulty.outOf})`}</PillSeal>}
+          {product.difficulty && <PillSeal>{`Difficulty: ${product.difficulty.label} (${product.difficulty.number}/${product.difficulty.outOf})`}</PillSeal>}
           <h1 style={{ fontSize: 38 }}>{product.displayNameFull}</h1>
           {product.targetSpecies && <div style={{ fontSize: 13, opacity: 0.75 }}>Target species: {product.targetSpecies}</div>}
           {product.bestFor && <div style={{ fontSize: 13, opacity: 0.75 }}>Best for: {product.bestFor}</div>}
@@ -189,7 +189,7 @@ export default function ProductPage() {
       </div>
 
       {/* How to fish it */}
-      <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
+      <div style={{ background: 'var(--sage)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Cast it with confidence tomorrow</div>
           <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>How to Fish It</h2>
@@ -202,7 +202,7 @@ export default function ProductPage() {
                 <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 10 }}>What else you'll need</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {product.guide.gearNeeded.map((g) => (
-                    <span key={g} style={{ fontSize: 12.5, fontWeight: 600, background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '6px 12px' }}>
+                    <span key={g} style={{ fontSize: 12.5, fontWeight: 600, background: '#fff', borderRadius: 20, padding: '6px 12px' }}>
                       {g}
                     </span>
                   ))}
@@ -219,14 +219,14 @@ export default function ProductPage() {
                       width: 30,
                       height: 30,
                       borderRadius: '50%',
-                      border: '2px solid var(--ink)',
+                      border: '2px solid rgba(27,67,50,.25)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontFamily: 'var(--font-heading)',
                       fontWeight: 800,
                       fontSize: 13,
-                      background: 'var(--parchment)',
+                      background: '#fff',
                     }}
                   >
                     {i + 1}
@@ -241,14 +241,14 @@ export default function ProductPage() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <TinFrame shadow="sm" background="var(--parchment)">
+            <TinFrame shadow="sm" background="#fff">
               <div style={{ padding: 20, width: '100%' }}>
                 <h3 style={{ fontSize: 15, marginBottom: 8, color: 'var(--rust)' }}>What a bite feels like</h3>
                 <p style={{ fontSize: 13.5, lineHeight: 1.6 }}>{product.guide.biteFeel}</p>
               </div>
             </TinFrame>
 
-            <TinFrame shadow="sm" background="var(--parchment)">
+            <TinFrame shadow="sm" background="#fff">
               <div style={{ padding: 20, width: '100%' }}>
                 <h3 style={{ fontSize: 15, marginBottom: 10, color: 'var(--rust)' }}>Common beginner mistakes</h3>
                 <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -299,7 +299,7 @@ export default function ProductPage() {
                       display: 'flex',
                       justifyContent: 'space-between',
                       padding: '8px 12px',
-                      background: d.highlight ? 'var(--rust)' : 'var(--hero-band)',
+                      background: d.highlight ? 'var(--rust)' : 'var(--sage)',
                       color: d.highlight ? 'var(--cream)' : 'var(--ink)',
                       fontWeight: d.highlight ? 700 : 400,
                       fontSize: 13,

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
 import { Seal, PillSeal } from '../components/ui/Seal';
-import { PriceTag } from '../components/ui/PriceTag';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
 import { ImagePlaceholder } from '../components/ui/ImagePlaceholder';
 import { StepsProgress } from '../components/StepsProgress';
@@ -49,9 +48,9 @@ function loadFeatured(): string[] {
 }
 
 const WHY_KETTO = [
-  { title: 'We teach, other brands only sell', body: "We built an entire beginner's guide — casting, reeling, reading water — because gear without know-how just sits in a drawer.", rotate: -6 },
-  { title: 'We match lure to person, not lure to price', body: "Every lure lists the exact species it catches, the angler it's built for, and a real difficulty score — so you buy the right gear for your water.", rotate: 4 },
-  { title: 'Every lure earns its spot', body: 'We cast, retrieve, and tune every lure ourselves before it ever reaches the catalog — so it performs the first time you tie it on.', rotate: -4 },
+  { title: 'We teach, other brands only sell', body: "We built an entire beginner's guide — casting, reeling, reading water — because gear without know-how just sits in a drawer." },
+  { title: 'We match lure to person, not lure to price', body: "Every lure lists the exact species it catches, the angler it's built for, and a real difficulty score — so you buy the right gear for your water." },
+  { title: 'Every lure earns its spot', body: 'We cast, retrieve, and tune every lure ourselves before it ever reaches the catalog — so it performs the first time you tie it on.' },
 ];
 
 const STEPS = [
@@ -81,7 +80,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--hero-band)', minHeight: 520, display: 'flex', alignItems: 'center', justifyContent: 'center', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)' }}>
+      <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--forest)', minHeight: 520, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <img
           src={`${import.meta.env.BASE_URL}assets/hero-photo.jpg`}
           alt="An angler standing at the water's edge at sunset"
@@ -92,59 +91,27 @@ export default function Home() {
             height: '100%',
             objectFit: 'cover',
             objectPosition: '67% 55%',
-            filter: 'sepia(.4) saturate(1.6) contrast(1.08) brightness(.9) hue-rotate(-6deg)',
           }}
         />
-        {/* Warm duotone wash to pull the photo into the site's mustard/forest palette */}
-        <div style={{ position: 'absolute', inset: 0, background: 'var(--forest)', mixBlendMode: 'color', opacity: 0.35 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 35%, rgba(217,154,44,.25), transparent 60%)', mixBlendMode: 'overlay' }} />
-        {/* Film grain, matching the site's body-texture noise */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            opacity: 0.5,
-            mixBlendMode: 'overlay',
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          }}
-        />
-        {/* Vignette */}
-        <div style={{ position: 'absolute', inset: 0, boxShadow: 'inset 0 0 140px rgba(20,15,8,.55)' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(20,30,22,.15), rgba(20,30,22,.5))' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(27,67,50,.1), rgba(27,67,50,.45))' }} />
 
         <TinFrame
-          background="rgba(247,236,208,.95)"
+          background="rgba(255,255,255,.96)"
           shadow="lg"
-          style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', zIndex: 2, maxWidth: 846, width: 'calc(100vw - 48px)' }}
-          innerStyle={{ padding: '44px 60px', gap: 40, alignItems: 'center', textAlign: 'left', borderLeft: '9px solid var(--rust)', position: 'relative', backdropFilter: 'blur(4px)' }}
+          style={{ position: 'relative', zIndex: 2, maxWidth: 846, width: 'calc(100vw - 48px)', margin: '48px 0' }}
+          innerStyle={{ padding: '44px 60px', gap: 40, alignItems: 'center', textAlign: 'left' }}
           innerClassName="hero-panel"
         >
-          <div className="stamp" style={{ position: 'absolute', top: 14, right: 14, width: 64, height: 64, fontSize: 9, lineHeight: 1.3, padding: 6, transform: 'rotate(-8deg)' }}>
-            EST.
-            <br />
-            KETTO
-            <br />
-            OUTDOORS
-          </div>
           <div style={{ display: 'flex', flexDirection: 'column-reverse', gap: 16 }}>
             <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>One confident answer, not fifty opinions</div>
-            <h1
-              style={{
-                fontSize: 58,
-                lineHeight: 0.94,
-                letterSpacing: '-0.04em',
-                color: 'var(--parchment)',
-                textShadow: '2px 2px 0 #241a10,4px 4px 0 #241a10,-2px 2px 0 #241a10,2px -2px 0 #241a10,-2px -2px 0 #241a10,6px 6px 0 #c1502e',
-              }}
-            >
+            <h1 style={{ fontSize: 58, lineHeight: 0.94, letterSpacing: '-0.04em', color: 'var(--ink)' }}>
               GEAR THAT
               <br />
               WORKS.
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
-            <BannerButton to="/kits" background="var(--rust)" color="var(--parchment)" innerStyle={{ padding: '16px 28px 16px 20px', fontSize: 14 }} style={{ filter: 'drop-shadow(4px 4px 0 rgba(36,26,16,.55))', whiteSpace: 'nowrap' }}>
+            <BannerButton to="/kits" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px', fontSize: 14 }} style={{ whiteSpace: 'nowrap' }}>
               Shop Kits
             </BannerButton>
             <Link to="/shop" style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', opacity: 0.7 }}>
@@ -166,7 +133,7 @@ export default function Home() {
           {WHY_KETTO.map((w, i) => (
             <Reveal key={w.title}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <Seal rotate={w.rotate}>{i + 1}</Seal>
+                <Seal>{i + 1}</Seal>
                 <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 16, letterSpacing: '-0.02em' }}>{w.title}</div>
                 <p style={{ fontSize: 13, opacity: 0.85 }}>{w.body}</p>
               </div>
@@ -176,7 +143,7 @@ export default function Home() {
       </div>
 
       {/* Kits — the primary shopping path */}
-      <div style={{ background: 'var(--hero-band)', paddingBottom: 56, borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)' }}>
+      <div style={{ background: 'var(--sage)', paddingBottom: 56 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
           <div className="card-kicker" style={{ fontSize: 11 }}>One decision, not fifty</div>
           <h2 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 8 }}>Stop Guessing What You Need</h2>
@@ -199,7 +166,7 @@ export default function Home() {
       {/* What's Biting Now teaser */}
       <div style={{ background: 'var(--ink)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <div>
-          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--mustard)', fontWeight: 700 }}>{BITING_NOW_SEASON} picks</span>{' '}
+          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>{BITING_NOW_SEASON} picks</span>{' '}
           <span style={{ fontSize: 15, marginLeft: 8 }}>Don't want to pick at all? See what's biting right now.</span>
         </div>
         <Link
@@ -213,12 +180,12 @@ export default function Home() {
       {/* Gear by State teaser */}
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <div>
-          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--mustard)', fontWeight: 700 }}>New to your state's water?</span>{' '}
+          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>New to your state's water?</span>{' '}
           <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state and see the fish and gear beginners there start with.</span>
         </div>
         <Link
           to="/gear-by-state"
-          style={{ fontSize: 13, fontWeight: 800, color: 'var(--ink)', background: 'var(--mustard)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
+          style={{ fontSize: 13, fontWeight: 800, color: 'var(--forest)', background: 'var(--cream)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
         >
           Gear for Your State →
         </Link>
@@ -260,7 +227,6 @@ export default function Home() {
             return (
               <TinFrame key={i} shadow="lg">
                 <div style={{ padding: 32, display: 'flex', flexDirection: 'column', gap: 14, position: 'relative', width: '100%' }}>
-                  <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
                   {isAdmin && (
                     <select
                       value={card.key}
@@ -276,15 +242,15 @@ export default function Home() {
                   )}
                   <ImagePlaceholder label={card.name} src={getProductImageSrc(card.key)} />
                   <div className="card-kicker">{card.kicker}</div>
-                  <PillSeal rotate={-2}>{card.badge}</PillSeal>
+                  <PillSeal>{card.badge}</PillSeal>
                   <Link to={card.href} style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24, letterSpacing: '-0.02em', color: '#1c1c1a' }}>
                     {card.name}
                   </Link>
                   <div style={{ fontSize: 12, letterSpacing: '.04em', color: '#1c1c1a', opacity: 0.7 }}>{card.sub}</div>
                   <p style={{ fontSize: 14 }}>{card.desc}</p>
-                  <PriceTag price={card.price} />
+                  <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 20 }}>${card.price}</div>
                   <div style={{ display: 'flex', gap: 10 }}>
-                    <BannerButton to={card.href} fill background="var(--ink)" color="var(--cream)">
+                    <BannerButton to={card.href} fill background="var(--forest)" color="var(--cream)">
                       {card.ctaText}
                     </BannerButton>
                   </div>
@@ -318,7 +284,7 @@ export default function Home() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
           <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit, one price, no guessing</div>
-          <BannerButton to="/kits" background="var(--rust)" color="var(--cream)" style={{ filter: 'drop-shadow(4px 4px 0 rgba(0,0,0,.35))' }} innerStyle={{ padding: '16px 28px 16px 20px' }}>
+          <BannerButton to="/kits" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
             Shop kits
           </BannerButton>
         </div>

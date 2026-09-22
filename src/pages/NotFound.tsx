@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <div style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '64px 40px' }}>
       <div style={{ textAlign: 'center', maxWidth: 480 }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 900, fontSize: 96, color: 'var(--mustard)', lineHeight: 1, textShadow: '3px 3px 0 var(--ink)' }}>404</div>
+        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 900, fontSize: 96, color: 'var(--forest)', lineHeight: 1 }}>404</div>
         <h1 style={{ fontSize: 30, marginTop: 16 }}>{NOT_FOUND_CONTENT.heading}</h1>
         <p style={{ marginTop: 10, opacity: 0.8 }}>{NOT_FOUND_CONTENT.body}</p>
 

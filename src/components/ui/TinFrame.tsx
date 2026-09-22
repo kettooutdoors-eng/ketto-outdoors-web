@@ -11,28 +11,29 @@ interface TinFrameProps {
 }
 
 const SHADOWS: Record<string, string> = {
-  sm: 'var(--shadow-ink-sm)',
-  md: 'var(--shadow-ink-md)',
-  lg: 'var(--shadow-ink-lg)',
+  sm: 'var(--shadow-sm)',
+  md: 'var(--shadow-md)',
+  lg: 'var(--shadow-lg)',
   none: 'none',
 };
 
-/** The ink-outlined "cut-tin" notch frame used around cards, hero panels, and the nav logo. */
-export function TinFrame({ children, background = 'var(--parchment)', padding = 3, shadow = 'md', style, innerStyle, innerClassName }: TinFrameProps) {
+/** Plain rounded card used around cards, hero panels, and the nav logo. */
+export function TinFrame({ children, background = '#fff', padding = 0, shadow = 'md', style, innerStyle, innerClassName }: TinFrameProps) {
   return (
     <div
-      className="notch"
+      className={innerClassName}
       style={{
-        background: 'var(--ink)',
-        padding,
         display: 'flex',
-        filter: shadow !== 'none' ? `drop-shadow(${SHADOWS[shadow]})` : undefined,
+        flex: 1,
+        background,
+        padding,
+        borderRadius: 12,
+        boxShadow: SHADOWS[shadow],
         ...style,
+        ...innerStyle,
       }}
     >
-      <div className={`notch${innerClassName ? ` ${innerClassName}` : ''}`} style={{ display: 'flex', flex: 1, background, ...innerStyle }}>
-        {children}
-      </div>
+      {children}
     </div>
   );
 }

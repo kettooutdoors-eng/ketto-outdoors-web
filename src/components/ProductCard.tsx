@@ -8,8 +8,8 @@ import type { ShopCatalogItem } from '../data/shop';
 
 const DIFFICULTY_COLOR: Record<string, string> = {
   Beginner: 'var(--forest)',
-  Intermediate: 'var(--mustard)',
-  Advanced: 'var(--rust)',
+  Intermediate: 'var(--rust)',
+  Advanced: 'var(--ink)',
 };
 
 // Stock status only shows on the product detail page (see Product.tsx) — cards
@@ -21,8 +21,6 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
   return (
     <TinFrame shadow="lg">
       <div style={{ padding: 28, display: 'flex', flexDirection: 'column', gap: 12, position: 'relative', width: '100%' }}>
-        <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
-
         <ImagePlaceholder label={item.name} src={getProductImageSrc(item.id)} />
 
         <div className="card-kicker">{item.kicker}</div>
@@ -34,7 +32,7 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '.06em',
-              background: 'var(--mustard)',
+              background: 'var(--sage)',
               color: 'var(--ink)',
               padding: '5px 10px',
               borderRadius: 12,
@@ -49,7 +47,7 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
               textTransform: 'uppercase',
               letterSpacing: '.06em',
               background: DIFFICULTY_COLOR[item.difficultyLabel] || 'var(--forest)',
-              color: 'var(--parchment)',
+              color: '#fff',
               padding: '5px 10px',
               borderRadius: 12,
             }}

@@ -6,8 +6,8 @@ import type { UsedGearItem } from '../data/usedGear';
 
 const CONDITION_COLOR: Record<string, string> = {
   'Like New': 'var(--forest)',
-  Good: 'var(--mustard)',
-  Fair: 'var(--rust)',
+  Good: 'var(--rust)',
+  Fair: 'var(--ink)',
 };
 
 export function UsedGearCard({ item }: { item: UsedGearItem }) {
@@ -17,13 +17,12 @@ export function UsedGearCard({ item }: { item: UsedGearItem }) {
   return (
     <TinFrame shadow="lg">
       <div style={{ padding: 28, display: 'flex', flexDirection: 'column', gap: 12, position: 'relative', width: '100%' }}>
-        <div className="notch" style={{ position: 'absolute', inset: 8, border: '1.5px dashed rgba(36,26,16,.35)', pointerEvents: 'none' }} />
         <ImagePlaceholder label={item.imagePlaceholderAlt} />
         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', background: CONDITION_COLOR[item.condition], color: 'var(--cream)', padding: '5px 10px', borderRadius: 12 }}>
+          <span style={{ fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', background: CONDITION_COLOR[item.condition], color: '#fff', padding: '5px 10px', borderRadius: 12 }}>
             {item.condition}
           </span>
-          <span style={{ fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', background: 'var(--parchment)', border: '1.5px solid var(--ink)', padding: '4px 10px', borderRadius: 12 }}>
+          <span style={{ fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', background: 'var(--sage)', color: 'var(--ink)', padding: '4px 10px', borderRadius: 12 }}>
             Quality-checked
           </span>
         </div>

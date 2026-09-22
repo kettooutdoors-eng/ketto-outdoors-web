@@ -48,14 +48,14 @@ export default function Kit() {
             Add whole kit to cart
           </BannerButton>
 
-          <div style={{ background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px', marginTop: 8 }}>
+          <div style={{ background: 'var(--sage)', borderRadius: 10, padding: '14px 18px', marginTop: 8 }}>
             <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0 }}>{bundle.reassurance}</p>
           </div>
         </div>
       </div>
 
       {/* What's inside */}
-      <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
+      <div style={{ background: 'var(--sage)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>No guessing what to add next</div>
           <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>What's Inside</h2>
@@ -65,7 +65,7 @@ export default function Kit() {
           {bundle.components.map((c) => {
             const linkedProduct = c.productId ? getProduct(c.productId) : undefined;
             return (
-              <TinFrame key={c.label} shadow="sm" background="var(--parchment)">
+              <TinFrame key={c.label} shadow="sm" background="#fff">
                 <div style={{ padding: 20, width: '100%' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 6 }}>
                     <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 17 }}>{c.label}</div>
@@ -76,8 +76,8 @@ export default function Kit() {
                         fontWeight: 700,
                         textTransform: 'uppercase',
                         letterSpacing: '.06em',
-                        background: c.sourced === 'anchor-brand' ? 'var(--mustard)' : 'var(--forest)',
-                        color: c.sourced === 'anchor-brand' ? 'var(--ink)' : 'var(--parchment)',
+                        background: c.sourced === 'anchor-brand' ? 'var(--rust)' : 'var(--forest)',
+                        color: '#fff',
                         padding: '5px 10px',
                         borderRadius: 12,
                       }}
@@ -109,7 +109,7 @@ export default function Kit() {
       </div>
 
       {/* Rigging guide */}
-      <div style={{ background: 'var(--hero-band)', borderTop: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', padding: '48px 40px' }}>
+      <div style={{ background: 'var(--sage)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>No fumbling with it the night before</div>
           <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>Setting It Up</h2>
@@ -126,14 +126,14 @@ export default function Kit() {
                     width: 30,
                     height: 30,
                     borderRadius: '50%',
-                    border: '2px solid var(--ink)',
+                    border: '2px solid rgba(27,67,50,.25)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontFamily: 'var(--font-heading)',
                     fontWeight: 800,
                     fontSize: 13,
-                    background: 'var(--parchment)',
+                    background: '#fff',
                   }}
                 >
                   {i + 1}
@@ -151,8 +151,8 @@ export default function Kit() {
               style={{
                 width: 140,
                 height: 140,
-                background: 'var(--parchment)',
-                border: '3px solid var(--ink)',
+                background: '#fff',
+                border: '3px solid rgba(27,67,50,.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

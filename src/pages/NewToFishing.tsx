@@ -12,14 +12,14 @@ function StepNumber({ n }: { n: number }) {
         width: 30,
         height: 30,
         borderRadius: '50%',
-        border: '2px solid var(--ink)',
+        border: '2px solid rgba(27,67,50,.25)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontFamily: 'var(--font-heading)',
         fontWeight: 800,
         fontSize: 13,
-        background: 'var(--parchment)',
+        background: '#fff',
       }}
     >
       {n}
@@ -31,16 +31,16 @@ export default function NewToFishing() {
   useDocumentMeta(GUIDE_META.title, GUIDE_META.description, '/new-to-fishing');
   return (
     <div>
-      <div style={{ background: 'var(--hero-band)', borderTop: '6px solid var(--ink)', borderBottom: '6px solid var(--ink)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>{GUIDE_HERO.eyebrow}</div>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 }}>{GUIDE_HERO.heading}</h1>
-        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, opacity: 0.8 }}>{GUIDE_HERO.intro}</p>
+      <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>{GUIDE_HERO.eyebrow}</div>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>{GUIDE_HERO.heading}</h1>
+        <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>{GUIDE_HERO.intro}</p>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center', marginTop: 24 }}>
           {GUIDE_HERO.jumpLinks.map((j) => (
             <a
               key={j.anchor}
               href={`#${j.anchor}`}
-              style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--ink)', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '8px 14px' }}
+              style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--ink)', background: '#fff', borderRadius: 20, padding: '8px 14px' }}
             >
               {j.label}
             </a>
@@ -95,7 +95,7 @@ export default function NewToFishing() {
               )}
 
               {s.note && (
-                <div style={{ marginTop: 20, maxWidth: '70ch', background: 'var(--parchment)', border: '2px solid var(--ink)', padding: '14px 18px' }}>
+                <div style={{ marginTop: 20, maxWidth: '70ch', background: 'var(--sage)', borderRadius: 10, padding: '14px 18px' }}>
                   <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0 }}>
                     <strong style={{ color: 'var(--rust)' }}>Good to know: </strong>
                     {s.note}

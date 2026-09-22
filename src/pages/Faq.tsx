@@ -18,7 +18,7 @@ export default function Faq() {
       <PageHero eyebrow="Common questions" heading="FAQ" />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: 12 }}>
         {entries.map((entry, i) => (
-          <div key={entry.question} style={{ border: '2px solid var(--ink)', background: 'var(--parchment)' }}>
+          <div key={entry.question} style={{ background: '#fff', borderRadius: 10, boxShadow: 'var(--shadow-sm)' }}>
             <h2 style={{ margin: 0 }}>
               <button
                 id={`faq-question-${i}`}
