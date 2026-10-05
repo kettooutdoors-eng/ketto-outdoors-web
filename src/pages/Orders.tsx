@@ -35,8 +35,8 @@ export default function Orders() {
       {orders.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>
           <p style={{ opacity: 0.75 }}>No orders yet.</p>
-          <BannerButton to="/shop" background="var(--forest)" color="var(--cream)" style={{ marginTop: 18, display: 'inline-flex' }}>
-            Shop all gear
+          <BannerButton to="/kits" background="var(--forest)" color="var(--cream)" style={{ marginTop: 18, display: 'inline-flex' }}>
+            Shop kits
           </BannerButton>
         </div>
       ) : (

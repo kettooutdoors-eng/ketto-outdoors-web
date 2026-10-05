@@ -54,9 +54,6 @@ export default function Home() {
             <BannerButton to="/kits" className="btn-pulse" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px', fontSize: 14 }} style={{ whiteSpace: 'nowrap' }}>
               Shop Kits
             </BannerButton>
-            <Link to="/shop" style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', opacity: 0.7 }}>
-              Or browse all gear
-            </Link>
           </div>
         </TinFrame>
       </div>
@@ -95,12 +92,6 @@ export default function Home() {
         ) : (
           <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
         )}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, marginTop: 40 }}>
-          <p style={{ fontSize: 15, opacity: 0.8 }}>Already know what you want?</p>
-          <BannerButton to="/shop" background="var(--forest)" color="var(--cream)">
-            Shop all gear
-          </BannerButton>
-        </div>
       </div>
 
       {/* Gear by State teaser */}

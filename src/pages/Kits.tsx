@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { BundleCard } from '../components/BundleCard';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
@@ -30,18 +29,6 @@ export default function Kits() {
         </div>
       )}
 
-      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Already know what you want?</div>
-        <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>
-          You can also shop gear one piece at a time.
-        </p>
-        <Link
-          to="/shop"
-          style={{ display: 'inline-block', marginTop: 20, fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}
-        >
-          Shop all gear →
-        </Link>
-      </div>
     </div>
   );
 }

@@ -139,7 +139,7 @@ export default function Checkout() {
         </TinFrame>
 
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginTop: 28 }}>
-          <BannerButton to="/shop" background="var(--forest)" color="var(--cream)">
+          <BannerButton to="/kits" background="var(--forest)" color="var(--cream)">
             Continue shopping
           </BannerButton>
           <BannerButton to="/orders" background="var(--cream)" color="var(--forest)" style={{ background: 'var(--forest)' }}>
@@ -154,9 +154,9 @@ export default function Checkout() {
     return (
       <div style={{ maxWidth: 480, margin: '0 auto', padding: '64px 40px', textAlign: 'center' }}>
         <h1 style={{ fontSize: 28 }}>Your cart is empty</h1>
-        <p style={{ marginTop: 10, opacity: 0.75 }}>Add something from the shop before checking out.</p>
-        <BannerButton to="/shop" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Shop all gear
+        <p style={{ marginTop: 10, opacity: 0.75 }}>Add a kit before checking out.</p>
+        <BannerButton to="/kits" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
+          Shop kits
         </BannerButton>
       </div>
     );
@@ -263,7 +263,7 @@ export default function Checkout() {
       </div>
 
       <div style={{ marginTop: 32 }}>
-        <Link to="/shop" style={{ fontSize: 13, color: 'var(--rust)' }}>
+        <Link to="/kits" style={{ fontSize: 13, color: 'var(--rust)' }}>
           ← Continue shopping
         </Link>
       </div>

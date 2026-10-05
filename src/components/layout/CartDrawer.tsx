@@ -64,7 +64,7 @@ export function CartDrawer() {
             <Link to="/checkout" onClick={closeCart} className="btn" style={{ flex: 1, textAlign: 'center', textDecoration: 'none', background: 'var(--rust)', color: '#fff', border: 'none', padding: '12px 0' }}>
               Checkout
             </Link>
-            <Link to="/shop" onClick={closeCart} className="btn" style={{ flex: 1, textAlign: 'center', textDecoration: 'none', background: 'var(--forest)', color: 'var(--cream)', border: 'none', padding: '12px 0' }}>
+            <Link to="/kits" onClick={closeCart} className="btn" style={{ flex: 1, textAlign: 'center', textDecoration: 'none', background: 'var(--forest)', color: 'var(--cream)', border: 'none', padding: '12px 0' }}>
               Continue Shopping
             </Link>
           </div>

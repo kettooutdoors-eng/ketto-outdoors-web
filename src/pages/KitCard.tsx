@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { getBundle } from '../data/bundles';
 import { KIT_CARDS } from '../data/kitCards';
 import { BannerButton } from '../components/ui/BannerButton';
@@ -107,9 +106,6 @@ export default function KitCard({ path }: { path: string }) {
           <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 17 }}>Questions?</div>
           <p style={{ fontSize: 15, lineHeight: 1.55, marginTop: 6 }}>
             Email us at <a href="mailto:KettoOutdoors@gmail.com" style={{ color: 'var(--rust)', fontWeight: 700 }}>KettoOutdoors@gmail.com</a> and we'll help.
-          </p>
-          <p style={{ fontSize: 14, marginTop: 12 }}>
-            Need more gear? <Link to="/shop" style={{ color: 'var(--rust)', fontWeight: 700 }}>Shop all gear</Link>
           </p>
         </div>
       </div>
