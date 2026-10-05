@@ -32,10 +32,7 @@ export function Footer() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12, minWidth: 150, textAlign: 'center', alignItems: 'center' }}>
         <div style={headingStyle}>Shop</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginTop: 4, alignItems: 'center' }}>
-          <Link to="/" style={linkStyle}>Home</Link>
           <Link to="/kits" style={linkStyle}>Shop kits</Link>
-          <Link to="/biting-now" style={linkStyle}>What's biting now</Link>
-          <Link to="/gear-by-state" style={linkStyle}>Gear for your state</Link>
           <Link to="/shop" style={linkStyle}>Shop all gear</Link>
           {(usedGear || isAdmin) && (
             <>

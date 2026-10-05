@@ -8,6 +8,7 @@ import { MobileMenu, MenuFab } from './MobileMenu';
 import { AdminLoginModal } from './AdminLoginModal';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { CookieConsentBanner } from '../CookieConsentBanner';
+import { WelcomePopup } from '../WelcomePopup';
 
 export function SiteLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ export function SiteLayout() {
       <CartDrawer />
       <AdminLoginModal />
       <MenuFab onOpen={() => setMenuOpen(true)} />
+      <WelcomePopup />
       <CookieConsentBanner />
     </div>
   );

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
 export function SectionKicker({ children }: { children: ReactNode }) {
@@ -37,7 +37,7 @@ export function StockLabel({ qty }: { qty: number }) {
 }
 
 /** Pop-in scroll-reveal wrapper matching the Home Page reference timing. */
-export function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function Reveal({ children, className = '', delay = 0, style }: { children: ReactNode; className?: string; delay?: number; style?: CSSProperties }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -62,7 +62,7 @@ export function Reveal({ children, className = '' }: { children: ReactNode; clas
   }, []);
 
   return (
-    <div ref={ref} className={`reveal ${visible ? 'reveal-visible' : ''} ${className}`}>
+    <div ref={ref} className={`reveal ${visible ? 'reveal-visible' : ''} ${className}`} style={{ transitionDelay: delay ? `${delay}ms` : undefined, ...style }}>
       {children}
     </div>
   );

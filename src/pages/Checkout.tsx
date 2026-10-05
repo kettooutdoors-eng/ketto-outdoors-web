@@ -6,6 +6,7 @@ import { US_STATES, TAX_RATES, estimateShipping, generateOrderId } from '../data
 import { BannerButton } from '../components/ui/BannerButton';
 import { TinFrame } from '../components/ui/TinFrame';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
+import { WELCOME_CODE, WELCOME_PERCENT, getClaimedCode } from '../lib/welcome';
 
 interface OrderRecord {
   id: string;
@@ -15,6 +16,7 @@ interface OrderRecord {
   items: { id: string; name: string; qty: number; lineTotal: number }[];
   shippingLabel: string;
   taxAmount: string;
+  discount?: string;
   total: string;
 }
 
@@ -43,9 +45,19 @@ export default function Checkout() {
 
   const itemCount = items.reduce((sum, i) => sum + i.qty, 0);
   const shipping = useMemo(() => estimateShipping(cartTotal, itemCount, form.zip), [cartTotal, itemCount, form.zip]);
+  const [codeInput, setCodeInput] = useState(() => getClaimedCode() ?? '');
+  const [appliedCode, setAppliedCode] = useState(() => getClaimedCode()?.trim().toUpperCase() === WELCOME_CODE);
+  const [codeError, setCodeError] = useState(false);
+  const discount = appliedCode ? Math.round(cartTotal * WELCOME_PERCENT) / 100 : 0;
   const taxRate = form.state ? TAX_RATES[form.state] || 0 : 0;
-  const taxAmount = Math.round((cartTotal + shipping.cost) * taxRate * 100) / 100;
-  const grandTotal = Math.round((cartTotal + shipping.cost + taxAmount) * 100) / 100;
+  const taxAmount = Math.round((cartTotal - discount + shipping.cost) * taxRate * 100) / 100;
+  const grandTotal = Math.round((cartTotal - discount + shipping.cost + taxAmount) * 100) / 100;
+
+  function applyCode() {
+    const ok = codeInput.trim().toUpperCase() === WELCOME_CODE;
+    setAppliedCode(ok);
+    setCodeError(!ok && codeInput.trim() !== '');
+  }
 
   function update(field: keyof typeof form, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -66,6 +78,7 @@ export default function Checkout() {
       items: items.map((i) => ({ id: i.id, name: i.name, qty: i.qty, lineTotal: i.lineTotal })),
       shippingLabel: shipping.label,
       taxAmount: taxAmount.toFixed(2),
+      discount: discount > 0 ? discount.toFixed(2) : undefined,
       total: grandTotal.toFixed(2),
     };
     saveOrder(order);
@@ -211,6 +224,26 @@ export default function Checkout() {
               </div>
             ))}
             <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid rgba(36,26,16,.15)' }}>
+              <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
+                <input
+                  style={{ ...inputStyle, padding: '9px 10px', fontSize: 13 }}
+                  name="discount-code"
+                  aria-label="Discount code"
+                  placeholder="Discount code"
+                  value={codeInput}
+                  onChange={(e) => setCodeInput(e.target.value)}
+                />
+                <button type="button" onClick={applyCode} style={{ padding: '0 16px', background: 'var(--forest)', color: 'var(--cream)', border: 'none', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                  Apply
+                </button>
+              </div>
+              {codeError && <div style={{ color: 'var(--rust)', fontSize: 12, marginBottom: 10 }}>That code isn't valid.</div>}
+              {discount > 0 && (
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 8, color: 'var(--forest)', fontWeight: 700 }}>
+                  <span>Welcome discount ({WELCOME_PERCENT}%)</span>
+                  <span>−${discount.toFixed(2)}</span>
+                </div>
+              )}
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13 }}>
                 <span>Shipping</span>
                 <span>{shipping.label}</span>

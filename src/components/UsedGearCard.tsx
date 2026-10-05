@@ -35,7 +35,7 @@ export function UsedGearCard({ item }: { item: UsedGearItem }) {
           <span style={{ fontSize: 13, opacity: 0.5, textDecoration: 'line-through' }}>${item.originalPrice.toFixed(2)}</span>
           <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--forest)' }}>{savings}% off new</span>
         </div>
-        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 6 }}>
+        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>
           Add to cart
         </BannerButton>
       </div>

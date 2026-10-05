@@ -9,6 +9,7 @@ interface BannerButtonProps {
   background?: string;
   color?: string;
   fill?: boolean;
+  className?: string;
   style?: CSSProperties;
   innerStyle?: CSSProperties;
   type?: 'button' | 'submit';
@@ -23,6 +24,7 @@ export function BannerButton({
   background = 'var(--forest)',
   color = 'var(--cream)',
   fill = false,
+  className = '',
   style,
   innerStyle,
   type = 'button',
@@ -47,20 +49,20 @@ export function BannerButton({
 
   if (to) {
     return (
-      <Link to={to} className="btn" style={combinedStyle}>
+      <Link to={to} className={`btn ${className}`} style={combinedStyle}>
         {children}
       </Link>
     );
   }
   if (href) {
     return (
-      <a href={href} className="btn" style={combinedStyle} onClick={onClick}>
+      <a href={href} className={`btn ${className}`} style={combinedStyle} onClick={onClick}>
         {children}
       </a>
     );
   }
   return (
-    <button type={type} className="btn" style={combinedStyle} onClick={onClick}>
+    <button type={type} className={`btn ${className}`} style={combinedStyle} onClick={onClick}>
       {children}
     </button>
   );

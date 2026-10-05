@@ -66,7 +66,7 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
           <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>${item.price.toFixed(2)}</span>
         </div>
 
-        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 6 }}>
+        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>
           Add to cart
         </BannerButton>
       </div>

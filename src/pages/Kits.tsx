@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BUNDLES } from '../data/bundles';
+import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { BundleCard } from '../components/BundleCard';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -16,10 +16,10 @@ export default function Kits() {
         </p>
       </div>
 
-      {BUNDLES.length > 0 ? (
+      {BUNDLES_BY_PRICE.length > 0 ? (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 28, padding: '48px 40px 56px' }}>
-          {BUNDLES.map((b) => (
-            <div key={b.id} style={{ width: '100%', maxWidth: 340 }}>
+          {BUNDLES_BY_PRICE.map((b) => (
+            <div key={b.id} style={{ display: 'flex', width: '100%', maxWidth: 340 }}>
               <BundleCard bundle={b} />
             </div>
           ))}

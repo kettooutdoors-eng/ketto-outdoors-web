@@ -7,7 +7,7 @@ export const LEAD_FORM_ENDPOINT = '';
 
 // 'upgrade-credit' is PHASE 2 (see src/data/upgradeCredit.ts) — not reachable live yet,
 // but kept in the union so the page still typechecks while it's built ahead of launch.
-export type LeadType = 'newsletter' | 'stock-notify' | 'contact' | 'trade-in' | 'upgrade-credit';
+export type LeadType = 'newsletter' | 'stock-notify' | 'contact' | 'trade-in' | 'upgrade-credit' | 'welcome-discount';
 
 interface LeadPayload {
   type: LeadType;
