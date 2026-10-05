@@ -50,9 +50,9 @@ export default function Shop() {
   return (
     <div>
       <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em' , color: 'var(--cream)'}}>Every Piece of Gear We Make</h1>
+        <h1 style={{ fontSize: 44, letterSpacing: '-0.03em' , color: 'var(--cream)'}}>All Gear</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          Every lure and piece of tackle below is hand-picked before it ships. Difficulty scores show how much technique it takes to fish well.
+          Every item here is picked by us. Difficulty scores show how much skill each one takes.
         </p>
       </div>
 
@@ -96,9 +96,9 @@ export default function Shop() {
         </div>
       ) : (
         <div style={{ textAlign: 'center', padding: '64px 40px' }}>
-          <h2 style={{ fontSize: 24 }}>Sorry, we don't have anything for that quite yet!</h2>
+          <h2 style={{ fontSize: 24 }}>Nothing matches those filters.</h2>
           <p style={{ maxWidth: '48ch', margin: '12px auto 0', opacity: 0.8 }}>
-            We asked the fish what they'd like to see next, but they just stared at us. Try a different filter in the meantime.
+            Try a different filter, or tell us what you're looking for.
           </p>
           <BannerButton href="mailto:KettoOutdoors@gmail.com?subject=Lure%20request" style={{ marginTop: 20, display: 'inline-flex' }}>
             Contact us &amp; request a lure

@@ -4,15 +4,15 @@ import { BundleCard } from '../components/BundleCard';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Kits() {
-  useDocumentMeta('Kits | Ketto Outdoors', 'One kit, one price, no guessing. Pre-built kits matched to the fish and water you’re after.', '/kits');
+  useDocumentMeta('Kits | Ketto Outdoors', 'Beginner tackle kits. Pick the kit that matches the fish you want to catch.', '/kits');
 
   return (
     <div>
       <div style={{ background: 'var(--hero-band)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>One decision, not fifty</div>
+        <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Beginner kits</div>
         <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Kits</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          We tell you exactly what you need, so you're not gambling on fifty conflicting opinions from the internet. Pick the kit that matches what you're after. Everything inside is already matched to work together.
+          Pick the kit that matches the fish you want to catch. Everything inside works together.
         </p>
       </div>
 
@@ -31,15 +31,15 @@ export default function Kits() {
       )}
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Already know exactly what you want?</div>
+        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Already know what you want?</div>
         <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>
-          You can also shop every piece of gear individually.
+          You can also shop gear one piece at a time.
         </p>
         <Link
           to="/shop"
           style={{ display: 'inline-block', marginTop: 20, fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}
         >
-          Browse gear à la carte →
+          Shop all gear →
         </Link>
       </div>
     </div>

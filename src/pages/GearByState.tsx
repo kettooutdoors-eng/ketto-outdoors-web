@@ -46,7 +46,7 @@ export default function GearByState() {
         <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Freshwater only: lakes &amp; streams</div>
         <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10, color: 'var(--cream)' }}>Gear for Your State</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          Pick your state and we'll show you the freshwater fish beginners there usually go after, and the gear that matches.
+          Pick your state to see the fish and gear beginners start with there.
         </p>
       </div>
 

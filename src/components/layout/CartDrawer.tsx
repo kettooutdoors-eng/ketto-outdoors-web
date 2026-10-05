@@ -41,7 +41,7 @@ export function CartDrawer() {
             ))
           ) : (
             <>
-              <p style={{ opacity: 0.7, fontSize: 14, margin: '0 0 14px' }}>Your cart is empty. Nothing’s biting yet.</p>
+              <p style={{ opacity: 0.7, fontSize: 14, margin: '0 0 14px' }}>Your cart is empty.</p>
               {BUNDLES[0] && (
                 <Link to={`/kits/${BUNDLES[0].slug}`} onClick={closeCart} style={{ display: 'block', background: 'var(--cream)', padding: '14px 16px', borderRadius: 8, textDecoration: 'none' }}>
                   <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Not sure where to start?</div>

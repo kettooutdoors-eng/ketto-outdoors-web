@@ -57,7 +57,7 @@ export default function Kit() {
       {/* What's inside */}
       <div style={{ background: 'var(--sage)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>No guessing what to add next</div>
+          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>In the box</div>
           <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>What's Inside</h2>
         </div>
 
@@ -111,7 +111,7 @@ export default function Kit() {
       {/* Rigging guide */}
       <div style={{ background: 'var(--sage)', padding: '48px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>No fumbling with it the night before</div>
+          <div style={{ fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Step by step</div>
           <h2 style={{ fontSize: 32, letterSpacing: '-0.02em', marginTop: 8 }}>Setting It Up</h2>
           <p style={{ margin: '12px auto 0', maxWidth: '60ch', fontSize: 14, opacity: 0.75 }}>{bundle.riggingNote}</p>
         </div>
@@ -161,13 +161,13 @@ export default function Kit() {
             >
               <span style={{ fontSize: 11, color: 'var(--kicker)', fontWeight: 700, lineHeight: 1.4 }}>QR CODE: video rigging guide (link before launch)</span>
             </div>
-            <p style={{ fontSize: 12.5, opacity: 0.7, maxWidth: '24ch' }}>Every kit ships with this on a printed card, plus the full written steps here on the site.</p>
+            <p style={{ fontSize: 12.5, opacity: 0.7, maxWidth: '24ch' }}>Every kit comes with this on a printed card. The full steps are also here.</p>
           </div>
         </div>
       </div>
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Ready to stop guessing?</div>
+        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Ready to go fishing?</div>
         <BannerButton onClick={() => addToCart(bundle.id)} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           Add whole kit to cart: ${bundle.price.toFixed(2)}
         </BannerButton>
