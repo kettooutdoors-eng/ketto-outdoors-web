@@ -168,10 +168,10 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
     endCta: {
-      heading: 'Know your water, not sure about your state?',
-      body: 'See the freshwater species and gear beginners in your state typically start with.',
-      buttonLabel: 'Find gear for your state →',
-      href: '/gear-by-state',
+      heading: 'Ready to try it?',
+      body: 'Let a kit make the decision for you.',
+      buttonLabel: 'Shop kits →',
+      href: '/kits',
     },
   },
 ];

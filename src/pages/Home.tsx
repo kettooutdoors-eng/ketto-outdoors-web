@@ -1,5 +1,4 @@
 import type { CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
 import { Seal } from '../components/ui/Seal';
@@ -92,20 +91,6 @@ export default function Home() {
         ) : (
           <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
         )}
-      </div>
-
-      {/* Gear by State teaser */}
-      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <div>
-          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Fishing near you?</span>{' '}
-          <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state to see what to buy.</span>
-        </div>
-        <Link
-          to="/gear-by-state"
-          style={{ fontSize: 13, fontWeight: 800, color: 'var(--forest)', background: 'var(--cream)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
-        >
-          Pick your state →
-        </Link>
       </div>
 
       {/* Stop guessing CTA */}
