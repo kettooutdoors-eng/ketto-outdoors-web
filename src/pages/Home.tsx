@@ -57,22 +57,6 @@ export default function Home() {
         </TinFrame>
       </div>
 
-      {/* Why Ketto */}
-      <div style={{ padding: '36px 40px', textAlign: 'center' }}>
-        <SectionKicker>Why Ketto</SectionKicker>
-        <h2 style={{ fontSize: 27, letterSpacing: '-0.03em', marginTop: 8 }}>Made for beginners.</h2>
-        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 24, marginTop: 28, textAlign: 'left', maxWidth: 920, marginLeft: 'auto', marginRight: 'auto' }}>
-          {WHY_KETTO.map((text, i) => (
-            <Reveal key={text}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <Seal>{i + 1}</Seal>
-                <p style={{ fontSize: 16, lineHeight: 1.6, opacity: 0.85 }}>{text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-
       {/* Kits — the primary shopping path */}
       <div style={{ background: 'var(--sage)', paddingBottom: 56 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
@@ -91,6 +75,22 @@ export default function Home() {
         ) : (
           <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
         )}
+      </div>
+
+      {/* Why Ketto */}
+      <div style={{ padding: '36px 40px', textAlign: 'center' }}>
+        <SectionKicker>Why Ketto</SectionKicker>
+        <h2 style={{ fontSize: 27, letterSpacing: '-0.03em', marginTop: 8 }}>Made for beginners.</h2>
+        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 24, marginTop: 28, textAlign: 'left', maxWidth: 920, marginLeft: 'auto', marginRight: 'auto' }}>
+          {WHY_KETTO.map((text, i) => (
+            <Reveal key={text}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <Seal>{i + 1}</Seal>
+                <p style={{ fontSize: 16, lineHeight: 1.6, opacity: 0.85 }}>{text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
 
       {/* Stop guessing CTA */}
