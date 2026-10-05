@@ -18,6 +18,7 @@ const TradeIn = lazy(() => import('./pages/TradeIn'));
 // stable. The page is fully built at src/pages/UpgradeCredit.tsx — uncomment this import
 // and the matching <Route> below, then add nav/footer links, when ready to switch it on.
 // const UpgradeCredit = lazy(() => import('./pages/UpgradeCredit'));
+const KitCard = lazy(() => import('./pages/KitCard'));
 const Shop = lazy(() => import('./pages/Shop'));
 const ProductPage = lazy(() => import('./pages/Product'));
 const NewToFishing = lazy(() => import('./pages/NewToFishing'));
@@ -53,6 +54,10 @@ function App() {
                   <Route path="trade-in" element={<UsedGearGate><TradeIn /></UsedGearGate>} />
                   {/* PHASE 2 - Upgrade Credit program, disabled until launch is stable. See src/pages/UpgradeCredit.tsx */}
                   {/* <Route path="upgrade-credit" element={<UpgradeCredit />} /> */}
+                  {/* Short pages the QR stickers inside each kit open. Not linked anywhere on the site. */}
+                  <Route path="bass" element={<KitCard path="bass" />} />
+                  <Route path="catfish" element={<KitCard path="catfish" />} />
+                  <Route path="starter" element={<KitCard path="starter" />} />
                   <Route path="shop" element={<Shop />} />
                   <Route path="product/:id" element={<ProductPage />} />
                   <Route path="new-to-fishing" element={<NewToFishing />} />
