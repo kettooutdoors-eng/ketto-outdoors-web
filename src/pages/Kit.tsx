@@ -45,7 +45,7 @@ export default function Kit() {
           <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>${bundle.price.toFixed(2)}</div>
 
           <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(bundle.id)} style={{ marginTop: 6 }}>
-            Add whole kit to cart
+            Add to cart
           </BannerButton>
 
           <div style={{ background: 'var(--sage)', borderRadius: 10, padding: '14px 18px', marginTop: 8 }}>
@@ -169,7 +169,7 @@ export default function Kit() {
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Ready to go fishing?</div>
         <BannerButton onClick={() => addToCart(bundle.id)} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Add whole kit to cart: ${bundle.price.toFixed(2)}
+          Add to cart: ${bundle.price.toFixed(2)}
         </BannerButton>
       </div>
     </div>
