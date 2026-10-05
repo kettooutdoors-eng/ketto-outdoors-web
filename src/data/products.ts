@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Rod and reel",
-        "10-12 lb monofilament or fluorocarbon line",
+        "10-12 lb monofilament line",
         "Pliers for hook removal"
       ],
       "steps": [
@@ -489,7 +489,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Rod and reel",
-        "8-10 lb fluorocarbon line (less visible in clear, cold water)"
+        "8-10 lb monofilament line"
       ],
       "steps": [
         {
@@ -1080,7 +1080,7 @@ export const PRODUCTS: Product[] = [
       "gearNeeded": [
         "4-in soft plastic (sold separately)",
         "Rod and reel",
-        "6-8 lb fluorocarbon line",
+        "6-8 lb monofilament line",
         "Sensitive rod tip recommended"
       ],
       "steps": [
@@ -1666,7 +1666,7 @@ export const PRODUCTS: Product[] = [
       "gearNeeded": [
         "1/0 wacky hook + O-ring (included)",
         "Rod and reel",
-        "8-10 lb fluorocarbon line"
+        "8-10 lb monofilament line"
       ],
       "steps": [
         {
@@ -1815,7 +1815,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Rod and reel",
-        "6-8 lb fluorocarbon line"
+        "6-8 lb monofilament line"
       ],
       "steps": [
         {
