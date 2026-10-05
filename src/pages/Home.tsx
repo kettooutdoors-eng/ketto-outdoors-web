@@ -4,7 +4,6 @@ import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
 import { Seal } from '../components/ui/Seal';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
-import { StepsProgress } from '../components/StepsProgress';
 import { BundleCard } from '../components/BundleCard';
 import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
@@ -13,12 +12,6 @@ const WHY_KETTO = [
   'We show you how to use everything, step by step.',
   'Every piece of equipment is matched to the fish you’re after.',
   'We check every piece of equipment before it ships.',
-];
-
-const STEPS = [
-  { title: 'Pick your fish', body: 'Know what you want to catch and where you will fish.' },
-  { title: 'Pick one or two pieces of equipment', body: "You don't need a full tackle box. One or two good pieces of equipment are enough." },
-  { title: 'Cast and reel', body: 'Cast out and reel steady. If you feel a tug, keep reeling.' },
 ];
 
 export default function Home() {
@@ -122,20 +115,6 @@ export default function Home() {
         >
           Pick your state →
         </Link>
-      </div>
-
-      {/* Three steps */}
-      <div style={{ padding: '56px 40px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Your first catch in 3 steps.</h2>
-        </div>
-        <StepsProgress steps={STEPS} />
-        <p style={{ textAlign: 'center', fontSize: 13, maxWidth: '60ch', margin: '32px auto 0', opacity: 0.8 }}>
-          New to fishing?{' '}
-          <Link to="/new-to-fishing" style={{ color: 'var(--rust)', fontWeight: 600 }}>
-            Learn the basics →
-          </Link>
-        </p>
       </div>
 
       {/* Stop guessing CTA */}
