@@ -12,7 +12,7 @@ export const BUNDLES: Bundle[] = [
     metaTitle: 'First Bass Kit | Ketto Outdoors',
     metaDescription: 'Beginner bass tackle: lures, hooks, and weights that work together. Bring your own rod and reel.',
     scenario: 'You want to catch bass from a pond, lake, or dock, and you don’t want to spend an hour reading advice first.',
-    reassurance: 'This is all the tackle you need to start. Add your own rod and reel and it will catch bass in most ponds and lakes.',
+    reassurance: 'This is all the tackle you need to start. Bring your own rod and reel.',
     sourcingNote: 'The hooks, jigs, and baits are ours. We pick them factory-direct, so you don’t pay brand markup, and the hooks won’t bend on your first real fish.',
     riggingNote: 'You only need one knot and two simple rigs. Everything else ties on the same way.',
     riggingSteps: [
@@ -93,7 +93,7 @@ export const BUNDLES: Bundle[] = [
     metaTitle: 'Never Fished Before Starter Kit | Ketto Outdoors',
     metaDescription: 'The simplest way to catch your first fish: a bobber, hooks, and bait with no worms to dig. Bring your own rod and reel.',
     scenario: 'You’ve never fished before and you don’t know the terms. You just want to stand by the water with a friend or your kid and catch something.',
-    reassurance: 'This is the whole setup. Tie on a hook, clip on a bobber, drop it near a dock or weeds, and wait for the bobber to go under. You don’t need to cast far or work a lure. Just bring a basic rod and reel.',
+    reassurance: 'This is the whole setup. Tie on a hook, clip on a bobber, drop it near a dock or weeds, and wait for the bobber to go under. Bring your own rod and reel.',
     sourcingNote: 'Everything here is ours. The hooks are sized small, and the soft bait is scented, so you don’t have to dig for worms.',
     riggingNote: 'One rig, one knot, five steps. That’s the whole setup.',
     riggingSteps: [
@@ -151,9 +151,9 @@ export const BUNDLES: Bundle[] = [
     // real costs before launch.
     price: 34.99,
     metaTitle: 'First Catfish Kit | Ketto Outdoors',
-    metaDescription: 'Beginner catfish tackle for the bank: circle hooks, rigging hardware, and stink bait. Bring your own medium-heavy rod and reel.',
+    metaDescription: 'Beginner catfish tackle for the bank: circle hooks, rigging hardware, and stink bait. Bring your own rod and reel.',
     scenario: 'You want to catch catfish from a river bank, a lake at dusk, or a dock after dark. Catfish tackle is different from bass tackle.',
-    reassurance: 'This is all the tackle you need to start. It will put bait in front of catfish from most banks and docks. You’ll need your own medium-heavy rod and reel.',
+    reassurance: 'This is all the tackle you need to start. Bring your own rod and reel.',
     sourcingNote: 'Catfish tackle takes more abuse, so the circle hooks, sinkers, and swivels are built for catfish rigs, not a random mix.',
     riggingNote: 'This kit rigs two ways: a slip-sinker rig for cut bait, and a simpler rig for stink bait.',
     riggingSteps: [

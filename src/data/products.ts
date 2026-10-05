@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Squarebills dive shallower on a slack line, deeper on a tight one. Deep Six holds a tight +/-1 ft band around 6 ft on a steady retrieve, tighter than most squarebills in its class. Retrieve notes: on a steady retrieve the bill loads, the body rolls six degrees each side, and the tail throws water off the back. At a brisk, steady reel speed of about 2.4 mph (roughly 90 handle turns per minute, about 1.5 cranks every second, no pausing), it holds its wobble and depth band consistently.",
     "guide": {
       "gearNeeded": [
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "10-12 lb monofilament or fluorocarbon line",
         "Pliers for hook removal"
       ],
@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Slow, patient fishing along the bottom near cover. A great first lure to learn feel with.",
     "guide": {
       "gearNeeded": [
-        "Spinning rod & reel",
+        "Rod and reel",
         "1/0 worm hook (see Baithooks)",
         "8-10 lb monofilament line",
         "Small split shot weight (optional, for deeper water)"
@@ -234,7 +234,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Whatever soft plastic or live bait you’re rigging",
-        "Spinning rod & reel",
+        "Rod and reel",
         "Line matched to your target species (8-12 lb covers most freshwater)"
       ],
       "steps": [
@@ -318,7 +318,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Stained or muddy water, low light, and covering water fast to find active fish.",
     "guide": {
       "gearNeeded": [
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "10-14 lb line",
         "Pliers for hook removal"
       ],
@@ -403,7 +403,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Calm mornings and evenings when fish are looking up near the surface.",
     "guide": {
       "gearNeeded": [
-        "Baitcasting rod & reel (recommended for casting accuracy)",
+        "Rod and reel",
         "12-17 lb line",
         "Calm early morning or evening conditions"
       ],
@@ -488,7 +488,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cold water and slow, suspended fish that won't chase a fast retrieve.",
     "guide": {
       "gearNeeded": [
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "8-10 lb fluorocarbon line (less visible in clear, cold water)"
       ],
       "steps": [
@@ -573,7 +573,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (Crawdaddy pairs well)",
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "8-12 lb line"
       ],
       "steps": [
@@ -656,7 +656,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Low light, aggressive fish, and open surface water near cover.",
     "guide": {
       "gearNeeded": [
-        "Baitcasting rod & reel (helps keep it on top immediately)",
+        "Rod and reel",
         "14-20 lb line",
         "Low light, dawn, dusk, or overcast"
       ],
@@ -741,7 +741,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Open water and imitating baitfish at a natural, steady pace.",
     "guide": {
       "gearNeeded": [
-        "Spinning rod & reel",
+        "Rod and reel",
         "8-10 lb line"
       ],
       "steps": [
@@ -825,7 +825,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Covering open water fast to locate schools of active fish.",
     "guide": {
       "gearNeeded": [
-        "Baitcasting rod & reel (helps with long, accurate casts)",
+        "Rod and reel",
         "10-14 lb line"
       ],
       "steps": [
@@ -909,7 +909,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Lily pads, mats, and slop where other lures would snag immediately.",
     "guide": {
       "gearNeeded": [
-        "Heavier baitcasting rod & reel (helps horse fish out of cover)",
+        "Rod and reel",
         "40-50 lb braided line (cuts through vegetation)"
       ],
       "steps": [
@@ -993,7 +993,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Deep, clear water and vertical jigging near schools of baitfish.",
     "guide": {
       "gearNeeded": [
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "8-10 lb line",
         "Electronics or a known deep hole (helpful but not required)"
       ],
@@ -1079,7 +1079,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "4-in soft plastic (sold separately)",
-        "Spinning rod & reel",
+        "Rod and reel",
         "6-8 lb fluorocarbon line",
         "Sensitive rod tip recommended"
       ],
@@ -1164,7 +1164,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Worm hook or light jighead (sold separately)",
-        "Spinning rod & reel",
+        "Rod and reel",
         "8-10 lb line"
       ],
       "steps": [
@@ -1248,7 +1248,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Jighead (Bottomjig pairs well)",
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "10-12 lb line"
       ],
       "steps": [
@@ -1331,7 +1331,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Around docks, weed edges, and other cover a weighted lure would snag on.",
     "guide": {
       "gearNeeded": [
-        "Spinning rod & reel",
+        "Rod and reel",
         "8-10 lb line",
         "Weedless hook (included)"
       ],
@@ -1416,7 +1416,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Tube jighead (sold separately)",
-        "Spinning rod & reel",
+        "Rod and reel",
         "6-8 lb line"
       ],
       "steps": [
@@ -1500,7 +1500,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (a craw or creature bait pairs well)",
-        "Medium-heavy rod recommended for pulling fish out of cover"
+        "Rod and reel"
       ],
       "steps": [
         {
@@ -1584,7 +1584,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "A medium-diving body, 66mm / 14g with roughly 100mm total length including the hook, built to run a consistent depth on a steady retrieve with a rattle that carries in stained water.",
     "guide": {
       "gearNeeded": [
-        "Spinning or baitcasting rod & reel",
+        "Rod and reel",
         "10-12 lb line"
       ],
       "steps": [
@@ -1665,7 +1665,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "1/0 wacky hook + O-ring (included)",
-        "Spinning rod & reel",
+        "Rod and reel",
         "8-10 lb fluorocarbon line"
       ],
       "steps": [
@@ -1740,7 +1740,7 @@ export const PRODUCTS: Product[] = [
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (a paddle tail or craw works well)",
-        "Baitcasting or spinning rod & reel",
+        "Rod and reel",
         "12-15 lb line"
       ],
       "steps": [
@@ -1814,7 +1814,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "17mm, in green pumpkin, watermelon seed, and chartreuse, rigged with a 1/16 oz or 3/32 oz nail/push weight for a slow, subtle fall right next to cover where bigger baits spook wary fish.",
     "guide": {
       "gearNeeded": [
-        "Light spinning rod & reel",
+        "Rod and reel",
         "6-8 lb fluorocarbon line"
       ],
       "steps": [
