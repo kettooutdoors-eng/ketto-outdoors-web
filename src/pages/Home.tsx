@@ -13,6 +13,12 @@ const WHY_KETTO = [
   'We check every piece of equipment before it ships.',
 ];
 
+/** Smooth-scrolls back up to the kits on this page. */
+function scrollToKits() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('kits')?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+}
+
 export default function Home() {
   useDocumentMeta('Ketto Outdoors | Fishing Gear That Works', 'Simple fishing tackle kits for beginners. Pick a kit and go fishing.', '/');
 
@@ -58,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* Kits — the primary shopping path */}
-      <div style={{ background: 'var(--sage)', paddingBottom: 56 }}>
+      <div id="kits" style={{ background: 'var(--sage)', paddingBottom: 56 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
           <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Pick a kit.</h2>
           <p style={{ margin: '12px auto 0', fontSize: 16, opacity: 0.75 }}>Everything inside works together.</p>
@@ -101,7 +107,7 @@ export default function Home() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
           <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit. Nothing to figure out.</div>
-          <BannerButton to="/kits" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
+          <BannerButton onClick={scrollToKits} background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
             Shop kits
           </BannerButton>
         </div>
