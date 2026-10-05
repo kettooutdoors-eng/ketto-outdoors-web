@@ -1,13 +1,19 @@
-// Optional third-party form endpoint (e.g. a Formspree form URL: https://formspree.io/f/xxxxxxxx).
-// Create a free account at formspree.io (or any service that accepts a JSON POST and emails you),
-// make a form, and paste its endpoint here — submissions will then reach your inbox directly.
-// Leave empty and every submission still gets saved locally as a fallback, but only on that
-// visitor's own device — you won't see it.
-export const LEAD_FORM_ENDPOINT = '';
+// Formspree form that emails every submission to KettoOutdoors@gmail.com. Every submission is
+// also saved locally as a fallback, but only on that visitor's own device.
+export const LEAD_FORM_ENDPOINT = 'https://formspree.io/f/moejqzlr';
 
 // 'upgrade-credit' is PHASE 2 (see src/data/upgradeCredit.ts) — not reachable live yet,
 // but kept in the union so the page still typechecks while it's built ahead of launch.
 export type LeadType = 'newsletter' | 'stock-notify' | 'contact' | 'trade-in' | 'upgrade-credit' | 'welcome-discount';
+
+const SUBJECTS: Record<LeadType, string> = {
+  newsletter: 'Newsletter sign-up',
+  'stock-notify': 'Back-in-stock request',
+  contact: 'Contact message',
+  'trade-in': 'Trade-in request',
+  'upgrade-credit': 'Upgrade credit request',
+  'welcome-discount': 'Welcome discount sign-up',
+};
 
 interface LeadPayload {
   type: LeadType;
@@ -23,7 +29,7 @@ export async function submitLead(payload: LeadPayload) {
     await fetch(LEAD_FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ _subject: `Ketto Outdoors — ${SUBJECTS[payload.type]}`, ...payload }),
     });
   } catch {
     // Local copy above is still saved — nothing further to do if the network call fails.
