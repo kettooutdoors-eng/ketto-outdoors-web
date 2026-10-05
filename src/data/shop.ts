@@ -1,4 +1,4 @@
-export const SHOP_META = { title: 'Shop All Gear — Ketto Outdoors', description: 'Browse every lure and combo, filtered by difficulty, species, and type.' };
+export const SHOP_META = { title: 'Shop All Gear — Ketto Outdoors', description: 'Browse every lure and piece of tackle, filtered by difficulty, species, and type.' };
 
 export interface ShopCatalogItem {
   id: string;
@@ -19,8 +19,6 @@ export const SHOP_CATALOG: ShopCatalogItem[] = [
   { id: 'deep-six', name: 'Deep Six', kicker: 'Squarebill — Best all-around starter lure', type: 'Crankbait', difficultyLabel: 'Beginner', difficultyScore: 2, targetFish: 'Largemouth & smallmouth bass', species: ['Largemouth Bass', 'Smallmouth Bass'], description: 'Just cast it out and reel steadily — it swims itself and bumps off rocks and logs instead of getting stuck.', price: 14.5 },
   { id: 'driftworm', name: 'Driftworm', kicker: 'Soft plastic worm — Simple, slow, and forgiving', type: 'Soft Plastic', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Bass & panfish', species: ['Largemouth Bass', 'Panfish'], description: 'Rig it and drag it slowly along the bottom. About as simple as fishing gets.', price: 6.5 },
   { id: 'baithooks', name: 'Baithooks', kicker: 'Hooks — Sharp, reliable, sized for beginners', type: 'Hooks', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Any species — pick a hook to match your bait', species: [], description: 'A basic assortment of sized hooks for rigging soft plastics and live bait. Start here if you need hooks for the Driftworm.', price: 4.25 },
-  { id: 'spinning-combo', name: 'Spinning Rod & Reel Combo', kicker: "Combo — 5'6\" rod + spinning reel", type: 'Combo', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'First-time casters, lighter lures', species: [], description: 'A matched rod and reel, spooled and ready to cast out of the box — the easiest way to start.', price: 54.99 },
-  { id: 'baitcaster', name: 'Baitcaster Combo', kicker: "Combo — 6'6\" medium-heavy rod + baitcaster reel", type: 'Combo', difficultyLabel: 'Intermediate', difficultyScore: 6, targetFish: 'Heavier lures, pinpoint casts', species: [], description: 'A matched rod and baitcaster reel — more accurate and more power once you have the thumb control down.', price: 72.99 },
 
   // Kit components, also sold individually to replace or top off a kit.
   { id: 'flipping-jig', name: 'Flipping Jig', kicker: 'Jig — Works almost everywhere', type: 'Jig', difficultyLabel: 'Intermediate', difficultyScore: 5, targetFish: 'Largemouth & smallmouth bass', species: ['Largemouth Bass', 'Smallmouth Bass'], description: "This is the jig you tie on when you don't know what else to throw.", price: 5.5 },
@@ -33,7 +31,6 @@ export const SHOP_CATALOG: ShopCatalogItem[] = [
   { id: 'split-shot-weights', name: 'Split Shot Weights', kicker: 'Weights — Reusable, pack of 20', type: 'Weights', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Any species', species: [], description: 'Pinch one on to sink a bait just enough to hang below a bobber.', price: 3.95 },
   { id: 'scented-soft-bait', name: 'Scented Soft Bait', kicker: 'Bait — No live bait needed', type: 'Soft Plastic', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Panfish, trout & bass', species: ['Panfish', 'Trout', 'Largemouth Bass'], description: 'Works like a real worm without a trip to dig for one.', price: 5.25 },
   { id: 'bobber-stops', name: 'Bobber Stops & Beads', kicker: 'Rigging — Adjustable, pack of 20', type: 'Rigging', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Any species', species: [], description: 'Set exactly how deep your bait hangs below a bobber.', price: 3.5 },
-  { id: 'junior-spinning-combo', name: 'Junior Spinning Combo', kicker: "Combo — 5-6' light-action rod + reel", type: 'Combo', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'First-ever trips, kids', species: [], description: 'A shorter, lighter combo — easier to actually hold and reel on a first trip.', price: 39.99 },
   { id: 'circle-hooks', name: 'Circle Hooks', kicker: 'Hooks — 5/0-7/0, for catfish', type: 'Hooks', difficultyLabel: 'Beginner', difficultyScore: 2, targetFish: 'Catfish', species: ['Catfish'], description: 'Hooks catfish in the corner of the mouth almost on their own.', price: 5.95 },
   { id: 'dip-bait-treble-hooks', name: 'Dip Bait Treble Hooks', kicker: 'Hooks — Bait-holder spring treble', type: 'Hooks', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Catfish', species: ['Catfish'], description: 'Built to hold prepared stink/dip bait through the cast.', price: 5.5 },
   { id: 'sliding-egg-sinkers', name: 'Sliding Egg Sinkers', kicker: 'Weights — 1 oz, slip-sinker rig', type: 'Weights', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Catfish', species: ['Catfish'], description: 'Lets a catfish pick up bait and swim off without feeling the weight.', price: 4.5 },
@@ -41,7 +38,6 @@ export const SHOP_CATALOG: ShopCatalogItem[] = [
   { id: 'barrel-swivels', name: 'Barrel Swivels', kicker: 'Rigging — Heavy-duty, 10-pack', type: 'Rigging', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Catfish', species: ['Catfish'], description: 'Keeps your leader from twisting up on itself.', price: 4.25 },
   { id: 'fluorocarbon-leader', name: 'Fluorocarbon Leader Line', kicker: 'Line — 30 lb test', type: 'Rigging', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Catfish', species: ['Catfish'], description: 'Abrasion-resistant enough to survive catfish dragging your rig across the bottom.', price: 8.5 },
   { id: 'catfish-stink-bait', name: 'Catfish Stink Bait', kicker: 'Bait — Prepared dip/paste', type: 'Prepared Bait', difficultyLabel: 'Beginner', difficultyScore: 1, targetFish: 'Catfish', species: ['Catfish'], description: 'No cut bait or chicken liver required to start — just dip and cast.', price: 6.5 },
-  { id: 'catfish-spinning-combo', name: 'Catfish Spinning Combo', kicker: "Combo — 7' medium-heavy rod + reel", type: 'Combo', difficultyLabel: 'Beginner', difficultyScore: 2, targetFish: 'Catfish', species: ['Catfish'], description: 'Rated for the fight and the heavier weight of a full catfish rig.', price: 54.99 },
 ];
 
 // Archived catalog — full product pages exist for these, they're just not on the live grid yet.
@@ -65,6 +61,6 @@ export const SHOP_ARCHIVE: ShopCatalogItem[] = [
 export const ALL_SHOP_ITEMS: ShopCatalogItem[] = [...SHOP_CATALOG, ...SHOP_ARCHIVE];
 
 export const FILTER_DIFFICULTIES = ['All difficulties', 'Beginner', 'Intermediate', 'Advanced'];
-export const FILTER_TYPES = ['All types', 'Crankbait', 'Soft Plastic', 'Hooks', 'Combo', 'Spinnerbait', 'Topwater', 'Jerkbait', 'Jig', 'Bladed Jig', 'Buzzbait', 'Swimbait', 'Frog', 'Spoon', 'Drop-shot', 'Tube', 'Prepared Bait', 'Weights', 'Float', 'Rigging'];
+export const FILTER_TYPES = ['All types', 'Crankbait', 'Soft Plastic', 'Hooks', 'Spinnerbait', 'Topwater', 'Jerkbait', 'Jig', 'Bladed Jig', 'Buzzbait', 'Swimbait', 'Frog', 'Spoon', 'Drop-shot', 'Tube', 'Prepared Bait', 'Weights', 'Float', 'Rigging'];
 export const FILTER_FISH = ['All fish', 'Largemouth Bass', 'Smallmouth Bass', 'Panfish', 'Catfish', 'Trout', 'Walleye', 'Pike', 'Crappie', 'Striped Bass'];
 export const FILTER_SORTS = ['Featured', 'Price: Low to High', 'Price: High to Low', 'Difficulty: Easiest First', 'Difficulty: Hardest First', 'Name: A–Z'];

@@ -1,3 +1,6 @@
+// SHELVED — we no longer sell rods or reels, so there are no combos to trade in. Kept only
+// for reference; do not route or link this program unless rods come back.
+//
 // PHASE 2 - Upgrade Credit Program, disabled until launch is stable.
 //
 // Idea: once a customer outgrows their original Ketto starter combo, they can send it

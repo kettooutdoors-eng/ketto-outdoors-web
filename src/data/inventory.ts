@@ -7,8 +7,6 @@ export const INVENTORY_PRODUCTS: InventoryProduct[] = [
   { id: 'deep-six', name: 'Deep Six' },
   { id: 'driftworm', name: 'Driftworm' },
   { id: 'baithooks', name: 'Baithooks' },
-  { id: 'spinning-combo', name: 'Spinning Rod & Reel Combo' },
-  { id: 'baitcaster', name: 'Baitcaster Combo' },
   { id: 'longshot', name: 'Longshot' },
   { id: 'chugger', name: 'Chugger' },
   { id: 'ripple', name: 'Ripple' },
@@ -33,7 +31,6 @@ export const INVENTORY_PRODUCTS: InventoryProduct[] = [
   { id: 'split-shot-weights', name: 'Split Shot Weights' },
   { id: 'scented-soft-bait', name: 'Scented Soft Bait' },
   { id: 'bobber-stops', name: 'Bobber Stops & Beads' },
-  { id: 'junior-spinning-combo', name: 'Junior Spinning Combo' },
   { id: 'circle-hooks', name: 'Circle Hooks' },
   { id: 'dip-bait-treble-hooks', name: 'Dip Bait Treble Hooks' },
   { id: 'sliding-egg-sinkers', name: 'Sliding Egg Sinkers' },
@@ -41,7 +38,6 @@ export const INVENTORY_PRODUCTS: InventoryProduct[] = [
   { id: 'barrel-swivels', name: 'Barrel Swivels' },
   { id: 'fluorocarbon-leader', name: 'Fluorocarbon Leader Line' },
   { id: 'catfish-stink-bait', name: 'Catfish Stink Bait' },
-  { id: 'catfish-spinning-combo', name: 'Catfish Spinning Combo' },
 ];
 
 // Everything is out of stock until real inventory is sourced and received —

@@ -56,7 +56,7 @@ export const GUIDE_SECTIONS: GuideSection[] = [
       'Polarized sunglasses — they cut glare so you can actually see into the water',
       'A local fishing license, if required in your area',
     ],
-    note: "If you're starting from zero, our Spinning Combo plus a Deep Six is genuinely the whole kit — nothing else to figure out before your first cast.",
+    note: "If you're starting from zero, a basic spinning rod and reel plus a Deep Six is genuinely the whole kit — nothing else to figure out before your first cast.",
     imagePlaceholder: 'Drop a photo of beginner tackle/gear laid out',
   },
   {

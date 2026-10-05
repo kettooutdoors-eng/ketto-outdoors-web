@@ -119,12 +119,6 @@ export const PRODUCTS: Product[] = [
         "price": 4.25
       },
       {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light enough to feel the bill ticking bottom on every retrieve.",
-        "price": 54.99
-      },
-      {
         "id": "ratlin",
         "name": "Ratlin",
         "blurb": "A lipless crankbait to cover water fast before you slow down with Deep Six.",
@@ -209,12 +203,6 @@ export const PRODUCTS: Product[] = [
         "name": "Baithooks",
         "blurb": "Sized right for rigging this bait.",
         "price": 4.25
-      },
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
       },
       {
         "id": "ribtail",
@@ -307,192 +295,6 @@ export const PRODUCTS: Product[] = [
         "blurb": "A curl-tail worm that covers different water.",
         "price": 5.25
       },
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      }
-    ],
-    "reviewsSectionPresent": true,
-    "reviewsSectionLabel": "What anglers say"
-  },
-  {
-    "id": "spinning-combo",
-    "name": "Spinning Combo",
-    "displayNameFull": "Spinning Rod & Reel Combo (5'6\")",
-    "price": 54.99,
-    "category": "Combo / Rod & Reel",
-    "kicker": "Combo — 5'6\" Rod + Spinning Reel",
-    "metaTitle": "Spinning Rod & Reel Combo — Ketto Outdoors",
-    "metaDescription": "A matched rod and reel, spooled and ready to cast out of the box. $54.99.",
-    "difficulty": {
-      "label": "Beginner",
-      "number": 1,
-      "outOf": 10
-    },
-    "targetSpecies": null,
-    "bestFor": "First-time casters, lighter lures",
-    "shortDescription": "A matched rod and reel, spooled and ready to cast out of the box — the easiest way to start. The rod loads easily on the cast, and the spinning reel's bail flips open and shut with no backlash to untangle.",
-    "longDescription": "Pre-matched so there's no guessing which reel fits which rod — just spool line and cast. Medium power and a fast tip load easily on the cast, and the fixed-spool reel can't overrun and tangle.",
-    "guide": {
-      "gearNeeded": [
-        "A lure or bait to tie on (Deep Six or Driftworm are great first choices)",
-        "Pliers for hook removal",
-        "A local fishing license, if required"
-      ],
-      "steps": [
-        {
-          "title": "Spool it (if not pre-spooled) and tie on",
-          "detail": "Run your line through every guide on the rod, then tie your lure on with an improved clinch knot at the tip."
-        },
-        {
-          "title": "Hold the rod and open the bail",
-          "detail": "Grip the rod with the reel hanging below your hand, hook your index finger over the line, and flip the bail lever open — the line is now free to release."
-        },
-        {
-          "title": "Cast",
-          "detail": "Swing the rod back over your shoulder, then forward, and let go of the line with your finger right as the rod passes vertical. It’ll land short at first — that’s normal, distance comes with reps."
-        },
-        {
-          "title": "Close the bail and reel",
-          "detail": "Turn the handle once to snap the bail shut, then reel at a steady pace to work whatever you’ve tied on."
-        },
-        {
-          "title": "Fight the fish with the rod, not just the reel",
-          "detail": "If you hook up, keep the rod tip up and let it absorb the fish’s runs — reel when it comes toward you, pause when it pulls away."
-        }
-      ],
-      "biteFeel": "Varies by lure, but the fixed-spool reel means you’ll never fight a backlash while you’re learning to feel one.",
-      "commonMistakes": [
-        "Letting go of the line too early or late on the cast — both send it off-target, and it just takes practice",
-        "Forgetting to close the bail before reeling (nothing happens — just close it and go)",
-        "Gripping the rod too tightly, which tires your hand out fast"
-      ],
-      "confidenceTip": "This is the easiest rod-and-reel combination that exists to learn on — the spinning reel physically can't backlash on you."
-    },
-    "whyItsEasy": "Medium power and a fast tip load easily on the cast, and the fixed-spool reel can't overrun and tangle.",
-    "specs": {
-      "rodLength": "5'6\"",
-      "rodPower": "medium/fast",
-      "reelSize": "2500-size",
-      "gearRatio": "5.2:1"
-    },
-    "colorOptions": null,
-    "trustBadges": [
-      "Ships in 1-2 business days",
-      "30-day returns on unused gear"
-    ],
-    "imagePlaceholderAlt": "Spinning Rod & Reel Combo",
-    "relatedProducts": [
-      {
-        "id": "driftworm",
-        "name": "Driftworm",
-        "blurb": "Another slow, forgiving bottom bait.",
-        "price": 6.5
-      },
-      {
-        "id": "baithooks",
-        "name": "Baithooks",
-        "blurb": "Sized right for rigging soft plastics.",
-        "price": 4.25
-      },
-      {
-        "id": "longshot",
-        "name": "Longshot",
-        "blurb": "Good backup for murky water days.",
-        "price": 11
-      }
-    ],
-    "reviewsSectionPresent": true,
-    "reviewsSectionLabel": "What anglers say"
-  },
-  {
-    "id": "baitcaster",
-    "name": "Baitcaster",
-    "displayNameFull": "Baitcaster Combo",
-    "price": 72.99,
-    "category": "Combo / Rod & Reel",
-    "kicker": "Combo — 6'6\" Medium-Heavy Rod + Baitcaster Reel",
-    "metaTitle": "Baitcaster Combo — Ketto Outdoors",
-    "metaDescription": "A matched rod and baitcaster reel for more accuracy and power. $72.99.",
-    "difficulty": {
-      "label": "Intermediate",
-      "number": 6,
-      "outOf": 10
-    },
-    "targetSpecies": null,
-    "bestFor": "Heavier lures, pinpoint casts",
-    "shortDescription": "A matched rod and baitcaster reel, spooled and ready to go — more accurate and more power once you've got the thumb control down. A step up once the spinning combo feels easy.",
-    "longDescription": "Pairs well with crankbaits like the Deep Six once you're comfortable with the thumb-bar.",
-    "guide": {
-      "gearNeeded": [
-        "A heavier lure to start with (Deep Six or Ratlin cast well on a baitcaster)",
-        "Pliers for hook removal"
-      ],
-      "steps": [
-        {
-          "title": "Set the brake and spool tension first",
-          "detail": "Before your first cast, turn the spool tension knob until the lure drops slowly under its own weight when you press the thumb bar — this prevents a backlash while you’re learning."
-        },
-        {
-          "title": "Grip and thumb the spool",
-          "detail": "Hold the reel with your thumb resting lightly on the spool, press the thumb bar to disengage it, and keep light thumb pressure on throughout the cast."
-        },
-        {
-          "title": "Cast with a shorter, controlled swing",
-          "detail": "Use a shorter, smoother stroke than you would with a spinning rod, and feather the spool with your thumb as the lure flies to control speed."
-        },
-        {
-          "title": "Thumb it down on landing",
-          "detail": "Press your thumb down firmly just as the lure hits the water to stop the spool — this is the single habit that prevents backlash."
-        },
-        {
-          "title": "Practice in open water first",
-          "detail": "Spend your first sessions casting into open water, not tight cover, until thumbing the spool feels automatic."
-        }
-      ],
-      "biteFeel": "The higher gear ratio means you’ll feel strikes and structure a bit more directly than on a spinning reel — pay attention to any sudden change in the retrieve.",
-      "commonMistakes": [
-        "Skipping the spool-tension setup and getting an immediate backlash (a tangled 'bird's nest')",
-        "Not thumbing the spool on the cast, which is the #1 cause of backlash",
-        "Rushing to fish heavy cover before the casting motion feels natural"
-      ],
-      "confidenceTip": "Every angler backlashes learning a baitcaster — it's not a sign you're doing it wrong, it's part of learning thumb control. A few slow practice casts in the yard or an open pond pay off fast."
-    },
-    "learningCurve": "The spool spins with the cast — feather it with your thumb or you'll get a backlash. Takes practice.",
-    "specs": {
-      "rodLength": "6'6\"",
-      "rodPower": "medium-heavy",
-      "gearRatio": "7.1:1",
-      "ballBearings": "6",
-      "brake": "adjustable"
-    },
-    "colorOptions": null,
-    "trustBadges": [
-      "Ships in 1-2 business days",
-      "30-day returns on unused gear"
-    ],
-    "imagePlaceholderAlt": "Baitcaster",
-    "relatedProducts": [
-      {
-        "id": "deep-six",
-        "name": "Deep Six",
-        "blurb": "A go-to squarebill to alternate retrieves with.",
-        "price": 14.5
-      },
-      {
-        "id": "ratlin",
-        "name": "Ratlin",
-        "blurb": "Covers water fast between casts.",
-        "price": 10.25
-      },
-      {
-        "id": "padhopper",
-        "name": "Padhopper",
-        "blurb": "For working thicker cover in the same trip.",
-        "price": 11.5
-      }
     ],
     "reviewsSectionPresent": true,
     "reviewsSectionLabel": "What anglers say"
@@ -567,12 +369,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Longshot spinnerbait",
     "relatedProducts": [
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      },
       {
         "id": "chugger",
         "name": "Chugger",
@@ -659,12 +455,6 @@ export const PRODUCTS: Product[] = [
     "imagePlaceholderAlt": "Chugger topwater",
     "relatedProducts": [
       {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
-      {
         "id": "padhopper",
         "name": "Padhopper",
         "blurb": "For working thicker cover in the same trip.",
@@ -748,12 +538,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Ripple jerkbait",
     "relatedProducts": [
-      {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
       {
         "id": "flutterspoon",
         "name": "Flutterspoon",
@@ -845,12 +629,6 @@ export const PRODUCTS: Product[] = [
         "price": 6.75
       },
       {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
-      {
         "id": "tubehead",
         "name": "Tubehead",
         "blurb": "A bottom-hugging option for rocky structure.",
@@ -929,12 +707,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Buzzrunner buzzbait",
     "relatedProducts": [
-      {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
       {
         "id": "chugger",
         "name": "Chugger",
@@ -1019,12 +791,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Swimshad",
     "relatedProducts": [
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      },
       {
         "id": "deep-six",
         "name": "Deep Six",
@@ -1116,12 +882,6 @@ export const PRODUCTS: Product[] = [
         "price": 14.5
       },
       {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
-      {
         "id": "longshot",
         "name": "Longshot",
         "blurb": "Good backup for murky water days.",
@@ -1199,12 +959,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Padhopper hollow frog",
     "relatedProducts": [
-      {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
       {
         "id": "buzzrunner",
         "name": "Buzzrunner",
@@ -1291,12 +1045,6 @@ export const PRODUCTS: Product[] = [
     "imagePlaceholderAlt": "Flutterspoon",
     "relatedProducts": [
       {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      },
-      {
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A curl-tail worm that covers different water.",
@@ -1381,12 +1129,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Finesse drop-shot rig",
     "relatedProducts": [
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      },
       {
         "id": "baithooks",
         "name": "Baithooks",
@@ -1483,12 +1225,6 @@ export const PRODUCTS: Product[] = [
         "blurb": "Another slow, forgiving bottom bait.",
         "price": 6.5
       },
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      }
     ],
     "reviewsSectionPresent": false
   },
@@ -1573,12 +1309,6 @@ export const PRODUCTS: Product[] = [
         "blurb": "Sized right for rigging this bait.",
         "price": 4.25
       },
-      {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      }
     ],
     "reviewsSectionPresent": false
   },
@@ -1658,12 +1388,6 @@ export const PRODUCTS: Product[] = [
         "price": 4.25
       },
       {
-        "id": "spinning-combo",
-        "name": "Spinning Rod & Reel Combo",
-        "blurb": "Light, beginner-friendly rod to fish this with.",
-        "price": 54.99
-      },
-      {
         "id": "swimshad",
         "name": "Swimshad",
         "blurb": "Steady swimming action as a change-up.",
@@ -1741,12 +1465,6 @@ export const PRODUCTS: Product[] = [
     ],
     "imagePlaceholderAlt": "Tubehead tube bait",
     "relatedProducts": [
-      {
-        "id": "baitcaster",
-        "name": "Baitcaster Combo",
-        "blurb": "More accuracy and power once you're ready.",
-        "price": 72.99
-      },
       {
         "id": "bottomjig",
         "name": "Bottomjig",
@@ -2447,81 +2165,6 @@ export const PRODUCTS: Product[] = [
     "reviewsSectionPresent": false
   },
   {
-    "id": "junior-spinning-combo",
-    "name": "Junior Spinning Combo",
-    "displayNameFull": "Junior Spinning Rod & Reel Combo",
-    "price": 39.99,
-    "category": "Combo / Rod & Reel",
-    "kicker": "Combo — 5'6\" Light-Action Rod + Spinning Reel",
-    "metaTitle": "Junior Spinning Combo — Ketto Outdoors",
-    "metaDescription": "A shorter, lighter spinning combo, spooled and ready — easier for a first-timer or a kid to actually hold and reel.",
-    "difficulty": {
-      "label": "Beginner",
-      "number": 1,
-      "outOf": 10
-    },
-    "targetSpecies": null,
-    "bestFor": "First-ever trips, kids, bobber-and-bait fishing",
-    "shortDescription": "A shorter, lighter rod and reel, spooled and ready — easier to actually hold and reel than a full-size combo on a first trip.",
-    "longDescription": "A 5–6 ft light-action spinning combo, matched and spooled so there’s nothing to figure out before your first cast. Lighter in the hand than our standard spinning combo, which matters more than people expect on someone’s very first trip.",
-    "guide": {
-      "gearNeeded": [
-        "A hook, bobber, and bait — see our Never Fished Before Starter Kit"
-      ],
-      "steps": [
-        {
-          "title": "Hold it correctly",
-          "detail": "Grip the rod with the reel hanging below your hand and your index finger resting near the bail."
-        },
-        {
-          "title": "Open the bail",
-          "detail": "Hook the line with your index finger, then flip the bail open with your other hand."
-        },
-        {
-          "title": "Cast underhand or overhand",
-          "detail": "A short underhand lob works fine for bobber fishing near the bank — you don’t need distance."
-        },
-        {
-          "title": "Close the bail and wait",
-          "detail": "Turn the handle once to close the bail, then watch your bobber."
-        }
-      ],
-      "biteFeel": "Depends entirely on what you rig it with — this combo is built to make holding and casting easier, not to change what a bite feels like.",
-      "commonMistakes": [
-        "Over-gripping the rod, which tires small hands out fast on a longer trip"
-      ],
-      "confidenceTip": "A lighter, shorter rod is genuinely easier to control for a first trip — this isn’t a toy version, it’s the right tool for the job."
-    },
-    "specs": {
-      "rodLength": "5-6'",
-      "rodPower": "light",
-      "reelSize": "1000-size",
-      "gearRatio": "5.0:1"
-    },
-    "colorOptions": null,
-    "trustBadges": [
-      "Ships in 1-2 business days",
-      "30-day returns on unused gear"
-    ],
-    "imagePlaceholderAlt": "Junior spinning combo",
-    "relatedProducts": [
-      {
-        "id": "bobbers",
-        "name": "Bobbers",
-        "blurb": "Set up a simple bobber rig with this combo.",
-        "price": 4.75
-      },
-      {
-        "id": "scented-soft-bait",
-        "name": "Scented Soft Bait",
-        "blurb": "No live bait needed to get started.",
-        "price": 5.25
-      }
-    ],
-    "reviewsSectionPresent": true,
-    "reviewsSectionLabel": "What anglers say"
-  },
-  {
     "id": "circle-hooks",
     "name": "Circle Hooks",
     "displayNameFull": "Circle Hooks",
@@ -2955,77 +2598,6 @@ export const PRODUCTS: Product[] = [
     ],
     "reviewsSectionPresent": false
   },
-  {
-    "id": "catfish-spinning-combo",
-    "name": "Catfish Spinning Combo",
-    "displayNameFull": "Medium-Heavy Catfish Spinning Combo",
-    "price": 54.99,
-    "category": "Combo / Rod & Reel",
-    "kicker": "Combo — 7' Medium-Heavy Rod + Spinning Reel",
-    "metaTitle": "Catfish Spinning Combo — Ketto Outdoors",
-    "metaDescription": "A name-brand medium-heavy spinning combo built for catfish, spooled with heavier line and ready to fish.",
-    "difficulty": {
-      "label": "Beginner",
-      "number": 2,
-      "outOf": 10
-    },
-    "targetSpecies": "Catfish",
-    "bestFor": "Bank and dock fishing for catfish",
-    "shortDescription": "Catfish pull harder than standard bass gear is built for — this is rated for the fight and the weight of a full catfish rig.",
-    "longDescription": "A 7 ft, medium-heavy spinning combo spooled with heavier line — built with more backbone and drag than our standard spinning combo, so it can handle both bigger fish and the heavier sinkers a catfish rig needs to cast.",
-    "guide": {
-      "gearNeeded": [
-        "A full catfish rig — see our First Catfish Kit"
-      ],
-      "steps": [
-        {
-          "title": "Check the drag",
-          "detail": "Set your drag firm enough to fight a strong fish but loose enough to give line under a hard run — tighten until you can still pull line by hand with steady pressure."
-        },
-        {
-          "title": "Cast the heavier rig",
-          "detail": "The extra backbone in this rod is built to cast heavier sinkers than a standard spinning rod comfortably handles."
-        },
-        {
-          "title": "Let the rod load up on a bite",
-          "detail": "With circle hooks, let the rod bend and the fish hook itself, then start reeling steadily."
-        }
-      ],
-      "biteFeel": "Depends on the rig — this combo is built to handle the fight once you’re hooked up, not to change what the bite itself feels like.",
-      "commonMistakes": [
-        "Using light bass tackle for catfish, which gets outmatched fast by both the fish and the heavier terminal tackle"
-      ],
-      "confidenceTip": "This is a genuine step up in backbone from our bass combo, not just a bigger label — it’s built for this specific job."
-    },
-    "specs": {
-      "rodLength": "7'",
-      "rodPower": "medium-heavy",
-      "reelSize": "4000-size",
-      "gearRatio": "5.2:1"
-    },
-    "colorOptions": null,
-    "trustBadges": [
-      "Ships in 1-2 business days",
-      "30-day returns on unused gear"
-    ],
-    "imagePlaceholderAlt": "Catfish spinning combo",
-    "relatedProducts": [
-      {
-        "id": "circle-hooks",
-        "name": "Circle Hooks",
-        "blurb": "Rig this combo with a proper catfish hook.",
-        "price": 5.95
-      },
-      {
-        "id": "sliding-egg-sinkers",
-        "name": "Sliding Egg Sinkers",
-        "blurb": "The standard catfish rig weight.",
-        "price": 4.5
-      }
-    ],
-    "reviewsSectionPresent": true,
-    "reviewsSectionLabel": "What anglers say"
-  }
 ];
 
 export function getProduct(id: string): Product | undefined {

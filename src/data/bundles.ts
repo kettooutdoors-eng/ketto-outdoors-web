@@ -5,15 +5,15 @@ export const BUNDLES: Bundle[] = [
     id: 'first-bass-kit',
     slug: 'first-bass-kit',
     name: 'First Bass Kit',
-    tagline: 'One box. Everything you need for your first bass. Nothing you don’t.',
-    // Placeholder introductory price — confirm against real anchor-combo
-    // wholesale cost before launch.
-    price: 79.99,
+    tagline: 'One box of tackle picked for your first bass. Nothing you don’t need.',
+    // Priced about 12% under the sum of the individual pieces — confirm against
+    // real costs before launch.
+    price: 44.99,
     metaTitle: 'First Bass Kit — Ketto Outdoors',
-    metaDescription: 'Everything a beginner needs to catch their first bass, picked for you. One kit, one price, no guessing.',
+    metaDescription: 'Beginner bass tackle, picked for you: lures, hooks, and weights that work together. One kit, one price, no guessing. Bring your own rod and reel.',
     scenario: 'You want to fish for bass — a pond, a local lake, a dock near you — and you don’t want to spend an hour reading conflicting advice before you can even cast.',
-    reassurance: 'You don’t need more than this to start. This kit alone will catch bass in almost any pond or lake — add to it later once you know what you actually want more of.',
-    sourcingNote: 'The rod and reel is a name you’ve probably heard of, at a fair price — that’s not the place to gamble on an unknown brand. The hooks, jigs, and baits are ours: we test and pick these factory-direct, so you’re not paying inflated brand markup for gear that’s functionally the same, and you’re not getting dollar-store hooks that bend on the first real fish.',
+    reassurance: 'You don’t need more tackle than this to start. With a basic rod and reel of your own, this kit will catch bass in almost any pond or lake — add to it later once you know what you actually want more of.',
+    sourcingNote: 'The hooks, jigs, and baits are ours: we test and pick these factory-direct, so you’re not paying inflated brand markup for gear that’s functionally the same, and you’re not getting dollar-store hooks that bend on the first real fish.',
     riggingNote: 'Eight lures means eight ways to tie on wrong the first time. Here’s the one knot you need and the two special rigs in this kit — everything else ties on the exact same way.',
     riggingSteps: [
       { title: 'Learn one knot: the improved clinch', detail: 'Thread the line through the lure’s eyelet, wrap the tag end around the main line 5–6 times, pass it back through the loop near the eyelet and then through the big loop you made, wet it, and pull tight. This ties on every hard lure and jig in this kit.' },
@@ -24,13 +24,6 @@ export const BUNDLES: Bundle[] = [
     ],
     imagePlaceholderAlt: 'First Bass Kit — full contents laid out',
     components: [
-      {
-        label: 'Spinning rod & reel combo',
-        detail: 'Name-brand combo (Ugly Stik GX2 or equivalent), spooled and ready to cast',
-        whyThis: 'This is the one piece of gear beginners have strong opinions about — an unknown brand here is where trust breaks. We use a name you can look up and trust, not a house brand.',
-        sourced: 'anchor-brand',
-        productId: 'spinning-combo',
-      },
       {
         label: 'Baitholder hooks',
         detail: 'Octopus-style, double-barbed circle-style, 10-pack',
@@ -93,15 +86,15 @@ export const BUNDLES: Bundle[] = [
     id: 'never-fished-before-starter-kit',
     slug: 'never-fished-before-starter-kit',
     name: 'Never Fished Before Starter Kit',
-    tagline: 'Bait, bobber, and a rod. The way almost everyone actually caught their first fish.',
-    // Placeholder introductory price — confirm against real anchor-combo
-    // wholesale cost before launch.
-    price: 49.99,
+    tagline: 'Bait and a bobber. The way almost everyone actually caught their first fish.',
+    // Priced about 12% under the sum of the individual pieces — confirm against
+    // real costs before launch.
+    price: 18.99,
     metaTitle: 'Never Fished Before Starter Kit — Ketto Outdoors',
-    metaDescription: 'The simplest possible way to catch your first fish — a rod, a bobber, and bait that needs no digging for worms. One kit, no decisions.',
-    scenario: 'You’ve genuinely never done this before — no rod, no idea what half the words mean, and you’d rather just go stand by the water with your kid or a friend and catch something than research technique first.',
-    reassurance: 'This is the whole thing. Tie on a hook, clip on a bobber, drop it in near a dock or some weeds, and wait for the bobber to go under. You don’t need to know how to cast far or work a lure for this to work.',
-    sourcingNote: 'A shorter, lighter rod is genuinely easier to handle for a first trip — that’s the name-brand piece, so you’re not learning on something flimsy. Everything else here is ours: sized-down hooks and a scented soft bait so nobody has to go dig worms out of the backyard first.',
+    metaDescription: 'The simplest possible way to catch your first fish — a bobber, hooks, and bait that needs no digging for worms. One kit, no decisions. Bring your own rod and reel.',
+    scenario: 'You’ve genuinely never done this before — no idea what half the words mean, and you’d rather just go stand by the water with your kid or a friend and catch something than research technique first.',
+    reassurance: 'This is the whole thing. Tie on a hook, clip on a bobber, drop it in near a dock or some weeds, and wait for the bobber to go under. You don’t need to know how to cast far or work a lure for this to work. Just bring a basic rod and reel of your own.',
+    sourcingNote: 'Everything here is ours: sized-down hooks and a scented soft bait so nobody has to go dig worms out of the backyard first.',
     riggingNote: 'One rig, one knot, five steps. This is the entire setup — there’s nothing else in this kit to figure out.',
     riggingSteps: [
       { title: 'Tie on the hook', detail: 'Thread your line through the hook’s eye and tie an improved clinch knot: wrap the tag end around the main line 5–6 times, pass it back through the loop, wet it, and pull tight.' },
@@ -112,13 +105,6 @@ export const BUNDLES: Bundle[] = [
     ],
     imagePlaceholderAlt: 'Never Fished Before Starter Kit — full contents laid out',
     components: [
-      {
-        label: 'Compact spinning combo',
-        detail: 'Name-brand, 5–6 ft light-action rod & reel (Ugly Stik Junior or equivalent), spooled and ready',
-        whyThis: 'Shorter and lighter than our bass combo on purpose — easier for a first-timer, or a kid, to actually hold and reel without fighting the rod itself.',
-        sourced: 'anchor-brand',
-        productId: 'junior-spinning-combo',
-      },
       {
         label: 'Bobbers',
         detail: 'Round snap-on floats, assorted sizes, 5-pack',
@@ -161,14 +147,14 @@ export const BUNDLES: Bundle[] = [
     slug: 'first-catfish-kit',
     name: 'First Catfish Kit',
     tagline: 'Heavier gear, bigger bait, one setup that works off any bank or dock after dark.',
-    // Placeholder introductory price — confirm against real anchor-combo
-    // wholesale cost before launch.
-    price: 69.99,
+    // Priced about 12% under the sum of the individual pieces — confirm against
+    // real costs before launch.
+    price: 34.99,
     metaTitle: 'First Catfish Kit — Ketto Outdoors',
-    metaDescription: 'Everything a beginner needs to catch their first catfish from the bank — circle hooks, real catfish rigging, and gear built to handle a bigger fish.',
+    metaDescription: 'Beginner catfish tackle for the bank: circle hooks, real catfish rigging, and hardware built to handle a bigger fish. Bring your own medium-heavy rod and reel.',
     scenario: 'You want to fish for catfish — a river bank, a lake at dusk, a dock after dark — and catfish gear is genuinely different from bass gear, so the bass kit and a search engine aren’t going to cut it.',
-    reassurance: 'You don’t need more than this to start. This rig will put bait in front of catfish from any bank or dock — add heavier gear later only once you’re chasing bigger water.',
-    sourcingNote: 'Catfish gear takes more abuse than bass gear, so the rod and reel is a name-brand step up in backbone — not the place to save a few dollars. The circle hooks, sinkers, and swivels are ours: real catfish-rig hardware, not a random assortment that happens to be labeled for catfish.',
+    reassurance: 'You don’t need more than this to start. This rig will put bait in front of catfish from any bank or dock — add heavier gear later only once you’re chasing bigger water. You’ll need your own medium-heavy rod and reel.',
+    sourcingNote: 'Catfish gear takes more abuse than bass gear, so the circle hooks, sinkers, and swivels are ours: real catfish-rig hardware, not a random assortment that happens to be labeled for catfish.',
     riggingNote: 'This kit rigs two ways depending on your bait — a slip-sinker rig for cut bait, and a simpler dip-bait rig for the stink bait. Both start the same.',
     riggingSteps: [
       { title: 'Rig one — cut bait: thread on a sinker', detail: 'Slide a sliding egg sinker (still water) or a no-roll bank sinker (current) onto your main line before tying on anything else.' },
@@ -181,13 +167,6 @@ export const BUNDLES: Bundle[] = [
     ],
     imagePlaceholderAlt: 'First Catfish Kit — full contents laid out',
     components: [
-      {
-        label: 'Medium-heavy spinning combo',
-        detail: 'Name-brand catfish-rated rod & reel (Ugly Stik Catfish Combo or equivalent), spooled with heavier line',
-        whyThis: 'Catfish pull harder than the bass gear next door is built for — this is rated for the fight and the weight of the rigs below, not just labeled bigger.',
-        sourced: 'anchor-brand',
-        productId: 'catfish-spinning-combo',
-      },
       {
         label: 'Circle hooks',
         detail: '5/0–7/0, assorted, 10-pack',
@@ -240,6 +219,9 @@ export const BUNDLES: Bundle[] = [
     ],
   },
 ];
+
+/** Kits listed cheapest first, for the Home and Kits page grids. */
+export const BUNDLES_BY_PRICE = [...BUNDLES].sort((a, b) => a.price - b.price);
 
 export function getBundle(slug: string): Bundle | undefined {
   return BUNDLES.find((b) => b.slug === slug);
