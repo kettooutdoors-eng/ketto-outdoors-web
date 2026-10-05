@@ -39,20 +39,29 @@ npm run preview  # serve the production build locally
 
 ## Hosting and deploys
 
-The site is hosted on GitHub Pages at **kettooutdoors.com** (`public/CNAME`).
-Every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
-which builds the site and publishes it to the `gh-pages` branch. You can also
-run it by hand from the Actions tab.
+The site is hosted on GitHub Pages at
+https://kettooutdoors-eng.github.io/ketto-outdoors-web/ (served from the
+`gh-pages` branch). Every push to `main` runs
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which builds the
+site and publishes it to `gh-pages`. You can also run it by hand from the
+Actions tab.
 
-One-time setup:
+### Moving to kettooutdoors.com
 
-1. **DNS** at your domain registrar for `kettooutdoors.com`:
+`kettooutdoors.com` isn't registered yet. Once it's bought:
+
+1. **DNS** at the registrar:
    - Four `A` records on `@`: `185.199.108.153`, `185.199.109.153`,
      `185.199.110.153`, `185.199.111.153`
    - A `CNAME` record on `www` pointing to `kettooutdoors-eng.github.io`
-2. **GitHub → Settings → Pages**: source "Deploy from a branch", branch
-   `gh-pages` / root. Enter `kettooutdoors.com` as the custom domain, then
-   tick **Enforce HTTPS** once the certificate is issued (can take up to a day).
+2. **Code** (one PR): add `public/CNAME` containing `kettooutdoors.com`; set
+   `base: '/'` in `vite.config.ts`; replace
+   `https://kettooutdoors-eng.github.io/ketto-outdoors-web` with
+   `https://kettooutdoors.com` in `src/hooks/useDocumentMeta.ts`, `index.html`,
+   `public/sitemap.xml`, and `public/robots.txt`. Merge it only after DNS is
+   live, or the site will redirect to a domain that doesn't resolve.
+3. **GitHub → Settings → Pages**: confirm the custom domain, then tick
+   **Enforce HTTPS** once the certificate is issued.
 
 ## Shopify setup
 

@@ -1,7 +1,7 @@
 name: Deploy site
 
-# Builds the site and publishes it to the gh-pages branch, which GitHub Pages serves
-# at kettooutdoors.com. Runs on every push to main, or by hand from the Actions tab.
+# Builds the site and publishes it to the gh-pages branch, which GitHub Pages serves.
+# Runs on every push to main, or by hand from the Actions tab.
 on:
   push:
     branches: [main]
