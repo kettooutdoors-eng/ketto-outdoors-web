@@ -72,7 +72,7 @@ export function WelcomePopup() {
 
         {claimed ? (
           <>
-            <h2 id="welcome-heading" style={{ fontSize: 26, letterSpacing: '-0.03em' }}>Your code is ready.</h2>
+            <h2 id="welcome-heading" style={{ fontSize: 26, letterSpacing: '-0.03em' }}>Nice catch! Your code is ready.</h2>
             <p style={{ marginTop: 10, fontSize: 14, opacity: 0.8 }}>Use it at checkout for {WELCOME_PERCENT}% off your first order.</p>
             <div style={{ margin: '20px auto', padding: '14px 20px', background: 'var(--sage)', borderRadius: 8, fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '.08em', userSelect: 'all' }}>
               {WELCOME_CODE}
@@ -87,7 +87,7 @@ export function WelcomePopup() {
             <h2 id="welcome-heading" style={{ fontSize: 30, letterSpacing: '-0.03em', marginTop: 8 }}>
               Get {WELCOME_PERCENT}% off your first purchase.
             </h2>
-            <p style={{ marginTop: 10, fontSize: 14, opacity: 0.8 }}>Enter your email and we'll show you your code.</p>
+            <p style={{ marginTop: 10, fontSize: 14, opacity: 0.8 }}>Enter your email and we'll reel in your code.</p>
             <form onSubmit={submit} style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 12, textAlign: 'left' }}>
               <input
                 ref={emailRef}

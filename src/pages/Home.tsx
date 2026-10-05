@@ -10,15 +10,15 @@ import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const WHY_KETTO = [
-  'We teach you how to cast, reel, and set up your gear.',
-  'Every lure is matched to the fish you want to catch.',
-  'We check every lure so it works the first time you tie it on.',
+  'We teach you how to cast, reel, and rig up — no fish stories needed.',
+  'Every lure is matched to the fish you’re after, so you’re not just casting around.',
+  'We check every lure so it’s ready to bite the first time you tie it on.',
 ];
 
 const STEPS = [
   { title: 'Pick your fish', body: 'Know what you want to catch and where you will fish.' },
-  { title: 'Pick one lure', body: "You don't need a full box. One good lure catches fish." },
-  { title: 'Cast and reel', body: 'Cast out and reel steadily. When you feel a tug, keep reeling.' },
+  { title: 'Pick one lure', body: "You don't need a full tackle box. One good lure is plenty to get a bite." },
+  { title: 'Cast and reel', body: 'Cast out and reel steady. Feel a tug? Keep reeling — you’ve got a bite.' },
 ];
 
 export default function Home() {
@@ -55,14 +55,14 @@ export default function Home() {
               <br />
               made simple.
             </h1>
-            <p className="hero-in" style={{ fontSize: 15, color: 'var(--ink)', opacity: 0.8, '--d': '0.4s' } as CSSProperties}>Beginner tackle kits, picked for you.</p>
+            <p className="hero-in" style={{ fontSize: 15, color: 'var(--ink)', opacity: 0.8, '--d': '0.4s' } as CSSProperties}>Beginner tackle kits — hook, line, and simple.</p>
           </div>
           <div className="hero-in" style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start', '--d': '0.65s' } as CSSProperties}>
             <BannerButton to="/kits" className="btn-pulse" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px', fontSize: 14 }} style={{ whiteSpace: 'nowrap' }}>
               Shop Kits
             </BannerButton>
             <Link to="/shop" style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', opacity: 0.7 }}>
-              Or browse all gear
+              Or cast a wider net
             </Link>
           </div>
         </TinFrame>
@@ -87,8 +87,8 @@ export default function Home() {
       {/* Kits — the primary shopping path */}
       <div style={{ background: 'var(--sage)', paddingBottom: 56 }}>
         <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Pick a kit.</h2>
-          <p style={{ margin: '12px auto 0', fontSize: 16, opacity: 0.75 }}>Everything inside works together.</p>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Pick a kit. Get hooked.</h2>
+          <p style={{ margin: '12px auto 0', fontSize: 16, opacity: 0.75 }}>Everything inside works together, so you’re never fishing for answers.</p>
           <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
         </div>
         {BUNDLES_BY_PRICE.length > 0 ? (
@@ -103,7 +103,7 @@ export default function Home() {
           <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
         )}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, marginTop: 40 }}>
-          <p style={{ fontSize: 15, opacity: 0.8 }}>Already know what you want?</p>
+          <p style={{ fontSize: 15, opacity: 0.8 }}>Already know what you’re after?</p>
           <BannerButton to="/shop" background="var(--forest)" color="var(--cream)">
             Shop all gear
           </BannerButton>
@@ -114,7 +114,7 @@ export default function Home() {
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <div>
           <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Fishing near you?</span>{' '}
-          <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state to see what to buy.</span>
+          <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state and we’ll reel in the right gear.</span>
         </div>
         <Link
           to="/gear-by-state"
@@ -127,13 +127,13 @@ export default function Home() {
       {/* Three steps */}
       <div style={{ padding: '56px 40px' }}>
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Your first catch in 3 steps.</h2>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Your first catch in 3 easy steps.</h2>
         </div>
         <StepsProgress steps={STEPS} />
         <p style={{ textAlign: 'center', fontSize: 13, maxWidth: '60ch', margin: '32px auto 0', opacity: 0.8 }}>
           New to fishing?{' '}
           <Link to="/new-to-fishing" style={{ color: 'var(--rust)', fontWeight: 600 }}>
-            Learn the basics →
+            Learn the ropes →
           </Link>
         </p>
       </div>
@@ -145,7 +145,7 @@ export default function Home() {
           STOP GUESSING. START FISHING.
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
-          <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit. Nothing to figure out.</div>
+          <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit. Nothing to figure out. Just add water.</div>
           <BannerButton to="/kits" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
             Shop kits
           </BannerButton>
