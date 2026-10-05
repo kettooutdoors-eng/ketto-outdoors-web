@@ -100,12 +100,7 @@ export const PRODUCTS: Product[] = [
         "note": "past its range"
       }
     ],
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -186,12 +181,7 @@ export const PRODUCTS: Product[] = [
       "material": "Soft plastic",
       "rigging": "1/0 worm hook (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -357,12 +347,7 @@ export const PRODUCTS: Product[] = [
       "blades": "single Colorado + willow blade combo",
       "hook": "#2"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -442,12 +427,7 @@ export const PRODUCTS: Product[] = [
       "face": "concave",
       "hooks": "#4 treble x2"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -526,12 +506,7 @@ export const PRODUCTS: Product[] = [
       "buoyancy": "suspending",
       "hooks": "#6 treble x3"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -610,12 +585,7 @@ export const PRODUCTS: Product[] = [
       "weight": "1/4 oz jighead",
       "pairing": "soft plastic trailer (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -695,12 +665,7 @@ export const PRODUCTS: Product[] = [
       "blade": "single spinning blade",
       "hook": "#3/0"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -779,12 +744,7 @@ export const PRODUCTS: Product[] = [
       "hook": "internal weighted hook",
       "tail": "paddle tail"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -863,12 +823,7 @@ export const PRODUCTS: Product[] = [
       "rattle": "internal rattle chamber",
       "hooks": "#4 treble x2"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -909,8 +864,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Best over lily pads, mats of weeds, and thick cover where other lures would snag right away.",
     "guide": {
       "gearNeeded": [
-        "Rod and reel",
-        "40-50 lb braided line (cuts through vegetation)"
+        "Rod and reel"
       ],
       "steps": [
         {
@@ -947,12 +901,7 @@ export const PRODUCTS: Product[] = [
       "hook": "snag-resistant double hook",
       "body": "hollow body"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1032,12 +981,7 @@ export const PRODUCTS: Product[] = [
       "material": "stamped metal",
       "hook": "single hook"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1117,12 +1061,7 @@ export const PRODUCTS: Product[] = [
       "includes": "weight + hook",
       "pairing": "4-in soft plastic (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1201,12 +1140,7 @@ export const PRODUCTS: Product[] = [
       "length": "6 in soft plastic",
       "pairing": "worm hook or jighead (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1285,12 +1219,7 @@ export const PRODUCTS: Product[] = [
       "length": "4 in soft plastic",
       "pairing": "jighead (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1369,12 +1298,7 @@ export const PRODUCTS: Product[] = [
       "length": "5 in soft plastic",
       "hook": "no-weight, snag-resistant hook included"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1453,12 +1377,7 @@ export const PRODUCTS: Product[] = [
       "length": "3.5 in hollow body",
       "pairing": "tube jighead (sold separately)"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1538,12 +1457,7 @@ export const PRODUCTS: Product[] = [
       "hook": "3/0",
       "skirt": "silicone"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -1618,12 +1532,7 @@ export const PRODUCTS: Product[] = [
       "length": "~100mm with hook",
       "rattle": "internal"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C",
-      "Color D"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
@@ -2088,11 +1997,7 @@ export const PRODUCTS: Product[] = [
     "specs": {
       "style": "trout-worm, pre-scented"
     },
-    "colorOptions": [
-      "Color A",
-      "Color B",
-      "Color C"
-    ],
+    "colorOptions": null,
     "trustBadges": [
       "Ships in 1-2 business days",
       "30-day returns on unused gear"
