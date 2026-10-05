@@ -5,7 +5,6 @@ import { Nav } from './Nav';
 import { Footer } from './Footer';
 import { CartDrawer } from './CartDrawer';
 import { MobileMenu, MenuFab } from './MobileMenu';
-import { AdminLoginModal } from './AdminLoginModal';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { CookieConsentBanner } from '../CookieConsentBanner';
 import { WelcomePopup } from '../WelcomePopup';
@@ -35,7 +34,6 @@ export function SiteLayout() {
       </main>
       <Footer />
       <CartDrawer />
-      <AdminLoginModal />
       <MenuFab onOpen={() => setMenuOpen(true)} />
       <WelcomePopup />
       <CookieConsentBanner />

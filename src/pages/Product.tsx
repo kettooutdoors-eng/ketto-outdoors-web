@@ -68,7 +68,7 @@ export default function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const product = id ? getProduct(id) : undefined;
   const { addToCart } = useCart();
-  const { get } = useInventory();
+  const { isInStock, isSizeInStock } = useInventory();
   const [selectedColor, setSelectedColor] = useState<string | null>(product?.colorOptions?.[0] ?? null);
   const [selectedSize, setSelectedSize] = useState<string | null>(product?.sizeOptions?.[0] ?? null);
 
@@ -78,8 +78,7 @@ export default function ProductPage() {
     `/product/${id ?? ''}`
   );
 
-  const qty = product ? get(product.id) : 0;
-  const inStock = qty > 0;
+  const inStock = product ? isInStock(product.id) && (!selectedSize || isSizeInStock(product.id, selectedSize)) : false;
   useProductSchema(product, product ? getProductImageSrc(product.id) : undefined, inStock);
 
   if (!product) return <NotFound />;
@@ -111,7 +110,7 @@ export default function ProductPage() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>${product.price.toFixed(2)}</span>
-            <StockLabel qty={qty} />
+            <StockLabel inStock={inStock} />
           </div>
 
           {product.colorOptions && (
@@ -172,7 +171,7 @@ export default function ProductPage() {
             fill
             background={inStock && !needsSelection ? 'var(--forest)' : 'rgba(36,26,16,.3)'}
             color="var(--cream)"
-            onClick={() => inStock && !needsSelection && addToCart(product.id)}
+            onClick={() => inStock && !needsSelection && addToCart(product.id, 1, selectedSize)}
             style={{ marginTop: 6, opacity: inStock ? 1 : 0.6, cursor: inStock && !needsSelection ? 'pointer' : 'not-allowed' }}
           >
             {!inStock ? 'Out of stock' : needsSelection ? 'Select options' : 'Add to cart'}

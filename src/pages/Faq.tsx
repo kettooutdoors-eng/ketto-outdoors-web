@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 import { PageHero } from '../components/ui/PageHero';
 import { FAQ_ENTRIES, FAQ_META } from '../data/legal';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
-import { useAdmin } from '../state/AdminContext';
-import { useFeatureFlags } from '../state/FeatureFlagsContext';
+import { USED_GEAR_ENABLED } from '../lib/featureFlags';
 
 export default function Faq() {
   useDocumentMeta(FAQ_META.title, FAQ_META.description, '/faq');
   const [open, setOpen] = useState<number | null>(0);
-  const { isAdmin } = useAdmin();
-  const { usedGear } = useFeatureFlags();
-  const entries = FAQ_ENTRIES.filter((entry) => !entry.usedGear || usedGear || isAdmin);
+  const entries = FAQ_ENTRIES.filter((entry) => !entry.usedGear || USED_GEAR_ENABLED);
 
   return (
     <div>

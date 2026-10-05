@@ -11,9 +11,10 @@ visual system applied across all 37 pages.
 - No CSS framework — hand-built design system in [`src/styles/tokens.css`](src/styles/tokens.css)
   (palette, fonts, cut-tin/notch clip-paths, textures) matching the approved
   retro reference design
-- State: cart, inventory, and admin/featured-products are in React context,
-  persisted to `localStorage` (same as the design prototype) — see
-  [`src/state/`](src/state)
+- Commerce: [Shopify](https://www.shopify.com) Storefront API. Shopify holds
+  products, stock, and orders, and runs checkout (payment, shipping rates,
+  sales tax). The cart lives in `localStorage` and is handed to Shopify's hosted
+  checkout. See [`src/lib/shopify.ts`](src/lib/shopify.ts).
 
 ## Getting started
 
@@ -30,38 +31,65 @@ npm run preview  # serve the production build locally
 ## Structure
 
 - `src/data/` — typed content extracted from the design handoff (products,
-  shop catalog, blog, guide, checkout logic, legal/support copy)
-- `src/state/` — `CartContext`, `InventoryContext`, `AdminContext`
+  shop catalog, blog, guide, legal/support copy)
+- `src/state/` — `CartContext`, `InventoryContext` (live stock from Shopify)
 - `src/components/` — shared UI (`TinFrame`, `BannerButton`, `Seal`,
   `PriceTag`, `ProductCard`, …) and layout (`Nav`, `Footer`, `CartDrawer`, …)
 - `src/pages/` — one component per route, wired in `src/App.tsx`
 
+## Hosting and deploys
+
+The site is hosted on GitHub Pages at **kettooutdoors.com** (`public/CNAME`).
+Every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the site and publishes it to the `gh-pages` branch. You can also
+run it by hand from the Actions tab.
+
+One-time setup:
+
+1. **DNS** at your domain registrar for `kettooutdoors.com`:
+   - Four `A` records on `@`: `185.199.108.153`, `185.199.109.153`,
+     `185.199.110.153`, `185.199.111.153`
+   - A `CNAME` record on `www` pointing to `kettooutdoors-eng.github.io`
+2. **GitHub → Settings → Pages**: source "Deploy from a branch", branch
+   `gh-pages` / root. Enter `kettooutdoors.com` as the custom domain, then
+   tick **Enforce HTTPS** once the certificate is issued (can take up to a day).
+
+## Shopify setup
+
+Until both Shopify variables are set, the site runs with checkout closed: the
+cart works, and `/checkout` says online orders open soon.
+
+1. **Create the products in Shopify.** Each product's **handle** (the URL slug
+   in Shopify's product editor, under "Search engine listing") must exactly
+   match the item's `id` on this site, e.g. `deep-six`, `first-bass-kit`,
+   `never-fished-before-starter-kit`, `first-catfish-kit`. See the ids in
+   `src/data/products.ts` and `src/data/bundles.ts`. Products with sizes need a
+   Shopify option named **Size** with the same values as `sizeOptions`.
+   Products must be published to the **Headless** sales channel.
+2. **Get a Storefront API token.** Install the **Headless** app from the
+   Shopify App Store, create a storefront, and copy its **public access
+   token**. (It's a read-only token made to live in browser code.)
+3. **Add the variables to GitHub**: Settings → Secrets and variables →
+   Actions → **Variables** tab:
+   - `VITE_SHOPIFY_STORE_DOMAIN` = `your-store.myshopify.com`
+   - `VITE_SHOPIFY_STOREFRONT_TOKEN` = the public access token
+   Then re-run the "Deploy site" workflow.
+4. **In Shopify admin:**
+   - Settings → Payments: set up Shopify Payments.
+   - Settings → Shipping and delivery: rates, including free shipping on
+     orders $35+ (the site's Shipping & Returns page promises that).
+   - Settings → Taxes and duties: turn on US sales tax collection.
+   - Discounts: create a 15% code **`WELCOME15`** (the welcome pop-up hands it
+     out, and checkout applies it automatically).
+
+For local testing, put the same two variables in a `.env.local` file.
+
 ## Known gaps before launch
 
-These are called out directly in the code/data or are carried over from the
-design handoff's own notes:
-
-- **Product photography** — every product image is a placeholder
-  (`ImagePlaceholder`); real photos still need to be sourced/shot.
-- **Payment processing** — checkout is a demo flow; no real payment
-  processor is wired up (see `src/pages/Checkout.tsx`).
-- **Shipping rates** — `src/data/checkout.ts` estimates shipping locally by
-  ZIP/weight. Swap in a real carrier API (Shippo, EasyPost, USPS) before
-  launch.
-- **Sales tax rates** — `TAX_RATES` in `src/data/checkout.ts` are
-  approximate; verify against current rates before launch.
-- **Admin gate** — the "admin mode" password gate (for swapping featured
-  products on Home) is a client-side demo gate, not real auth. See
-  `src/state/AdminContext.tsx`.
-- **Cart/inventory/orders storage** — currently `localStorage` per the
-  original design prototype; move to a real backend/data layer for
-  production multi-device use.
-- The site domain in `public/sitemap.xml` / `public/robots.txt` and in
-  `src/hooks/useDocumentMeta.ts` (`SITE_URL`) is the placeholder
-  `kettooutdoors.com` — swap for the real domain before launch.
+- **Product photography**: some product images are still placeholders
+  (`ImagePlaceholder`).
 - **SEO meta tags** are wired per route via `useDocumentMeta` (title,
   description, canonical, OG/Twitter tags, robots index/noindex) — but since
   this is a client-rendered SPA, a crawler that doesn't execute JS only sees
   the static tags in `index.html` (the Home page's). For real search-engine
-  indexing of every route, add pre-rendering or SSR (e.g. `vite-plugin-ssr`,
-  Next.js) before launch.
+  indexing of every route, add pre-rendering or SSR before launch.

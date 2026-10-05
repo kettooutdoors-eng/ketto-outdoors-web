@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/</loc>
+    <loc>https://kettooutdoors.com/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/kits</loc>
+    <loc>https://kettooutdoors.com/kits</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/kits/first-bass-kit</loc>
+    <loc>https://kettooutdoors.com/kits/first-bass-kit</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/kits/never-fished-before-starter-kit</loc>
+    <loc>https://kettooutdoors.com/kits/never-fished-before-starter-kit</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/kits/first-catfish-kit</loc>
+    <loc>https://kettooutdoors.com/kits/first-catfish-kit</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/biting-now</loc>
+    <loc>https://kettooutdoors.com/biting-now</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/gear-by-state</loc>
+    <loc>https://kettooutdoors.com/gear-by-state</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -45,313 +45,313 @@
   <!-- /used-gear and /trade-in are paused (see src/state/FeatureFlagsContext.tsx) and
        excluded here while off-by-default; re-add once the program is switched on. -->
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/shop</loc>
+    <loc>https://kettooutdoors.com/shop</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/deep-six</loc>
+    <loc>https://kettooutdoors.com/product/deep-six</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/driftworm</loc>
+    <loc>https://kettooutdoors.com/product/driftworm</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/baithooks</loc>
+    <loc>https://kettooutdoors.com/product/baithooks</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/longshot</loc>
+    <loc>https://kettooutdoors.com/product/longshot</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/chugger</loc>
+    <loc>https://kettooutdoors.com/product/chugger</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/ripple</loc>
+    <loc>https://kettooutdoors.com/product/ripple</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/bottomjig</loc>
+    <loc>https://kettooutdoors.com/product/bottomjig</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/buzzrunner</loc>
+    <loc>https://kettooutdoors.com/product/buzzrunner</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/swimshad</loc>
+    <loc>https://kettooutdoors.com/product/swimshad</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/ratlin</loc>
+    <loc>https://kettooutdoors.com/product/ratlin</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/padhopper</loc>
+    <loc>https://kettooutdoors.com/product/padhopper</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/flutterspoon</loc>
+    <loc>https://kettooutdoors.com/product/flutterspoon</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/finessedrop</loc>
+    <loc>https://kettooutdoors.com/product/finessedrop</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/ribtail</loc>
+    <loc>https://kettooutdoors.com/product/ribtail</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/crawdaddy</loc>
+    <loc>https://kettooutdoors.com/product/crawdaddy</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/flukeshad</loc>
+    <loc>https://kettooutdoors.com/product/flukeshad</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/tubehead</loc>
+    <loc>https://kettooutdoors.com/product/tubehead</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/new-to-fishing</loc>
+    <loc>https://kettooutdoors.com/new-to-fishing</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog</loc>
+    <loc>https://kettooutdoors.com/blog</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/beginner-guides</loc>
+    <loc>https://kettooutdoors.com/blog/beginner-guides</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/beginner-guides/how-to-start-fishing</loc>
+    <loc>https://kettooutdoors.com/blog/beginner-guides/how-to-start-fishing</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/gear-and-lures</loc>
+    <loc>https://kettooutdoors.com/blog/gear-and-lures</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/gear-and-lures/how-to-pick-your-first-lure</loc>
+    <loc>https://kettooutdoors.com/blog/gear-and-lures/how-to-pick-your-first-lure</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/technique</loc>
+    <loc>https://kettooutdoors.com/blog/technique</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/technique/retrieve-speed-101</loc>
+    <loc>https://kettooutdoors.com/blog/technique/retrieve-speed-101</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/where-to-fish</loc>
+    <loc>https://kettooutdoors.com/blog/where-to-fish</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/blog/where-to-fish/how-to-read-new-water</loc>
+    <loc>https://kettooutdoors.com/blog/where-to-fish/how-to-read-new-water</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/about</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/contact</loc>
+    <loc>https://kettooutdoors.com/about</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/faq</loc>
+    <loc>https://kettooutdoors.com/contact</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/shipping-returns</loc>
+    <loc>https://kettooutdoors.com/faq</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kettooutdoors.com/shipping-returns</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/privacy</loc>
+    <loc>https://kettooutdoors.com/privacy</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/cookies</loc>
+    <loc>https://kettooutdoors.com/cookies</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/terms</loc>
+    <loc>https://kettooutdoors.com/terms</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/flipping-jig</loc>
+    <loc>https://kettooutdoors.com/product/flipping-jig</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/medium-crankbait</loc>
+    <loc>https://kettooutdoors.com/product/medium-crankbait</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/wacky-worm</loc>
+    <loc>https://kettooutdoors.com/product/wacky-worm</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/chatterbait</loc>
+    <loc>https://kettooutdoors.com/product/chatterbait</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/urchin-finesse-bait</loc>
+    <loc>https://kettooutdoors.com/product/urchin-finesse-bait</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/bulk-sinkers</loc>
+    <loc>https://kettooutdoors.com/product/bulk-sinkers</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/bobbers</loc>
+    <loc>https://kettooutdoors.com/product/bobbers</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/split-shot-weights</loc>
+    <loc>https://kettooutdoors.com/product/split-shot-weights</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/scented-soft-bait</loc>
+    <loc>https://kettooutdoors.com/product/scented-soft-bait</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/bobber-stops</loc>
+    <loc>https://kettooutdoors.com/product/bobber-stops</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/circle-hooks</loc>
+    <loc>https://kettooutdoors.com/product/circle-hooks</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/dip-bait-treble-hooks</loc>
+    <loc>https://kettooutdoors.com/product/dip-bait-treble-hooks</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/sliding-egg-sinkers</loc>
+    <loc>https://kettooutdoors.com/product/sliding-egg-sinkers</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/no-roll-bank-sinkers</loc>
+    <loc>https://kettooutdoors.com/product/no-roll-bank-sinkers</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/barrel-swivels</loc>
+    <loc>https://kettooutdoors.com/product/barrel-swivels</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/fluorocarbon-leader</loc>
+    <loc>https://kettooutdoors.com/product/fluorocarbon-leader</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kettooutdoors-eng.github.io/ketto-outdoors-web/product/catfish-stink-bait</loc>
+    <loc>https://kettooutdoors.com/product/catfish-stink-bait</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

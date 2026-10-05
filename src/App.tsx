@@ -1,9 +1,7 @@
 import { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './state/CartContext';
-import { AdminProvider } from './state/AdminContext';
 import { InventoryProvider } from './state/InventoryContext';
-import { FeatureFlagsProvider } from './state/FeatureFlagsContext';
 import { SiteLayout } from './components/layout/SiteLayout';
 import { UsedGearGate } from './components/UsedGearGate';
 
@@ -26,7 +24,6 @@ const BlogIndex = lazy(() => import('./pages/blog/BlogIndex'));
 const BlogCategory = lazy(() => import('./pages/blog/BlogCategory'));
 const BlogArticlePage = lazy(() => import('./pages/blog/BlogArticlePage'));
 const Checkout = lazy(() => import('./pages/Checkout'));
-const Orders = lazy(() => import('./pages/Orders'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Faq = lazy(() => import('./pages/Faq'));
@@ -39,9 +36,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <AdminProvider>
         <InventoryProvider>
-          <FeatureFlagsProvider>
             <CartProvider>
               <Routes>
                 <Route element={<SiteLayout />}>
@@ -65,7 +60,6 @@ function App() {
                   <Route path="blog/:category" element={<BlogCategory />} />
                   <Route path="blog/:category/:slug" element={<BlogArticlePage />} />
                   <Route path="checkout" element={<Checkout />} />
-                  <Route path="orders" element={<Orders />} />
                   <Route path="about" element={<About />} />
                   <Route path="contact" element={<Contact />} />
                   <Route path="faq" element={<Faq />} />
@@ -77,9 +71,7 @@ function App() {
                 </Route>
               </Routes>
             </CartProvider>
-          </FeatureFlagsProvider>
         </InventoryProvider>
-      </AdminProvider>
     </BrowserRouter>
   );
 }
