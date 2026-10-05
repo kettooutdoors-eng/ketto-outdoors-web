@@ -9,11 +9,11 @@ export const PRODUCTS: Product[] = [
     "category": "Crankbait (Squarebill)",
     "kicker": "Squarebill / 2.5 in / 1/2 oz",
     "metaTitle": "Deep Six Squarebill Crankbait | Ketto Outdoors",
-    "metaDescription": "A wide-hunting squarebill that runs six feet and deflects instead of hanging. $14.50.",
+    "metaDescription": "A crankbait that dives about 6 feet and bounces off rocks and logs instead of getting stuck. Cast it out and reel it back steady. $14.50.",
     "difficulty": null,
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "A wide-hunting squarebill that runs six feet and deflects instead of hanging. Balanced on the pause, hard on the strike.",
-    "longDescription": "Squarebills dive shallower on a slack line, deeper on a tight one. Deep Six holds a tight +/-1 ft band around 6 ft on a steady retrieve, tighter than most squarebills in its class. Retrieve notes: on a steady retrieve the bill loads, the body rolls six degrees each side, and the tail throws water off the back. At a brisk, steady reel speed of about 2.4 mph (roughly 90 handle turns per minute, about 1.5 cranks every second, no pausing), it holds its wobble and depth band consistently.",
+    "shortDescription": "A crankbait that dives about 6 feet and bounces off rocks and logs instead of getting stuck. Cast it out and reel it back steady.",
+    "longDescription": "A crankbait with a squared-off front that dives about 6 feet and bounces off rocks and wood instead of snagging. Reel steady, about 1.5 turns of the handle per second, and it keeps a steady wobble and depth.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -135,15 +135,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Worm)",
     "kicker": "Soft plastic worm",
     "metaTitle": "Driftworm Soft Plastic | Ketto Outdoors",
-    "metaDescription": "Rig it and drag it slowly along the bottom. About as simple as fishing gets. $6.50.",
+    "metaDescription": "A soft worm you drag slowly along the bottom. One of the easiest lures to fish, and a good first one. $6.50.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "Rig it and drag it slowly along the bottom. About as simple and forgiving as fishing gets. A great confidence-builder.",
-    "longDescription": "Slow, patient fishing along the bottom near cover. A great first lure to learn feel with.",
+    "shortDescription": "A soft worm you drag slowly along the bottom. One of the easiest lures to fish, and a good first one.",
+    "longDescription": "Best for slow fishing along the bottom near logs, rocks, and weeds. A good first lure for learning to feel what's happening on your line.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -222,15 +222,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks",
     "metaTitle": "Baithooks | Ketto Outdoors",
-    "metaDescription": "A basic assortment of sized hooks for rigging soft plastics and live bait. $4.25.",
+    "metaDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm. $4.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Any species. Pick a size to match your bait",
-    "shortDescription": "A basic assortment of sized hooks for rigging soft plastics and live bait. Start here if you need hooks for the Driftworm.",
-    "longDescription": "Rigging soft plastics like the Driftworm, or tipping with live bait.",
+    "shortDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm.",
+    "longDescription": "For rigging soft plastic worms like the Driftworm, or adding a live worm.",
     "guide": {
       "gearNeeded": [
         "Whatever soft plastic or live bait you’re rigging",
@@ -307,15 +307,15 @@ export const PRODUCTS: Product[] = [
     "category": "Spinnerbait",
     "kicker": "Spinnerbait",
     "metaTitle": "Longshot | Ketto Outdoors",
-    "metaDescription": "A long-casting spoon built to cover open water fast.",
+    "metaDescription": "A lure with two metal blades that flash and vibrate, so fish can find it in murky or cloudy water. Just reel it in steady. $11.00.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
       "outOf": 10
     },
     "targetSpecies": "Bass & pike",
-    "shortDescription": "Tandem willow blades flash and vibrate so fish can find it even when they can't see far. Reel it steady, no technique needed. Good for murky or cloudy water.",
-    "longDescription": "Stained or muddy water, low light, and covering water fast to find active fish.",
+    "shortDescription": "A lure with two metal blades that flash and vibrate, so fish can find it in murky or cloudy water. Just reel it in steady.",
+    "longDescription": "Good in murky or muddy water, in low light, and for covering a lot of water to find active fish.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -392,15 +392,15 @@ export const PRODUCTS: Product[] = [
     "category": "Topwater (Popper)",
     "kicker": "Topwater",
     "metaTitle": "Chugger | Ketto Outdoors",
-    "metaDescription": "A topwater popper that chugs and spits on the pause.",
+    "metaDescription": "A topwater lure that splashes and pops on the surface when you twitch your rod. Fun to watch, but better once you have the basics down. $12.75.",
     "difficulty": {
       "label": "Intermediate",
       "number": 6,
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "A concave face throws a hard splash on the twitch and walks clean between pops. Exciting to watch, fun once you're ready to level up.",
-    "longDescription": "Calm mornings and evenings when fish are looking up near the surface.",
+    "shortDescription": "A topwater lure that splashes and pops on the surface when you twitch your rod. Fun to watch, but better once you have the basics down.",
+    "longDescription": "Best on calm mornings and evenings, when fish are looking up near the surface.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -477,15 +477,15 @@ export const PRODUCTS: Product[] = [
     "category": "Jerkbait",
     "kicker": "Jerkbait",
     "metaTitle": "Ripple | Ketto Outdoors",
-    "metaDescription": "A paddle-tail swimbait for a steady, thumping retrieve.",
+    "metaDescription": "A lure you twitch, pause, and twitch again. It's a little harder to learn, but it works well on cold, slow fish. $13.25.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
       "outOf": 10
     },
     "targetSpecies": "Smallmouth bass & trout",
-    "shortDescription": "Twitch-pause-twitch gives it a darting, suspended action. A slight learning curve, but deadly on cold, sluggish fish.",
-    "longDescription": "Cold water and slow, suspended fish that won't chase a fast retrieve.",
+    "shortDescription": "A lure you twitch, pause, and twitch again. It's a little harder to learn, but it works well on cold, slow fish.",
+    "longDescription": "Best in cold water, when fish are slow and won't chase a fast lure.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -561,15 +561,15 @@ export const PRODUCTS: Product[] = [
     "category": "Jig",
     "kicker": "Jig",
     "metaTitle": "Bottomjig | Ketto Outdoors",
-    "metaDescription": "Feel for the bottom and hop it back. $5.75.",
+    "metaDescription": "A weighted lure you hop along the bottom. It takes some practice to feel the bites. $5.75.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
       "outOf": 10
     },
     "targetSpecies": "Bass & walleye",
-    "shortDescription": "Feel for the bottom and hop it back. Versatile and bottom-hugging, takes a little practice to read the bites.",
-    "longDescription": "Rocky bottoms and drop-offs where fish sit low and hug structure.",
+    "shortDescription": "A weighted lure you hop along the bottom. It takes some practice to feel the bites.",
+    "longDescription": "Best around rocky bottoms and drop-offs, where fish stay low near structure.",
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (Crawdaddy pairs well)",
@@ -645,15 +645,15 @@ export const PRODUCTS: Product[] = [
     "category": "Topwater (Buzzbait)",
     "kicker": "Buzzbait",
     "metaTitle": "Buzzrunner | Ketto Outdoors",
-    "metaDescription": "A topwater buzzbait for explosive surface strikes.",
+    "metaDescription": "A lure that churns across the surface and makes a lot of noise. Fish hit it hard. It takes some practice to find the right reeling speed. $12.00.",
     "difficulty": {
       "label": "Intermediate",
       "number": 6,
       "outOf": 10
     },
     "targetSpecies": "Bass & pike",
-    "shortDescription": "Loud surface commotion that draws explosive strikes. Reel fast enough to keep it churning, takes a bit of practice to find the pace.",
-    "longDescription": "Low light, aggressive fish, and open surface water near cover.",
+    "shortDescription": "A lure that churns across the surface and makes a lot of noise. Fish hit it hard. It takes some practice to find the right reeling speed.",
+    "longDescription": "Best in low light, around cover, and in open water near the surface where fish are aggressive.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -730,15 +730,15 @@ export const PRODUCTS: Product[] = [
     "category": "Swimbait",
     "kicker": "Swimbait",
     "metaTitle": "Swimshad | Ketto Outdoors",
-    "metaDescription": "A swimbait built to imitate baitfish at any retrieve speed.",
+    "metaDescription": "A soft lure with a paddle tail that swims on its own. Cast it out and reel it back steady. $9.50.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
       "outOf": 10
     },
     "targetSpecies": "Bass & striped bass",
-    "shortDescription": "Realistic, steady swimming action. Cast and reel at a steady pace. Its paddle tail does the swimming for you.",
-    "longDescription": "Open water and imitating baitfish at a natural, steady pace.",
+    "shortDescription": "A soft lure with a paddle tail that swims on its own. Cast it out and reel it back steady.",
+    "longDescription": "Best in open water, where it looks like a small baitfish swimming at a natural pace.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -814,15 +814,15 @@ export const PRODUCTS: Product[] = [
     "category": "Crankbait (Lipless)",
     "kicker": "Lipless crankbait",
     "metaTitle": "Ratlin | Ketto Outdoors",
-    "metaDescription": "A lipless crankbait with a loud internal rattle. $10.25.",
+    "metaDescription": "A lure with a loud rattle inside. Cast it far and reel steady to find where the fish are. $10.25.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
       "outOf": 10
     },
     "targetSpecies": "Bass & crappie",
-    "shortDescription": "Cast far, reel steady. A loud internal rattle helps you cover water fast to find active fish.",
-    "longDescription": "Covering open water fast to locate schools of active fish.",
+    "shortDescription": "A lure with a loud rattle inside. Cast it far and reel steady to find where the fish are.",
+    "longDescription": "Best for covering open water fast to find schools of active fish.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -898,15 +898,15 @@ export const PRODUCTS: Product[] = [
     "category": "Topwater (Frog)",
     "kicker": "Topwater frog",
     "metaTitle": "Padhopper | Ketto Outdoors",
-    "metaDescription": "A weedless frog for skipping across lily pads and slop.",
+    "metaDescription": "A frog lure that slides over lily pads and thick weeds without snagging. It takes practice to know when to set the hook. $11.50.",
     "difficulty": {
       "label": "Advanced",
       "number": 7,
       "outOf": 10
     },
     "targetSpecies": "Largemouth bass",
-    "shortDescription": "Weedless and built for heavy cover. Walks over lily pads and slop, takes practice timing the hookset through cover.",
-    "longDescription": "Lily pads, mats, and slop where other lures would snag immediately.",
+    "shortDescription": "A frog lure that slides over lily pads and thick weeds without snagging. It takes practice to know when to set the hook.",
+    "longDescription": "Best over lily pads, mats of weeds, and thick cover where other lures would snag right away.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -982,15 +982,15 @@ export const PRODUCTS: Product[] = [
     "category": "Spoon",
     "kicker": "Spoon",
     "metaTitle": "Flutterspoon | Ketto Outdoors",
-    "metaDescription": "A flutter spoon for vertical jigging and reaction strikes.",
+    "metaDescription": "A metal spoon that wobbles and flashes as it sinks and as you reel it back. Cast, let it sink, and reel in. $7.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Trout, walleye & crappie",
-    "shortDescription": "Simple flash and flutter. Cast, let it sink, reel it back. One simple wobbling flash of metal.",
-    "longDescription": "Deep, clear water and vertical jigging near schools of baitfish.",
+    "shortDescription": "A metal spoon that wobbles and flashes as it sinks and as you reel it back. Cast, let it sink, and reel in.",
+    "longDescription": "Best in deep, clear water near schools of baitfish. Drop it straight down and lift it up and down.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -1067,15 +1067,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Drop-shot Rig)",
     "kicker": "Drop-shot rig",
     "metaTitle": "Finesse Drop | Ketto Outdoors",
-    "metaDescription": "A finesse drop-shot rig for finicky, pressured fish.",
+    "metaDescription": "A light setup that lets you keep your bait at an exact depth. It takes more practice, but it works when fish are hard to catch. $8.00.",
     "difficulty": {
       "label": "Advanced",
       "number": 7,
       "outOf": 10
     },
     "targetSpecies": "Smallmouth bass & walleye",
-    "shortDescription": "Precise depth control and a subtle shake. More technique, but more control over tough, pressured bites.",
-    "longDescription": "Tough bites, pressured fish, and precise depth control off the bottom.",
+    "shortDescription": "A light setup that lets you keep your bait at an exact depth. It takes more practice, but it works when fish are hard to catch.",
+    "longDescription": "Best when fish are hard to catch or have seen a lot of lures. It keeps your bait at an exact depth just off the bottom.",
     "guide": {
       "gearNeeded": [
         "4-in soft plastic (sold separately)",
@@ -1152,15 +1152,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Curl-tail Worm)",
     "kicker": "Soft plastic: curl-tail worm",
     "metaTitle": "Ribtail | Ketto Outdoors",
-    "metaDescription": "A ribbed soft-plastic worm with extra tail vibration.",
+    "metaDescription": "A soft lure with a curled tail that kicks as it falls and as you reel. Easy to use, and you can rig it many ways as you learn. $5.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "A curling tail kicks on the fall and the retrieve. Forgiving and versatile. Rig it a dozen ways as you learn.",
-    "longDescription": "Nearly any water. A reliable everyday bait once you've picked a rig.",
+    "shortDescription": "A soft lure with a curled tail that kicks as it falls and as you reel. Easy to use, and you can rig it many ways as you learn.",
+    "longDescription": "Works in almost any water. A reliable everyday bait once you've picked how to rig it.",
     "guide": {
       "gearNeeded": [
         "Worm hook or light jighead (sold separately)",
@@ -1236,15 +1236,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Creature Bait)",
     "kicker": "Soft plastic: creature bait",
     "metaTitle": "Crawdaddy | Ketto Outdoors",
-    "metaDescription": "A crawfish-imitating lure for bottom-hugging bites.",
+    "metaDescription": "A soft lure with claws that flap like a crawfish on the bottom. A good partner for a jig once you're ready to feel bites on the bottom. $6.75.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
       "outOf": 10
     },
     "targetSpecies": "Bass & smallmouth bass",
-    "shortDescription": "Flapping claws imitate a crawfish scooting along the bottom. A great pairing with a jig once you're ready to read bottom bites.",
-    "longDescription": "Rocky or gravel bottoms where real crawfish live.",
+    "shortDescription": "A soft lure with claws that flap like a crawfish on the bottom. A good partner for a jig once you're ready to feel bites on the bottom.",
+    "longDescription": "Best on rocky or gravel bottoms where real crawfish live.",
     "guide": {
       "gearNeeded": [
         "Jighead (Bottomjig pairs well)",
@@ -1320,15 +1320,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Weightless Jerkbait)",
     "kicker": "Soft plastic: weightless jerkbait",
     "metaTitle": "Flukeshad | Ketto Outdoors",
-    "metaDescription": "A soft-plastic fluke for a darting, baitfish-like action.",
+    "metaDescription": "A soft lure that darts side to side just under the surface. Twitch it, pause, and repeat. $5.95.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
       "outOf": 10
     },
     "targetSpecies": "Bass & pike",
-    "shortDescription": "Rigged weedless and weightless, it darts side to side just under the surface. Simple twitch-and-pause retrieve.",
-    "longDescription": "Around docks, weed edges, and other cover a weighted lure would snag on.",
+    "shortDescription": "A soft lure that darts side to side just under the surface. Twitch it, pause, and repeat.",
+    "longDescription": "Best around docks, weed edges, and other cover where a weighted lure would snag.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -1404,15 +1404,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Tube Bait)",
     "kicker": "Soft plastic: tube bait",
     "metaTitle": "Tubehead | Ketto Outdoors",
-    "metaDescription": "A tube jig for finesse presentations around structure.",
+    "metaDescription": "A tube lure with a skirt that flares open as it sinks. A classic for rocky bottoms. $4.95.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
       "outOf": 10
     },
     "targetSpecies": "Smallmouth bass & walleye",
-    "shortDescription": "Its tentacle skirt flares on the fall and pause. A classic bottom bait for rocky structure.",
-    "longDescription": "Rock piles, riprap, and bottom structure where fish tuck in tight.",
+    "shortDescription": "A tube lure with a skirt that flares open as it sinks. A classic for rocky bottoms.",
+    "longDescription": "Best around rock piles and other bottom structure where fish tuck in tight.",
     "guide": {
       "gearNeeded": [
         "Tube jighead (sold separately)",
@@ -1488,15 +1488,15 @@ export const PRODUCTS: Product[] = [
     "category": "Jig",
     "kicker": "Jig",
     "metaTitle": "Flipping Jig | Ketto Outdoors",
-    "metaDescription": "The jig you tie on when you don't know what else to throw. 3/8 oz, painted head, 3/0 hook.",
+    "metaDescription": "The jig to tie on when you don’t know what else to throw. It works almost anywhere near cover. $5.50.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
       "outOf": 10
     },
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "This is the jig you tie on when you don't know what else to throw. Works almost everywhere cover reaches.",
-    "longDescription": "Flip it into laydowns, docks, and weed edges and let it fall on a semi-slack line, then hop it back slowly. A painted head with eyes and a stout 3/0 hook make it the one lure that’s always a reasonable option.",
+    "shortDescription": "The jig to tie on when you don’t know what else to throw. It works almost anywhere near cover.",
+    "longDescription": "Drop it next to docks, fallen trees, and weed edges, let it sink, then hop it back slowly. The painted head with eyes and a strong 3/0 hook make it a safe choice almost anywhere.",
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (a craw or creature bait pairs well)",
@@ -1573,15 +1573,15 @@ export const PRODUCTS: Product[] = [
     "category": "Crankbait",
     "kicker": "Crankbait",
     "metaTitle": "Medium Crankbait | Ketto Outdoors",
-    "metaDescription": "A medium-diving crankbait with an internal rattle. Cast it, reel it back steady. The bait does the rest.",
+    "metaDescription": "Cast it out and reel it back steady. The rattle and wobble get a bass’s attention. $8.50.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "Cast it out and reel it back steady. The internal rattle and wobble do the work of getting a bass’s attention for you.",
-    "longDescription": "A medium-diving body, 66mm / 14g with roughly 100mm total length including the hook, built to run a consistent depth on a steady retrieve with a rattle that carries in stained water.",
+    "shortDescription": "Cast it out and reel it back steady. The rattle and wobble get a bass’s attention.",
+    "longDescription": "A medium-diving crankbait, 66mm and 14g (about 100mm long with the hook). It runs at a steady depth when you reel steady, and the rattle carries in cloudy water.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -1653,15 +1653,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Wacky Worm)",
     "kicker": "Soft plastic: wacky-rigged worm",
     "metaTitle": "Wacky Worm | Ketto Outdoors",
-    "metaDescription": "Rig it through the middle, cast it, let it sink and shimmy. About as close to a sure thing as soft plastics get.",
+    "metaDescription": "Rig it, cast it, and let it sink. One of the easiest soft plastics to fish. $6.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "Rig it, cast it, let it sink and shimmy on a slack line. About as close to a sure thing as soft plastics get.",
-    "longDescription": "13.5cm / 5in, 7.5g, in green pumpkin and watermelon, hooked through the middle so both ends flutter on the fall. The \"wacky rig\" is one of the easiest presentations in fishing to get right on the first try.",
+    "shortDescription": "Rig it, cast it, and let it sink. One of the easiest soft plastics to fish.",
+    "longDescription": "13.5cm / 5in, 7.5g, in green pumpkin and watermelon. Hook it through the middle so both ends flutter as it sinks. This 'wacky rig' is one of the easiest ways to rig a worm.",
     "guide": {
       "gearNeeded": [
         "1/0 wacky hook + O-ring (included)",
@@ -1728,15 +1728,15 @@ export const PRODUCTS: Product[] = [
     "category": "Bladed Jig",
     "kicker": "Chatterbait / bladed jig",
     "metaTitle": "Chatterbait | Ketto Outdoors",
-    "metaDescription": "Vibrates as you reel, so fish can find it even when the water is stained or cloudy. 3/8 oz.",
+    "metaDescription": "It vibrates as you reel, so fish can find it in cloudy water. $7.75.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
       "outOf": 10
     },
     "targetSpecies": "Largemouth bass",
-    "shortDescription": "Vibrates as you reel, which means fish can find it even when the water’s stained or cloudy.",
-    "longDescription": "3/8 oz in green pumpkin and chartreuse/white. A small metal blade on the nose makes the whole bait shimmy and thump at any steady retrieve speed, covering the gap between a jig and a spinnerbait.",
+    "shortDescription": "It vibrates as you reel, so fish can find it in cloudy water.",
+    "longDescription": "3/8 oz, in green pumpkin and chartreuse/white. A small metal blade on the front makes it shimmy and thump at any steady reeling speed. It sits between a jig and a spinnerbait.",
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (a paddle tail or craw works well)",
@@ -1803,15 +1803,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Finesse)",
     "kicker": "Soft plastic: finesse",
     "metaTitle": "Urchin Finesse Bait | Ketto Outdoors",
-    "metaDescription": "A small, subtle finesse bait for the days nothing else gets bit. 17mm, nail/push weighted.",
+    "metaDescription": "A small, subtle bait for the days other lures don’t get bit. Easy to drop next to cover. $4.95.",
     "difficulty": {
       "label": "Advanced",
       "number": 6,
       "outOf": 10
     },
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "A finesse option for the days the rest of the box doesn’t get bit. Small, subtle, and easy to drop right next to cover.",
-    "longDescription": "17mm, in green pumpkin, watermelon seed, and chartreuse, rigged with a 1/16 oz or 3/32 oz nail/push weight for a slow, subtle fall right next to cover where bigger baits spook wary fish.",
+    "shortDescription": "A small, subtle bait for the days other lures don’t get bit. Easy to drop next to cover.",
+    "longDescription": "17mm, in green pumpkin, watermelon seed, and chartreuse, with a 1/16 oz or 3/32 oz nail or push weight. It sinks slowly right next to cover, where bigger lures can spook wary fish.",
     "guide": {
       "gearNeeded": [
         "Rod and reel",
@@ -1877,11 +1877,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
     "metaTitle": "Bulk Sinkers | Ketto Outdoors",
-    "metaDescription": "An assorted 10-pack of basic fishing weights. Nothing fancy. Exactly what you need.",
+    "metaDescription": "Basic weights that get your bait down to where the fish are. $4.50.",
     "difficulty": null,
     "targetSpecies": "Any species",
-    "shortDescription": "Basic, boring, and exactly what you need to get a bait down to where the fish actually are.",
-    "longDescription": "An assorted 10-pack of split-shot and slip weights covering the range most freshwater rigs call for. No need to guess which size to grab.",
+    "shortDescription": "Basic weights that get your bait down to where the fish are.",
+    "longDescription": "A mixed 10-pack of split-shot and slip weights in the sizes most freshwater rigs use. No guessing which size to grab.",
     "guide": {
       "gearNeeded": [],
       "steps": [
@@ -1927,15 +1927,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Float)",
     "kicker": "Float",
     "metaTitle": "Bobbers | Ketto Outdoors",
-    "metaDescription": "Round snap-on floats, assorted sizes, 5-pack. The bobber going under is the easiest bite you’ll ever learn to read.",
+    "metaDescription": "A bobber going under is the easiest bite to read. You can tell it’s a fish. $4.75.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Panfish & bass",
-    "shortDescription": "The bobber going under is the easiest bite you’ll ever learn to read. No guessing whether that was a fish or the current.",
-    "longDescription": "Round snap-on floats in assorted sizes. Clip one onto your line above a hook and weight, and it holds your bait at a set depth while giving you an unmistakable visual signal the moment a fish takes it.",
+    "shortDescription": "A bobber going under is the easiest bite to read. You can tell it’s a fish.",
+    "longDescription": "Round snap-on floats in mixed sizes. Clip one onto your line above the hook and weight. It holds your bait at one depth and dips under when a fish bites.",
     "guide": {
       "gearNeeded": [
         "Hook and split shot weight",
@@ -1994,11 +1994,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
     "metaTitle": "Split Shot Weights | Ketto Outdoors",
-    "metaDescription": "Reusable split shot weights, assorted sizes, pack of 20. Pinch one on above the hook to sink a bobber rig.",
+    "metaDescription": "Pinch one on above the hook so your bait sinks and hangs under the bobber. $3.95.",
     "difficulty": null,
     "targetSpecies": "Any species",
-    "shortDescription": "Pinch one on above the hook so your bait sinks just enough to hang below the bobber instead of floating uselessly on top.",
-    "longDescription": "Reusable, removable split shot in assorted sizes. Pinch on with your fingers or pliers, and pinch off again to adjust.",
+    "shortDescription": "Pinch one on above the hook so your bait sinks and hangs under the bobber.",
+    "longDescription": "Reusable split shot in mixed sizes. Pinch them on with your fingers or pliers, and pinch them off to adjust.",
     "guide": {
       "gearNeeded": [
         "A bobber rig or any light line rig"
@@ -2051,15 +2051,15 @@ export const PRODUCTS: Product[] = [
     "category": "Soft Plastic (Scented)",
     "kicker": "Scented bait: no live bait needed",
     "metaTitle": "Scented Soft Bait | Ketto Outdoors",
-    "metaDescription": "A trout-worm style scented soft bait, works like a real worm without a trip to dig for one.",
+    "metaDescription": "Works like a real worm without digging for one. Thread it on and go. $5.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Panfish, trout & bass",
-    "shortDescription": "Works like a real worm without a trip to dig for one or a stop at the bait shop. Thread it on and go.",
-    "longDescription": "A pre-scented, trout-worm style soft bait that fish key in on by smell as much as sight. Thread it onto a small hook under a bobber, or fish it plain on the bottom.",
+    "shortDescription": "Works like a real worm without digging for one. Thread it on and go.",
+    "longDescription": "A pre-scented soft bait shaped like a trout worm. Fish find it by smell as well as sight. Thread it on a small hook under a bobber, or fish it plain on the bottom.",
     "guide": {
       "gearNeeded": [
         "Small hook (size 6-10)",
@@ -2116,11 +2116,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
     "metaTitle": "Bobber Stops & Beads | Ketto Outdoors",
-    "metaDescription": "Adjustable bobber stops with beads, pack of 20. Set exactly how deep your bait hangs.",
+    "metaDescription": "Set how deep your bait hangs, and move it up or down as you find the fish. $3.50.",
     "difficulty": null,
     "targetSpecies": "Any species",
-    "shortDescription": "Lets you set exactly how deep your bait hangs, and slide it up or down as you figure out where the fish are holding.",
-    "longDescription": "Small adjustable stops paired with beads. Thread the stop onto your main line above the bobber, and the bead keeps it from sliding through the bobber’s hole.",
+    "shortDescription": "Set how deep your bait hangs, and move it up or down as you find the fish.",
+    "longDescription": "Small adjustable stops with beads. Thread the stop onto your line above the bobber. The bead keeps it from sliding through the bobber’s hole.",
     "guide": {
       "gearNeeded": [
         "A slip-bobber rig"
@@ -2172,15 +2172,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks: circle style",
     "metaTitle": "Circle Hooks | Ketto Outdoors",
-    "metaDescription": "Circle hooks, 5/0-7/0, 10-pack. Hook catfish in the corner of the mouth almost on their own.",
+    "metaDescription": "Circle hooks catch catfish in the corner of the mouth on their own, so you aren’t gut-hooking fish while you learn the bite. $5.95.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Catfish",
-    "shortDescription": "Circle hooks hook catfish in the corner of the mouth almost on their own, so you’re not gut-hooking fish while you’re still learning to feel a bite.",
-    "longDescription": "Sized 5/0 through 7/0, assorted. Bait it and let the fish hook itself as it swims off with the bait, pulling straight back on a circle hook, the way you would with a normal hook, actually pulls it out of the fish’s mouth instead of setting it.",
+    "shortDescription": "Circle hooks catch catfish in the corner of the mouth on their own, so you aren’t gut-hooking fish while you learn the bite.",
+    "longDescription": "Sizes 5/0 to 7/0, mixed. Bait the hook and let the fish hook itself as it swims off. Don’t jerk the rod back like you would with a normal hook, because that pulls a circle hook out of the fish’s mouth.",
     "guide": {
       "gearNeeded": [
         "Cut bait or live/prepared bait",
@@ -2244,15 +2244,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks: treble, bait-holder spring",
     "metaTitle": "Dip Bait Treble Hooks | Ketto Outdoors",
-    "metaDescription": "Bait-holder spring treble hooks built to hold prepared stink/dip bait, 10-pack.",
+    "metaDescription": "Stink bait needs a hook that holds paste. A regular hook lets it slide off when you cast. $5.50.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Catfish",
-    "shortDescription": "Prepared stink or dip bait needs a hook built to hold paste bait. A regular hook just lets it slide off on the cast.",
-    "longDescription": "A small treble hook with a bait-holder spring wrapped around the shank. Twist the spring into a wad of dip bait and it holds through the cast and the sink instead of washing off.",
+    "shortDescription": "Stink bait needs a hook that holds paste. A regular hook lets it slide off when you cast.",
+    "longDescription": "A small treble hook with a spring around the shank that holds dip bait. Twist the bait into the spring and it stays on through the cast and the sink instead of washing off.",
     "guide": {
       "gearNeeded": [
         "Prepared catfish stink/dip bait"
@@ -2310,11 +2310,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights: slip-sinker rig",
     "metaTitle": "Sliding Egg Sinkers | Ketto Outdoors",
-    "metaDescription": "1 oz sliding egg sinkers, 10-pack. The standard slip-sinker rig weight for calmer catfish water.",
+    "metaDescription": "Lets a catfish take the bait and swim off without feeling the weight. Best in calm water. $4.50.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Lets a catfish pick up the bait and swim off without feeling the weight. The standard slip-sinker rig for calmer water.",
-    "longDescription": "1 oz, egg-shaped with a hole through the middle so your main line slides freely through it, stopped by a swivel above your leader.",
+    "shortDescription": "Lets a catfish take the bait and swim off without feeling the weight. Best in calm water.",
+    "longDescription": "1 oz, egg-shaped with a hole through the middle so your line slides through it. A swivel above your leader stops it.",
     "guide": {
       "gearNeeded": [
         "Barrel swivel",
@@ -2369,11 +2369,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights: current fishing",
     "metaTitle": "No-Roll Bank Sinkers | Ketto Outdoors",
-    "metaDescription": "Flat, 2 oz no-roll sinkers, 10-pack. Hold bottom in current instead of rolling away.",
+    "metaDescription": "Flat sinkers that stay put in current. Use these on a river bank. $4.75.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Flat sinkers that hold bottom in current instead of rolling away. What you want fishing a river bank instead of a still pond.",
-    "longDescription": "2 oz, flat-sided so current pushes them into the bottom instead of rolling them downstream. Pair with a swivel and leader the same way as an egg sinker rig.",
+    "shortDescription": "Flat sinkers that stay put in current. Use these on a river bank.",
+    "longDescription": "2 oz, flat-sided so the current pushes them into the bottom instead of rolling them downstream. Use with a swivel and leader, the same way as the egg sinker rig.",
     "guide": {
       "gearNeeded": [
         "Barrel swivel",
@@ -2428,10 +2428,10 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
     "metaTitle": "Barrel Swivels | Ketto Outdoors",
-    "metaDescription": "Heavy-duty barrel swivels, 10-pack, keeps your leader from twisting and connects a rig without a bulky knot.",
+    "metaDescription": "Stops your leader from twisting and joins the rig without a bulky knot. $4.25.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Keeps your leader from twisting up on itself and connects your rig without a bulky knot.",
+    "shortDescription": "Stops your leader from twisting and joins the rig without a bulky knot.",
     "longDescription": "Heavy-duty barrel swivels sized for catfish rigs. Tie your main line to one end and your leader to the other.",
     "guide": {
       "gearNeeded": [
@@ -2485,11 +2485,11 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Line)",
     "kicker": "Line: 30 lb leader",
     "metaTitle": "Fluorocarbon Leader Line | Ketto Outdoors",
-    "metaDescription": "30 lb fluorocarbon leader line, abrasion-resistant enough for catfish dragging your rig across the bottom.",
+    "metaDescription": "Tough enough to survive being dragged over rocks on the bottom. $8.50.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Abrasion-resistant enough to survive catfish dragging your rig across rocks and structure on the bottom.",
-    "longDescription": "30 lb test fluorocarbon, spooled and ready to cut leader lengths from. Tie it between your swivel and hook for the abrasion resistance a straight main-line rig doesn’t have.",
+    "shortDescription": "Tough enough to survive being dragged over rocks on the bottom.",
+    "longDescription": "30 lb test fluorocarbon line to cut leader lengths from. Tie it between your swivel and hook so the rig can take being dragged over rocks.",
     "guide": {
       "gearNeeded": [
         "Barrel swivel and circle hook"
@@ -2542,15 +2542,15 @@ export const PRODUCTS: Product[] = [
     "category": "Natural Bait / Prepared Bait",
     "kicker": "Bait: prepared dip/paste",
     "metaTitle": "Catfish Stink Bait | Ketto Outdoors",
-    "metaDescription": "Prepared dip/paste bait for catfish. No cut bait or chicken liver required to start.",
+    "metaDescription": "No cut bait or chicken liver needed. Dip the hook and cast. $6.50.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Catfish",
-    "shortDescription": "No cut bait or chicken liver required to start. Just dip the treble hook in and cast.",
-    "longDescription": "A prepared, ready-to-use dip/paste bait built for use with a bait-holder spring treble hook, catfish locate it by smell, so it works even in murky or muddy water.",
+    "shortDescription": "No cut bait or chicken liver needed. Dip the hook and cast.",
+    "longDescription": "A ready-to-use dip bait made for a hook with a spring. Catfish find it by smell, so it works even in murky water.",
     "guide": {
       "gearNeeded": [
         "Dip bait treble hook (spring style)"
