@@ -15,6 +15,7 @@ import { useProductSchema } from '../hooks/useProductSchema';
 import { submitLead } from '../lib/leads';
 import { getProductImageSrc } from '../data/productImages';
 import NotFound from './NotFound';
+import { formatPrice } from '../lib/format';
 
 function NotifyWhenBackForm({ productId, productName }: { productId: string; productName: string }) {
   const [email, setEmail] = useState('');
@@ -110,7 +111,7 @@ export default function ProductPage() {
           <p style={{ fontSize: 15, lineHeight: 1.6 }}>{product.shortDescription}</p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>${product.price.toFixed(2)}</span>
+            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>{formatPrice(product.price)}</span>
             <StockLabel qty={qty} />
           </div>
 

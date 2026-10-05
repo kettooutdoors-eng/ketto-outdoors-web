@@ -5,10 +5,10 @@ export const BUNDLES: Bundle[] = [
     id: 'first-bass-kit',
     slug: 'first-bass-kit',
     name: 'First Bass Kit',
-    tagline: 'Lures, hooks, and weights for your first bass.',
+    tagline: 'Pieces of equipment, hooks, and weights for your first bass.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
-    price: 44.99,
+    price: 45,
     metaTitle: 'First Bass Kit | Ketto Outdoors',
     metaDescription: 'Beginner bass tackle: lures, hooks, and weights that work together. Bring your own rod and reel.',
     scenario: 'You want to catch bass from a pond, lake, or dock, and you don’t want to spend an hour reading advice first.',
@@ -89,7 +89,7 @@ export const BUNDLES: Bundle[] = [
     tagline: 'A bobber, hooks, and bait. The easiest way to catch your first fish.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
-    price: 18.99,
+    price: 19,
     metaTitle: 'Never Fished Before Starter Kit | Ketto Outdoors',
     metaDescription: 'The simplest way to catch your first fish: a bobber, hooks, and bait with no worms to dig. Bring your own rod and reel.',
     scenario: 'You’ve never fished before and you don’t know the terms. You just want to stand by the water with a friend or your kid and catch something.',
@@ -149,7 +149,7 @@ export const BUNDLES: Bundle[] = [
     tagline: 'Heavier tackle and bigger bait for catfish from the bank or a dock.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
-    price: 34.99,
+    price: 35,
     metaTitle: 'First Catfish Kit | Ketto Outdoors',
     metaDescription: 'Beginner catfish tackle for the bank: circle hooks, rigging hardware, and stink bait. Bring your own rod and reel.',
     scenario: 'You want to catch catfish from a river bank, a lake at dusk, or a dock after dark. Catfish tackle is different from bass tackle.',

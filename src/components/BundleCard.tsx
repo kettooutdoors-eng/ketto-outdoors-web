@@ -4,6 +4,7 @@ import { ImagePlaceholder } from './ui/ImagePlaceholder';
 import { PillSeal } from './ui/Seal';
 import { BannerButton } from './ui/BannerButton';
 import type { Bundle } from '../data/types';
+import { formatPrice } from '../lib/format';
 
 export function BundleCard({ bundle }: { bundle: Bundle }) {
   return (
@@ -15,7 +16,7 @@ export function BundleCard({ bundle }: { bundle: Bundle }) {
           {bundle.name}
         </Link>
         <p style={{ fontSize: 14, margin: 0 }}>{bundle.tagline}</p>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22 }}>${bundle.price.toFixed(2)}</div>
+        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22 }}>{formatPrice(bundle.price)}</div>
         <BannerButton to={`/kits/${bundle.slug}`} fill background="var(--forest)" color="var(--cream)" style={{ marginTop: 'auto' }}>
           View the kit
         </BannerButton>

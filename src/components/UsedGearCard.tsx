@@ -3,6 +3,7 @@ import { ImagePlaceholder } from './ui/ImagePlaceholder';
 import { BannerButton } from './ui/BannerButton';
 import { useCart } from '../state/CartContext';
 import type { UsedGearItem } from '../data/usedGear';
+import { formatPrice } from '../lib/format';
 
 const CONDITION_COLOR: Record<string, string> = {
   'Like New': 'var(--forest)',
@@ -31,8 +32,8 @@ export function UsedGearCard({ item }: { item: UsedGearItem }) {
         <p style={{ fontSize: 13, opacity: 0.75 }}>{item.conditionNote}</p>
         <p style={{ fontSize: 14 }}>{item.description}</p>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 4 }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 20 }}>${item.price.toFixed(2)}</span>
-          <span style={{ fontSize: 13, opacity: 0.5, textDecoration: 'line-through' }}>${item.originalPrice.toFixed(2)}</span>
+          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 20 }}>{formatPrice(item.price)}</span>
+          <span style={{ fontSize: 13, opacity: 0.5, textDecoration: 'line-through' }}>{formatPrice(item.originalPrice)}</span>
           <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--forest)' }}>{savings}% off new</span>
         </div>
         <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>

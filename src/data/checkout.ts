@@ -63,10 +63,10 @@ export function estimateShipping(subtotal: number, itemCount: number, zip: strin
     size = 'Box';
     base = 8.5;
   }
-  const cost = Math.round((base + zone * 0.35) * 100) / 100;
+  const cost = Math.ceil(base + zone * 0.35);
   return {
     cost,
-    label: `$${cost.toFixed(2)}`,
+    label: `$${cost}`,
     subLabel: `${size}, Zone ${zone} · ${weight} lb`,
   };
 }

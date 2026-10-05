@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../state/CartContext';
 import { useEscapeKey } from '../../hooks/useEscapeKey';
 import { BUNDLES } from '../../data/bundles';
+import { formatPrice } from '../../lib/format';
 
 export function CartDrawer() {
   const { cartOpen, closeCart, items, hasItems, cartTotal, increment, decrement, removeFromCart } = useCart();
@@ -25,7 +26,7 @@ export function CartDrawer() {
               <div key={item.id} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontWeight: 700, fontSize: 15 }}>{item.name}</div>
-                  <div style={{ fontSize: 13, opacity: 0.7 }}>${item.price.toFixed(2)}</div>
+                  <div style={{ fontSize: 13, opacity: 0.7 }}>{formatPrice(item.price)}</div>
                 </div>
                 <button onClick={() => decrement(item.id)} style={{ width: 26, height: 26, borderRadius: '50%', border: '1px solid var(--forest)', background: 'transparent', color: 'var(--forest)', cursor: 'pointer' }}>
                   −
@@ -46,7 +47,7 @@ export function CartDrawer() {
                 <Link to={`/kits/${BUNDLES[0].slug}`} onClick={closeCart} style={{ display: 'block', background: 'var(--cream)', padding: '14px 16px', borderRadius: 8, textDecoration: 'none' }}>
                   <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Not sure where to start?</div>
                   <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--ink)', marginTop: 2 }}>
-                    {BUNDLES[0].name}: ${BUNDLES[0].price.toFixed(2)}
+                    {BUNDLES[0].name}: {formatPrice(BUNDLES[0].price)}
                   </div>
                   <div style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.65 }}>{BUNDLES[0].tagline}</div>
                 </Link>
@@ -57,7 +58,7 @@ export function CartDrawer() {
         <div style={{ padding: 24, background: 'var(--sage)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 800, fontSize: 18, marginBottom: 14 }}>
             <span>Total</span>
-            <span>${cartTotal.toFixed(2)}</span>
+            <span>{formatPrice(cartTotal)}</span>
           </div>
           <div style={{ display: 'flex', gap: 10 }}>
             <Link to="/checkout" onClick={closeCart} className="btn" style={{ flex: 1, textAlign: 'center', textDecoration: 'none', background: 'var(--rust)', color: '#fff', border: 'none', padding: '12px 0' }}>

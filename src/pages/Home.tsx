@@ -10,14 +10,14 @@ import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const WHY_KETTO = [
-  'We teach you how to cast, reel, and set up your gear.',
-  'Every lure is matched to the fish you’re after.',
-  'We check every lure before it ships.',
+  'We show you how to use everything, step by step.',
+  'Every piece of equipment is matched to the fish you’re after.',
+  'We check every piece of equipment before it ships.',
 ];
 
 const STEPS = [
   { title: 'Pick your fish', body: 'Know what you want to catch and where you will fish.' },
-  { title: 'Pick one or two lures', body: "You don't need a full tackle box. One or two good lures are enough." },
+  { title: 'Pick one or two pieces of equipment', body: "You don't need a full tackle box. One or two good pieces of equipment are enough." },
   { title: 'Cast and reel', body: 'Cast out and reel steady. If you feel a tug, keep reeling.' },
 ];
 
