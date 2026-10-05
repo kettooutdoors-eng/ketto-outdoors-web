@@ -23,32 +23,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Tie it on",
-          "detail": "Thread your line through the eyelet on the nose of the bill and tie an improved clinch knot. Give it a firm tug. If it holds, you're set."
+          "detail": "Thread your line through the loop on the nose of the lure and tie an improved clinch knot. Give it a firm tug. If it holds, you're set."
         },
         {
           "title": "Cast past your target",
-          "detail": "Cast a few feet beyond where you think a fish is holding (a dock edge, a rock pile, a laydown log) so the lure is already swimming by the time it reaches that spot."
+          "detail": "Cast a few feet beyond where you think a fish is. Try the edge of a dock, a pile of rocks, or a fallen log. That way the lure is already swimming when it reaches the spot."
         },
         {
-          "title": "Reel at a steady, brisk pace",
-          "detail": "Close the bail and reel immediately at a steady clip, about 1.5 turns of the handle per second, no pausing. You should feel a light, rhythmic thump-thump-thump through the rod as the bill kicks side to side."
+          "title": "Reel at a steady pace",
+          "detail": "Flip the bail closed and start reeling right away, about 1.5 turns of the handle per second. Don't pause. You should feel a light, steady thump through the rod."
         },
         {
-          "title": "Let it bump, don’t fight it",
-          "detail": "When it ticks a rock or piece of wood, keep reeling at the same pace. The square bill deflects off cover instead of digging in, so a bump usually means it just changed direction, not that it’s stuck."
+          "title": "Let it bump",
+          "detail": "When it bumps a rock or a log, keep reeling at the same pace. The lure bounces off instead of getting stuck, so a bump just means it changed direction."
         },
         {
-          "title": "Set the hook on the thump",
-          "detail": "A strike feels like the steady thump suddenly turns into a solid, heavy pull. Don't yank. Just keep reeling and let the rod bend; the hook does the work."
+          "title": "Reel through the bite",
+          "detail": "A bite feels like the steady thump turns into a heavy pull. Don't yank. Keep reeling and let the rod bend. The hook does the work."
         }
       ],
-      "biteFeel": "A hard, sudden weight that interrupts the steady thump-thump of the retrieve, like the lure got heavier, not like a tap.",
+      "biteFeel": "A sudden heavy pull that stops the steady thump, like the lure got heavier. It doesn't feel like a tap.",
       "commonMistakes": [
-        "Reeling too slow, which lets the bill dig into the bottom instead of deflecting",
-        "Yanking the rod on a bump before confirming it’s actually a fish",
-        "Stopping the retrieve mid-cast. A steady pace is what makes this lure forgiving"
+        "Reeling too slow, so the lure digs into the bottom instead of bouncing off",
+        "Yanking the rod on a bump before you know it's a fish",
+        "Stopping partway through. A steady pace is what makes this lure easy to use"
       ],
-      "confidenceTip": "This is the lure we'd hand a total beginner on their first-ever trip: cast it out, reel steady, and it does almost everything else itself."
+      "confidenceTip": "This is the lure we'd hand a total beginner on their first trip. Cast it out, reel steady, and it does the rest."
     },
     "specs": {
       "diveDepth": "6 ft",
@@ -58,23 +58,23 @@ export const PRODUCTS: Product[] = [
       "pattern": "Sexy Shad",
       "bill": "Square, 45 degrees",
       "body": "Balsa core",
-      "rattle": "Single tungsten knocker ball"
+      "rattle": "One small rattle ball"
     },
     "buildDetails": [
       {
         "part": "01: Bill",
         "title": "Square, 45 degrees",
-        "description": "The corner catches the rock and kicks the body sideways, so contact reads as a direction change rather than a snag."
+        "description": "The square corner hits a rock and kicks the lure sideways, so it bounces off instead of snagging."
       },
       {
         "part": "02: Body",
         "title": "Balsa core",
-        "description": "Buoyant enough to back out of cover on the pause, dense enough to hold the wobble at speed."
+        "description": "Light enough to float up out of trouble when you pause, and solid enough to keep its wobble at speed."
       },
       {
         "part": "03: Rattle",
-        "title": "Single knocker",
-        "description": "One tungsten ball, low and irregular. A thud that carries in stained water instead of a rasp."
+        "title": "One rattle ball",
+        "description": "One small ball inside makes a low thud that fish can hear in cloudy water."
       }
     ],
     "depthChart": [
@@ -93,7 +93,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "depth": "8 ft",
-        "note": "rock & timber"
+        "note": "rocks and logs"
       },
       {
         "depth": "12 ft",
@@ -115,13 +115,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Replacement trebles sized right for a squarebill this size.",
+        "blurb": "Spare hooks sized for this lure.",
         "price": 4.25
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
-        "blurb": "A lipless crankbait to cover water fast before you slow down with Deep Six.",
+        "blurb": "A rattling lure that covers a lot of water fast.",
         "price": 10.25
       }
     ],
@@ -154,32 +154,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Rig it",
-          "detail": "Thread the hook point into the nose of the worm about a quarter-inch, bring it out the side, then bury the hook point shallowly back into the plastic so it's weedless."
+          "detail": "Push the hook point into the nose of the worm about a quarter inch, bring it out the side, then push the point lightly back into the plastic. This hides the point so it won't snag."
         },
         {
           "title": "Cast near cover",
-          "detail": "Cast past a likely spot, a weed edge, a dock post, a drop-off, and let it sink all the way to the bottom on a slack line. Watch your line; if it twitches or moves sideways on the fall, a fish already has it."
+          "detail": "Cast near a weed edge, a dock post, or a drop-off, and let it sink to the bottom with the line loose. Watch your line. If it twitches or moves sideways while sinking, a fish may already have it."
         },
         {
-          "title": "Drag, don’t reel",
-          "detail": "Once it hits bottom, point your rod tip at the water and slowly drag it a foot or two by reeling just enough to take up slack, then pause for 3-5 seconds. Repeat: drag, pause, drag, pause."
+          "title": "Drag it slowly",
+          "detail": "Once it hits bottom, point your rod tip at the water and drag the worm a foot or two by reeling slowly, then pause for 3-5 seconds. Repeat: drag, pause, drag, pause."
         },
         {
-          "title": "Watch for the pause bite",
-          "detail": "Most bites happen during the pause, not the drag. If your line twitches, comes tight, or just feels different, reel down to take up slack and set the hook with a firm upward sweep."
+          "title": "Watch during the pause",
+          "detail": "Most bites happen during the pause. If your line twitches, goes tight, or just feels different, reel in the slack and sweep the rod up firmly."
         },
         {
           "title": "Be patient",
-          "detail": "This is a confidence-builder because it's forgiving. There's no wrong retrieve speed, just slow and slower."
+          "detail": "This lure is easy because there's no wrong speed. Just go slow, then slower."
         }
       ],
-      "biteFeel": "A soft \"tap-tap\" or the line just going slightly heavy and moving off to one side during the pause. Subtle compared to a crankbait strike.",
+      "biteFeel": "A soft tap-tap, or the line going a little heavy and moving to one side during the pause. It's gentler than a crankbait bite.",
       "commonMistakes": [
-        "Reeling it in like a crankbait instead of dragging it slowly along bottom",
-        "Not pausing long enough. Most bites come in the dead-still moments",
-        "Setting the hook too gently on a soft-plastic bite; use a firm upward sweep, not a light twitch"
+        "Reeling it in fast like a crankbait instead of dragging it slowly along the bottom",
+        "Not pausing long enough. Most bites come when it's sitting still",
+        "Setting the hook too gently. Use a firm upward sweep, not a light twitch"
       ],
-      "confidenceTip": "There's no way to fish this wrong at a slow pace. If you're moving it slower than feels natural, you're probably doing it right."
+      "confidenceTip": "You can't really fish this wrong at a slow pace. If it feels too slow, you're probably doing it right."
     },
     "specs": {
       "length": "6 in",
@@ -201,13 +201,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Sized right for rigging this bait.",
+        "blurb": "Hooks sized for this bait.",
         "price": 4.25
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
-        "blurb": "A curl-tail worm that covers different water.",
+        "blurb": "A soft worm with a curled tail. Good for different water.",
         "price": 5.25
       }
     ],
@@ -240,28 +240,28 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Match the size to your bait",
-          "detail": "Use a smaller hook (1/0) for thin baits like the Driftworm, and size up (3/0-4/0) for bulkier soft plastics or live bait."
+          "detail": "Use a smaller hook (1/0) for thin baits like the Driftworm. Use a bigger one (3/0-4/0) for thicker soft baits or live bait."
         },
         {
-          "title": "Rig it weedless (soft plastics)",
-          "detail": "Insert the hook point into the nose of the bait about a quarter-inch, bring it out the side, then tuck the point back into the plastic so it doesn't snag cover."
+          "title": "Hide the hook in soft baits",
+          "detail": "Push the hook point into the nose of the bait about a quarter inch, bring it out the side, then tuck the point back into the plastic so it doesn't snag."
         },
         {
-          "title": "Or rig it exposed (live bait)",
-          "detail": "For live or cut bait, thread the hook straight through so the point rides free. That's what gets a solid hookset on a soft bite."
+          "title": "Leave it showing for live bait",
+          "detail": "For live or cut bait, push the hook straight through so the point sticks out. That helps it catch a fish that bites softly."
         },
         {
           "title": "Check it after every fish or snag",
-          "detail": "A hook point dulls fast against rock and teeth. Drag the point across your thumbnail. If it doesn’t catch, it’s time to retie on a fresh one."
+          "detail": "Hook points go dull fast on rocks and teeth. Drag the point across your thumbnail. If it doesn't catch, tie on a fresh hook."
         }
       ],
-      "biteFeel": "Depends entirely on what you rig it with, but a sharp hook is what turns a mushy tap into a solid hookset either way.",
+      "biteFeel": "It depends on the bait you use, but a sharp hook turns a soft tap into a solid catch.",
       "commonMistakes": [
-        "Using a hook too big for the bait, which kills its natural action",
-        "Rigging a soft plastic crooked, which makes it spin and look unnatural in the water",
-        "Fishing a dulled-out hook after it’s bounced off a few rocks"
+        "Using a hook too big for the bait, which stops it moving naturally",
+        "Putting a soft bait on crooked, so it spins and looks unnatural in the water",
+        "Fishing with a dull hook after it's bounced off a few rocks"
       ],
-      "confidenceTip": "Hooks are the one piece of gear that's genuinely hard to mess up. Match the size to your bait and you're set."
+      "confidenceTip": "Hooks are hard to mess up. Match the size to your bait and you're set."
     },
     "specs": {
       "sizes": "#6 - 4/0",
@@ -286,13 +286,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "driftworm",
         "name": "Driftworm",
-        "blurb": "Another slow, forgiving bottom bait.",
+        "blurb": "Another slow, easy bottom lure.",
         "price": 6.5
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
-        "blurb": "A curl-tail worm that covers different water.",
+        "blurb": "A soft worm with a curled tail. Good for different water.",
         "price": 5.25
       },
     ],
@@ -325,32 +325,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast past the target",
-          "detail": "Cast beyond where you think fish are holding. This bait shines in open water and along stained-water edges where fish are hunting by feel and vibration."
+          "detail": "Cast past where you think fish are. This lure works well in open water and along murky edges, where fish hunt by feel and vibration."
         },
         {
-          "title": "Close the bail and reel immediately",
-          "detail": "Start reeling the moment it hits the water at a steady, moderate pace. The spinning blades do all the work, no rod action needed."
+          "title": "Reel right away",
+          "detail": "Start reeling as soon as it hits the water, at a steady, medium pace. The spinning blades do all the work. You don't need to move the rod."
         },
         {
           "title": "Keep it steady",
-          "detail": "Resist the urge to jerk or twitch the rod. A consistent, boring retrieve is exactly what makes the blades flash and thump correctly."
+          "detail": "Don't jerk or twitch the rod. A steady, boring reel is what makes the blades flash and thump the right way."
         },
         {
           "title": "Slow down near cover",
-          "detail": "As it approaches a stump, dock post, or weed edge, slow your retrieve slightly so it doesn't shoot past the strike zone too fast."
+          "detail": "When it nears a stump, dock post, or weed edge, reel a little slower so it doesn't shoot past too fast."
         },
         {
           "title": "Set the hook on the pull",
-          "detail": "A bite feels like a solid thump or the line going heavy. Reel down to remove slack and sweep the rod up firmly."
+          "detail": "A bite feels like a solid thump or the line going heavy. Reel in any slack and sweep the rod up firmly."
         }
       ],
-      "biteFeel": "A sharp thump or sudden heaviness, sometimes preceded by the blade vibration stopping for a split second as a fish grabs it.",
+      "biteFeel": "A sharp thump or sudden heaviness. Sometimes the blade vibration stops for a second as a fish grabs it.",
       "commonMistakes": [
-        "Reeling too fast and burning it through the strike zone",
-        "Fishing it on clear, calm days when a subtler bait would work better. This one shines in murky or low-light conditions",
-        "Setting the hook too hard on light spinning tackle"
+        "Reeling too fast, so it zips past the fish",
+        "Using it on clear, calm days when a quieter lure would work better. This one is best in murky water or low light",
+        "Setting the hook too hard on a light rod"
       ],
-      "confidenceTip": "No technique required here. If you can turn a reel handle at a steady pace, you can fish this correctly."
+      "confidenceTip": "No special technique needed. If you can turn the reel handle at a steady pace, you can fish this."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -372,13 +372,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "chugger",
         "name": "Chugger",
-        "blurb": "A topwater change-up for calmer water.",
+        "blurb": "A surface lure for calm water.",
         "price": 12.75
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
-        "blurb": "Covers water fast between casts with this.",
+        "blurb": "Covers a lot of water fast.",
         "price": 10.25
       }
     ],
@@ -410,32 +410,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Fish it early or late",
-          "detail": "Topwater bites best in low light, dawn, dusk, or overcast days, when fish are looking up toward the surface."
+          "detail": "Surface lures work best at dawn, at dusk, or on cloudy days, when fish look up toward the surface."
         },
         {
-          "title": "Cast past cover and let it sit",
-          "detail": "Cast near a target and let the ripples fully die out before your first twitch. A fish is often already looking at it."
+          "title": "Cast near cover and let it sit",
+          "detail": "Cast near a target and wait for the ripples to fade before your first twitch. A fish may already be watching it."
         },
         {
-          "title": "Twitch, don’t reel",
-          "detail": "Snap the rod tip down sharply to make the concave face \"chug\" and spit water, then pause 2-3 seconds. Repeat: twitch, pause, twitch, pause."
+          "title": "Twitch, don't reel",
+          "detail": "Snap the rod tip down sharply so the lure splashes and pops, then pause 2-3 seconds. Repeat: twitch, pause, twitch, pause."
         },
         {
           "title": "Find the rhythm",
-          "detail": "Vary the pause length between casts until you get a reaction. Some days fish want a fast walk, other days a long pause between pops."
+          "detail": "Change how long you pause between casts until you get a reaction. Some days fish want fast pops, other days a long pause."
         },
         {
           "title": "Wait a beat before setting the hook",
-          "detail": "When a fish blows up on it, resist the instinct to set immediately, pause half a second to feel the weight of the fish, then sweep the rod up."
+          "detail": "When a fish smashes it, don't pull right away. Wait half a second to feel the weight, then sweep the rod up."
         }
       ],
-      "biteFeel": "Impossible to miss. A visible surface explosion, often before you feel anything through the rod.",
+      "biteFeel": "Hard to miss. A big splash on the surface, often before you feel anything through the rod.",
       "commonMistakes": [
-        "Setting the hook the instant you see the splash instead of feeling the weight first, which pulls it away from the fish",
-        "Fishing it in bright midday sun when fish aren't looking up",
-        "Reeling it steadily instead of twitch-pausing it"
+        "Pulling the instant you see the splash, which yanks the lure away from the fish",
+        "Fishing it in bright midday sun, when fish aren't looking up",
+        "Reeling it steadily instead of twitching and pausing"
       ],
-      "confidenceTip": "The takedown is the whole appeal, even if you miss a few at first, watching a fish blow up on the surface is what hooks most anglers on topwater for life."
+      "confidenceTip": "Watching a fish smash a lure on the surface is what gets most people hooked on fishing. Even if you miss a few at first, it's worth it."
     },
     "specs": {
       "weight": "1/2 oz",
@@ -457,13 +457,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "padhopper",
         "name": "Padhopper",
-        "blurb": "For working thicker cover in the same trip.",
+        "blurb": "For fishing thicker weeds on the same trip.",
         "price": 11.5
       },
       {
         "id": "buzzrunner",
         "name": "Buzzrunner",
-        "blurb": "Loud surface option for low-light hours.",
+        "blurb": "A loud surface lure for early morning and evening.",
         "price": 12
       }
     ],
@@ -494,32 +494,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Fish it in cold or clear water",
-          "detail": "This suspending bait is built for cold-water conditions or clear water when fish are sluggish and won't chase something fast."
+          "detail": "This lure is made for cold or clear water, when fish are slow and won't chase something fast."
         },
         {
           "title": "Cast and let it settle",
-          "detail": "Cast out and let it sit for a few seconds after it lands so it settles to its suspend depth before you start working it."
+          "detail": "Cast out and let it sit a few seconds after it lands, so it settles to its depth before you start twitching."
         },
         {
-          "title": "Twitch-twitch-pause",
-          "detail": "Give the rod tip two short, sharp twitches to make it dart side to side, then pause 3-5 full seconds and let it hang motionless."
+          "title": "Twitch, twitch, pause",
+          "detail": "Give the rod tip two short, sharp twitches so the lure darts side to side, then pause 3-5 full seconds and let it hang still."
         },
         {
-          "title": "Resist reeling during the pause",
-          "detail": "The suspending action means it stays right at that depth without sinking or rising. This dead-still pause is what triggers a following fish."
+          "title": "Don't reel during the pause",
+          "detail": "It stays at the same depth, neither sinking nor rising. That still pause is what makes a following fish bite."
         },
         {
           "title": "Watch your line, not just your rod",
-          "detail": "Most bites happen on the pause and show up as your line twitching or moving sideways rather than a felt tug."
+          "detail": "Most bites happen during the pause. You'll usually see your line twitch or move sideways instead of feeling a tug."
         }
       ],
-      "biteFeel": "Often more visual than physical at first. Watch for the line twitching during the pause, then feel a solid weight when you reel down.",
+      "biteFeel": "Often you see it before you feel it. Watch for your line twitching during the pause, then feel a solid weight when you reel in.",
       "commonMistakes": [
-        "Fishing it with a fast, continuous retrieve instead of twitch-pause",
-        "Pausing for only a second when 3-5 seconds is what triggers a following, hesitant fish",
-        "Using heavy, visible line in the clear water this bait is made for"
+        "Reeling steadily instead of twitching and pausing",
+        "Pausing for just a second. 3-5 seconds is what gets a hesitant fish to bite",
+        "Using thick, easy-to-see line in the clear water this lure is made for"
       ],
-      "confidenceTip": "The pause feels unnaturally long the first few times, trust it. That stillness is exactly what separates this bait from a fast-moving crankbait on tough, cold days."
+      "confidenceTip": "The pause feels too long the first few times. Trust it. That stillness is what works on cold, slow days."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -541,13 +541,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "flutterspoon",
         "name": "Flutterspoon",
-        "blurb": "Simple flash for suspended fish.",
+        "blurb": "A simple flashing lure for fish holding off the bottom.",
         "price": 7.25
       },
       {
         "id": "tubehead",
         "name": "Tubehead",
-        "blurb": "A bottom-hugging option for rocky structure.",
+        "blurb": "A lure for rocky bottoms.",
         "price": 4.95
       }
     ],
@@ -578,33 +578,33 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Add a trailer",
-          "detail": "Thread a soft plastic, the Crawdaddy is a natural match, onto the jighead before casting."
+          "title": "Add a soft bait",
+          "detail": "Thread a soft plastic onto the jig head before casting. The Crawdaddy is a good match."
         },
         {
-          "title": "Cast and let it sink fully",
-          "detail": "Cast past your target and let it sink all the way to the bottom on a slack line. Count the seconds it takes to feel the line stop. That tells you the depth."
+          "title": "Cast and let it sink",
+          "detail": "Cast past your target and let it sink to the bottom with the line loose. Count the seconds until you feel the line stop. That tells you how deep it is."
         },
         {
-          "title": "Hop it in short lifts",
-          "detail": "Lift the rod tip 6-12 inches to hop the jig off bottom, then let it fall back on a controlled line. Don’t just reel, actually lift with the rod."
+          "title": "Hop it with short lifts",
+          "detail": "Lift the rod tip 6-12 inches to hop the jig off the bottom, then let it fall. Don't just reel. Lift with the rod."
         },
         {
           "title": "Follow it down",
-          "detail": "Reel up slack as it falls so you stay in contact, but don’t pull it. Most bites come as it’s sinking back to bottom."
+          "detail": "Reel in the slack as it falls so you stay in touch, but don't pull it. Most bites happen as it sinks back down."
         },
         {
-          "title": "Learn to read the tap",
-          "detail": "A bite often just feels like extra weight or a light tap when the jig should be falling freely. If it feels different than the last hop, set the hook."
+          "title": "Learn to feel the tap",
+          "detail": "A bite often feels like extra weight or a light tap when the jig should be falling. If it feels different from the last hop, set the hook."
         }
       ],
-      "biteFeel": "A light tap, a \"mushy\" extra weight on the fall, or your line simply not falling as far as it should. Subtle and easy to miss at first.",
+      "biteFeel": "A light tap, a mushy extra weight as it falls, or your line not dropping as far as it should. It's subtle and easy to miss at first.",
       "commonMistakes": [
-        "Reeling instead of hopping with the rod tip, which drags the jig instead of bouncing it naturally",
-        "Not staying in contact with slack line on the fall, missing the tap",
-        "Setting the hook on every bump of rock or wood instead of learning the difference. It takes a few trips to tell them apart"
+        "Reeling instead of hopping with the rod tip, which drags the jig instead of bouncing it",
+        "Letting the line go loose as it falls, so you miss the tap",
+        "Setting the hook on every bump from rocks or wood. It takes a few trips to tell them apart"
       ],
-      "confidenceTip": "Reading bottom bites is a real skill that takes a few trips to click. Don't get discouraged if the first outing is mostly rocks and snags. It gets obvious fast once you feel a real one."
+      "confidenceTip": "Feeling bites on the bottom takes a few trips to learn. Don't get discouraged if your first outing is mostly rocks and snags. It gets easy once you feel a real one."
     },
     "specs": {
       "weight": "1/4 oz jighead",
@@ -625,13 +625,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "crawdaddy",
         "name": "Crawdaddy",
-        "blurb": "Pair on a jighead for bottom crawling.",
+        "blurb": "Put it on a jig head to fish the bottom.",
         "price": 6.75
       },
       {
         "id": "tubehead",
         "name": "Tubehead",
-        "blurb": "A bottom-hugging option for rocky structure.",
+        "blurb": "A lure for rocky bottoms.",
         "price": 4.95
       }
     ],
@@ -663,32 +663,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast past your target",
-          "detail": "Cast beyond cover, docks, weed edges, laydowns, where aggressive fish are likely holding near the surface."
+          "detail": "Cast beyond docks, weed edges, and fallen trees, where fish are likely near the surface."
         },
         {
-          "title": "Start reeling the instant it lands",
-          "detail": "Close the bail and begin reeling immediately and fast enough that the blade stays churning on top. If it starts to sink, speed up."
+          "title": "Start reeling as it lands",
+          "detail": "Flip the bail closed and start reeling right away, fast enough that the blade stays splashing on top. If it starts to sink, speed up."
         },
         {
-          "title": "Keep a constant, brisk pace",
-          "detail": "Don't slow down or pause. A buzzbait is a reaction bait, and a steady disturbance is what draws a reaction strike."
+          "title": "Keep a steady, brisk pace",
+          "detail": "Don't slow down or pause. The steady noise on the surface is what makes fish strike."
         },
         {
-          "title": "Brace for a blow-up",
-          "detail": "Strikes are often violent and close to the boat or bank. Keep a firm grip and be ready."
+          "title": "Be ready for a big strike",
+          "detail": "Bites are often violent and close to the bank. Keep a firm grip."
         },
         {
-          "title": "Set the hook on the pull, not the splash",
-          "detail": "Like other topwaters, wait to feel weight before setting. A premature hookset often pulls it away from the fish."
+          "title": "Wait for the weight, not the splash",
+          "detail": "Like other surface lures, wait to feel the weight before setting the hook. Pulling too early yanks it away from the fish."
         }
       ],
-      "biteFeel": "A loud surface explosion and then a hard, immediate pull. One of the most obvious strikes in fishing.",
+      "biteFeel": "A loud splash, then a hard, instant pull. One of the easiest bites to notice.",
       "commonMistakes": [
-        "Reeling too slowly and letting the blade sink, which kills the whole presentation",
-        "Setting the hook on the splash instead of the felt weight",
-        "Fishing it in calm, clear, bright conditions where a subtler bait usually out-fishes it"
+        "Reeling too slowly and letting the blade sink, which ruins the whole action",
+        "Setting the hook on the splash instead of waiting to feel the weight",
+        "Using it in calm, clear, bright conditions, where a quieter lure usually works better"
       ],
-      "confidenceTip": "Finding the right reel speed takes one or two casts, not a whole trip, as soon as you feel the blade staying up and churning, you've got it."
+      "confidenceTip": "Finding the right speed takes one or two casts, not a whole trip. Once you feel the blade staying up and splashing, you've got it."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -710,13 +710,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "chugger",
         "name": "Chugger",
-        "blurb": "A topwater change-up for calmer water.",
+        "blurb": "A surface lure for calm water.",
         "price": 12.75
       },
       {
         "id": "padhopper",
         "name": "Padhopper",
-        "blurb": "For working thicker cover in the same trip.",
+        "blurb": "For fishing thicker weeds on the same trip.",
         "price": 11.5
       }
     ],
@@ -747,32 +747,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast into open water",
-          "detail": "This bait shines swimming through open water and along drop-offs, imitating baitfish cruising in the open."
+          "detail": "This lure works well in open water and along drop-offs, where it looks like a baitfish swimming by."
         },
         {
-          "title": "Reel at a steady, moderate pace",
-          "detail": "Close the bail and reel immediately at a consistent, unhurried speed. No twitching or pausing needed."
+          "title": "Reel at a steady, medium pace",
+          "detail": "Flip the bail closed and reel right away at an even, unhurried speed. No twitching or pausing needed."
         },
         {
           "title": "Let the tail do the work",
-          "detail": "The paddle tail kicks automatically at any steady retrieve speed, so focus on keeping your pace even rather than adding action."
+          "detail": "The paddle tail kicks on its own at any steady speed, so just keep your pace even."
         },
         {
-          "title": "Vary depth by reel speed",
-          "detail": "Reel faster to keep it higher in the water column, slower to let it swim deeper. Small speed changes are all it takes to find where fish are holding."
+          "title": "Change depth with your speed",
+          "detail": "Reel faster to keep it higher in the water, slower to let it sink deeper. Small speed changes are enough to find the fish."
         },
         {
-          "title": "Set the hook on solid contact",
-          "detail": "A bite feels like a firm, sustained pull rather than a tap. Reel down and sweep the rod up when you feel it."
+          "title": "Set the hook on a solid pull",
+          "detail": "A bite feels like a firm, steady pull, not a tap. Reel in any slack and sweep the rod up."
         }
       ],
-      "biteFeel": "A firm, steady pull that interrupts the wobble of the tail, feels more like a solid grab than a light tap.",
+      "biteFeel": "A firm, steady pull that stops the wobble of the tail. It feels like a solid grab, not a light tap.",
       "commonMistakes": [
-        "Adding unnecessary twitches. A steady retrieve is what sells the swimming action",
-        "Fishing it too shallow or too deep for the water you're in without adjusting reel speed",
-        "Retrieving too fast, which can make the tail spin instead of kick"
+        "Adding extra twitches. A steady reel is what makes it swim right",
+        "Fishing it too shallow or too deep without changing your reeling speed",
+        "Reeling too fast, which makes the tail spin instead of kick"
       ],
-      "confidenceTip": "This is close to the simplest retrieve in the lineup. Cast it out, reel steady, and let the built-in tail action do the selling."
+      "confidenceTip": "This is one of the easiest lures here. Cast it out, reel steady, and let the tail do the work."
     },
     "specs": {
       "length": "4.5 in soft body",
@@ -794,13 +794,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "deep-six",
         "name": "Deep Six",
-        "blurb": "A go-to squarebill to alternate retrieves with.",
+        "blurb": "A good lure to switch to when this one isn't working.",
         "price": 14.5
       },
       {
         "id": "flukeshad",
         "name": "Flukeshad",
-        "blurb": "A weightless option for the same water.",
+        "blurb": "A lighter lure for the same water.",
         "price": 5.95
       }
     ],
@@ -831,32 +831,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast far",
-          "detail": "This is a search bait built to cover open water fast. Make long casts to fan out and locate active fish."
+          "detail": "This lure is made for covering a lot of water fast. Make long casts in different directions to find fish."
         },
         {
-          "title": "Let it sink to your target depth",
-          "detail": "Count it down after the cast (roughly 1 second per foot of fall) so you know how deep it's running."
+          "title": "Let it sink to your depth",
+          "detail": "Count after the cast, about 1 second for each foot it sinks, so you know how deep it is."
         },
         {
-          "title": "Reel at a steady, moderate-to-fast pace",
-          "detail": "Close the bail and reel immediately. The internal rattle and tight wobble do the attracting, so a consistent pace is what matters most."
+          "title": "Reel at a steady, medium-fast pace",
+          "detail": "Flip the bail closed and reel right away. The rattle and wobble attract fish, so a steady pace is what matters most."
         },
         {
-          "title": "Vary retrieve speed to find the depth fish want",
-          "detail": "Reel faster to run it shallower, slower to let it run deeper. Change speed between casts until you get bit."
+          "title": "Change your speed to find the depth",
+          "detail": "Reel faster to keep it shallower, slower to let it run deeper. Change speed from cast to cast until you get a bite."
         },
         {
-          "title": "Set the hook on the thump",
-          "detail": "A strike interrupts the steady vibration with a hard, sudden weight. Keep reeling and let the rod load up."
+          "title": "Reel through the bite",
+          "detail": "A bite stops the steady vibration with a hard, sudden weight. Keep reeling and let the rod bend."
         }
       ],
-      "biteFeel": "A hard, rattling thump that cuts off the bait’s vibration. Usually unmistakable.",
+      "biteFeel": "A hard, rattling thump that stops the lure's vibration. It's hard to miss.",
       "commonMistakes": [
-        "Fishing it at one depth all day instead of varying reel speed to search the water column",
-        "Casting short instead of using its long-casting design to cover water efficiently",
-        "Setting the hook too softly. A firmer sweep helps drive trebles home on a fast-moving bait"
+        "Fishing at one depth all day instead of changing your reeling speed to search",
+        "Casting short instead of making the long casts this lure is built for",
+        "Setting the hook too softly. A firmer sweep helps the hooks catch on a fast-moving lure"
       ],
-      "confidenceTip": "Its whole job is to help you find fish fast. A handful of long casts at different speeds will usually tell you where they're holding for the day."
+      "confidenceTip": "Its job is to help you find fish fast. A few long casts at different speeds will usually show you where they are that day."
     },
     "specs": {
       "weight": "1/2 oz",
@@ -878,13 +878,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "deep-six",
         "name": "Deep Six",
-        "blurb": "A go-to squarebill to alternate retrieves with.",
+        "blurb": "A good lure to switch to when this one isn't working.",
         "price": 14.5
       },
       {
         "id": "longshot",
         "name": "Longshot",
-        "blurb": "Good backup for murky water days.",
+        "blurb": "A good backup for murky water.",
         "price": 11
       }
     ],
@@ -914,37 +914,37 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Target heavy cover",
-          "detail": "Cast directly onto lily pads, matted vegetation, or slop where other lures would snag immediately. This frog is built to walk right over it."
+          "title": "Aim for thick cover",
+          "detail": "Cast right onto lily pads or thick mats of weeds, where other lures would snag. This frog is built to slide over them."
         },
         {
           "title": "Walk it steadily",
-          "detail": "Twitch the rod tip side to side in a steady rhythm to make it \"walk\" across the surface and through gaps in the cover."
+          "detail": "Twitch the rod tip side to side in a steady rhythm so the frog walks across the surface and through gaps in the cover."
         },
         {
-          "title": "Pause over holes",
-          "detail": "When you reach an opening in the vegetation, let it sit still for a couple seconds before continuing. That pause is often when a strike happens."
+          "title": "Pause over open spots",
+          "detail": "When you reach a gap in the weeds, let it sit for a couple of seconds. A fish often strikes during that pause."
         },
         {
-          "title": "Wait a full beat after the blow-up",
-          "detail": "This is the one exception to setting fast: after a strike through heavy cover, pause about one full second to let the fish fully close its mouth around the bait before you set."
+          "title": "Wait one second after the strike",
+          "detail": "This is the one time to wait. After a fish hits in thick cover, count about one second so it can close its mouth on the lure before you set the hook."
         },
         {
           "title": "Set hard and pull up and out",
-          "detail": "Sweep the rod up and toward open water immediately to get the fish’s head turned and moving out of the cover before it can wrap you around a stem."
+          "detail": "Sweep the rod up and toward open water right away, so the fish turns and comes out of the cover before it can wrap you around a stem."
         }
       ],
-      "biteFeel": "A visible blow-up through the vegetation, sometimes just a swirl or the pads themselves moving before you feel weight.",
+      "biteFeel": "A big splash through the weeds, sometimes just a swirl or the lily pads moving before you feel any weight.",
       "commonMistakes": [
-        "Setting the hook the instant you see the strike instead of waiting a beat for the fish to close its mouth",
-        "Fishing light line that can't handle pulling a fish out of heavy cover",
-        "Working it too fast through gaps instead of pausing to give fish a chance to react"
+        "Setting the hook the moment you see the strike instead of waiting a second",
+        "Using light line that can't pull a fish out of thick cover",
+        "Moving it too fast through gaps instead of pausing to give fish time to react"
       ],
-      "confidenceTip": "This one takes practice timing the hookset. Expect to miss a few blow-ups before it clicks. Every angler does; it's the price of fishing the thickest cover on the lake."
+      "confidenceTip": "This one takes practice. Expect to miss a few strikes before it clicks. Every angler does. It comes with fishing the thickest cover on the lake."
     },
     "specs": {
       "weight": "1/2 oz",
-      "hook": "weedless double hook",
+      "hook": "snag-resistant double hook",
       "body": "hollow body"
     },
     "colorOptions": [
@@ -962,13 +962,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "buzzrunner",
         "name": "Buzzrunner",
-        "blurb": "Loud surface option for low-light hours.",
+        "blurb": "A loud surface lure for early morning and evening.",
         "price": 12
       },
       {
         "id": "chugger",
         "name": "Chugger",
-        "blurb": "A topwater change-up for calmer water.",
+        "blurb": "A surface lure for calm water.",
         "price": 12.75
       }
     ],
@@ -1000,32 +1000,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast and count it down",
-          "detail": "Cast out and let it sink on a semi-slack line, counting seconds as it falls so you know roughly what depth you're fishing."
+          "detail": "Cast out and let it sink with the line loose, counting seconds as it falls so you roughly know how deep you're fishing."
         },
         {
-          "title": "Reel steady for simple flash",
-          "detail": "The easiest approach: once it's at depth, reel back at a slow, steady pace and let the metal wobble and flash on its own."
+          "title": "Reel steady for easy flash",
+          "detail": "The simplest way: once it's down, reel back slowly and steadily and let the metal wobble and flash on its own."
         },
         {
-          "title": "Or lift-and-drop for extra flutter",
-          "detail": "For more action, lift the rod tip sharply and let it flutter back down on a controlled line. Most bites hit on the fall."
+          "title": "Or lift and drop for extra flutter",
+          "detail": "For more action, lift the rod tip sharply and let the spoon flutter back down. Most bites happen as it falls."
         },
         {
-          "title": "Stay in contact on the fall",
-          "detail": "Reel up slack as it drops so you can feel a bite, but don't pull against it. Let it flutter freely."
+          "title": "Stay in touch as it falls",
+          "detail": "Reel in slack as it drops so you can feel a bite, but don't pull against it. Let it flutter freely."
         },
         {
-          "title": "Set on any change",
-          "detail": "If the line jumps, goes slack unexpectedly, or you feel a tap, reel down and set firmly."
+          "title": "Set the hook on any change",
+          "detail": "If the line jumps, suddenly goes loose, or you feel a tap, reel in the slack and set the hook firmly."
         }
       ],
-      "biteFeel": "Often a sharp tap on the fall, or the line suddenly going slack because a fish grabbed it on the way down.",
+      "biteFeel": "Often a sharp tap as it falls, or the line suddenly going loose because a fish grabbed it on the way down.",
       "commonMistakes": [
-        "Not counting the fall, so you lose track of what depth you're actually fishing",
-        "Reeling too fast and skipping the flutter that makes this bait work",
-        "Missing fall bites because of too much slack line"
+        "Not counting the fall, so you lose track of how deep you're fishing",
+        "Reeling too fast and skipping the flutter that makes this lure work",
+        "Missing bites on the fall because there's too much slack in your line"
       ],
-      "confidenceTip": "Cast it, let it sink, reel it back. This is one of the most literal 'point and catch' lures in the lineup once you find the right depth."
+      "confidenceTip": "Cast it, let it sink, reel it back. Once you find the right depth, this is one of the simplest lures to fish."
     },
     "specs": {
       "weight": "3/4 oz",
@@ -1047,13 +1047,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "ribtail",
         "name": "Ribtail",
-        "blurb": "A curl-tail worm that covers different water.",
+        "blurb": "A soft worm with a curled tail. Good for different water.",
         "price": 5.25
       },
       {
         "id": "ripple",
         "name": "Ripple",
-        "blurb": "A jerkbait for suspended, sluggish fish.",
+        "blurb": "A twitch-and-pause lure for slow fish.",
         "price": 13.25
       }
     ],
@@ -1085,33 +1085,33 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Rig the soft plastic",
-          "detail": "Tie the hook about 12-18 inches above the weight using a Palomar knot, then thread on a 4-inch soft plastic through the nose."
+          "title": "Rig the soft bait",
+          "detail": "Tie the hook 12-18 inches above the weight using a Palomar knot, then thread a 4-inch soft plastic on through the nose."
         },
         {
-          "title": "Drop straight down",
-          "detail": "Lower it straight down along a dock, ledge, or drop-off until the weight touches bottom. Keep the line as vertical as possible."
+          "title": "Drop it straight down",
+          "detail": "Lower it straight down along a dock, ledge, or drop-off until the weight touches the bottom. Keep the line as straight up and down as you can."
         },
         {
-          "title": "Keep the weight anchored",
-          "detail": "Hold the rod tip low and let the weight rest on the bottom. It acts as an anchor while the bait hovers just above it."
+          "title": "Keep the weight on the bottom",
+          "detail": "Hold the rod tip low and let the weight rest on the bottom. It acts as an anchor while the bait floats just above it."
         },
         {
-          "title": "Shake, don’t reel",
-          "detail": "Gently shake the rod tip in small, quick movements to make the bait quiver in place without moving the weight. This subtle action is the whole technique."
+          "title": "Shake, don't reel",
+          "detail": "Gently shake the rod tip in small, quick movements so the bait quivers in place without moving the weight. That small shake is the whole technique."
         },
         {
-          "title": "Feel for the light tick",
-          "detail": "Bites here are subtle. A light tick or the line going slightly heavy. Reel down to remove slack before setting."
+          "title": "Feel for a light tick",
+          "detail": "Bites are subtle here. You may feel a light tick or the line going slightly heavy. Reel in the slack before you set the hook."
         }
       ],
-      "biteFeel": "Subtle. A light tick, a slight tap, or the line feeling just a little heavier than a moment ago. Pressured fish bite soft.",
+      "biteFeel": "Subtle. A light tick, a small tap, or the line feeling a little heavier than a moment ago. Fish that have seen lots of lures bite softly.",
       "commonMistakes": [
-        "Shaking too hard, which looks unnatural to wary fish this rig is meant to fool",
-        "Losing bottom contact by not keeping the weight anchored",
-        "Setting the hook on every twitch of the line instead of learning the specific light tick of a real bite"
+        "Shaking too hard, which looks unnatural to wary fish",
+        "Letting the weight leave the bottom instead of keeping it down",
+        "Setting the hook on every twitch of the line instead of learning the light tick of a real bite"
       ],
-      "confidenceTip": "This is genuinely the most technical bait in the lineup. Expect it to take longer to click than anything else here, and that's completely normal. It rewards patience over power."
+      "confidenceTip": "This is the hardest lure here. Expect it to take longer to click than anything else, and that's normal. It rewards patience, not power."
     },
     "specs": {
       "includes": "weight + hook",
@@ -1132,13 +1132,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Sized right for rigging this bait.",
+        "blurb": "Hooks sized for this bait.",
         "price": 4.25
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
-        "blurb": "A curl-tail worm that covers different water.",
+        "blurb": "A soft worm with a curled tail. Good for different water.",
         "price": 5.25
       }
     ],
@@ -1170,32 +1170,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Pick a rig",
-          "detail": "Rig it weightless on a worm hook for shallow cover, or thread it onto a light jighead to fish it slightly deeper. Both are beginner-friendly."
+          "detail": "Rig it with no weight on a worm hook for shallow cover, or thread it onto a light jig head to fish a little deeper. Both are easy."
         },
         {
           "title": "Cast near cover",
-          "detail": "Cast past docks, weed edges, or laydowns and let it sink on a slack line."
+          "detail": "Cast past docks, weed edges, or fallen trees and let it sink with the line loose."
         },
         {
-          "title": "Reel slow with pauses",
-          "detail": "Reel it back slowly, pausing every few feet to let the curl tail kick and flutter on its own. The tail does most of the work."
+          "title": "Reel slowly, with pauses",
+          "detail": "Reel it back slowly, pausing every few feet so the curled tail kicks and flutters on its own. The tail does most of the work."
         },
         {
-          "title": "Watch the fall",
-          "detail": "This bait also draws strikes just sinking. Watch your line on the initial drop and after every pause."
+          "title": "Watch it fall",
+          "detail": "Fish also hit this lure as it sinks. Watch your line on the first drop and after every pause."
         },
         {
-          "title": "Set with a firm sweep",
-          "detail": "Soft plastic bites can feel mushy. Set the hook with a confident upward sweep rather than a light twitch."
+          "title": "Set the hook with a firm sweep",
+          "detail": "Bites on soft plastics can feel mushy. Set the hook with a confident upward sweep, not a light twitch."
         }
       ],
-      "biteFeel": "A soft tap or the line moving off to the side, often during a pause rather than the retrieve itself.",
+      "biteFeel": "A soft tap or the line moving to the side, often during a pause rather than while you're reeling.",
       "commonMistakes": [
-        "Reeling too fast and not letting the tail flutter naturally",
+        "Reeling too fast, so the tail can't flutter naturally",
         "Skipping the pauses, which is when most bites happen",
-        "Under-setting the hook on a soft, subtle bite"
+        "Setting the hook too gently on a soft bite"
       ],
-      "confidenceTip": "This bait forgives almost any rig or retrieve mistake. Slow it down and it will still catch fish even on an imperfect presentation."
+      "confidenceTip": "This lure forgives almost any mistake. Go slowly and it will still catch fish."
     },
     "specs": {
       "length": "6 in soft plastic",
@@ -1216,13 +1216,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Sized right for rigging this bait.",
+        "blurb": "Hooks sized for this bait.",
         "price": 4.25
       },
       {
         "id": "driftworm",
         "name": "Driftworm",
-        "blurb": "Another slow, forgiving bottom bait.",
+        "blurb": "Another slow, easy bottom lure.",
         "price": 6.5
       },
     ],
@@ -1253,33 +1253,33 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Pair it with a jighead",
-          "detail": "Thread it onto a jighead, the Bottomjig is a natural match, with the claws facing up for the most natural fall."
+          "title": "Pair it with a jig head",
+          "detail": "Thread it onto a jig head, with the claws facing up so it falls naturally. The Bottomjig is a good match."
         },
         {
-          "title": "Cast to rock or gravel bottom",
-          "detail": "Target rocky or gravel-bottom areas where real crawfish live. That's where this bait earns its keep."
+          "title": "Cast to rock or gravel",
+          "detail": "Aim for rocky or gravel bottoms where real crawfish live. That's where this lure works best."
         },
         {
-          "title": "Let it sink fully",
-          "detail": "Let it hit bottom on a slack line before doing anything else."
+          "title": "Let it sink all the way",
+          "detail": "Let it hit the bottom with the line loose before you do anything else."
         },
         {
-          "title": "Hop it slowly along bottom",
-          "detail": "Lift the rod tip a few inches to hop it, then let it settle back. The claws flap open on the fall, imitating a fleeing crawfish."
+          "title": "Hop it slowly along the bottom",
+          "detail": "Lift the rod tip a few inches to hop it, then let it settle back. The claws flap open as it falls, like a crawfish swimming away."
         },
         {
-          "title": "Feel for the heavy tap",
-          "detail": "Bites often feel like a distinct, heavier tap than a rock bump. If in doubt, reel down and set."
+          "title": "Feel for a heavy tap",
+          "detail": "Bites often feel like a heavier tap than a bump on a rock. If you're not sure, reel in the slack and set the hook."
         }
       ],
-      "biteFeel": "A heavy, deliberate tap, noticeably different from the light click of bouncing off a rock once you’ve felt both a few times.",
+      "biteFeel": "A heavy, deliberate tap. It feels different from the light click of bumping a rock, once you've felt both a few times.",
       "commonMistakes": [
-        "Fishing it over sand or mud instead of the rock/gravel bottom it's designed to imitate",
-        "Hopping it too high or too far, which looks unnatural for a bottom-dwelling bait",
+        "Fishing it over sand or mud instead of the rock or gravel it imitates",
+        "Hopping it too high or too far, which looks unnatural for a lure that lives on the bottom",
         "Setting the hook on every rock tap instead of learning to tell the difference"
       ],
-      "confidenceTip": "Pair it with the Bottomjig and fish rocky bottom. That combination alone does most of the work for you."
+      "confidenceTip": "Pair it with the Bottomjig and fish a rocky bottom. That combination does most of the work for you."
     },
     "specs": {
       "length": "4 in soft plastic",
@@ -1300,13 +1300,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "bottomjig",
         "name": "Bottomjig",
-        "blurb": "Classic jighead pairing for bottom presentation.",
+        "blurb": "A classic match for fishing the bottom.",
         "price": 5.75
       },
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Sized right for rigging this bait.",
+        "blurb": "Hooks sized for this bait.",
         "price": 4.25
       },
     ],
@@ -1337,37 +1337,37 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Rig it weedless",
-          "detail": "Thread the included weedless hook through the nose and out the top so the point tucks against the body, letting it skip past cover."
+          "title": "Rig it so it won't snag",
+          "detail": "Push the included hook through the nose and out the top, so the point tucks against the body. That lets it slide past cover."
         },
         {
-          "title": "Cast tight to cover",
-          "detail": "Cast right up against docks, weed edges, and laydowns, being weightless and weedless means you can fish spots other baits would snag."
+          "title": "Cast close to cover",
+          "detail": "Cast right up to docks, weed edges, and fallen trees. With no weight and a hidden hook, you can fish spots where other lures would snag."
         },
         {
           "title": "Twitch and pause",
-          "detail": "Twitch the rod tip to make it dart side to side just under the surface, then pause a couple seconds and let it sit."
+          "detail": "Twitch the rod tip so it darts side to side just under the surface, then pause a couple of seconds and let it sit."
         },
         {
-          "title": "Let it flutter down on the pause",
-          "detail": "Being weightless, it sinks very slowly during the pause. That slow flutter is often exactly what triggers a strike."
+          "title": "Let it sink slowly on the pause",
+          "detail": "With no weight, it sinks very slowly during the pause. That slow flutter is often what makes a fish strike."
         },
         {
-          "title": "Set on the pull",
-          "detail": "A bite usually feels like sudden resistance or the line coming tight. Reel down and sweep the rod up."
+          "title": "Set the hook on the pull",
+          "detail": "A bite usually feels like sudden resistance or the line going tight. Reel in the slack and sweep the rod up."
         }
       ],
-      "biteFeel": "Sudden resistance or the line coming tight, sometimes with a visible swirl near the surface first.",
+      "biteFeel": "Sudden resistance or the line going tight, sometimes with a swirl near the surface first.",
       "commonMistakes": [
-        "Reeling it steadily instead of twitch-pausing, which loses the darting action",
-        "Fishing it too far from cover. It's built to be worked tight to docks and weed lines",
-        "Setting the hook too early before the fish has it fully"
+        "Reeling it steadily instead of twitching and pausing, which loses the darting action",
+        "Fishing it too far from cover. It works best close to docks and weed lines",
+        "Setting the hook too early, before the fish has it"
       ],
-      "confidenceTip": "Being weedless means you can cast into spots that would snag almost anything else. Don't be afraid to put it right on top of the cover."
+      "confidenceTip": "Because the hook is hidden, you can cast into spots that would snag almost any other lure. Don't be afraid to put it right on top of the cover."
     },
     "specs": {
       "length": "5 in soft plastic",
-      "hook": "weightless weedless hook included"
+      "hook": "no-weight, snag-resistant hook included"
     },
     "colorOptions": [
       "Color A",
@@ -1384,13 +1384,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Sized right for rigging this bait.",
+        "blurb": "Hooks sized for this bait.",
         "price": 4.25
       },
       {
         "id": "swimshad",
         "name": "Swimshad",
-        "blurb": "Steady swimming action as a change-up.",
+        "blurb": "A steady-swimming lure to switch to.",
         "price": 9.5
       }
     ],
@@ -1421,33 +1421,33 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Insert the jighead",
-          "detail": "Push a tube jighead up inside the hollow body so the hook point exits through the top, hook eye sitting right at the nose."
+          "title": "Put the jig head inside",
+          "detail": "Push a tube jig head up inside the hollow body so the hook point comes out the top and the eye sits at the nose."
         },
         {
-          "title": "Cast to rocky structure",
-          "detail": "Target rock piles, riprap, or other hard bottom structure where fish tuck in tight."
+          "title": "Cast to rocky areas",
+          "detail": "Aim for rock piles, riprap, and other hard bottom where fish tuck in tight."
         },
         {
-          "title": "Let it sink to bottom",
-          "detail": "Let it fall on a slack line all the way down. Most strikes happen on this initial fall, so pay attention right away."
+          "title": "Let it sink to the bottom",
+          "detail": "Let it fall with the line loose all the way down. Most bites happen on this first drop, so pay attention right away."
         },
         {
           "title": "Hop it slowly",
-          "detail": "Once on bottom, hop it gently a few inches at a time. The tentacle skirt flares open on every pause, which is what triggers bites."
+          "detail": "Once it's on the bottom, hop it gently a few inches at a time. The skirt flares open on every pause, and that's what gets bites."
         },
         {
-          "title": "Set on the tick",
-          "detail": "Bites are often a light tick during the fall or a hop. Reel down to remove slack before setting."
+          "title": "Set the hook on a tick",
+          "detail": "Bites are often a light tick as it falls or hops. Reel in the slack before you set the hook."
         }
       ],
-      "biteFeel": "A light tick, frequently right as it's sinking rather than while sitting still on bottom.",
+      "biteFeel": "A light tick, often as it's sinking rather than while it sits still on the bottom.",
       "commonMistakes": [
-        "Missing the fall bite by not paying attention right after the cast",
-        "Fishing it over open mud or sand instead of the rocky structure it's made for",
-        "Hopping it too aggressively instead of small, subtle lifts"
+        "Missing the bite on the fall by not paying attention right after the cast",
+        "Fishing it over open mud or sand instead of the rocky bottom it's made for",
+        "Hopping it too hard instead of making small, gentle lifts"
       ],
-      "confidenceTip": "Most of the bites happen on the fall, so the easiest way to catch fish on this one is simply to pay close attention right after your bait hits the water."
+      "confidenceTip": "Most bites happen on the fall. The easiest way to catch fish with this one is to pay close attention right after it hits the water."
     },
     "specs": {
       "length": "3.5 in hollow body",
@@ -1468,13 +1468,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "bottomjig",
         "name": "Bottomjig",
-        "blurb": "Classic jighead pairing for bottom presentation.",
+        "blurb": "A classic match for fishing the bottom.",
         "price": 5.75
       },
       {
         "id": "ripple",
         "name": "Ripple",
-        "blurb": "A jerkbait for suspended, sluggish fish.",
+        "blurb": "A twitch-and-pause lure for slow fish.",
         "price": 13.25
       }
     ],
@@ -1504,16 +1504,16 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Add a trailer",
-          "detail": "Thread a soft plastic craw or creature bait onto the hook for extra bulk and action. The jig alone works, but a trailer usually outfishes it."
+          "title": "Add a soft bait",
+          "detail": "Thread a soft plastic craw or creature bait onto the hook for extra bulk and action. The jig works alone, but it usually catches more with one."
         },
         {
           "title": "Flip or pitch it into cover",
-          "detail": "Underhand-flip it tight against docks, laydowns, or weed edges rather than casting overhand, accuracy matters more than distance here."
+          "detail": "Swing it underhand tight against docks, fallen trees, or weed edges instead of casting overhand. Accuracy matters more than distance here."
         },
         {
-          "title": "Let it fall on a controlled line",
-          "detail": "Keep light contact with the line as it sinks. Most bites happen on the fall, and a fully slack line means you won't feel it."
+          "title": "Let it fall on a light line",
+          "detail": "Keep a little tension on the line as it sinks. Most bites happen on the fall, and a totally loose line means you won't feel one."
         },
         {
           "title": "Hop it back slowly",
@@ -1521,16 +1521,16 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Set the hook hard",
-          "detail": "Jig bites often feel like a sudden, heavy weight. Reel down and set with a firm upward sweep."
+          "detail": "Jig bites often feel like a sudden, heavy weight. Reel in the slack and set the hook with a firm upward sweep."
         }
       ],
-      "biteFeel": "A heavy, sudden weight on the fall, or the line simply stops sinking when it should still be dropping.",
+      "biteFeel": "A sudden heavy weight as it falls, or the line stops sinking when it should still be dropping.",
       "commonMistakes": [
-        "Casting it into open water instead of flipping it tight to cover, where it earns its keep",
-        "Losing contact with the line on the fall and missing the bite entirely",
+        "Casting it into open water instead of putting it tight to cover, where it works best",
+        "Letting the line go loose on the fall and missing the bite",
         "Setting the hook too softly. This hook can take a firm sweep"
       ],
-      "confidenceTip": "When nothing else in the box is working, this is the one to tie back on. It's built to be the default, not the specialist."
+      "confidenceTip": "When nothing else in the box is working, tie this one back on. It's the lure to start with, not a specialty."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -1553,13 +1553,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "crawdaddy",
         "name": "Crawdaddy",
-        "blurb": "A natural trailer for this jig.",
+        "blurb": "A good soft bait to add to this jig.",
         "price": 6.75
       },
       {
         "id": "bottomjig",
         "name": "Bottomjig",
-        "blurb": "A lighter jig for open bottom instead of heavy cover.",
+        "blurb": "A lighter jig for open bottom.",
         "price": 5.75
       }
     ],
@@ -1590,27 +1590,27 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast past your target",
-          "detail": "Cast a few feet beyond docks, points, or rock so the bait is already swimming by the time it reaches the spot."
+          "detail": "Cast a few feet beyond a dock, point, or rock so the lure is already swimming by the time it reaches the spot."
         },
         {
           "title": "Reel at a steady pace",
-          "detail": "Close the bail and reel immediately at a consistent, moderate speed. No pausing."
+          "detail": "Flip the bail closed and reel right away at an even, medium speed. Don't pause."
         },
         {
           "title": "Feel for the wobble",
-          "detail": "You should feel a light, rhythmic thump through the rod the whole retrieve. If you feel nothing, speed up slightly."
+          "detail": "You should feel a light, steady thump through the rod the whole time you reel. If you feel nothing, reel a little faster."
         },
         {
           "title": "Let it bump cover",
-          "detail": "A deflection off rock or wood reads as a direction change, not a snag. Keep reeling through it."
+          "detail": "If it bounces off a rock or wood, that's normal, not a snag. Keep reeling through it."
         }
       ],
-      "biteFeel": "A hard, sudden weight that interrupts the steady thump of the retrieve.",
+      "biteFeel": "A hard, sudden weight that stops the steady thump while you reel.",
       "commonMistakes": [
-        "Reeling too slowly, which lets it dig into the bottom instead of deflecting off cover",
-        "Stopping the retrieve mid-cast. A steady pace is what makes it forgiving"
+        "Reeling too slowly, so it digs into the bottom instead of bouncing off cover",
+        "Stopping partway through. A steady pace is what makes it easy to use"
       ],
-      "confidenceTip": "Cast, reel steady, repeat. This is one of the simplest lures in the kit to fish correctly on the very first cast."
+      "confidenceTip": "Cast, reel steady, repeat. This is one of the easiest lures in the kit to fish right on your very first cast."
     },
     "specs": {
       "diveDepth": "5-6 ft",
@@ -1633,13 +1633,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "deep-six",
         "name": "Deep Six",
-        "blurb": "A squarebill crankbait for shallower, snaggier water.",
+        "blurb": "A crankbait for shallow water with lots of snags.",
         "price": 14.5
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
-        "blurb": "A lipless crankbait for covering water fast.",
+        "blurb": "A rattling lure that covers water fast.",
         "price": 10.25
       }
     ],
@@ -1670,28 +1670,28 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Ring it and hook it",
-          "detail": "Roll the O-ring onto the middle of the worm, then hook through the ring so the worm hangs horizontally off the hook."
+          "title": "Add the ring and hook it",
+          "detail": "Roll the O-ring onto the middle of the worm, then hook through the ring so the worm hangs flat off the hook."
         },
         {
           "title": "Cast near cover",
-          "detail": "Cast past docks, laydowns, or weed edges and let it sink on a slack line."
+          "detail": "Cast past docks, fallen trees, or weed edges and let it sink with the line loose."
         },
         {
           "title": "Watch it fall",
-          "detail": "Both ends of the worm flutter independently as it sinks. Most bites happen right here, before you do anything."
+          "detail": "Both ends of the worm flutter as it sinks. Most bites happen right here, before you do anything."
         },
         {
           "title": "Twitch and pause",
-          "detail": "Once it's near bottom, twitch the rod tip gently and let it sit for several seconds before twitching again."
+          "detail": "Once it's near the bottom, twitch the rod tip gently and let it sit for several seconds before twitching again."
         }
       ],
-      "biteFeel": "The line jumping sideways or going slack unexpectedly during the fall, or a soft tap once it settles.",
+      "biteFeel": "The line jumping sideways or suddenly going loose as it falls, or a soft tap once it settles.",
       "commonMistakes": [
         "Skipping the O-ring, which tears the worm in half on the first cast",
-        "Not pausing long enough. The fall is doing most of the work here"
+        "Not pausing long enough. The fall does most of the work here"
       ],
-      "confidenceTip": "If you only fish one soft plastic all day, this is the one that's hardest to fish wrong."
+      "confidenceTip": "If you only fish one soft plastic all day, make it this one. It's the hardest to fish wrong."
     },
     "specs": {
       "length": "13.5cm / 5in",
@@ -1708,13 +1708,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "ribtail",
         "name": "Ribtail",
-        "blurb": "A curl-tail worm for a different presentation.",
+        "blurb": "A curl-tail worm to try something different.",
         "price": 5.25
       },
       {
         "id": "driftworm",
         "name": "Driftworm",
-        "blurb": "A slower, drag-along-bottom worm.",
+        "blurb": "A slower worm you drag along the bottom.",
         "price": 6.5
       }
     ],
@@ -1745,28 +1745,28 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Add a trailer",
-          "detail": "Thread on a paddle tail swimbait or craw trailer for extra bulk and thump."
+          "title": "Add a soft tail",
+          "detail": "Thread on a paddle tail or craw bait for extra bulk and thump."
         },
         {
           "title": "Cast past your target",
-          "detail": "Cast beyond grass lines, docks, or stained-water banks."
+          "detail": "Cast beyond grass lines, docks, or murky banks."
         },
         {
           "title": "Reel at a steady pace",
-          "detail": "Close the bail and reel immediately at a consistent speed. The blade does the vibrating on its own."
+          "detail": "Flip the bail closed and reel right away at an even speed. The blade does the vibrating on its own."
         },
         {
-          "title": "Slow down through grass",
-          "detail": "If it's dragging through vegetation, slow down slightly to keep it from fouling on weeds."
+          "title": "Slow down in weeds",
+          "detail": "If it's dragging through weeds, slow down a little so it doesn't clog with grass."
         }
       ],
-      "biteFeel": "A hard, thumping strike that cuts the bait’s vibration off mid-retrieve. Usually unmistakable.",
+      "biteFeel": "A hard thump that stops the lure's vibration while you reel. It's hard to miss.",
       "commonMistakes": [
-        "Reeling too fast through heavy grass, which fouls the blade with weeds",
-        "Fishing it on gin-clear water where a more subtle bait usually works better"
+        "Reeling too fast through thick weeds, which clogs the blade",
+        "Using it in very clear water, where a quieter lure usually works better"
       ],
-      "confidenceTip": "Cast it, reel steady, and trust the blade to do the attracting. No twitching or special technique required."
+      "confidenceTip": "Cast it, reel steady, and let the blade do the attracting. No twitching or special technique needed."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -1783,13 +1783,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "longshot",
         "name": "Longshot",
-        "blurb": "A spinnerbait for a similar murky-water search.",
+        "blurb": "A blade lure that also works in murky water.",
         "price": 11
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
-        "blurb": "A lipless crankbait for covering more water.",
+        "blurb": "A rattling lure that covers more water.",
         "price": 10.25
       }
     ],
@@ -1801,7 +1801,7 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Urchin Finesse Bait",
     "price": 4.95,
     "category": "Soft Plastic (Finesse)",
-    "kicker": "Soft plastic: finesse",
+    "kicker": "Soft plastic: small and subtle",
     "metaTitle": "Urchin Finesse Bait | Ketto Outdoors",
     "metaDescription": "A small, subtle bait for the days other lures don’t get bit. Easy to drop next to cover. $4.95.",
     "difficulty": {
@@ -1819,28 +1819,28 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Insert the weight",
-          "detail": "Push the nail/push weight into the nose of the bait, 1/16 oz for a slower fall, 3/32 oz to get down faster."
+          "title": "Add the weight",
+          "detail": "Push the weight into the nose of the bait. Use 1/16 oz for a slower fall, or 3/32 oz to get down faster."
         },
         {
-          "title": "Rig it weedless",
-          "detail": "Texas-rig it on a small hook so it can be dropped right into cover without snagging."
+          "title": "Rig it so it won't snag",
+          "detail": "Rig it on a small hook with the point tucked into the body, so you can drop it into cover without snagging."
         },
         {
           "title": "Drop it next to cover",
-          "detail": "Pitch it right up against a dock post, laydown, or weed edge rather than casting it into open water."
+          "detail": "Pitch it right up against a dock post, fallen tree, or weed edge instead of casting into open water."
         },
         {
           "title": "Shake it in place",
-          "detail": "Let it settle, then shake the rod tip gently without moving it far. This is a finesse bait, not a search bait."
+          "detail": "Let it settle, then shake the rod tip gently without moving it far. This lure is for slow, close fishing, not for covering water."
         }
       ],
-      "biteFeel": "Subtle. A light tick or the line feeling slightly heavier than a moment ago.",
+      "biteFeel": "Subtle. A light tick, or the line feeling a little heavier than a moment ago.",
       "commonMistakes": [
-        "Fishing it fast like a search bait instead of slow and subtle right next to cover",
-        "Skipping this bait on tough days when it’s exactly the one built for them"
+        "Fishing it fast, like a lure for covering water, instead of slow and close to cover",
+        "Skipping it on tough days, when it's exactly the lure made for them"
       ],
-      "confidenceTip": "Save this one for when the other seven baits in the kit go quiet. That’s exactly the day it’s built for."
+      "confidenceTip": "Save this one for when the other lures in the kit go quiet. That's the day it's made for."
     },
     "specs": {
       "size": "17mm",
@@ -1857,13 +1857,13 @@ export const PRODUCTS: Product[] = [
       {
         "id": "finessedrop",
         "name": "Finesse Drop",
-        "blurb": "A drop-shot rig for the same tough, pressured bites.",
+        "blurb": "A drop-shot rig for the same hard-to-catch fish.",
         "price": 8
       },
       {
         "id": "flukeshad",
         "name": "Flukeshad",
-        "blurb": "A weightless option for cover this bait can’t reach.",
+        "blurb": "A lighter lure for cover this one can’t reach.",
         "price": 5.95
       }
     ],
@@ -1887,16 +1887,16 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Match the weight to the rig",
-          "detail": "Use just enough weight to get your bait to depth without killing its natural action. Start light and add more only if you need to."
+          "detail": "Use just enough weight to get your bait down without ruining how it moves. Start light and add more only if you need to."
         },
         {
           "title": "Pinch or thread it on",
-          "detail": "Split shot pinches directly onto the line; slip weights thread on above a swivel or bead."
+          "detail": "Split shot pinches straight onto the line. Slip weights thread on above a swivel or bead."
         }
       ],
-      "biteFeel": "Depends entirely on what you rig it with. The weight itself has no feel, it just gets your bait to the fish.",
+      "biteFeel": "It has no feel of its own. It just gets your bait down to the fish.",
       "commonMistakes": [
-        "Using more weight than the rig actually needs, which makes the bait sink unnaturally fast"
+        "Using more weight than you need, which makes the bait sink too fast"
       ],
       "confidenceTip": "A pack of weights is hard to get wrong. When in doubt, start with the lightest one that still gets your bait down."
     },
@@ -1913,7 +1913,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Pair these weights with a hook for any bait rig.",
+        "blurb": "Pair these weights with a hook for any rig.",
         "price": 4.25
       }
     ],
@@ -1944,27 +1944,27 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Set your depth",
-          "detail": "Clip the bobber onto your line above the hook. The distance between bobber and hook is roughly how deep your bait will hang."
+          "detail": "Clip the bobber onto your line above the hook. The distance between bobber and hook is about how deep your bait will hang."
         },
         {
           "title": "Cast it out",
           "detail": "Cast near a dock, weed edge, or drop-off and let it settle."
         },
         {
-          "title": "Watch, don’t reel",
-          "detail": "Leave the bail open or the line slack and just watch the bobber sit."
+          "title": "Watch, don't reel",
+          "detail": "Leave the line loose and just watch the bobber sit."
         },
         {
           "title": "Set the hook when it goes under",
-          "detail": "When the bobber dips or slides sideways and stays down, reel down to remove slack and set the hook."
+          "detail": "When the bobber dips or slides sideways and stays down, reel in the slack and set the hook."
         }
       ],
-      "biteFeel": "Visual, not physical. The bobber twitches, dips, or disappears under the surface.",
+      "biteFeel": "You see it, you don't feel it. The bobber twitches, dips, or disappears under the water.",
       "commonMistakes": [
-        "Setting the hook on every little bobber wiggle instead of waiting for it to actually go under and stay",
-        "Using a bobber too big for the bait, which lets fish feel resistance and drop it"
+        "Setting the hook on every little wiggle instead of waiting for it to go under and stay down",
+        "Using a bobber too big for the bait, so fish feel the resistance and drop it"
       ],
-      "confidenceTip": "This is the most forgiving way to fish that exists. You genuinely just watch and wait."
+      "confidenceTip": "This is the easiest way to fish. You just watch and wait."
     },
     "specs": {
       "style": "round, snap-on",
@@ -1980,7 +1980,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Small hooks sized for a bobber rig.",
+        "blurb": "Small hooks for a bobber setup.",
         "price": 4.25
       }
     ],
@@ -2006,7 +2006,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Pick a size",
-          "detail": "Start with the smallest shot. Just enough to sink the bait without dragging your bobber under."
+          "detail": "Start with the smallest shot. Use just enough to sink the bait without pulling your bobber under."
         },
         {
           "title": "Pinch it onto the line",
@@ -2014,14 +2014,14 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Adjust as needed",
-          "detail": "If your bait is floating up too much, add another; if your bobber is sitting too low, remove one."
+          "detail": "If your bait floats up too much, add another one. If your bobber sits too low, take one off."
         }
       ],
-      "biteFeel": "No feel of its own. It just gets your bait to hang at the right depth.",
+      "biteFeel": "It has no feel of its own. It just keeps your bait at the right depth.",
       "commonMistakes": [
         "Using one size for every rig instead of adjusting to how the bobber is sitting"
       ],
-      "confidenceTip": "You can’t really get this wrong. Add or remove one until your bobber floats the way you want."
+      "confidenceTip": "You can't really get this wrong. Add or remove one until your bobber floats the way you want."
     },
     "specs": {
       "style": "reusable, removable",
@@ -2037,7 +2037,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "bobbers",
         "name": "Bobbers",
-        "blurb": "Pair these weights with a float rig.",
+        "blurb": "Use these weights with a bobber.",
         "price": 4.75
       }
     ],
@@ -2072,18 +2072,18 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Fish it under a bobber or on the bottom",
-          "detail": "Under a bobber near cover for panfish, or let it sink and sit on the bottom for anything cruising along it."
+          "detail": "Fish it under a bobber near cover for panfish, or let it sink and sit on the bottom for fish swimming along it."
         },
         {
           "title": "Be patient",
-          "detail": "The scent does a lot of the work. Let it sit in one spot for a while before recasting."
+          "detail": "The scent does a lot of the work. Let it sit in one spot for a while before you recast."
         }
       ],
-      "biteFeel": "Same as fishing live bait. A bobber dipping under, or a steady pull if fished on the bottom.",
+      "biteFeel": "The same as live bait: a bobber dipping under, or a steady pull if you fish it on the bottom.",
       "commonMistakes": [
-        "Recasting too often instead of letting the scent sit and work an area"
+        "Recasting too often instead of letting the scent work in one spot"
       ],
-      "confidenceTip": "If you're not ready to dig up worms or visit a bait shop, this is the honest substitute. It works."
+      "confidenceTip": "If you don't want to dig up worms or stop at a bait shop, this is a good swap. It works."
     },
     "specs": {
       "style": "trout-worm, pre-scented"
@@ -2102,7 +2102,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "baithooks",
         "name": "Baithooks",
-        "blurb": "Small hooks sized for this bait.",
+        "blurb": "Small hooks for this bait.",
         "price": 4.25
       }
     ],
@@ -2132,18 +2132,18 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Add the bead",
-          "detail": "Thread a bead on after the stop so it can’t slip through your bobber."
+          "detail": "Thread a bead on after the stop so the stop can't slip through your bobber."
         },
         {
-          "title": "Slide it to set depth",
-          "detail": "Slide the whole stop up or down the line to change how deep your bait hangs, then reel in. The stop passes through the rod guides fine."
+          "title": "Slide it to set your depth",
+          "detail": "Slide the stop up or down the line to change how deep your bait hangs, then reel in. The stop passes through the rod guides fine."
         }
       ],
-      "biteFeel": "No feel of its own. It just controls how deep your bait sits below the bobber.",
+      "biteFeel": "It has no feel of its own. It just controls how deep your bait hangs below the bobber.",
       "commonMistakes": [
-        "Setting it too tight to slide, making it impossible to adjust depth on the water"
+        "Setting it so tight it won't slide, so you can't change depth when you're out on the water"
       ],
-      "confidenceTip": "Once it’s on the line, changing depth takes five seconds, experiment until you find where the fish are."
+      "confidenceTip": "Once it's on the line, changing depth takes five seconds. Try different depths until you find where the fish are."
     },
     "specs": {
       "packaging": "adjustable stops with beads, pack of 20"
@@ -2158,7 +2158,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "bobbers",
         "name": "Bobbers",
-        "blurb": "Pair these stops with a slip-bobber rig.",
+        "blurb": "Use these stops with a bobber.",
         "price": 4.75
       }
     ],
@@ -2188,28 +2188,28 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Bait it through the point",
-          "detail": "Thread cut bait onto the hook so the point stays mostly exposed."
+          "title": "Bait it so the point shows",
+          "detail": "Thread cut bait onto the hook so the point stays mostly uncovered."
         },
         {
           "title": "Cast and let it sit",
-          "detail": "Cast near structure and place the rod in a holder or against something stable. This is a wait-and-watch bait."
+          "detail": "Cast near cover and set the rod in a holder or against something stable. This is a wait-and-watch lure."
         },
         {
-          "title": "Don’t set the hook the normal way",
-          "detail": "When the rod bends or line starts steadily peeling out, just start reeling. Don’t yank back."
+          "title": "Don't set the hook the normal way",
+          "detail": "When the rod bends or the line starts steadily peeling out, just start reeling. Don't yank back."
         },
         {
-          "title": "Let the reel do the hooking",
-          "detail": "As the fish turns and swims off, the circle shape slides into the corner of the jaw and hooks itself."
+          "title": "Let the hook set itself",
+          "detail": "As the fish turns and swims off, the round shape of the hook slides into the corner of its mouth and sets itself."
         }
       ],
-      "biteFeel": "The rod tip bending steadily or line peeling off the reel, not a sharp tap.",
+      "biteFeel": "The rod tip bending steadily, or line peeling off the reel. It's not a sharp tap.",
       "commonMistakes": [
-        "Setting the hook hard like you would with a normal hook, which usually pulls it right out of the fish’s mouth",
-        "Using a hook too small for the bait, which hides the point"
+        "Setting the hook hard like you would with a normal hook, which usually pulls it out of the fish's mouth",
+        "Using a hook too small for the bait, which covers the point"
       ],
-      "confidenceTip": "The whole point of a circle hook is that you have to do less, not more. Resist the instinct to set hard and just start reeling."
+      "confidenceTip": "A circle hook means you do less, not more. Fight the urge to yank and just start reeling."
     },
     "specs": {
       "sizes": "5/0-7/0",
@@ -2230,7 +2230,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "sliding-egg-sinkers",
         "name": "Sliding Egg Sinkers",
-        "blurb": "The standard rig weight to pair with these hooks.",
+        "blurb": "The usual weight to use with these hooks.",
         "price": 4.5
       }
     ],
@@ -2260,27 +2260,27 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Load the spring",
-          "detail": "Pack a wad of dip bait around the spring, twisting it in so it holds together."
+          "detail": "Pack a wad of dip bait around the spring and twist it in so it holds together."
         },
         {
           "title": "Cast gently",
-          "detail": "A smooth, controlled cast keeps the bait from flying off the spring. No need to cast hard."
+          "detail": "A smooth, easy cast keeps the bait on the spring. There's no need to cast hard."
         },
         {
           "title": "Let it sit",
           "detail": "This is a wait-and-watch bait. Leave it in one spot and let the scent do the work."
         },
         {
-          "title": "Reload as needed",
-          "detail": "Dip bait washes off over time. Check and reload every so often, especially in current."
+          "title": "Reload when needed",
+          "detail": "Dip bait washes off over time. Check it and reload every so often, especially in current."
         }
       ],
       "biteFeel": "A steady pull or the rod tip bending down. Set the hook firmly once you feel real weight.",
       "commonMistakes": [
-        "Casting hard, which flings the bait off the spring before it even hits the water",
-        "Leaving it too long without checking. The bait washes off eventually"
+        "Casting hard, which flings the bait off the spring before it hits the water",
+        "Leaving it too long without checking. The bait eventually washes off"
       ],
-      "confidenceTip": "No cut bait or chicken liver required to start. Just dip the hook in and cast."
+      "confidenceTip": "No cut bait or chicken liver needed. Just dip the hook and cast."
     },
     "specs": {
       "style": "treble, bait-holder spring",
@@ -2296,7 +2296,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "catfish-stink-bait",
         "name": "Catfish Stink Bait",
-        "blurb": "The prepared bait these hooks are built for.",
+        "blurb": "The bait these hooks are made for.",
         "price": 6.5
       }
     ],
@@ -2323,22 +2323,22 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Thread it onto the main line",
-          "detail": "Slide the sinker onto your main line before tying on anything else."
+          "detail": "Slide the sinker onto your main line before you tie on anything else."
         },
         {
           "title": "Tie a swivel below it",
-          "detail": "Tie a barrel swivel to the main line below the sinker so it can’t slide down to the hook."
+          "detail": "Tie a barrel swivel to the main line below the sinker so it can't slide down to the hook."
         },
         {
-          "title": "Add leader and hook",
+          "title": "Add the leader and hook",
           "detail": "Tie your leader line and circle hook to the other end of the swivel."
         }
       ],
-      "biteFeel": "No feel of its own by design. A fish can pick up the bait and the line slides freely through the sinker instead of feeling resistance.",
+      "biteFeel": "It has no feel of its own, on purpose. A fish can pick up the bait and the line slides through the sinker, so it doesn't feel any resistance.",
       "commonMistakes": [
-        "Using a bank sinker instead in current, where it won’t hold bottom as well as a flatter no-roll sinker"
+        "Using this sinker in current, where it won't hold the bottom as well as a flat no-roll sinker"
       ],
-      "confidenceTip": "Still water, calm bank, slower current. This is the right sinker. For moving water, reach for the no-roll sinkers instead."
+      "confidenceTip": "Still water, calm bank, slow current: this is the right sinker. For moving water, use the no-roll sinkers instead."
     },
     "specs": {
       "weight": "1 oz",
@@ -2355,7 +2355,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "no-roll-bank-sinkers",
         "name": "No-Roll Bank Sinkers",
-        "blurb": "The current-water alternative to this rig weight.",
+        "blurb": "The weight to use in moving water.",
         "price": 4.75
       }
     ],
@@ -2382,22 +2382,22 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Rig it above a swivel",
-          "detail": "Same rig as the egg sinker. Thread it on the main line, then tie a swivel below it, then your leader and hook."
+          "detail": "Use the same rig as the egg sinker. Thread it onto the main line, tie a swivel below it, then add your leader and hook."
         },
         {
           "title": "Cast upstream of your target",
-          "detail": "In current, cast slightly upstream so the rig settles where you actually want it."
+          "detail": "In current, cast a little upstream so the rig settles where you want it."
         },
         {
-          "title": "Check that it’s holding",
-          "detail": "Feel for steady resistance. If the rig keeps sliding downstream, go up a size."
+          "title": "Check that it's holding",
+          "detail": "Feel for steady resistance. If the rig keeps sliding downstream, use a heavier size."
         }
       ],
-      "biteFeel": "A steady pull or the rod tip loading up, current fishing tends to feel more constant than still water.",
+      "biteFeel": "A steady pull or the rod tip bending. Fishing in current feels steadier than still water.",
       "commonMistakes": [
-        "Using a round egg sinker in real current, where it rolls downstream instead of holding"
+        "Using a round egg sinker in real current, where it rolls downstream instead of staying put"
       ],
-      "confidenceTip": "Moving water, river banks, current seams. This is the sinker built for exactly that, where the egg sinker would just roll away."
+      "confidenceTip": "Moving water, river banks, and current: this is the sinker made for it. An egg sinker would just roll away."
     },
     "specs": {
       "weight": "2 oz",
@@ -2414,7 +2414,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "sliding-egg-sinkers",
         "name": "Sliding Egg Sinkers",
-        "blurb": "The still-water alternative to this rig weight.",
+        "blurb": "The weight to use in still water.",
         "price": 4.5
       }
     ],
@@ -2439,23 +2439,23 @@ export const PRODUCTS: Product[] = [
       ],
       "steps": [
         {
-          "title": "Tie main line to one end",
-          "detail": "Use a simple clinch knot to attach your main line (with sinker already threaded on) to one eye of the swivel."
+          "title": "Tie the main line to one end",
+          "detail": "Use a simple clinch knot to tie your main line (with the sinker already threaded on) to one eye of the swivel."
         },
         {
-          "title": "Tie leader to the other end",
-          "detail": "Attach your leader line and hook to the opposite eye."
+          "title": "Tie the leader to the other end",
+          "detail": "Tie your leader line and hook to the opposite eye."
         },
         {
-          "title": "Check it spins freely",
-          "detail": "A good connection lets the swivel spin on its own. That’s what stops line twist during the fight."
+          "title": "Check that it spins freely",
+          "detail": "A good connection lets the swivel spin on its own. That's what stops line twist when you fight a fish."
         }
       ],
-      "biteFeel": "No feel of its own. It’s a connector, not a bait or weight.",
+      "biteFeel": "It has no feel of its own. It's a connector, not a bait or a weight.",
       "commonMistakes": [
-        "Skipping the swivel entirely and tying the sinker directly to the leader, which twists line up fast"
+        "Skipping the swivel and tying the sinker straight to the leader, which twists your line fast"
       ],
-      "confidenceTip": "A small, easy-to-overlook piece that quietly prevents a very common, very annoying problem, tangled, twisted line."
+      "confidenceTip": "A small piece that's easy to overlook, but it quietly prevents a very common and annoying problem: tangled, twisted line."
     },
     "specs": {
       "style": "heavy-duty barrel",
@@ -2471,7 +2471,7 @@ export const PRODUCTS: Product[] = [
       {
         "id": "fluorocarbon-leader",
         "name": "Fluorocarbon Leader Line",
-        "blurb": "Pair with these swivels for a full catfish rig.",
+        "blurb": "Use with these swivels for a full catfish rig.",
         "price": 8.5
       }
     ],
@@ -2497,22 +2497,22 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cut a leader length",
-          "detail": "Cut roughly 12-18 inches for a standard bottom rig, longer in clearer water, shorter in murkier water."
+          "detail": "Cut about 12-18 inches for a standard bottom rig. Use a longer one in clearer water and a shorter one in murkier water."
         },
         {
-          "title": "Tie to the swivel",
-          "detail": "Attach one end to your swivel with a clinch knot."
+          "title": "Tie it to the swivel",
+          "detail": "Tie one end to your swivel with a clinch knot."
         },
         {
           "title": "Tie on your hook",
-          "detail": "Attach a circle hook or dip-bait treble to the other end."
+          "detail": "Tie a circle hook or a dip bait treble hook to the other end."
         }
       ],
-      "biteFeel": "No feel of its own. It’s there to survive the fight, not signal the bite.",
+      "biteFeel": "It has no feel of its own. It's there to survive the fight, not to show you a bite.",
       "commonMistakes": [
-        "Using your regular main line as the leader instead, which frays and breaks on rock and structure much faster"
+        "Using your regular main line as the leader, which frays and breaks on rocks much faster"
       ],
-      "confidenceTip": "This is the piece that keeps a good fish from breaking off on the one rock you didn’t see. Cheap insurance."
+      "confidenceTip": "This is the piece that keeps a good fish from breaking off on the one rock you didn't see. It's cheap insurance."
     },
     "specs": {
       "test": "30 lb",
@@ -2558,26 +2558,26 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Load the spring hook",
-          "detail": "Dip and pack the spring on your treble hook with bait until it holds a solid wad."
+          "detail": "Dip the spring on your treble hook in the bait and pack it until it holds a solid wad."
         },
         {
           "title": "Cast gently",
-          "detail": "A smooth cast keeps the bait on the hook. No need to power through the cast."
+          "detail": "A smooth cast keeps the bait on the hook. There's no need to cast hard."
         },
         {
-          "title": "Let it sit and work",
+          "title": "Let it sit",
           "detail": "Leave it in place. The scent spreads through the water and draws fish in over time."
         },
         {
-          "title": "Reload periodically",
+          "title": "Reload now and then",
           "detail": "Check every 20-30 minutes and reload if the bait has washed off."
         }
       ],
-      "biteFeel": "A steady pull or the rod tip loading down. This is a wait-and-watch bait.",
+      "biteFeel": "A steady pull or the rod tip bending down. This is a wait-and-watch bait.",
       "commonMistakes": [
-        "Recasting too often instead of letting one spot build scent over time"
+        "Recasting too often instead of letting one spot build up scent over time"
       ],
-      "confidenceTip": "This is genuinely the simplest way to start catfishing. No bait prep, no cutting, just dip and cast."
+      "confidenceTip": "This is the simplest way to start catfishing. No bait prep, no cutting. Just dip and cast."
     },
     "specs": {
       "style": "prepared dip/paste bait"
