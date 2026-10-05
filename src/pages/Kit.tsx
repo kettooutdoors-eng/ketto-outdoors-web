@@ -161,7 +161,7 @@ export default function Kit() {
             >
               <span style={{ fontSize: 11, color: 'var(--kicker)', fontWeight: 700, lineHeight: 1.4 }}>QR CODE: video rigging guide (link before launch)</span>
             </div>
-            <p style={{ fontSize: 12.5, opacity: 0.7, maxWidth: '24ch' }}>Every kit comes with this on a printed card. The full steps are also here.</p>
+            <p style={{ fontSize: 12.5, opacity: 0.7, maxWidth: '24ch' }}>Every kit comes with this on a waterproof sticker. The full steps are also here.</p>
           </div>
         </div>
       </div>
