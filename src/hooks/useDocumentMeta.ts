@@ -29,7 +29,7 @@ export const SITE_URL = 'https://kettooutdoors-eng.github.io/ketto-outdoors-web'
 /** Sets document title, meta description, canonical URL, and OG/Twitter tags for the current route. */
 export function useDocumentMeta(title: string, description: string, path = '', noIndex = false) {
   useEffect(() => {
-    const fullTitle = title.includes(SITE_NAME) ? title : `${title} — ${SITE_NAME}`;
+    const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
     document.title = fullTitle;
     upsertMeta('name', 'description', description);
     upsertMeta('name', 'robots', noIndex ? 'noindex,follow' : 'index,follow');

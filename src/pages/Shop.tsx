@@ -38,7 +38,7 @@ export default function Shop() {
       case 'Difficulty: Hardest First':
         list.sort((a, b) => b.difficultyScore - a.difficultyScore);
         break;
-      case 'Name: A–Z':
+      case 'Name: A-Z':
         list.sort((a, b) => a.name.localeCompare(b.name));
         break;
       default:
@@ -107,7 +107,7 @@ export default function Shop() {
       )}
 
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '64px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.85 }}>Ketto Outdoors — Beginner guide</div>
+        <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.85 }}>Ketto Outdoors: Beginner guide</div>
         <h2 style={{ fontSize: 36, letterSpacing: '-0.03em', marginTop: 10 }}>NOT SURE WHICH ONE TO PICK?</h2>
         <BannerButton to="/new-to-fishing" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           See how to start

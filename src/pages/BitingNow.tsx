@@ -8,8 +8,8 @@ import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function BitingNow() {
   useDocumentMeta(
-    "What's Biting Now — Ketto Outdoors",
-    `${BITING_NOW_SEASON} picks — no decisions, just what's working this time of year.`,
+    "What's Biting Now | Ketto Outdoors",
+    `${BITING_NOW_SEASON} picks. No decisions, just what's working this time of year.`,
     '/biting-now'
   );
 

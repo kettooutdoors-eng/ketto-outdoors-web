@@ -10,7 +10,7 @@ export default function BlogArticlePage() {
   const { category, slug } = useParams<{ category: string; slug: string }>();
   const article = category && slug ? getArticle(category, slug) : undefined;
   useDocumentMeta(
-    article ? `${article.title} — The Ketto Journal` : 'Post Not Found — Ketto Outdoors',
+    article ? `${article.title} | The Ketto Journal` : 'Post Not Found | Ketto Outdoors',
     article?.bodyIntro.slice(0, 160) ?? "This post doesn't exist, moved, or never got hooked in the first place.",
     `/blog/${category ?? ''}/${slug ?? ''}`
   );

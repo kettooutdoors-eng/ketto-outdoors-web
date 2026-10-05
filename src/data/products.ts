@@ -8,12 +8,12 @@ export const PRODUCTS: Product[] = [
     "price": 14.5,
     "category": "Crankbait (Squarebill)",
     "kicker": "Squarebill / 2.5 in / 1/2 oz",
-    "metaTitle": "Deep Six Squarebill Crankbait — Ketto Outdoors",
+    "metaTitle": "Deep Six Squarebill Crankbait | Ketto Outdoors",
     "metaDescription": "A wide-hunting squarebill that runs six feet and deflects instead of hanging. $14.50.",
     "difficulty": null,
     "targetSpecies": "Largemouth & smallmouth bass",
     "shortDescription": "A wide-hunting squarebill that runs six feet and deflects instead of hanging. Balanced on the pause, hard on the strike.",
-    "longDescription": "Squarebills dive shallower on a slack line, deeper on a tight one. Deep Six holds a tight +/-1 ft band around 6 ft on a steady retrieve — tighter than most squarebills in its class. Retrieve notes: on a steady retrieve the bill loads, the body rolls six degrees each side, and the tail throws water off the back. At a brisk, steady reel speed of about 2.4 mph (roughly 90 handle turns per minute, about 1.5 cranks every second, no pausing), it holds its wobble and depth band consistently.",
+    "longDescription": "Squarebills dive shallower on a slack line, deeper on a tight one. Deep Six holds a tight +/-1 ft band around 6 ft on a steady retrieve, tighter than most squarebills in its class. Retrieve notes: on a steady retrieve the bill loads, the body rolls six degrees each side, and the tail throws water off the back. At a brisk, steady reel speed of about 2.4 mph (roughly 90 handle turns per minute, about 1.5 cranks every second, no pausing), it holds its wobble and depth band consistently.",
     "guide": {
       "gearNeeded": [
         "Spinning or baitcasting rod & reel",
@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Tie it on",
-          "detail": "Thread your line through the eyelet on the nose of the bill and tie an improved clinch knot. Give it a firm tug — if it holds, you're set."
+          "detail": "Thread your line through the eyelet on the nose of the bill and tie an improved clinch knot. Give it a firm tug. If it holds, you're set."
         },
         {
           "title": "Cast past your target",
@@ -31,22 +31,22 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel at a steady, brisk pace",
-          "detail": "Close the bail and reel immediately at a steady clip — about 1.5 turns of the handle per second, no pausing. You should feel a light, rhythmic thump-thump-thump through the rod as the bill kicks side to side."
+          "detail": "Close the bail and reel immediately at a steady clip, about 1.5 turns of the handle per second, no pausing. You should feel a light, rhythmic thump-thump-thump through the rod as the bill kicks side to side."
         },
         {
           "title": "Let it bump, don’t fight it",
-          "detail": "When it ticks a rock or piece of wood, keep reeling at the same pace. The square bill deflects off cover instead of digging in, so a bump usually means it just changed direction — not that it’s stuck."
+          "detail": "When it ticks a rock or piece of wood, keep reeling at the same pace. The square bill deflects off cover instead of digging in, so a bump usually means it just changed direction, not that it’s stuck."
         },
         {
           "title": "Set the hook on the thump",
-          "detail": "A strike feels like the steady thump suddenly turns into a solid, heavy pull. Don't yank — just keep reeling and let the rod bend; the hook does the work."
+          "detail": "A strike feels like the steady thump suddenly turns into a solid, heavy pull. Don't yank. Just keep reeling and let the rod bend; the hook does the work."
         }
       ],
-      "biteFeel": "A hard, sudden weight that interrupts the steady thump-thump of the retrieve — like the lure got heavier, not like a tap.",
+      "biteFeel": "A hard, sudden weight that interrupts the steady thump-thump of the retrieve, like the lure got heavier, not like a tap.",
       "commonMistakes": [
         "Reeling too slow, which lets the bill dig into the bottom instead of deflecting",
         "Yanking the rod on a bump before confirming it’s actually a fish",
-        "Stopping the retrieve mid-cast — a steady pace is what makes this lure forgiving"
+        "Stopping the retrieve mid-cast. A steady pace is what makes this lure forgiving"
       ],
       "confidenceTip": "This is the lure we'd hand a total beginner on their first-ever trip: cast it out, reel steady, and it does almost everything else itself."
     },
@@ -62,19 +62,19 @@ export const PRODUCTS: Product[] = [
     },
     "buildDetails": [
       {
-        "part": "01 — Bill",
+        "part": "01: Bill",
         "title": "Square, 45 degrees",
         "description": "The corner catches the rock and kicks the body sideways, so contact reads as a direction change rather than a snag."
       },
       {
-        "part": "02 — Body",
+        "part": "02: Body",
         "title": "Balsa core",
         "description": "Buoyant enough to back out of cover on the pause, dense enough to hold the wobble at speed."
       },
       {
-        "part": "03 — Rattle",
+        "part": "03: Rattle",
         "title": "Single knocker",
-        "description": "One tungsten ball, low and irregular — a thud that carries in stained water instead of a rasp."
+        "description": "One tungsten ball, low and irregular. A thud that carries in stained water instead of a rasp."
       }
     ],
     "depthChart": [
@@ -134,7 +134,7 @@ export const PRODUCTS: Product[] = [
     "price": 6.5,
     "category": "Soft Plastic (Worm)",
     "kicker": "Soft plastic worm",
-    "metaTitle": "Driftworm Soft Plastic — Ketto Outdoors",
+    "metaTitle": "Driftworm Soft Plastic | Ketto Outdoors",
     "metaDescription": "Rig it and drag it slowly along the bottom. About as simple as fishing gets. $6.50.",
     "difficulty": {
       "label": "Beginner",
@@ -142,8 +142,8 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "Rig it and drag it slowly along the bottom. About as simple and forgiving as fishing gets — a great confidence-builder.",
-    "longDescription": "Slow, patient fishing along the bottom near cover — a great first lure to learn feel with.",
+    "shortDescription": "Rig it and drag it slowly along the bottom. About as simple and forgiving as fishing gets. A great confidence-builder.",
+    "longDescription": "Slow, patient fishing along the bottom near cover. A great first lure to learn feel with.",
     "guide": {
       "gearNeeded": [
         "Spinning rod & reel",
@@ -158,7 +158,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Cast near cover",
-          "detail": "Cast past a likely spot — a weed edge, a dock post, a drop-off — and let it sink all the way to the bottom on a slack line. Watch your line; if it twitches or moves sideways on the fall, a fish already has it."
+          "detail": "Cast past a likely spot, a weed edge, a dock post, a drop-off, and let it sink all the way to the bottom on a slack line. Watch your line; if it twitches or moves sideways on the fall, a fish already has it."
         },
         {
           "title": "Drag, don’t reel",
@@ -170,16 +170,16 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Be patient",
-          "detail": "This is a confidence-builder because it's forgiving — there's no wrong retrieve speed, just slow and slower."
+          "detail": "This is a confidence-builder because it's forgiving. There's no wrong retrieve speed, just slow and slower."
         }
       ],
-      "biteFeel": "A soft \"tap-tap\" or the line just going slightly heavy and moving off to one side during the pause — subtle compared to a crankbait strike.",
+      "biteFeel": "A soft \"tap-tap\" or the line just going slightly heavy and moving off to one side during the pause. Subtle compared to a crankbait strike.",
       "commonMistakes": [
         "Reeling it in like a crankbait instead of dragging it slowly along bottom",
-        "Not pausing long enough — most bites come in the dead-still moments",
+        "Not pausing long enough. Most bites come in the dead-still moments",
         "Setting the hook too gently on a soft-plastic bite; use a firm upward sweep, not a light twitch"
       ],
-      "confidenceTip": "There's no way to fish this wrong at a slow pace — if you're moving it slower than feels natural, you're probably doing it right."
+      "confidenceTip": "There's no way to fish this wrong at a slow pace. If you're moving it slower than feels natural, you're probably doing it right."
     },
     "specs": {
       "length": "6 in",
@@ -221,14 +221,14 @@ export const PRODUCTS: Product[] = [
     "price": 4.25,
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks",
-    "metaTitle": "Baithooks — Ketto Outdoors",
+    "metaTitle": "Baithooks | Ketto Outdoors",
     "metaDescription": "A basic assortment of sized hooks for rigging soft plastics and live bait. $4.25.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
-    "targetSpecies": "Any species — pick a size to match your bait",
+    "targetSpecies": "Any species. Pick a size to match your bait",
     "shortDescription": "A basic assortment of sized hooks for rigging soft plastics and live bait. Start here if you need hooks for the Driftworm.",
     "longDescription": "Rigging soft plastics like the Driftworm, or tipping with live bait.",
     "guide": {
@@ -248,20 +248,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Or rig it exposed (live bait)",
-          "detail": "For live or cut bait, thread the hook straight through so the point rides free — that's what gets a solid hookset on a soft bite."
+          "detail": "For live or cut bait, thread the hook straight through so the point rides free. That's what gets a solid hookset on a soft bite."
         },
         {
           "title": "Check it after every fish or snag",
-          "detail": "A hook point dulls fast against rock and teeth. Drag the point across your thumbnail — if it doesn’t catch, it’s time to retie on a fresh one."
+          "detail": "A hook point dulls fast against rock and teeth. Drag the point across your thumbnail. If it doesn’t catch, it’s time to retie on a fresh one."
         }
       ],
-      "biteFeel": "Depends entirely on what you rig it with — but a sharp hook is what turns a mushy tap into a solid hookset either way.",
+      "biteFeel": "Depends entirely on what you rig it with, but a sharp hook is what turns a mushy tap into a solid hookset either way.",
       "commonMistakes": [
         "Using a hook too big for the bait, which kills its natural action",
         "Rigging a soft plastic crooked, which makes it spin and look unnatural in the water",
         "Fishing a dulled-out hook after it’s bounced off a few rocks"
       ],
-      "confidenceTip": "Hooks are the one piece of gear that's genuinely hard to mess up — match the size to your bait and you're set."
+      "confidenceTip": "Hooks are the one piece of gear that's genuinely hard to mess up. Match the size to your bait and you're set."
     },
     "specs": {
       "sizes": "#6 - 4/0",
@@ -306,7 +306,7 @@ export const PRODUCTS: Product[] = [
     "price": 11,
     "category": "Spinnerbait",
     "kicker": "Spinnerbait",
-    "metaTitle": "Longshot — Ketto Outdoors",
+    "metaTitle": "Longshot | Ketto Outdoors",
     "metaDescription": "A long-casting spoon built to cover open water fast.",
     "difficulty": {
       "label": "Beginner",
@@ -314,7 +314,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & pike",
-    "shortDescription": "Tandem willow blades flash and vibrate so fish can find it even when they can't see far. Reel it steady, no technique needed — good for murky or cloudy water.",
+    "shortDescription": "Tandem willow blades flash and vibrate so fish can find it even when they can't see far. Reel it steady, no technique needed. Good for murky or cloudy water.",
     "longDescription": "Stained or muddy water, low light, and covering water fast to find active fish.",
     "guide": {
       "gearNeeded": [
@@ -325,11 +325,11 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast past the target",
-          "detail": "Cast beyond where you think fish are holding — this bait shines in open water and along stained-water edges where fish are hunting by feel and vibration."
+          "detail": "Cast beyond where you think fish are holding. This bait shines in open water and along stained-water edges where fish are hunting by feel and vibration."
         },
         {
           "title": "Close the bail and reel immediately",
-          "detail": "Start reeling the moment it hits the water at a steady, moderate pace — the spinning blades do all the work, no rod action needed."
+          "detail": "Start reeling the moment it hits the water at a steady, moderate pace. The spinning blades do all the work, no rod action needed."
         },
         {
           "title": "Keep it steady",
@@ -341,16 +341,16 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Set the hook on the pull",
-          "detail": "A bite feels like a solid thump or the line going heavy — reel down to remove slack and sweep the rod up firmly."
+          "detail": "A bite feels like a solid thump or the line going heavy. Reel down to remove slack and sweep the rod up firmly."
         }
       ],
       "biteFeel": "A sharp thump or sudden heaviness, sometimes preceded by the blade vibration stopping for a split second as a fish grabs it.",
       "commonMistakes": [
         "Reeling too fast and burning it through the strike zone",
-        "Fishing it on clear, calm days when a subtler bait would work better — this one shines in murky or low-light conditions",
+        "Fishing it on clear, calm days when a subtler bait would work better. This one shines in murky or low-light conditions",
         "Setting the hook too hard on light spinning tackle"
       ],
-      "confidenceTip": "No technique required here — if you can turn a reel handle at a steady pace, you can fish this correctly."
+      "confidenceTip": "No technique required here. If you can turn a reel handle at a steady pace, you can fish this correctly."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -391,7 +391,7 @@ export const PRODUCTS: Product[] = [
     "price": 12.75,
     "category": "Topwater (Popper)",
     "kicker": "Topwater",
-    "metaTitle": "Chugger — Ketto Outdoors",
+    "metaTitle": "Chugger | Ketto Outdoors",
     "metaDescription": "A topwater popper that chugs and spits on the pause.",
     "difficulty": {
       "label": "Intermediate",
@@ -410,11 +410,11 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Fish it early or late",
-          "detail": "Topwater bites best in low light — dawn, dusk, or overcast days — when fish are looking up toward the surface."
+          "detail": "Topwater bites best in low light, dawn, dusk, or overcast days, when fish are looking up toward the surface."
         },
         {
           "title": "Cast past cover and let it sit",
-          "detail": "Cast near a target and let the ripples fully die out before your first twitch — a fish is often already looking at it."
+          "detail": "Cast near a target and let the ripples fully die out before your first twitch. A fish is often already looking at it."
         },
         {
           "title": "Twitch, don’t reel",
@@ -422,20 +422,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Find the rhythm",
-          "detail": "Vary the pause length between casts until you get a reaction — some days fish want a fast walk, other days a long pause between pops."
+          "detail": "Vary the pause length between casts until you get a reaction. Some days fish want a fast walk, other days a long pause between pops."
         },
         {
           "title": "Wait a beat before setting the hook",
-          "detail": "When a fish blows up on it, resist the instinct to set immediately — pause half a second to feel the weight of the fish, then sweep the rod up."
+          "detail": "When a fish blows up on it, resist the instinct to set immediately, pause half a second to feel the weight of the fish, then sweep the rod up."
         }
       ],
-      "biteFeel": "Impossible to miss — a visible surface explosion, often before you feel anything through the rod.",
+      "biteFeel": "Impossible to miss. A visible surface explosion, often before you feel anything through the rod.",
       "commonMistakes": [
         "Setting the hook the instant you see the splash instead of feeling the weight first, which pulls it away from the fish",
         "Fishing it in bright midday sun when fish aren't looking up",
         "Reeling it steadily instead of twitch-pausing it"
       ],
-      "confidenceTip": "The takedown is the whole appeal — even if you miss a few at first, watching a fish blow up on the surface is what hooks most anglers on topwater for life."
+      "confidenceTip": "The takedown is the whole appeal, even if you miss a few at first, watching a fish blow up on the surface is what hooks most anglers on topwater for life."
     },
     "specs": {
       "weight": "1/2 oz",
@@ -476,7 +476,7 @@ export const PRODUCTS: Product[] = [
     "price": 13.25,
     "category": "Jerkbait",
     "kicker": "Jerkbait",
-    "metaTitle": "Ripple — Ketto Outdoors",
+    "metaTitle": "Ripple | Ketto Outdoors",
     "metaDescription": "A paddle-tail swimbait for a steady, thumping retrieve.",
     "difficulty": {
       "label": "Intermediate",
@@ -506,20 +506,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Resist reeling during the pause",
-          "detail": "The suspending action means it stays right at that depth without sinking or rising — this dead-still pause is what triggers a following fish."
+          "detail": "The suspending action means it stays right at that depth without sinking or rising. This dead-still pause is what triggers a following fish."
         },
         {
           "title": "Watch your line, not just your rod",
           "detail": "Most bites happen on the pause and show up as your line twitching or moving sideways rather than a felt tug."
         }
       ],
-      "biteFeel": "Often more visual than physical at first — watch for the line twitching during the pause, then feel a solid weight when you reel down.",
+      "biteFeel": "Often more visual than physical at first. Watch for the line twitching during the pause, then feel a solid weight when you reel down.",
       "commonMistakes": [
         "Fishing it with a fast, continuous retrieve instead of twitch-pause",
         "Pausing for only a second when 3-5 seconds is what triggers a following, hesitant fish",
         "Using heavy, visible line in the clear water this bait is made for"
       ],
-      "confidenceTip": "The pause feels unnaturally long the first few times — trust it. That stillness is exactly what separates this bait from a fast-moving crankbait on tough, cold days."
+      "confidenceTip": "The pause feels unnaturally long the first few times, trust it. That stillness is exactly what separates this bait from a fast-moving crankbait on tough, cold days."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -560,7 +560,7 @@ export const PRODUCTS: Product[] = [
     "price": 5.75,
     "category": "Jig",
     "kicker": "Jig",
-    "metaTitle": "Bottomjig — Ketto Outdoors",
+    "metaTitle": "Bottomjig | Ketto Outdoors",
     "metaDescription": "Feel for the bottom and hop it back. $5.75.",
     "difficulty": {
       "label": "Intermediate",
@@ -568,7 +568,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & walleye",
-    "shortDescription": "Feel for the bottom and hop it back. Versatile and bottom-hugging — takes a little practice to read the bites.",
+    "shortDescription": "Feel for the bottom and hop it back. Versatile and bottom-hugging, takes a little practice to read the bites.",
     "longDescription": "Rocky bottoms and drop-offs where fish sit low and hug structure.",
     "guide": {
       "gearNeeded": [
@@ -579,32 +579,32 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Add a trailer",
-          "detail": "Thread a soft plastic — the Crawdaddy is a natural match — onto the jighead before casting."
+          "detail": "Thread a soft plastic, the Crawdaddy is a natural match, onto the jighead before casting."
         },
         {
           "title": "Cast and let it sink fully",
-          "detail": "Cast past your target and let it sink all the way to the bottom on a slack line. Count the seconds it takes to feel the line stop — that tells you the depth."
+          "detail": "Cast past your target and let it sink all the way to the bottom on a slack line. Count the seconds it takes to feel the line stop. That tells you the depth."
         },
         {
           "title": "Hop it in short lifts",
-          "detail": "Lift the rod tip 6-12 inches to hop the jig off bottom, then let it fall back on a controlled line — don’t just reel, actually lift with the rod."
+          "detail": "Lift the rod tip 6-12 inches to hop the jig off bottom, then let it fall back on a controlled line. Don’t just reel, actually lift with the rod."
         },
         {
           "title": "Follow it down",
-          "detail": "Reel up slack as it falls so you stay in contact, but don’t pull it — most bites come as it’s sinking back to bottom."
+          "detail": "Reel up slack as it falls so you stay in contact, but don’t pull it. Most bites come as it’s sinking back to bottom."
         },
         {
           "title": "Learn to read the tap",
-          "detail": "A bite often just feels like extra weight or a light tap when the jig should be falling freely — if it feels different than the last hop, set the hook."
+          "detail": "A bite often just feels like extra weight or a light tap when the jig should be falling freely. If it feels different than the last hop, set the hook."
         }
       ],
-      "biteFeel": "A light tap, a \"mushy\" extra weight on the fall, or your line simply not falling as far as it should — subtle and easy to miss at first.",
+      "biteFeel": "A light tap, a \"mushy\" extra weight on the fall, or your line simply not falling as far as it should. Subtle and easy to miss at first.",
       "commonMistakes": [
         "Reeling instead of hopping with the rod tip, which drags the jig instead of bouncing it naturally",
         "Not staying in contact with slack line on the fall, missing the tap",
-        "Setting the hook on every bump of rock or wood instead of learning the difference — it takes a few trips to tell them apart"
+        "Setting the hook on every bump of rock or wood instead of learning the difference. It takes a few trips to tell them apart"
       ],
-      "confidenceTip": "Reading bottom bites is a real skill that takes a few trips to click — don't get discouraged if the first outing is mostly rocks and snags. It gets obvious fast once you feel a real one."
+      "confidenceTip": "Reading bottom bites is a real skill that takes a few trips to click. Don't get discouraged if the first outing is mostly rocks and snags. It gets obvious fast once you feel a real one."
     },
     "specs": {
       "weight": "1/4 oz jighead",
@@ -644,7 +644,7 @@ export const PRODUCTS: Product[] = [
     "price": 12,
     "category": "Topwater (Buzzbait)",
     "kicker": "Buzzbait",
-    "metaTitle": "Buzzrunner — Ketto Outdoors",
+    "metaTitle": "Buzzrunner | Ketto Outdoors",
     "metaDescription": "A topwater buzzbait for explosive surface strikes.",
     "difficulty": {
       "label": "Intermediate",
@@ -652,43 +652,43 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & pike",
-    "shortDescription": "Loud surface commotion that draws explosive strikes. Reel fast enough to keep it churning — takes a bit of practice to find the pace.",
+    "shortDescription": "Loud surface commotion that draws explosive strikes. Reel fast enough to keep it churning, takes a bit of practice to find the pace.",
     "longDescription": "Low light, aggressive fish, and open surface water near cover.",
     "guide": {
       "gearNeeded": [
         "Baitcasting rod & reel (helps keep it on top immediately)",
         "14-20 lb line",
-        "Low light — dawn, dusk, or overcast"
+        "Low light, dawn, dusk, or overcast"
       ],
       "steps": [
         {
           "title": "Cast past your target",
-          "detail": "Cast beyond cover — docks, weed edges, laydowns — where aggressive fish are likely holding near the surface."
+          "detail": "Cast beyond cover, docks, weed edges, laydowns, where aggressive fish are likely holding near the surface."
         },
         {
           "title": "Start reeling the instant it lands",
-          "detail": "Close the bail and begin reeling immediately and fast enough that the blade stays churning on top — if it starts to sink, speed up."
+          "detail": "Close the bail and begin reeling immediately and fast enough that the blade stays churning on top. If it starts to sink, speed up."
         },
         {
           "title": "Keep a constant, brisk pace",
-          "detail": "Don't slow down or pause — a buzzbait is a reaction bait, and a steady disturbance is what draws a reaction strike."
+          "detail": "Don't slow down or pause. A buzzbait is a reaction bait, and a steady disturbance is what draws a reaction strike."
         },
         {
           "title": "Brace for a blow-up",
-          "detail": "Strikes are often violent and close to the boat or bank — keep a firm grip and be ready."
+          "detail": "Strikes are often violent and close to the boat or bank. Keep a firm grip and be ready."
         },
         {
           "title": "Set the hook on the pull, not the splash",
-          "detail": "Like other topwaters, wait to feel weight before setting — a premature hookset often pulls it away from the fish."
+          "detail": "Like other topwaters, wait to feel weight before setting. A premature hookset often pulls it away from the fish."
         }
       ],
-      "biteFeel": "A loud surface explosion and then a hard, immediate pull — one of the most obvious strikes in fishing.",
+      "biteFeel": "A loud surface explosion and then a hard, immediate pull. One of the most obvious strikes in fishing.",
       "commonMistakes": [
         "Reeling too slowly and letting the blade sink, which kills the whole presentation",
         "Setting the hook on the splash instead of the felt weight",
         "Fishing it in calm, clear, bright conditions where a subtler bait usually out-fishes it"
       ],
-      "confidenceTip": "Finding the right reel speed takes one or two casts, not a whole trip — as soon as you feel the blade staying up and churning, you've got it."
+      "confidenceTip": "Finding the right reel speed takes one or two casts, not a whole trip, as soon as you feel the blade staying up and churning, you've got it."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -729,7 +729,7 @@ export const PRODUCTS: Product[] = [
     "price": 9.5,
     "category": "Swimbait",
     "kicker": "Swimbait",
-    "metaTitle": "Swimshad — Ketto Outdoors",
+    "metaTitle": "Swimshad | Ketto Outdoors",
     "metaDescription": "A swimbait built to imitate baitfish at any retrieve speed.",
     "difficulty": {
       "label": "Beginner",
@@ -737,7 +737,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & striped bass",
-    "shortDescription": "Realistic, steady swimming action. Cast and reel at a steady pace — its paddle tail does the swimming for you.",
+    "shortDescription": "Realistic, steady swimming action. Cast and reel at a steady pace. Its paddle tail does the swimming for you.",
     "longDescription": "Open water and imitating baitfish at a natural, steady pace.",
     "guide": {
       "gearNeeded": [
@@ -751,7 +751,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel at a steady, moderate pace",
-          "detail": "Close the bail and reel immediately at a consistent, unhurried speed — no twitching or pausing needed."
+          "detail": "Close the bail and reel immediately at a consistent, unhurried speed. No twitching or pausing needed."
         },
         {
           "title": "Let the tail do the work",
@@ -759,20 +759,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Vary depth by reel speed",
-          "detail": "Reel faster to keep it higher in the water column, slower to let it swim deeper — small speed changes are all it takes to find where fish are holding."
+          "detail": "Reel faster to keep it higher in the water column, slower to let it swim deeper. Small speed changes are all it takes to find where fish are holding."
         },
         {
           "title": "Set the hook on solid contact",
-          "detail": "A bite feels like a firm, sustained pull rather than a tap — reel down and sweep the rod up when you feel it."
+          "detail": "A bite feels like a firm, sustained pull rather than a tap. Reel down and sweep the rod up when you feel it."
         }
       ],
-      "biteFeel": "A firm, steady pull that interrupts the wobble of the tail — feels more like a solid grab than a light tap.",
+      "biteFeel": "A firm, steady pull that interrupts the wobble of the tail, feels more like a solid grab than a light tap.",
       "commonMistakes": [
-        "Adding unnecessary twitches — a steady retrieve is what sells the swimming action",
+        "Adding unnecessary twitches. A steady retrieve is what sells the swimming action",
         "Fishing it too shallow or too deep for the water you're in without adjusting reel speed",
         "Retrieving too fast, which can make the tail spin instead of kick"
       ],
-      "confidenceTip": "This is close to the simplest retrieve in the lineup — cast it out, reel steady, and let the built-in tail action do the selling."
+      "confidenceTip": "This is close to the simplest retrieve in the lineup. Cast it out, reel steady, and let the built-in tail action do the selling."
     },
     "specs": {
       "length": "4.5 in soft body",
@@ -813,7 +813,7 @@ export const PRODUCTS: Product[] = [
     "price": 10.25,
     "category": "Crankbait (Lipless)",
     "kicker": "Lipless crankbait",
-    "metaTitle": "Ratlin — Ketto Outdoors",
+    "metaTitle": "Ratlin | Ketto Outdoors",
     "metaDescription": "A lipless crankbait with a loud internal rattle. $10.25.",
     "difficulty": {
       "label": "Intermediate",
@@ -831,7 +831,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cast far",
-          "detail": "This is a search bait built to cover open water fast — make long casts to fan out and locate active fish."
+          "detail": "This is a search bait built to cover open water fast. Make long casts to fan out and locate active fish."
         },
         {
           "title": "Let it sink to your target depth",
@@ -839,24 +839,24 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel at a steady, moderate-to-fast pace",
-          "detail": "Close the bail and reel immediately — the internal rattle and tight wobble do the attracting, so a consistent pace is what matters most."
+          "detail": "Close the bail and reel immediately. The internal rattle and tight wobble do the attracting, so a consistent pace is what matters most."
         },
         {
           "title": "Vary retrieve speed to find the depth fish want",
-          "detail": "Reel faster to run it shallower, slower to let it run deeper — change speed between casts until you get bit."
+          "detail": "Reel faster to run it shallower, slower to let it run deeper. Change speed between casts until you get bit."
         },
         {
           "title": "Set the hook on the thump",
-          "detail": "A strike interrupts the steady vibration with a hard, sudden weight — keep reeling and let the rod load up."
+          "detail": "A strike interrupts the steady vibration with a hard, sudden weight. Keep reeling and let the rod load up."
         }
       ],
-      "biteFeel": "A hard, rattling thump that cuts off the bait’s vibration — usually unmistakable.",
+      "biteFeel": "A hard, rattling thump that cuts off the bait’s vibration. Usually unmistakable.",
       "commonMistakes": [
         "Fishing it at one depth all day instead of varying reel speed to search the water column",
         "Casting short instead of using its long-casting design to cover water efficiently",
-        "Setting the hook too softly — a firmer sweep helps drive trebles home on a fast-moving bait"
+        "Setting the hook too softly. A firmer sweep helps drive trebles home on a fast-moving bait"
       ],
-      "confidenceTip": "Its whole job is to help you find fish fast — a handful of long casts at different speeds will usually tell you where they're holding for the day."
+      "confidenceTip": "Its whole job is to help you find fish fast. A handful of long casts at different speeds will usually tell you where they're holding for the day."
     },
     "specs": {
       "weight": "1/2 oz",
@@ -897,7 +897,7 @@ export const PRODUCTS: Product[] = [
     "price": 11.5,
     "category": "Topwater (Frog)",
     "kicker": "Topwater frog",
-    "metaTitle": "Padhopper — Ketto Outdoors",
+    "metaTitle": "Padhopper | Ketto Outdoors",
     "metaDescription": "A weedless frog for skipping across lily pads and slop.",
     "difficulty": {
       "label": "Advanced",
@@ -905,7 +905,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Largemouth bass",
-    "shortDescription": "Weedless and built for heavy cover. Walks over lily pads and slop — takes practice timing the hookset through cover.",
+    "shortDescription": "Weedless and built for heavy cover. Walks over lily pads and slop, takes practice timing the hookset through cover.",
     "longDescription": "Lily pads, mats, and slop where other lures would snag immediately.",
     "guide": {
       "gearNeeded": [
@@ -915,7 +915,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Target heavy cover",
-          "detail": "Cast directly onto lily pads, matted vegetation, or slop where other lures would snag immediately — this frog is built to walk right over it."
+          "detail": "Cast directly onto lily pads, matted vegetation, or slop where other lures would snag immediately. This frog is built to walk right over it."
         },
         {
           "title": "Walk it steadily",
@@ -923,7 +923,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Pause over holes",
-          "detail": "When you reach an opening in the vegetation, let it sit still for a couple seconds before continuing — that pause is often when a strike happens."
+          "detail": "When you reach an opening in the vegetation, let it sit still for a couple seconds before continuing. That pause is often when a strike happens."
         },
         {
           "title": "Wait a full beat after the blow-up",
@@ -940,7 +940,7 @@ export const PRODUCTS: Product[] = [
         "Fishing light line that can't handle pulling a fish out of heavy cover",
         "Working it too fast through gaps instead of pausing to give fish a chance to react"
       ],
-      "confidenceTip": "This one takes practice timing the hookset — expect to miss a few blow-ups before it clicks. Every angler does; it's the price of fishing the thickest cover on the lake."
+      "confidenceTip": "This one takes practice timing the hookset. Expect to miss a few blow-ups before it clicks. Every angler does; it's the price of fishing the thickest cover on the lake."
     },
     "specs": {
       "weight": "1/2 oz",
@@ -981,7 +981,7 @@ export const PRODUCTS: Product[] = [
     "price": 7.25,
     "category": "Spoon",
     "kicker": "Spoon",
-    "metaTitle": "Flutterspoon — Ketto Outdoors",
+    "metaTitle": "Flutterspoon | Ketto Outdoors",
     "metaDescription": "A flutter spoon for vertical jigging and reaction strikes.",
     "difficulty": {
       "label": "Beginner",
@@ -989,7 +989,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Trout, walleye & crappie",
-    "shortDescription": "Simple flash and flutter. Cast, let it sink, reel it back — one simple wobbling flash of metal.",
+    "shortDescription": "Simple flash and flutter. Cast, let it sink, reel it back. One simple wobbling flash of metal.",
     "longDescription": "Deep, clear water and vertical jigging near schools of baitfish.",
     "guide": {
       "gearNeeded": [
@@ -1008,11 +1008,11 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Or lift-and-drop for extra flutter",
-          "detail": "For more action, lift the rod tip sharply and let it flutter back down on a controlled line — most bites hit on the fall."
+          "detail": "For more action, lift the rod tip sharply and let it flutter back down on a controlled line. Most bites hit on the fall."
         },
         {
           "title": "Stay in contact on the fall",
-          "detail": "Reel up slack as it drops so you can feel a bite, but don't pull against it — let it flutter freely."
+          "detail": "Reel up slack as it drops so you can feel a bite, but don't pull against it. Let it flutter freely."
         },
         {
           "title": "Set on any change",
@@ -1025,7 +1025,7 @@ export const PRODUCTS: Product[] = [
         "Reeling too fast and skipping the flutter that makes this bait work",
         "Missing fall bites because of too much slack line"
       ],
-      "confidenceTip": "Cast it, let it sink, reel it back — this is one of the most literal 'point and catch' lures in the lineup once you find the right depth."
+      "confidenceTip": "Cast it, let it sink, reel it back. This is one of the most literal 'point and catch' lures in the lineup once you find the right depth."
     },
     "specs": {
       "weight": "3/4 oz",
@@ -1066,7 +1066,7 @@ export const PRODUCTS: Product[] = [
     "price": 8,
     "category": "Terminal Tackle (Drop-shot Rig)",
     "kicker": "Drop-shot rig",
-    "metaTitle": "Finesse Drop — Ketto Outdoors",
+    "metaTitle": "Finesse Drop | Ketto Outdoors",
     "metaDescription": "A finesse drop-shot rig for finicky, pressured fish.",
     "difficulty": {
       "label": "Advanced",
@@ -1090,28 +1090,28 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Drop straight down",
-          "detail": "Lower it straight down along a dock, ledge, or drop-off until the weight touches bottom — keep the line as vertical as possible."
+          "detail": "Lower it straight down along a dock, ledge, or drop-off until the weight touches bottom. Keep the line as vertical as possible."
         },
         {
           "title": "Keep the weight anchored",
-          "detail": "Hold the rod tip low and let the weight rest on the bottom — it acts as an anchor while the bait hovers just above it."
+          "detail": "Hold the rod tip low and let the weight rest on the bottom. It acts as an anchor while the bait hovers just above it."
         },
         {
           "title": "Shake, don’t reel",
-          "detail": "Gently shake the rod tip in small, quick movements to make the bait quiver in place without moving the weight — this subtle action is the whole technique."
+          "detail": "Gently shake the rod tip in small, quick movements to make the bait quiver in place without moving the weight. This subtle action is the whole technique."
         },
         {
           "title": "Feel for the light tick",
-          "detail": "Bites here are subtle — a light tick or the line going slightly heavy. Reel down to remove slack before setting."
+          "detail": "Bites here are subtle. A light tick or the line going slightly heavy. Reel down to remove slack before setting."
         }
       ],
-      "biteFeel": "Subtle — a light tick, a slight tap, or the line feeling just a little heavier than a moment ago. Pressured fish bite soft.",
+      "biteFeel": "Subtle. A light tick, a slight tap, or the line feeling just a little heavier than a moment ago. Pressured fish bite soft.",
       "commonMistakes": [
         "Shaking too hard, which looks unnatural to wary fish this rig is meant to fool",
         "Losing bottom contact by not keeping the weight anchored",
         "Setting the hook on every twitch of the line instead of learning the specific light tick of a real bite"
       ],
-      "confidenceTip": "This is genuinely the most technical bait in the lineup — expect it to take longer to click than anything else here, and that's completely normal. It rewards patience over power."
+      "confidenceTip": "This is genuinely the most technical bait in the lineup. Expect it to take longer to click than anything else here, and that's completely normal. It rewards patience over power."
     },
     "specs": {
       "includes": "weight + hook",
@@ -1150,8 +1150,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Ribtail",
     "price": 5.25,
     "category": "Soft Plastic (Curl-tail Worm)",
-    "kicker": "Soft plastic — curl-tail worm",
-    "metaTitle": "Ribtail — Ketto Outdoors",
+    "kicker": "Soft plastic: curl-tail worm",
+    "metaTitle": "Ribtail | Ketto Outdoors",
     "metaDescription": "A ribbed soft-plastic worm with extra tail vibration.",
     "difficulty": {
       "label": "Beginner",
@@ -1159,8 +1159,8 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Bass & panfish",
-    "shortDescription": "A curling tail kicks on the fall and the retrieve. Forgiving and versatile — rig it a dozen ways as you learn.",
-    "longDescription": "Nearly any water — a reliable everyday bait once you've picked a rig.",
+    "shortDescription": "A curling tail kicks on the fall and the retrieve. Forgiving and versatile. Rig it a dozen ways as you learn.",
+    "longDescription": "Nearly any water. A reliable everyday bait once you've picked a rig.",
     "guide": {
       "gearNeeded": [
         "Worm hook or light jighead (sold separately)",
@@ -1170,7 +1170,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Pick a rig",
-          "detail": "Rig it weightless on a worm hook for shallow cover, or thread it onto a light jighead to fish it slightly deeper — both are beginner-friendly."
+          "detail": "Rig it weightless on a worm hook for shallow cover, or thread it onto a light jighead to fish it slightly deeper. Both are beginner-friendly."
         },
         {
           "title": "Cast near cover",
@@ -1178,15 +1178,15 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel slow with pauses",
-          "detail": "Reel it back slowly, pausing every few feet to let the curl tail kick and flutter on its own — the tail does most of the work."
+          "detail": "Reel it back slowly, pausing every few feet to let the curl tail kick and flutter on its own. The tail does most of the work."
         },
         {
           "title": "Watch the fall",
-          "detail": "This bait also draws strikes just sinking — watch your line on the initial drop and after every pause."
+          "detail": "This bait also draws strikes just sinking. Watch your line on the initial drop and after every pause."
         },
         {
           "title": "Set with a firm sweep",
-          "detail": "Soft plastic bites can feel mushy — set the hook with a confident upward sweep rather than a light twitch."
+          "detail": "Soft plastic bites can feel mushy. Set the hook with a confident upward sweep rather than a light twitch."
         }
       ],
       "biteFeel": "A soft tap or the line moving off to the side, often during a pause rather than the retrieve itself.",
@@ -1195,7 +1195,7 @@ export const PRODUCTS: Product[] = [
         "Skipping the pauses, which is when most bites happen",
         "Under-setting the hook on a soft, subtle bite"
       ],
-      "confidenceTip": "This bait forgives almost any rig or retrieve mistake — slow it down and it will still catch fish even on an imperfect presentation."
+      "confidenceTip": "This bait forgives almost any rig or retrieve mistake. Slow it down and it will still catch fish even on an imperfect presentation."
     },
     "specs": {
       "length": "6 in soft plastic",
@@ -1234,8 +1234,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Crawdaddy",
     "price": 6.75,
     "category": "Soft Plastic (Creature Bait)",
-    "kicker": "Soft plastic — creature bait",
-    "metaTitle": "Crawdaddy — Ketto Outdoors",
+    "kicker": "Soft plastic: creature bait",
+    "metaTitle": "Crawdaddy | Ketto Outdoors",
     "metaDescription": "A crawfish-imitating lure for bottom-hugging bites.",
     "difficulty": {
       "label": "Intermediate",
@@ -1254,11 +1254,11 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Pair it with a jighead",
-          "detail": "Thread it onto a jighead — the Bottomjig is a natural match — with the claws facing up for the most natural fall."
+          "detail": "Thread it onto a jighead, the Bottomjig is a natural match, with the claws facing up for the most natural fall."
         },
         {
           "title": "Cast to rock or gravel bottom",
-          "detail": "Target rocky or gravel-bottom areas where real crawfish live — that's where this bait earns its keep."
+          "detail": "Target rocky or gravel-bottom areas where real crawfish live. That's where this bait earns its keep."
         },
         {
           "title": "Let it sink fully",
@@ -1266,20 +1266,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Hop it slowly along bottom",
-          "detail": "Lift the rod tip a few inches to hop it, then let it settle back — the claws flap open on the fall, imitating a fleeing crawfish."
+          "detail": "Lift the rod tip a few inches to hop it, then let it settle back. The claws flap open on the fall, imitating a fleeing crawfish."
         },
         {
           "title": "Feel for the heavy tap",
-          "detail": "Bites often feel like a distinct, heavier tap than a rock bump — if in doubt, reel down and set."
+          "detail": "Bites often feel like a distinct, heavier tap than a rock bump. If in doubt, reel down and set."
         }
       ],
-      "biteFeel": "A heavy, deliberate tap — noticeably different from the light click of bouncing off a rock once you’ve felt both a few times.",
+      "biteFeel": "A heavy, deliberate tap, noticeably different from the light click of bouncing off a rock once you’ve felt both a few times.",
       "commonMistakes": [
         "Fishing it over sand or mud instead of the rock/gravel bottom it's designed to imitate",
         "Hopping it too high or too far, which looks unnatural for a bottom-dwelling bait",
         "Setting the hook on every rock tap instead of learning to tell the difference"
       ],
-      "confidenceTip": "Pair it with the Bottomjig and fish rocky bottom — that combination alone does most of the work for you."
+      "confidenceTip": "Pair it with the Bottomjig and fish rocky bottom. That combination alone does most of the work for you."
     },
     "specs": {
       "length": "4 in soft plastic",
@@ -1318,8 +1318,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Flukeshad",
     "price": 5.95,
     "category": "Soft Plastic (Weightless Jerkbait)",
-    "kicker": "Soft plastic — weightless jerkbait",
-    "metaTitle": "Flukeshad — Ketto Outdoors",
+    "kicker": "Soft plastic: weightless jerkbait",
+    "metaTitle": "Flukeshad | Ketto Outdoors",
     "metaDescription": "A soft-plastic fluke for a darting, baitfish-like action.",
     "difficulty": {
       "label": "Beginner",
@@ -1342,7 +1342,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Cast tight to cover",
-          "detail": "Cast right up against docks, weed edges, and laydowns — being weightless and weedless means you can fish spots other baits would snag."
+          "detail": "Cast right up against docks, weed edges, and laydowns, being weightless and weedless means you can fish spots other baits would snag."
         },
         {
           "title": "Twitch and pause",
@@ -1350,20 +1350,20 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Let it flutter down on the pause",
-          "detail": "Being weightless, it sinks very slowly during the pause — that slow flutter is often exactly what triggers a strike."
+          "detail": "Being weightless, it sinks very slowly during the pause. That slow flutter is often exactly what triggers a strike."
         },
         {
           "title": "Set on the pull",
-          "detail": "A bite usually feels like sudden resistance or the line coming tight — reel down and sweep the rod up."
+          "detail": "A bite usually feels like sudden resistance or the line coming tight. Reel down and sweep the rod up."
         }
       ],
       "biteFeel": "Sudden resistance or the line coming tight, sometimes with a visible swirl near the surface first.",
       "commonMistakes": [
         "Reeling it steadily instead of twitch-pausing, which loses the darting action",
-        "Fishing it too far from cover — it's built to be worked tight to docks and weed lines",
+        "Fishing it too far from cover. It's built to be worked tight to docks and weed lines",
         "Setting the hook too early before the fish has it fully"
       ],
-      "confidenceTip": "Being weedless means you can cast into spots that would snag almost anything else — don't be afraid to put it right on top of the cover."
+      "confidenceTip": "Being weedless means you can cast into spots that would snag almost anything else. Don't be afraid to put it right on top of the cover."
     },
     "specs": {
       "length": "5 in soft plastic",
@@ -1402,8 +1402,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Tubehead",
     "price": 4.95,
     "category": "Soft Plastic (Tube Bait)",
-    "kicker": "Soft plastic — tube bait",
-    "metaTitle": "Tubehead — Ketto Outdoors",
+    "kicker": "Soft plastic: tube bait",
+    "metaTitle": "Tubehead | Ketto Outdoors",
     "metaDescription": "A tube jig for finesse presentations around structure.",
     "difficulty": {
       "label": "Intermediate",
@@ -1411,7 +1411,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Smallmouth bass & walleye",
-    "shortDescription": "Its tentacle skirt flares on the fall and pause — a classic bottom bait for rocky structure.",
+    "shortDescription": "Its tentacle skirt flares on the fall and pause. A classic bottom bait for rocky structure.",
     "longDescription": "Rock piles, riprap, and bottom structure where fish tuck in tight.",
     "guide": {
       "gearNeeded": [
@@ -1430,15 +1430,15 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Let it sink to bottom",
-          "detail": "Let it fall on a slack line all the way down — most strikes happen on this initial fall, so pay attention right away."
+          "detail": "Let it fall on a slack line all the way down. Most strikes happen on this initial fall, so pay attention right away."
         },
         {
           "title": "Hop it slowly",
-          "detail": "Once on bottom, hop it gently a few inches at a time — the tentacle skirt flares open on every pause, which is what triggers bites."
+          "detail": "Once on bottom, hop it gently a few inches at a time. The tentacle skirt flares open on every pause, which is what triggers bites."
         },
         {
           "title": "Set on the tick",
-          "detail": "Bites are often a light tick during the fall or a hop — reel down to remove slack before setting."
+          "detail": "Bites are often a light tick during the fall or a hop. Reel down to remove slack before setting."
         }
       ],
       "biteFeel": "A light tick, frequently right as it's sinking rather than while sitting still on bottom.",
@@ -1487,7 +1487,7 @@ export const PRODUCTS: Product[] = [
     "price": 5.5,
     "category": "Jig",
     "kicker": "Jig",
-    "metaTitle": "Flipping Jig — Ketto Outdoors",
+    "metaTitle": "Flipping Jig | Ketto Outdoors",
     "metaDescription": "The jig you tie on when you don't know what else to throw. 3/8 oz, painted head, 3/0 hook.",
     "difficulty": {
       "label": "Intermediate",
@@ -1505,11 +1505,11 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Add a trailer",
-          "detail": "Thread a soft plastic craw or creature bait onto the hook for extra bulk and action — the jig alone works, but a trailer usually outfishes it."
+          "detail": "Thread a soft plastic craw or creature bait onto the hook for extra bulk and action. The jig alone works, but a trailer usually outfishes it."
         },
         {
           "title": "Flip or pitch it into cover",
-          "detail": "Underhand-flip it tight against docks, laydowns, or weed edges rather than casting overhand — accuracy matters more than distance here."
+          "detail": "Underhand-flip it tight against docks, laydowns, or weed edges rather than casting overhand, accuracy matters more than distance here."
         },
         {
           "title": "Let it fall on a controlled line",
@@ -1528,7 +1528,7 @@ export const PRODUCTS: Product[] = [
       "commonMistakes": [
         "Casting it into open water instead of flipping it tight to cover, where it earns its keep",
         "Losing contact with the line on the fall and missing the bite entirely",
-        "Setting the hook too softly — this hook can take a firm sweep"
+        "Setting the hook too softly. This hook can take a firm sweep"
       ],
       "confidenceTip": "When nothing else in the box is working, this is the one to tie back on. It's built to be the default, not the specialist."
     },
@@ -1572,15 +1572,15 @@ export const PRODUCTS: Product[] = [
     "price": 8.5,
     "category": "Crankbait",
     "kicker": "Crankbait",
-    "metaTitle": "Medium Crankbait — Ketto Outdoors",
-    "metaDescription": "A medium-diving crankbait with an internal rattle. Cast it, reel it back steady — the bait does the rest.",
+    "metaTitle": "Medium Crankbait | Ketto Outdoors",
+    "metaDescription": "A medium-diving crankbait with an internal rattle. Cast it, reel it back steady. The bait does the rest.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
       "outOf": 10
     },
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "Cast it out and reel it back steady — the internal rattle and wobble do the work of getting a bass’s attention for you.",
+    "shortDescription": "Cast it out and reel it back steady. The internal rattle and wobble do the work of getting a bass’s attention for you.",
     "longDescription": "A medium-diving body, 66mm / 14g with roughly 100mm total length including the hook, built to run a consistent depth on a steady retrieve with a rattle that carries in stained water.",
     "guide": {
       "gearNeeded": [
@@ -1594,7 +1594,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel at a steady pace",
-          "detail": "Close the bail and reel immediately at a consistent, moderate speed — no pausing."
+          "detail": "Close the bail and reel immediately at a consistent, moderate speed. No pausing."
         },
         {
           "title": "Feel for the wobble",
@@ -1602,13 +1602,13 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Let it bump cover",
-          "detail": "A deflection off rock or wood reads as a direction change, not a snag — keep reeling through it."
+          "detail": "A deflection off rock or wood reads as a direction change, not a snag. Keep reeling through it."
         }
       ],
       "biteFeel": "A hard, sudden weight that interrupts the steady thump of the retrieve.",
       "commonMistakes": [
         "Reeling too slowly, which lets it dig into the bottom instead of deflecting off cover",
-        "Stopping the retrieve mid-cast — a steady pace is what makes it forgiving"
+        "Stopping the retrieve mid-cast. A steady pace is what makes it forgiving"
       ],
       "confidenceTip": "Cast, reel steady, repeat. This is one of the simplest lures in the kit to fish correctly on the very first cast."
     },
@@ -1651,8 +1651,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Wacky Worm",
     "price": 6.25,
     "category": "Soft Plastic (Wacky Worm)",
-    "kicker": "Soft plastic — wacky-rigged worm",
-    "metaTitle": "Wacky Worm — Ketto Outdoors",
+    "kicker": "Soft plastic: wacky-rigged worm",
+    "metaTitle": "Wacky Worm | Ketto Outdoors",
     "metaDescription": "Rig it through the middle, cast it, let it sink and shimmy. About as close to a sure thing as soft plastics get.",
     "difficulty": {
       "label": "Beginner",
@@ -1661,7 +1661,7 @@ export const PRODUCTS: Product[] = [
     },
     "targetSpecies": "Bass & panfish",
     "shortDescription": "Rig it, cast it, let it sink and shimmy on a slack line. About as close to a sure thing as soft plastics get.",
-    "longDescription": "13.5cm / 5in, 7.5g, in green pumpkin and watermelon, hooked through the middle so both ends flutter on the fall — the \"wacky rig\" is one of the easiest presentations in fishing to get right on the first try.",
+    "longDescription": "13.5cm / 5in, 7.5g, in green pumpkin and watermelon, hooked through the middle so both ends flutter on the fall. The \"wacky rig\" is one of the easiest presentations in fishing to get right on the first try.",
     "guide": {
       "gearNeeded": [
         "1/0 wacky hook + O-ring (included)",
@@ -1679,7 +1679,7 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Watch it fall",
-          "detail": "Both ends of the worm flutter independently as it sinks — most bites happen right here, before you do anything."
+          "detail": "Both ends of the worm flutter independently as it sinks. Most bites happen right here, before you do anything."
         },
         {
           "title": "Twitch and pause",
@@ -1689,7 +1689,7 @@ export const PRODUCTS: Product[] = [
       "biteFeel": "The line jumping sideways or going slack unexpectedly during the fall, or a soft tap once it settles.",
       "commonMistakes": [
         "Skipping the O-ring, which tears the worm in half on the first cast",
-        "Not pausing long enough — the fall is doing most of the work here"
+        "Not pausing long enough. The fall is doing most of the work here"
       ],
       "confidenceTip": "If you only fish one soft plastic all day, this is the one that's hardest to fish wrong."
     },
@@ -1727,7 +1727,7 @@ export const PRODUCTS: Product[] = [
     "price": 7.75,
     "category": "Bladed Jig",
     "kicker": "Chatterbait / bladed jig",
-    "metaTitle": "Chatterbait — Ketto Outdoors",
+    "metaTitle": "Chatterbait | Ketto Outdoors",
     "metaDescription": "Vibrates as you reel, so fish can find it even when the water is stained or cloudy. 3/8 oz.",
     "difficulty": {
       "label": "Intermediate",
@@ -1736,7 +1736,7 @@ export const PRODUCTS: Product[] = [
     },
     "targetSpecies": "Largemouth bass",
     "shortDescription": "Vibrates as you reel, which means fish can find it even when the water’s stained or cloudy.",
-    "longDescription": "3/8 oz in green pumpkin and chartreuse/white — a small metal blade on the nose makes the whole bait shimmy and thump at any steady retrieve speed, covering the gap between a jig and a spinnerbait.",
+    "longDescription": "3/8 oz in green pumpkin and chartreuse/white. A small metal blade on the nose makes the whole bait shimmy and thump at any steady retrieve speed, covering the gap between a jig and a spinnerbait.",
     "guide": {
       "gearNeeded": [
         "Soft plastic trailer (a paddle tail or craw works well)",
@@ -1754,19 +1754,19 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Reel at a steady pace",
-          "detail": "Close the bail and reel immediately at a consistent speed — the blade does the vibrating on its own."
+          "detail": "Close the bail and reel immediately at a consistent speed. The blade does the vibrating on its own."
         },
         {
           "title": "Slow down through grass",
           "detail": "If it's dragging through vegetation, slow down slightly to keep it from fouling on weeds."
         }
       ],
-      "biteFeel": "A hard, thumping strike that cuts the bait’s vibration off mid-retrieve — usually unmistakable.",
+      "biteFeel": "A hard, thumping strike that cuts the bait’s vibration off mid-retrieve. Usually unmistakable.",
       "commonMistakes": [
         "Reeling too fast through heavy grass, which fouls the blade with weeds",
         "Fishing it on gin-clear water where a more subtle bait usually works better"
       ],
-      "confidenceTip": "Cast it, reel steady, and trust the blade to do the attracting — no twitching or special technique required."
+      "confidenceTip": "Cast it, reel steady, and trust the blade to do the attracting. No twitching or special technique required."
     },
     "specs": {
       "weight": "3/8 oz",
@@ -1801,8 +1801,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Urchin Finesse Bait",
     "price": 4.95,
     "category": "Soft Plastic (Finesse)",
-    "kicker": "Soft plastic — finesse",
-    "metaTitle": "Urchin Finesse Bait — Ketto Outdoors",
+    "kicker": "Soft plastic: finesse",
+    "metaTitle": "Urchin Finesse Bait | Ketto Outdoors",
     "metaDescription": "A small, subtle finesse bait for the days nothing else gets bit. 17mm, nail/push weighted.",
     "difficulty": {
       "label": "Advanced",
@@ -1810,7 +1810,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Largemouth & smallmouth bass",
-    "shortDescription": "A finesse option for the days the rest of the box doesn’t get bit — small, subtle, and easy to drop right next to cover.",
+    "shortDescription": "A finesse option for the days the rest of the box doesn’t get bit. Small, subtle, and easy to drop right next to cover.",
     "longDescription": "17mm, in green pumpkin, watermelon seed, and chartreuse, rigged with a 1/16 oz or 3/32 oz nail/push weight for a slow, subtle fall right next to cover where bigger baits spook wary fish.",
     "guide": {
       "gearNeeded": [
@@ -1820,7 +1820,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Insert the weight",
-          "detail": "Push the nail/push weight into the nose of the bait — 1/16 oz for a slower fall, 3/32 oz to get down faster."
+          "detail": "Push the nail/push weight into the nose of the bait, 1/16 oz for a slower fall, 3/32 oz to get down faster."
         },
         {
           "title": "Rig it weedless",
@@ -1832,15 +1832,15 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Shake it in place",
-          "detail": "Let it settle, then shake the rod tip gently without moving it far — this is a finesse bait, not a search bait."
+          "detail": "Let it settle, then shake the rod tip gently without moving it far. This is a finesse bait, not a search bait."
         }
       ],
-      "biteFeel": "Subtle — a light tick or the line feeling slightly heavier than a moment ago.",
+      "biteFeel": "Subtle. A light tick or the line feeling slightly heavier than a moment ago.",
       "commonMistakes": [
         "Fishing it fast like a search bait instead of slow and subtle right next to cover",
         "Skipping this bait on tough days when it’s exactly the one built for them"
       ],
-      "confidenceTip": "Save this one for when the other seven baits in the kit go quiet — that’s exactly the day it’s built for."
+      "confidenceTip": "Save this one for when the other seven baits in the kit go quiet. That’s exactly the day it’s built for."
     },
     "specs": {
       "size": "17mm",
@@ -1876,29 +1876,29 @@ export const PRODUCTS: Product[] = [
     "price": 4.5,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
-    "metaTitle": "Bulk Sinkers — Ketto Outdoors",
-    "metaDescription": "An assorted 10-pack of basic fishing weights. Nothing fancy — exactly what you need.",
+    "metaTitle": "Bulk Sinkers | Ketto Outdoors",
+    "metaDescription": "An assorted 10-pack of basic fishing weights. Nothing fancy. Exactly what you need.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Basic, boring, and exactly what you need to get a bait down to where the fish actually are.",
-    "longDescription": "An assorted 10-pack of split-shot and slip weights covering the range most freshwater rigs call for — no need to guess which size to grab.",
+    "longDescription": "An assorted 10-pack of split-shot and slip weights covering the range most freshwater rigs call for. No need to guess which size to grab.",
     "guide": {
       "gearNeeded": [],
       "steps": [
         {
           "title": "Match the weight to the rig",
-          "detail": "Use just enough weight to get your bait to depth without killing its natural action — start light and add more only if you need to."
+          "detail": "Use just enough weight to get your bait to depth without killing its natural action. Start light and add more only if you need to."
         },
         {
           "title": "Pinch or thread it on",
           "detail": "Split shot pinches directly onto the line; slip weights thread on above a swivel or bead."
         }
       ],
-      "biteFeel": "Depends entirely on what you rig it with — the weight itself has no feel, it just gets your bait to the fish.",
+      "biteFeel": "Depends entirely on what you rig it with. The weight itself has no feel, it just gets your bait to the fish.",
       "commonMistakes": [
         "Using more weight than the rig actually needs, which makes the bait sink unnaturally fast"
       ],
-      "confidenceTip": "A pack of weights is hard to get wrong — when in doubt, start with the lightest one that still gets your bait down."
+      "confidenceTip": "A pack of weights is hard to get wrong. When in doubt, start with the lightest one that still gets your bait down."
     },
     "specs": {
       "packaging": "assorted, 10-pack"
@@ -1926,7 +1926,7 @@ export const PRODUCTS: Product[] = [
     "price": 4.75,
     "category": "Terminal Tackle (Float)",
     "kicker": "Float",
-    "metaTitle": "Bobbers — Ketto Outdoors",
+    "metaTitle": "Bobbers | Ketto Outdoors",
     "metaDescription": "Round snap-on floats, assorted sizes, 5-pack. The bobber going under is the easiest bite you’ll ever learn to read.",
     "difficulty": {
       "label": "Beginner",
@@ -1934,7 +1934,7 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Panfish & bass",
-    "shortDescription": "The bobber going under is the easiest bite you’ll ever learn to read — no guessing whether that was a fish or the current.",
+    "shortDescription": "The bobber going under is the easiest bite you’ll ever learn to read. No guessing whether that was a fish or the current.",
     "longDescription": "Round snap-on floats in assorted sizes. Clip one onto your line above a hook and weight, and it holds your bait at a set depth while giving you an unmistakable visual signal the moment a fish takes it.",
     "guide": {
       "gearNeeded": [
@@ -1944,7 +1944,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Set your depth",
-          "detail": "Clip the bobber onto your line above the hook — the distance between bobber and hook is roughly how deep your bait will hang."
+          "detail": "Clip the bobber onto your line above the hook. The distance between bobber and hook is roughly how deep your bait will hang."
         },
         {
           "title": "Cast it out",
@@ -1959,12 +1959,12 @@ export const PRODUCTS: Product[] = [
           "detail": "When the bobber dips or slides sideways and stays down, reel down to remove slack and set the hook."
         }
       ],
-      "biteFeel": "Visual, not physical — the bobber twitches, dips, or disappears under the surface.",
+      "biteFeel": "Visual, not physical. The bobber twitches, dips, or disappears under the surface.",
       "commonMistakes": [
         "Setting the hook on every little bobber wiggle instead of waiting for it to actually go under and stay",
         "Using a bobber too big for the bait, which lets fish feel resistance and drop it"
       ],
-      "confidenceTip": "This is the most forgiving way to fish that exists — you genuinely just watch and wait."
+      "confidenceTip": "This is the most forgiving way to fish that exists. You genuinely just watch and wait."
     },
     "specs": {
       "style": "round, snap-on",
@@ -1993,12 +1993,12 @@ export const PRODUCTS: Product[] = [
     "price": 3.95,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
-    "metaTitle": "Split Shot Weights — Ketto Outdoors",
-    "metaDescription": "Reusable split shot weights, assorted sizes, pack of 20 — pinch one on above the hook to sink a bobber rig.",
+    "metaTitle": "Split Shot Weights | Ketto Outdoors",
+    "metaDescription": "Reusable split shot weights, assorted sizes, pack of 20. Pinch one on above the hook to sink a bobber rig.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Pinch one on above the hook so your bait sinks just enough to hang below the bobber instead of floating uselessly on top.",
-    "longDescription": "Reusable, removable split shot in assorted sizes — pinch on with your fingers or pliers, and pinch off again to adjust.",
+    "longDescription": "Reusable, removable split shot in assorted sizes. Pinch on with your fingers or pliers, and pinch off again to adjust.",
     "guide": {
       "gearNeeded": [
         "A bobber rig or any light line rig"
@@ -2006,7 +2006,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Pick a size",
-          "detail": "Start with the smallest shot — just enough to sink the bait without dragging your bobber under."
+          "detail": "Start with the smallest shot. Just enough to sink the bait without dragging your bobber under."
         },
         {
           "title": "Pinch it onto the line",
@@ -2017,11 +2017,11 @@ export const PRODUCTS: Product[] = [
           "detail": "If your bait is floating up too much, add another; if your bobber is sitting too low, remove one."
         }
       ],
-      "biteFeel": "No feel of its own — it just gets your bait to hang at the right depth.",
+      "biteFeel": "No feel of its own. It just gets your bait to hang at the right depth.",
       "commonMistakes": [
         "Using one size for every rig instead of adjusting to how the bobber is sitting"
       ],
-      "confidenceTip": "You can’t really get this wrong — add or remove one until your bobber floats the way you want."
+      "confidenceTip": "You can’t really get this wrong. Add or remove one until your bobber floats the way you want."
     },
     "specs": {
       "style": "reusable, removable",
@@ -2049,9 +2049,9 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Scented Soft Bait",
     "price": 5.25,
     "category": "Soft Plastic (Scented)",
-    "kicker": "Scented bait — no live bait needed",
-    "metaTitle": "Scented Soft Bait — Ketto Outdoors",
-    "metaDescription": "A trout-worm style scented soft bait — works like a real worm without a trip to dig for one.",
+    "kicker": "Scented bait: no live bait needed",
+    "metaTitle": "Scented Soft Bait | Ketto Outdoors",
+    "metaDescription": "A trout-worm style scented soft bait, works like a real worm without a trip to dig for one.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -2059,7 +2059,7 @@ export const PRODUCTS: Product[] = [
     },
     "targetSpecies": "Panfish, trout & bass",
     "shortDescription": "Works like a real worm without a trip to dig for one or a stop at the bait shop. Thread it on and go.",
-    "longDescription": "A pre-scented, trout-worm style soft bait that fish key in on by smell as much as sight — thread it onto a small hook under a bobber, or fish it plain on the bottom.",
+    "longDescription": "A pre-scented, trout-worm style soft bait that fish key in on by smell as much as sight. Thread it onto a small hook under a bobber, or fish it plain on the bottom.",
     "guide": {
       "gearNeeded": [
         "Small hook (size 6-10)",
@@ -2076,14 +2076,14 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Be patient",
-          "detail": "The scent does a lot of the work — let it sit in one spot for a while before recasting."
+          "detail": "The scent does a lot of the work. Let it sit in one spot for a while before recasting."
         }
       ],
-      "biteFeel": "Same as fishing live bait — a bobber dipping under, or a steady pull if fished on the bottom.",
+      "biteFeel": "Same as fishing live bait. A bobber dipping under, or a steady pull if fished on the bottom.",
       "commonMistakes": [
         "Recasting too often instead of letting the scent sit and work an area"
       ],
-      "confidenceTip": "If you're not ready to dig up worms or visit a bait shop, this is the honest substitute — it works."
+      "confidenceTip": "If you're not ready to dig up worms or visit a bait shop, this is the honest substitute. It works."
     },
     "specs": {
       "style": "trout-worm, pre-scented"
@@ -2115,12 +2115,12 @@ export const PRODUCTS: Product[] = [
     "price": 3.5,
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
-    "metaTitle": "Bobber Stops & Beads — Ketto Outdoors",
-    "metaDescription": "Adjustable bobber stops with beads, pack of 20 — set exactly how deep your bait hangs.",
+    "metaTitle": "Bobber Stops & Beads | Ketto Outdoors",
+    "metaDescription": "Adjustable bobber stops with beads, pack of 20. Set exactly how deep your bait hangs.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Lets you set exactly how deep your bait hangs, and slide it up or down as you figure out where the fish are holding.",
-    "longDescription": "Small adjustable stops paired with beads — thread the stop onto your main line above the bobber, and the bead keeps it from sliding through the bobber’s hole.",
+    "longDescription": "Small adjustable stops paired with beads. Thread the stop onto your main line above the bobber, and the bead keeps it from sliding through the bobber’s hole.",
     "guide": {
       "gearNeeded": [
         "A slip-bobber rig"
@@ -2136,14 +2136,14 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Slide it to set depth",
-          "detail": "Slide the whole stop up or down the line to change how deep your bait hangs, then reel in — the stop passes through the rod guides fine."
+          "detail": "Slide the whole stop up or down the line to change how deep your bait hangs, then reel in. The stop passes through the rod guides fine."
         }
       ],
-      "biteFeel": "No feel of its own — it just controls how deep your bait sits below the bobber.",
+      "biteFeel": "No feel of its own. It just controls how deep your bait sits below the bobber.",
       "commonMistakes": [
         "Setting it too tight to slide, making it impossible to adjust depth on the water"
       ],
-      "confidenceTip": "Once it’s on the line, changing depth takes five seconds — experiment until you find where the fish are."
+      "confidenceTip": "Once it’s on the line, changing depth takes five seconds, experiment until you find where the fish are."
     },
     "specs": {
       "packaging": "adjustable stops with beads, pack of 20"
@@ -2170,9 +2170,9 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Circle Hooks",
     "price": 5.95,
     "category": "Terminal Tackle (Hooks)",
-    "kicker": "Hooks — circle style",
-    "metaTitle": "Circle Hooks — Ketto Outdoors",
-    "metaDescription": "Circle hooks, 5/0-7/0, 10-pack — hook catfish in the corner of the mouth almost on their own.",
+    "kicker": "Hooks: circle style",
+    "metaTitle": "Circle Hooks | Ketto Outdoors",
+    "metaDescription": "Circle hooks, 5/0-7/0, 10-pack. Hook catfish in the corner of the mouth almost on their own.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -2180,7 +2180,7 @@ export const PRODUCTS: Product[] = [
     },
     "targetSpecies": "Catfish",
     "shortDescription": "Circle hooks hook catfish in the corner of the mouth almost on their own, so you’re not gut-hooking fish while you’re still learning to feel a bite.",
-    "longDescription": "Sized 5/0 through 7/0, assorted. Bait it and let the fish hook itself as it swims off with the bait — pulling straight back on a circle hook, the way you would with a normal hook, actually pulls it out of the fish’s mouth instead of setting it.",
+    "longDescription": "Sized 5/0 through 7/0, assorted. Bait it and let the fish hook itself as it swims off with the bait, pulling straight back on a circle hook, the way you would with a normal hook, actually pulls it out of the fish’s mouth instead of setting it.",
     "guide": {
       "gearNeeded": [
         "Cut bait or live/prepared bait",
@@ -2193,23 +2193,23 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Cast and let it sit",
-          "detail": "Cast near structure and place the rod in a holder or against something stable — this is a wait-and-watch bait."
+          "detail": "Cast near structure and place the rod in a holder or against something stable. This is a wait-and-watch bait."
         },
         {
           "title": "Don’t set the hook the normal way",
-          "detail": "When the rod bends or line starts steadily peeling out, just start reeling — don’t yank back."
+          "detail": "When the rod bends or line starts steadily peeling out, just start reeling. Don’t yank back."
         },
         {
           "title": "Let the reel do the hooking",
           "detail": "As the fish turns and swims off, the circle shape slides into the corner of the jaw and hooks itself."
         }
       ],
-      "biteFeel": "The rod tip bending steadily or line peeling off the reel — not a sharp tap.",
+      "biteFeel": "The rod tip bending steadily or line peeling off the reel, not a sharp tap.",
       "commonMistakes": [
         "Setting the hook hard like you would with a normal hook, which usually pulls it right out of the fish’s mouth",
         "Using a hook too small for the bait, which hides the point"
       ],
-      "confidenceTip": "The whole point of a circle hook is that you have to do less, not more — resist the instinct to set hard and just start reeling."
+      "confidenceTip": "The whole point of a circle hook is that you have to do less, not more. Resist the instinct to set hard and just start reeling."
     },
     "specs": {
       "sizes": "5/0-7/0",
@@ -2242,8 +2242,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Dip Bait Treble Hooks",
     "price": 5.5,
     "category": "Terminal Tackle (Hooks)",
-    "kicker": "Hooks — treble, bait-holder spring",
-    "metaTitle": "Dip Bait Treble Hooks — Ketto Outdoors",
+    "kicker": "Hooks: treble, bait-holder spring",
+    "metaTitle": "Dip Bait Treble Hooks | Ketto Outdoors",
     "metaDescription": "Bait-holder spring treble hooks built to hold prepared stink/dip bait, 10-pack.",
     "difficulty": {
       "label": "Beginner",
@@ -2251,8 +2251,8 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Catfish",
-    "shortDescription": "Prepared stink or dip bait needs a hook built to hold paste bait — a regular hook just lets it slide off on the cast.",
-    "longDescription": "A small treble hook with a bait-holder spring wrapped around the shank — twist the spring into a wad of dip bait and it holds through the cast and the sink instead of washing off.",
+    "shortDescription": "Prepared stink or dip bait needs a hook built to hold paste bait. A regular hook just lets it slide off on the cast.",
+    "longDescription": "A small treble hook with a bait-holder spring wrapped around the shank. Twist the spring into a wad of dip bait and it holds through the cast and the sink instead of washing off.",
     "guide": {
       "gearNeeded": [
         "Prepared catfish stink/dip bait"
@@ -2264,23 +2264,23 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Cast gently",
-          "detail": "A smooth, controlled cast keeps the bait from flying off the spring — no need to cast hard."
+          "detail": "A smooth, controlled cast keeps the bait from flying off the spring. No need to cast hard."
         },
         {
           "title": "Let it sit",
-          "detail": "This is a wait-and-watch bait — leave it in one spot and let the scent do the work."
+          "detail": "This is a wait-and-watch bait. Leave it in one spot and let the scent do the work."
         },
         {
           "title": "Reload as needed",
-          "detail": "Dip bait washes off over time — check and reload every so often, especially in current."
+          "detail": "Dip bait washes off over time. Check and reload every so often, especially in current."
         }
       ],
-      "biteFeel": "A steady pull or the rod tip bending down — set the hook firmly once you feel real weight.",
+      "biteFeel": "A steady pull or the rod tip bending down. Set the hook firmly once you feel real weight.",
       "commonMistakes": [
         "Casting hard, which flings the bait off the spring before it even hits the water",
-        "Leaving it too long without checking — the bait washes off eventually"
+        "Leaving it too long without checking. The bait washes off eventually"
       ],
-      "confidenceTip": "No cut bait or chicken liver required to start — just dip the hook in and cast."
+      "confidenceTip": "No cut bait or chicken liver required to start. Just dip the hook in and cast."
     },
     "specs": {
       "style": "treble, bait-holder spring",
@@ -2308,12 +2308,12 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Sliding Egg Sinkers",
     "price": 4.5,
     "category": "Terminal Tackle (Weights)",
-    "kicker": "Weights — slip-sinker rig",
-    "metaTitle": "Sliding Egg Sinkers — Ketto Outdoors",
-    "metaDescription": "1 oz sliding egg sinkers, 10-pack — the standard slip-sinker rig weight for calmer catfish water.",
+    "kicker": "Weights: slip-sinker rig",
+    "metaTitle": "Sliding Egg Sinkers | Ketto Outdoors",
+    "metaDescription": "1 oz sliding egg sinkers, 10-pack. The standard slip-sinker rig weight for calmer catfish water.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Lets a catfish pick up the bait and swim off without feeling the weight — the standard slip-sinker rig for calmer water.",
+    "shortDescription": "Lets a catfish pick up the bait and swim off without feeling the weight. The standard slip-sinker rig for calmer water.",
     "longDescription": "1 oz, egg-shaped with a hole through the middle so your main line slides freely through it, stopped by a swivel above your leader.",
     "guide": {
       "gearNeeded": [
@@ -2334,11 +2334,11 @@ export const PRODUCTS: Product[] = [
           "detail": "Tie your leader line and circle hook to the other end of the swivel."
         }
       ],
-      "biteFeel": "No feel of its own by design — a fish can pick up the bait and the line slides freely through the sinker instead of feeling resistance.",
+      "biteFeel": "No feel of its own by design. A fish can pick up the bait and the line slides freely through the sinker instead of feeling resistance.",
       "commonMistakes": [
         "Using a bank sinker instead in current, where it won’t hold bottom as well as a flatter no-roll sinker"
       ],
-      "confidenceTip": "Still water, calm bank, slower current — this is the right sinker. For moving water, reach for the no-roll sinkers instead."
+      "confidenceTip": "Still water, calm bank, slower current. This is the right sinker. For moving water, reach for the no-roll sinkers instead."
     },
     "specs": {
       "weight": "1 oz",
@@ -2367,13 +2367,13 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "No-Roll Bank Sinkers",
     "price": 4.75,
     "category": "Terminal Tackle (Weights)",
-    "kicker": "Weights — current fishing",
-    "metaTitle": "No-Roll Bank Sinkers — Ketto Outdoors",
-    "metaDescription": "Flat, 2 oz no-roll sinkers, 10-pack — hold bottom in current instead of rolling away.",
+    "kicker": "Weights: current fishing",
+    "metaTitle": "No-Roll Bank Sinkers | Ketto Outdoors",
+    "metaDescription": "Flat, 2 oz no-roll sinkers, 10-pack. Hold bottom in current instead of rolling away.",
     "difficulty": null,
     "targetSpecies": "Catfish",
-    "shortDescription": "Flat sinkers that hold bottom in current instead of rolling away — what you want fishing a river bank instead of a still pond.",
-    "longDescription": "2 oz, flat-sided so current pushes them into the bottom instead of rolling them downstream — pair with a swivel and leader the same way as an egg sinker rig.",
+    "shortDescription": "Flat sinkers that hold bottom in current instead of rolling away. What you want fishing a river bank instead of a still pond.",
+    "longDescription": "2 oz, flat-sided so current pushes them into the bottom instead of rolling them downstream. Pair with a swivel and leader the same way as an egg sinker rig.",
     "guide": {
       "gearNeeded": [
         "Barrel swivel",
@@ -2382,7 +2382,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Rig it above a swivel",
-          "detail": "Same rig as the egg sinker — thread it on the main line, then tie a swivel below it, then your leader and hook."
+          "detail": "Same rig as the egg sinker. Thread it on the main line, then tie a swivel below it, then your leader and hook."
         },
         {
           "title": "Cast upstream of your target",
@@ -2390,14 +2390,14 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Check that it’s holding",
-          "detail": "Feel for steady resistance — if the rig keeps sliding downstream, go up a size."
+          "detail": "Feel for steady resistance. If the rig keeps sliding downstream, go up a size."
         }
       ],
-      "biteFeel": "A steady pull or the rod tip loading up — current fishing tends to feel more constant than still water.",
+      "biteFeel": "A steady pull or the rod tip loading up, current fishing tends to feel more constant than still water.",
       "commonMistakes": [
         "Using a round egg sinker in real current, where it rolls downstream instead of holding"
       ],
-      "confidenceTip": "Moving water, river banks, current seams — this is the sinker built for exactly that, where the egg sinker would just roll away."
+      "confidenceTip": "Moving water, river banks, current seams. This is the sinker built for exactly that, where the egg sinker would just roll away."
     },
     "specs": {
       "weight": "2 oz",
@@ -2427,12 +2427,12 @@ export const PRODUCTS: Product[] = [
     "price": 4.25,
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
-    "metaTitle": "Barrel Swivels — Ketto Outdoors",
-    "metaDescription": "Heavy-duty barrel swivels, 10-pack — keeps your leader from twisting and connects a rig without a bulky knot.",
+    "metaTitle": "Barrel Swivels | Ketto Outdoors",
+    "metaDescription": "Heavy-duty barrel swivels, 10-pack, keeps your leader from twisting and connects a rig without a bulky knot.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Keeps your leader from twisting up on itself and connects your rig without a bulky knot.",
-    "longDescription": "Heavy-duty barrel swivels sized for catfish rigs — tie your main line to one end and your leader to the other.",
+    "longDescription": "Heavy-duty barrel swivels sized for catfish rigs. Tie your main line to one end and your leader to the other.",
     "guide": {
       "gearNeeded": [
         "Main line and leader line"
@@ -2448,14 +2448,14 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Check it spins freely",
-          "detail": "A good connection lets the swivel spin on its own — that’s what stops line twist during the fight."
+          "detail": "A good connection lets the swivel spin on its own. That’s what stops line twist during the fight."
         }
       ],
-      "biteFeel": "No feel of its own — it’s a connector, not a bait or weight.",
+      "biteFeel": "No feel of its own. It’s a connector, not a bait or weight.",
       "commonMistakes": [
         "Skipping the swivel entirely and tying the sinker directly to the leader, which twists line up fast"
       ],
-      "confidenceTip": "A small, easy-to-overlook piece that quietly prevents a very common, very annoying problem — tangled, twisted line."
+      "confidenceTip": "A small, easy-to-overlook piece that quietly prevents a very common, very annoying problem, tangled, twisted line."
     },
     "specs": {
       "style": "heavy-duty barrel",
@@ -2483,13 +2483,13 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Fluorocarbon Leader Line",
     "price": 8.5,
     "category": "Terminal Tackle (Line)",
-    "kicker": "Line — 30 lb leader",
-    "metaTitle": "Fluorocarbon Leader Line — Ketto Outdoors",
-    "metaDescription": "30 lb fluorocarbon leader line — abrasion-resistant enough for catfish dragging your rig across the bottom.",
+    "kicker": "Line: 30 lb leader",
+    "metaTitle": "Fluorocarbon Leader Line | Ketto Outdoors",
+    "metaDescription": "30 lb fluorocarbon leader line, abrasion-resistant enough for catfish dragging your rig across the bottom.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Abrasion-resistant enough to survive catfish dragging your rig across rocks and structure on the bottom.",
-    "longDescription": "30 lb test fluorocarbon, spooled and ready to cut leader lengths from — tie it between your swivel and hook for the abrasion resistance a straight main-line rig doesn’t have.",
+    "longDescription": "30 lb test fluorocarbon, spooled and ready to cut leader lengths from. Tie it between your swivel and hook for the abrasion resistance a straight main-line rig doesn’t have.",
     "guide": {
       "gearNeeded": [
         "Barrel swivel and circle hook"
@@ -2497,7 +2497,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Cut a leader length",
-          "detail": "Cut roughly 12-18 inches for a standard bottom rig — longer in clearer water, shorter in murkier water."
+          "detail": "Cut roughly 12-18 inches for a standard bottom rig, longer in clearer water, shorter in murkier water."
         },
         {
           "title": "Tie to the swivel",
@@ -2508,11 +2508,11 @@ export const PRODUCTS: Product[] = [
           "detail": "Attach a circle hook or dip-bait treble to the other end."
         }
       ],
-      "biteFeel": "No feel of its own — it’s there to survive the fight, not signal the bite.",
+      "biteFeel": "No feel of its own. It’s there to survive the fight, not signal the bite.",
       "commonMistakes": [
         "Using your regular main line as the leader instead, which frays and breaks on rock and structure much faster"
       ],
-      "confidenceTip": "This is the piece that keeps a good fish from breaking off on the one rock you didn’t see — cheap insurance."
+      "confidenceTip": "This is the piece that keeps a good fish from breaking off on the one rock you didn’t see. Cheap insurance."
     },
     "specs": {
       "test": "30 lb",
@@ -2540,8 +2540,8 @@ export const PRODUCTS: Product[] = [
     "displayNameFull": "Prepared Catfish Dip Bait",
     "price": 6.5,
     "category": "Natural Bait / Prepared Bait",
-    "kicker": "Bait — prepared dip/paste",
-    "metaTitle": "Catfish Stink Bait — Ketto Outdoors",
+    "kicker": "Bait: prepared dip/paste",
+    "metaTitle": "Catfish Stink Bait | Ketto Outdoors",
     "metaDescription": "Prepared dip/paste bait for catfish. No cut bait or chicken liver required to start.",
     "difficulty": {
       "label": "Beginner",
@@ -2549,8 +2549,8 @@ export const PRODUCTS: Product[] = [
       "outOf": 10
     },
     "targetSpecies": "Catfish",
-    "shortDescription": "No cut bait or chicken liver required to start — just dip the treble hook in and cast.",
-    "longDescription": "A prepared, ready-to-use dip/paste bait built for use with a bait-holder spring treble hook — catfish locate it by smell, so it works even in murky or muddy water.",
+    "shortDescription": "No cut bait or chicken liver required to start. Just dip the treble hook in and cast.",
+    "longDescription": "A prepared, ready-to-use dip/paste bait built for use with a bait-holder spring treble hook, catfish locate it by smell, so it works even in murky or muddy water.",
     "guide": {
       "gearNeeded": [
         "Dip bait treble hook (spring style)"
@@ -2562,22 +2562,22 @@ export const PRODUCTS: Product[] = [
         },
         {
           "title": "Cast gently",
-          "detail": "A smooth cast keeps the bait on the hook — no need to power through the cast."
+          "detail": "A smooth cast keeps the bait on the hook. No need to power through the cast."
         },
         {
           "title": "Let it sit and work",
-          "detail": "Leave it in place — the scent spreads through the water and draws fish in over time."
+          "detail": "Leave it in place. The scent spreads through the water and draws fish in over time."
         },
         {
           "title": "Reload periodically",
           "detail": "Check every 20-30 minutes and reload if the bait has washed off."
         }
       ],
-      "biteFeel": "A steady pull or the rod tip loading down — this is a wait-and-watch bait.",
+      "biteFeel": "A steady pull or the rod tip loading down. This is a wait-and-watch bait.",
       "commonMistakes": [
         "Recasting too often instead of letting one spot build scent over time"
       ],
-      "confidenceTip": "This is genuinely the simplest way to start catfishing — no bait prep, no cutting, just dip and cast."
+      "confidenceTip": "This is genuinely the simplest way to start catfishing. No bait prep, no cutting, just dip and cast."
     },
     "specs": {
       "style": "prepared dip/paste bait"

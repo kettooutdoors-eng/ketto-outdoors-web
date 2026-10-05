@@ -15,7 +15,7 @@ export function UsedGearGate({ children }: { children: ReactNode }) {
     <>
       {!usedGear && (
         <div style={{ background: 'var(--rust)', color: 'var(--cream)', textAlign: 'center', padding: '10px 20px', fontSize: 13, fontWeight: 700 }}>
-          Admin preview — the used gear program is hidden from customers. Toggle it in the Admin panel in the footer.
+          Admin preview. The used gear program is hidden from customers. Toggle it in the Admin panel in the footer.
         </div>
       )}
       {children}

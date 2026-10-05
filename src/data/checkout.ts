@@ -42,7 +42,7 @@ export interface ShippingQuote {
 
 export function estimateShipping(subtotal: number, itemCount: number, zip: string): ShippingQuote {
   if (subtotal >= FREE_SHIPPING_THRESHOLD) {
-    return { cost: 0, label: 'Free', subLabel: 'Free shipping — orders $35+' };
+    return { cost: 0, label: 'Free', subLabel: 'Free shipping on orders $35+' };
   }
   if (!zip || zip.trim().length < 5) {
     return { cost: 0, label: 'Enter ZIP', subLabel: 'Enter your ZIP code to calculate' };
@@ -67,7 +67,7 @@ export function estimateShipping(subtotal: number, itemCount: number, zip: strin
   return {
     cost,
     label: `$${cost.toFixed(2)}`,
-    subLabel: `${size} — Zone ${zone} · ${weight} lb`,
+    subLabel: `${size}, Zone ${zone} · ${weight} lb`,
   };
 }
 

@@ -111,9 +111,9 @@ export default function UpgradeCredit() {
       </div>
 
       <div style={{ padding: '48px 40px 0', maxWidth: 700, margin: '0 auto' }}>
-        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 6 }}>How we grade it — and what it's worth</h2>
+        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 6 }}>How we grade it, and what it's worth</h2>
         <p style={{ fontSize: 13, textAlign: 'center', opacity: 0.7, marginBottom: 18 }}>
-          Rough store-credit ranges as a share of the combo's original price — the exact number depends on the actual inspection.
+          Rough store-credit ranges as a share of the combo's original price. The exact number depends on the actual inspection.
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {UPGRADE_CREDIT_GRADES.map((g) => (
@@ -136,7 +136,7 @@ export default function UpgradeCredit() {
             </div>
             <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
               <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
-                A combo that doesn't pass inspection isn't relisted — we'll ship it back to you instead, if you'd like it returned.
+                A combo that doesn't pass inspection isn't relisted. We'll ship it back to you instead, if you'd like it returned.
               </li>
               <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>{UPGRADE_CREDIT_VALUE_DISCLAIMER}</li>
             </ul>

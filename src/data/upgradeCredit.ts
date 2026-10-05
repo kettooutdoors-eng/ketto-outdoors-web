@@ -37,12 +37,12 @@ export const UPGRADE_CREDIT_GRADES: UpgradeCreditGrade[] = [
   },
   {
     label: 'Good',
-    description: 'Normal wear from real fishing — the reel still casts and retrieves cleanly, and the rod is straight with all its guides intact.',
+    description: 'Normal wear from real fishing. The reel still casts and retrieves cleanly, and the rod is straight with all its guides intact.',
     creditPercent: '~25-30%',
   },
   {
     label: 'Fair',
-    description: 'Clearly used but still fully functional — rod and reel both work, even with visible cosmetic wear.',
+    description: 'Clearly used but still fully functional, rod and reel both work, even with visible cosmetic wear.',
     creditPercent: '~15-20%',
   },
 ];
@@ -62,22 +62,22 @@ export const UPGRADE_CREDIT_ELIGIBLE_COMBOS: UpgradeCreditEligibleCombo[] = [
 ];
 
 export const UPGRADE_CREDIT_EXCLUDED: string[] = [
-  "Rods or reels bought separately, or not originally purchased from Ketto Outdoors — we can't verify what we're grading against.",
-  'A rod without its matching reel, or a reel without its rod — the combo has to come back as a complete, matched set.',
-  "A cracked or snapped rod blank, or a reel that no longer retrieves line — that's beyond what a credit can cover.",
+  "Rods or reels bought separately, or not originally purchased from Ketto Outdoors. We can't verify what we're grading against.",
+  'A rod without its matching reel, or a reel without its rod. The combo has to come back as a complete, matched set.',
+  "A cracked or snapped rod blank, or a reel that no longer retrieves line. That's beyond what a credit can cover.",
 ];
 
 export const UPGRADE_CREDIT_STEPS = [
   { title: 'Tell us which combo you have', body: "Let us know which Ketto combo you're trading in and how it's held up." },
   { title: "We'll email you a prepaid label", body: 'If it sounds like a fit, shipping it back to us costs you nothing.' },
-  { title: 'We check it out', body: 'Reel retrieve, drag, rod guides and blank — a real function check, graded against the scale below.' },
-  { title: 'Store credit lands in your account', body: "Once it passes, your credit is ready to put toward your next combo — or anything else on the site." },
+  { title: 'We check it out', body: 'Reel retrieve, drag, rod guides and blank. A real function check, graded against the scale below.' },
+  { title: 'Store credit lands in your account', body: "Once it passes, your credit is ready to put toward your next combo, or anything else on the site." },
 ];
 
 export const UPGRADE_CREDIT_VALUE_DISCLAIMER =
-  "Upgrade credit is store credit only, with no cash value — and like any trade-in, the exact amount depends on how the combo actually checks out, not just its age.";
+  "Upgrade credit is store credit only, with no cash value, and like any trade-in, the exact amount depends on how the combo actually checks out, not just its age.";
 
 export const UPGRADE_CREDIT_META = {
-  title: 'Upgrade Credit — Ketto Outdoors',
+  title: 'Upgrade Credit | Ketto Outdoors',
   description: "Outgrown your starter combo? Trade it in for store credit toward an upgrade once you're ready for the next one.",
 };

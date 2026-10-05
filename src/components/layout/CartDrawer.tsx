@@ -41,12 +41,12 @@ export function CartDrawer() {
             ))
           ) : (
             <>
-              <p style={{ opacity: 0.7, fontSize: 14, margin: '0 0 14px' }}>Your cart is empty — nothing’s biting yet.</p>
+              <p style={{ opacity: 0.7, fontSize: 14, margin: '0 0 14px' }}>Your cart is empty. Nothing’s biting yet.</p>
               {BUNDLES[0] && (
                 <Link to={`/kits/${BUNDLES[0].slug}`} onClick={closeCart} style={{ display: 'block', background: 'var(--cream)', padding: '14px 16px', borderRadius: 8, textDecoration: 'none' }}>
                   <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--rust)', fontWeight: 700 }}>Not sure where to start?</div>
                   <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--ink)', marginTop: 2 }}>
-                    {BUNDLES[0].name} — ${BUNDLES[0].price.toFixed(2)}
+                    {BUNDLES[0].name}: ${BUNDLES[0].price.toFixed(2)}
                   </div>
                   <div style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.65 }}>{BUNDLES[0].tagline}</div>
                 </Link>

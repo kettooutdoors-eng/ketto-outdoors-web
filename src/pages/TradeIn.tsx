@@ -8,9 +8,9 @@ import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const STEPS = [
   { title: 'Tell us what you have', body: "Fill out the form below with what you're sending in and its condition, as best you can tell." },
-  { title: "We'll email you shipping instructions", body: "If it sounds like something we can use, we'll send you a prepaid shipping label — sending it in costs you nothing." },
-  { title: 'We inspect it', body: "Every piece gets a real function check against the grades below — not just a glance. If it doesn't hold up, we'll let you know and ship it back if you want it returned." },
-  { title: 'You get store credit', body: "Once it passes, we'll email you a store credit code for the trade-in value — good toward anything on the site." },
+  { title: "We'll email you shipping instructions", body: "If it sounds like something we can use, we'll send you a prepaid shipping label. Sending it in costs you nothing." },
+  { title: 'We inspect it', body: "Every piece gets a real function check against the grades below, not just a glance. If it doesn't hold up, we'll let you know and ship it back if you want it returned." },
+  { title: 'You get store credit', body: "Once it passes, we'll email you a store credit code for the trade-in value. Good toward anything on the site." },
 ];
 
 export default function TradeIn() {
@@ -40,7 +40,7 @@ export default function TradeIn() {
         <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Free shipping, real inspection, store credit</div>
         <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Trade In Your Gear</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '58ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          Lures, terminal tackle, and other gear you're not using anymore don't have to end up in a drawer or the trash. Send it in — we'll pay for shipping, check it out, and pay you in store credit if it passes.
+          Lures, terminal tackle, and other gear you're not using anymore don't have to end up in a drawer or the trash. Send it in. We'll pay for shipping, check it out, and pay you in store credit if it passes.
         </p>
       </div>
 
@@ -94,9 +94,9 @@ export default function TradeIn() {
       </div>
 
       <div style={{ padding: '48px 40px 0', maxWidth: 700, margin: '0 auto' }}>
-        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 6 }}>How we grade it — and what it's worth</h2>
+        <h2 style={{ fontSize: 22, textAlign: 'center', marginBottom: 6 }}>How we grade it, and what it's worth</h2>
         <p style={{ fontSize: 13, textAlign: 'center', opacity: 0.7, marginBottom: 18 }}>
-          Rough store-credit ranges as a share of the item's original price — the exact number depends on the actual inspection.
+          Rough store-credit ranges as a share of the item's original price. The exact number depends on the actual inspection.
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {CONDITION_GRADES.map((g) => (
@@ -119,10 +119,10 @@ export default function TradeIn() {
             </div>
             <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
               <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
-                Gear that's broken, unsafe, or doesn't pass a function check doesn't get relisted — we'll ship it back to you instead of trashing it, if you'd like it returned.
+                Gear that's broken, unsafe, or doesn't pass a function check doesn't get relisted. We'll ship it back to you instead of trashing it, if you'd like it returned.
               </li>
               <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
-                We can only take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more — smaller items cost more to ship than they're worth crediting.
+                We can only take trade-ins on gear that sells new for ${MIN_TRADE_IN_VALUE} or more. Smaller items cost more to ship than they're worth crediting.
               </li>
               <li style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>{TRADE_IN_VALUE_DISCLAIMER}</li>
             </ul>
@@ -198,7 +198,7 @@ export default function TradeIn() {
                     id="ti-description"
                     value={form.description}
                     onChange={(e) => update('description', e.target.value)}
-                    placeholder="e.g. Tackle box with about 15 assorted hard baits — crankbaits and spinnerbaits, most look barely used."
+                    placeholder="e.g. Tackle box with about 15 assorted hard baits, crankbaits and spinnerbaits, most look barely used."
                     rows={4}
                     style={{ padding: '11px 12px', border: '2px solid rgba(27,67,50,.25)', fontSize: 14, width: '100%', fontFamily: 'inherit', resize: 'vertical' }}
                   />

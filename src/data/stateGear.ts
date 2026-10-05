@@ -67,6 +67,6 @@ export const STATE_GEAR: Record<string, StateGearProfile> = {
 export const STATE_LIST = Object.keys(STATE_GEAR).sort();
 
 export const GEAR_BY_STATE_META = {
-  title: 'Gear by State — Ketto Outdoors',
+  title: 'Gear by State | Ketto Outdoors',
   description: 'Pick your state and see the freshwater species, water types, and gear beginners there start with.',
 };

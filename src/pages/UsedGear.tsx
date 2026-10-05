@@ -32,9 +32,9 @@ export default function UsedGear() {
         </div>
       ) : (
         <div style={{ textAlign: 'center', padding: '64px 40px', maxWidth: 560, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 24 }}>Nothing in yet — check back soon.</h2>
+          <h2 style={{ fontSize: 24 }}>Nothing in yet. Check back soon.</h2>
           <p style={{ marginTop: 12, opacity: 0.8, fontSize: 14.5, lineHeight: 1.7 }}>
-            We're just getting this program started, so there's no used inventory to show yet. Every piece that ends up here first gets inspected and graded by hand — nothing goes on this page until it passes.
+            We're just getting this program started, so there's no used inventory to show yet. Every piece that ends up here first gets inspected and graded by hand. Nothing goes on this page until it passes.
           </p>
           <BannerButton to="/trade-in" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
             Be the first to send something in
@@ -45,7 +45,7 @@ export default function UsedGear() {
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
         <h2 style={{ fontSize: 28, letterSpacing: '-0.03em' }}>Got gear you're not using?</h2>
         <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>
-          We'll pay for shipping, inspect it, and give you store credit if it passes — instead of it sitting in a drawer.
+          We'll pay for shipping, inspect it, and give you store credit if it passes, instead of it sitting in a drawer.
         </p>
         <BannerButton to="/trade-in" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           See how trade-ins work →

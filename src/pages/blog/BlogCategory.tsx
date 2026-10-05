@@ -9,7 +9,7 @@ export default function BlogCategory() {
   const cat = category ? BLOG_CATEGORIES[category] : undefined;
   const articles = category ? getArticlesByCategory(category) : [];
   useDocumentMeta(
-    cat?.meta.title ?? 'Page Not Found — Ketto Outdoors',
+    cat?.meta.title ?? 'Page Not Found | Ketto Outdoors',
     cat?.meta.description ?? "This page doesn't exist, moved, or never got hooked in the first place.",
     `/blog/${category ?? ''}`
   );

@@ -34,7 +34,7 @@ const inputStyle: CSSProperties = { padding: '11px 12px', border: '2px solid rgb
 const fieldWrap = (span2: boolean): CSSProperties => ({ gridColumn: span2 ? 'span 2' : undefined });
 
 export default function Checkout() {
-  useDocumentMeta('Checkout — Ketto Outdoors', 'Complete your order.', '/checkout', true);
+  useDocumentMeta('Checkout | Ketto Outdoors', 'Complete your order.', '/checkout', true);
   const { items, cartTotal, hasItems, clearCart } = useCart();
   const { decrement } = useInventory();
 
@@ -109,7 +109,7 @@ export default function Checkout() {
         </div>
         <h1 style={{ fontSize: 32 }}>Order confirmed</h1>
         <p style={{ marginTop: 12, fontSize: 15 }}>
-          Thanks, {confirmedOrder.name} — order {confirmedOrder.id} is on its way. A receipt was "sent" to {confirmedOrder.email}.
+          Thanks, {confirmedOrder.name}, order {confirmedOrder.id} is on its way. A receipt was "sent" to {confirmedOrder.email}.
         </p>
 
         <TinFrame shadow="sm" style={{ margin: '28px auto 0', maxWidth: 420 }}>
@@ -166,7 +166,7 @@ export default function Checkout() {
     <div style={{ padding: '40px', maxWidth: 1100, margin: '0 auto' }}>
       <h1 style={{ fontSize: 34, marginBottom: 6 }}>Checkout</h1>
       <p style={{ fontSize: 13, opacity: 0.7, marginBottom: 32, maxWidth: '70ch' }}>
-        Demo checkout — no real payment is processed. Shipping is an estimated carrier rate by ZIP, weight, and package size.
+        Demo checkout. No real payment is processed. Shipping is an estimated carrier rate by ZIP, weight, and package size.
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 48 }} className="grid-2">
@@ -208,7 +208,7 @@ export default function Checkout() {
           {formError && <div style={{ color: 'var(--rust)', fontSize: 13, marginTop: 12 }}>Fill in all fields to place your order.</div>}
 
           <BannerButton fill background="var(--rust)" color="#fff" onClick={placeOrder} style={{ marginTop: 24 }}>
-            Place order — ${grandTotal.toFixed(2)}
+            Place order: ${grandTotal.toFixed(2)}
           </BannerButton>
         </div>
 

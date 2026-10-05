@@ -24,13 +24,13 @@ function loadOrders(): OrderRecord[] {
 }
 
 export default function Orders() {
-  useDocumentMeta('My Orders — Ketto Outdoors', 'View your past orders on this device.', '/orders', true);
+  useDocumentMeta('My Orders | Ketto Outdoors', 'View your past orders on this device.', '/orders', true);
   const [orders] = useState<OrderRecord[]>(() => loadOrders());
 
   return (
     <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 40px' }}>
       <h1 style={{ fontSize: 34 }}>My Orders</h1>
-      <p style={{ fontSize: 13, opacity: 0.7, marginTop: 6, marginBottom: 28 }}>Saved on this device only — demo store, no account system.</p>
+      <p style={{ fontSize: 13, opacity: 0.7, marginTop: 6, marginBottom: 28 }}>Saved on this device only, demo store, no account system.</p>
 
       {orders.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>

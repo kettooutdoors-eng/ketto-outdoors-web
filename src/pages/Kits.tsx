@@ -4,7 +4,7 @@ import { BundleCard } from '../components/BundleCard';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function Kits() {
-  useDocumentMeta('Kits — Ketto Outdoors', 'One kit, one price, no guessing. Pre-built kits matched to the fish and water you’re after.', '/kits');
+  useDocumentMeta('Kits | Ketto Outdoors', 'One kit, one price, no guessing. Pre-built kits matched to the fish and water you’re after.', '/kits');
 
   return (
     <div>
@@ -12,7 +12,7 @@ export default function Kits() {
         <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>One decision, not fifty</div>
         <h1 style={{ fontSize: 44, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Kits</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '56ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          We tell you exactly what you need, so you're not gambling on fifty conflicting opinions from the internet. Pick the kit that matches what you're after — everything inside is already matched to work together.
+          We tell you exactly what you need, so you're not gambling on fifty conflicting opinions from the internet. Pick the kit that matches what you're after. Everything inside is already matched to work together.
         </p>
       </div>
 

@@ -35,7 +35,7 @@ export function CookieConsentBanner() {
       }}
     >
       <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6 }}>
-        We use your browser's local storage to run your cart — that's not tracking, and it's not optional. Site analytics are off by default; if you say yes below, we'll turn on basic traffic analytics.{' '}
+        We use your browser's local storage to run your cart. That's not tracking, and it's not optional. Site analytics are off by default; if you say yes below, we'll turn on basic traffic analytics.{' '}
         <Link to="/cookies" style={{ color: '#e8a487', fontWeight: 700 }}>
           Read the Cookie Policy
         </Link>

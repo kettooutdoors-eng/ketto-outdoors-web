@@ -13,7 +13,7 @@ export default function BlogIndex() {
         <div style={{ fontSize: 11, letterSpacing: '.2em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>The Ketto Journal</div>
         <h1 style={{ fontSize: 40, letterSpacing: '-0.03em', marginTop: 10 , color: 'var(--cream)'}}>Notes From the Water</h1>
         <p style={{ margin: '14px auto 0', maxWidth: '52ch', fontSize: 15, color: 'var(--cream)', opacity: 0.85 }}>
-          Straight talk on lures, technique, and getting started — no jargon, no gatekeeping.
+          Straight talk on lures, technique, and getting started. No jargon, no gatekeeping.
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginTop: 22 }}>
           {BLOG_CATEGORY_NAV.map((c) => (

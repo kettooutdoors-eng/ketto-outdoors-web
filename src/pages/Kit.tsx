@@ -18,7 +18,7 @@ export default function Kit() {
   const bundle = slug ? getBundle(slug) : undefined;
   const { addToCart } = useCart();
 
-  useDocumentMeta(bundle?.metaTitle ?? 'Kit Not Found — Ketto Outdoors', bundle?.metaDescription ?? 'This kit could not be found.', `/kits/${slug ?? ''}`);
+  useDocumentMeta(bundle?.metaTitle ?? 'Kit Not Found | Ketto Outdoors', bundle?.metaDescription ?? 'This kit could not be found.', `/kits/${slug ?? ''}`);
 
   if (!bundle) return <NotFound />;
 
@@ -92,7 +92,7 @@ export default function Kit() {
                       to={`/product/${linkedProduct.id}`}
                       style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, fontWeight: 700, color: 'var(--rust)' }}
                     >
-                      Buy this piece separately — ${linkedProduct.price.toFixed(2)} →
+                      Buy this piece separately: ${linkedProduct.price.toFixed(2)} →
                     </Link>
                   )}
                 </div>
@@ -159,7 +159,7 @@ export default function Kit() {
                 padding: 12,
               }}
             >
-              <span style={{ fontSize: 11, color: 'var(--kicker)', fontWeight: 700, lineHeight: 1.4 }}>QR CODE — video rigging guide (link before launch)</span>
+              <span style={{ fontSize: 11, color: 'var(--kicker)', fontWeight: 700, lineHeight: 1.4 }}>QR CODE: video rigging guide (link before launch)</span>
             </div>
             <p style={{ fontSize: 12.5, opacity: 0.7, maxWidth: '24ch' }}>Every kit ships with this on a printed card, plus the full written steps here on the site.</p>
           </div>
@@ -169,7 +169,7 @@ export default function Kit() {
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Ready to stop guessing?</div>
         <BannerButton onClick={() => addToCart(bundle.id)} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Add whole kit to cart — ${bundle.price.toFixed(2)}
+          Add whole kit to cart: ${bundle.price.toFixed(2)}
         </BannerButton>
       </div>
     </div>

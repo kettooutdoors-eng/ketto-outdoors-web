@@ -29,7 +29,7 @@ export async function submitLead(payload: LeadPayload) {
     await fetch(LEAD_FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ _subject: `Ketto Outdoors — ${SUBJECTS[payload.type]}`, ...payload }),
+      body: JSON.stringify({ _subject: `Ketto Outdoors: ${SUBJECTS[payload.type]}`, ...payload }),
     });
   } catch {
     // Local copy above is still saved — nothing further to do if the network call fails.

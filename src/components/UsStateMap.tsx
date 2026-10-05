@@ -27,7 +27,7 @@ export function UsStateMap({ selected, onSelect }: UsStateMapProps) {
       <svg
         viewBox={US_MAP_VIEWBOX}
         role="group"
-        aria-label="Map of the United States — select your state"
+        aria-label="Map of the United States, select your state"
         style={{ width: '100%', height: 'auto', maxHeight: 480, display: 'block', margin: '0 auto' }}
       >
         {Object.entries(US_STATE_PATHS).map(([name, { d }]) => {

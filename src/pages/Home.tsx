@@ -10,7 +10,7 @@ import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const WHY_KETTO = [
-  'We teach you how to cast, reel, and rig up — no fish stories needed.',
+  'We teach you how to cast, reel, and rig up. No fish stories needed.',
   'Every lure is matched to the fish you’re after, so you’re not just casting around.',
   'We check every lure so it’s ready to bite the first time you tie it on.',
 ];
@@ -18,11 +18,11 @@ const WHY_KETTO = [
 const STEPS = [
   { title: 'Pick your fish', body: 'Know what you want to catch and where you will fish.' },
   { title: 'Pick one lure', body: "You don't need a full tackle box. One good lure is plenty to get a bite." },
-  { title: 'Cast and reel', body: 'Cast out and reel steady. Feel a tug? Keep reeling — you’ve got a bite.' },
+  { title: 'Cast and reel', body: 'Cast out and reel steady. Feel a tug? Keep reeling. You’ve got a bite.' },
 ];
 
 export default function Home() {
-  useDocumentMeta('Ketto Outdoors — Fishing Gear That Works', 'Simple fishing tackle kits for beginners. Pick a kit and go fishing.', '/');
+  useDocumentMeta('Ketto Outdoors | Fishing Gear That Works', 'Simple fishing tackle kits for beginners. Pick a kit and go fishing.', '/');
 
   return (
     <div>
@@ -55,7 +55,7 @@ export default function Home() {
               <br />
               made simple.
             </h1>
-            <p className="hero-in" style={{ fontSize: 15, color: 'var(--ink)', opacity: 0.8, '--d': '0.4s' } as CSSProperties}>Beginner tackle kits — hook, line, and simple.</p>
+            <p className="hero-in" style={{ fontSize: 15, color: 'var(--ink)', opacity: 0.8, '--d': '0.4s' } as CSSProperties}>Beginner tackle kits. Hook, line, and simple.</p>
           </div>
           <div className="hero-in" style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start', '--d': '0.65s' } as CSSProperties}>
             <BannerButton to="/kits" className="btn-pulse" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px', fontSize: 14 }} style={{ whiteSpace: 'nowrap' }}>

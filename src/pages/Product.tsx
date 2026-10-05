@@ -31,7 +31,7 @@ function NotifyWhenBackForm({ productId, productName }: { productId: string; pro
   if (done) {
     return (
       <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--forest)', border: '2px solid var(--forest)', padding: '10px 14px' }}>
-        Got it — we'll email you the second this is back.
+        Got it. We'll email you the second this is back.
       </div>
     );
   }
@@ -73,7 +73,7 @@ export default function ProductPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>(product?.sizeOptions?.[0] ?? null);
 
   useDocumentMeta(
-    product?.metaTitle ?? 'Product Not Found — Ketto Outdoors',
+    product?.metaTitle ?? 'Product Not Found | Ketto Outdoors',
     product?.metaDescription ?? 'This product could not be found.',
     `/product/${id ?? ''}`
   );
