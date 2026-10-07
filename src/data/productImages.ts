@@ -1,6 +1,6 @@
 // Real product photos, sourced and matched by hand — most products still fall back to the
 // sketch placeholder until more photos come in.
-const PRODUCT_IMAGES: Record<string, string> = {
+export const PRODUCT_IMAGES: Record<string, string> = {
   'deep-six': 'deep-six.jpg',
   'medium-crankbait': 'medium-crankbait.jpg',
   'wacky-worm': 'wacky-worm.jpg',
