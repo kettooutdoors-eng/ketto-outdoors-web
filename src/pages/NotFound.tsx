@@ -40,8 +40,8 @@ export default function NotFound() {
           <BannerButton to="/" background="var(--forest)" color="var(--cream)">
             Back home
           </BannerButton>
-          <BannerButton to="/shop" background="var(--rust)" color="var(--cream)">
-            Shop all gear
+          <BannerButton to="/kits" background="var(--rust)" color="var(--cream)">
+            Shop kits
           </BannerButton>
         </div>
       </div>

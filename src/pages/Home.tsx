@@ -1,25 +1,23 @@
 import type { CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
 import { TinFrame } from '../components/ui/TinFrame';
 import { BannerButton } from '../components/ui/BannerButton';
 import { Seal } from '../components/ui/Seal';
 import { SectionKicker, Reveal } from '../components/ui/Misc';
-import { StepsProgress } from '../components/StepsProgress';
 import { BundleCard } from '../components/BundleCard';
 import { BUNDLES_BY_PRICE } from '../data/bundles';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const WHY_KETTO = [
-  'We teach you how to cast, reel, and set up your gear.',
-  'Every lure is matched to the fish you’re after.',
-  'We check every lure before it ships.',
+  'We show you how to use everything, step by step.',
+  'Every piece of equipment is matched to the fish you’re after.',
+  'We check every piece of equipment before it ships.',
 ];
 
-const STEPS = [
-  { title: 'Pick your fish', body: 'Know what you want to catch and where you will fish.' },
-  { title: 'Pick one or two lures', body: "You don't need a full tackle box. One or two good lures are enough." },
-  { title: 'Cast and reel', body: 'Cast out and reel steady. If you feel a tug, keep reeling.' },
-];
+/** Smooth-scrolls back up to the kits on this page. */
+function scrollToKits() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('kits')?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+}
 
 export default function Home() {
   useDocumentMeta('Ketto Outdoors | Fishing Gear That Works', 'Simple fishing tackle kits for beginners. Pick a kit and go fishing.', '/');
@@ -61,11 +59,28 @@ export default function Home() {
             <BannerButton to="/kits" className="btn-pulse" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px', fontSize: 14 }} style={{ whiteSpace: 'nowrap' }}>
               Shop Kits
             </BannerButton>
-            <Link to="/shop" style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', opacity: 0.7 }}>
-              Or browse all gear
-            </Link>
           </div>
         </TinFrame>
+      </div>
+
+      {/* Kits — the primary shopping path */}
+      <div id="kits" style={{ background: 'var(--sage)', paddingBottom: 56 }}>
+        <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Pick a kit.</h2>
+          <p style={{ margin: '12px auto 0', fontSize: 16, opacity: 0.75 }}>Everything inside works together.</p>
+          <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
+        </div>
+        {BUNDLES_BY_PRICE.length > 0 ? (
+          <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, maxWidth: 1080, margin: '36px auto 0', padding: '0 40px' }}>
+            {BUNDLES_BY_PRICE.map((b, i) => (
+              <Reveal key={b.id} delay={i * 150} style={{ display: 'flex' }}>
+                <BundleCard bundle={b} />
+              </Reveal>
+            ))}
+          </div>
+        ) : (
+          <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
+        )}
       </div>
 
       {/* Why Ketto */}
@@ -84,60 +99,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Kits — the primary shopping path */}
-      <div style={{ background: 'var(--sage)', paddingBottom: 56 }}>
-        <div style={{ padding: '56px 40px 0', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Pick a kit.</h2>
-          <p style={{ margin: '12px auto 0', fontSize: 16, opacity: 0.75 }}>Everything inside works together.</p>
-          <div style={{ width: 64, height: 4, background: 'var(--rust)', margin: '16px auto 0' }} />
-        </div>
-        {BUNDLES_BY_PRICE.length > 0 ? (
-          <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 28, maxWidth: 1080, margin: '36px auto 0', padding: '0 40px' }}>
-            {BUNDLES_BY_PRICE.map((b, i) => (
-              <Reveal key={b.id} delay={i * 150} style={{ display: 'flex' }}>
-                <BundleCard bundle={b} />
-              </Reveal>
-            ))}
-          </div>
-        ) : (
-          <p style={{ textAlign: 'center', opacity: 0.7 }}>Kits coming soon.</p>
-        )}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, marginTop: 40 }}>
-          <p style={{ fontSize: 15, opacity: 0.8 }}>Already know what you want?</p>
-          <BannerButton to="/shop" background="var(--forest)" color="var(--cream)">
-            Shop all gear
-          </BannerButton>
-        </div>
-      </div>
-
-      {/* Gear by State teaser */}
-      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '28px 40px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <div>
-          <span style={{ fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', color: '#e8a487', fontWeight: 700 }}>Fishing near you?</span>{' '}
-          <span style={{ fontSize: 15, marginLeft: 8 }}>Pick your state to see what to buy.</span>
-        </div>
-        <Link
-          to="/gear-by-state"
-          style={{ fontSize: 13, fontWeight: 800, color: 'var(--forest)', background: 'var(--cream)', padding: '10px 18px', textDecoration: 'none', flexShrink: 0 }}
-        >
-          Pick your state →
-        </Link>
-      </div>
-
-      {/* Three steps */}
-      <div style={{ padding: '56px 40px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <h2 style={{ fontSize: 44, letterSpacing: '-0.03em' }}>Your first catch in 3 steps.</h2>
-        </div>
-        <StepsProgress steps={STEPS} />
-        <p style={{ textAlign: 'center', fontSize: 13, maxWidth: '60ch', margin: '32px auto 0', opacity: 0.8 }}>
-          New to fishing?{' '}
-          <Link to="/new-to-fishing" style={{ color: 'var(--rust)', fontWeight: 600 }}>
-            Learn the basics →
-          </Link>
-        </p>
-      </div>
-
       {/* Stop guessing CTA */}
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '80px 40px', display: 'flex', flexWrap: 'wrap', gap: 40, alignItems: 'flex-end', justifyContent: 'space-between', position: 'relative' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'var(--rust)' }} />
@@ -146,7 +107,7 @@ export default function Home() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start' }}>
           <div style={{ fontSize: 13, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.9 }}>One kit. Nothing to figure out.</div>
-          <BannerButton to="/kits" background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
+          <BannerButton onClick={scrollToKits} background="var(--rust)" color="#fff" innerStyle={{ padding: '16px 28px' }}>
             Shop kits
           </BannerButton>
         </div>

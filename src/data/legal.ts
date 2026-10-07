@@ -49,7 +49,7 @@ export interface FaqEntry {
   answer: string;
   links: { text: string; target: string }[];
   // Set on entries specific to the used-gear/trade-in program, which is paused for now
-  // (see FeatureFlagsContext.usedGear) — Faq.tsx hides these while the flag is off.
+  // (see USED_GEAR_ENABLED in src/lib/featureFlags.ts) — Faq.tsx hides these while the flag is off.
   usedGear?: boolean;
 }
 
@@ -58,7 +58,7 @@ export const FAQ_ENTRIES: FaqEntry[] = [
   { question: "Can I return a lure I didn't like?", answer: "Unused, unopened gear can be returned within 30 days. Once a lure's been in the water, it's yours, but we're happy to help you pick something better suited next time.", links: [] },
   { question: "I'm brand new to fishing, where do I start?", answer: 'Start with a kit. Pick the one that matches what you want to fish for, and every piece inside is already matched to work together. Our New to Fishing guide covers the basics if you want the background too.', links: [{ text: 'Shop kits', target: '/kits' }, { text: 'New to Fishing guide', target: '/new-to-fishing' }] },
   { question: "What's the difference between the three kits?", answer: 'First Bass Kit is a full lure-casting setup for bass. Never Fished Before Starter Kit is the simplest possible entry point, bait and a bobber, no casting technique or live bait required. First Catfish Kit uses genuinely different gear (circle hooks, heavier sinkers, prepared bait) built specifically for catfish. Pick the one that matches what you’re actually after.', links: [{ text: 'Shop kits', target: '/kits' }] },
-  { question: 'Can I customize what’s inside a kit?', answer: 'Not at checkout. Each kit is priced and matched as a set. But every piece inside is also sold on its own, so you can swap something out, buy a replacement, or top off a kit after the fact without buying a whole second one.', links: [{ text: 'Shop all gear', target: '/shop' }] },
+  { question: 'Can I customize what’s inside a kit?', answer: 'Not at checkout. Each kit is priced and matched as a set. But every piece inside is also sold on its own, so you can swap something out, buy a replacement, or top off a kit after the fact without buying a whole second one.', links: [] },
   { question: 'Do I need my own rod and reel?', answer: 'Yes, bring your own. We don’t sell rods or reels. A basic spinning rod and reel is the easiest to learn on.', links: [{ text: 'New to Fishing guide', target: '/new-to-fishing' }] },
   { question: 'How do I know which lure to buy?', answer: 'Every lure page lists the target species, a difficulty score, and how to fish it, retrieve speed, technique, and what a strike feels like. Not sure where to start? Ask us directly.', links: [{ text: 'Ask us directly', target: '/contact' }] },
   { question: 'Do you ship internationally?', answer: "Right now we only ship within the continental US. If that changes, we'll post it here.", links: [] },

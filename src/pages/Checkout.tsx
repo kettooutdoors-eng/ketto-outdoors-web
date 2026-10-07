@@ -36,9 +36,9 @@ export default function Checkout() {
     return (
       <div style={wrap}>
         <h1 style={{ fontSize: 28 }}>Your cart is empty</h1>
-        <p style={{ marginTop: 10, opacity: 0.75 }}>Add something from the shop before checking out.</p>
-        <BannerButton to="/shop" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Shop all gear
+        <p style={{ marginTop: 10, opacity: 0.75 }}>Add a kit before checking out.</p>
+        <BannerButton to="/kits" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
+          Shop kits
         </BannerButton>
       </div>
     );
@@ -55,7 +55,7 @@ export default function Checkout() {
           </a>
           .
         </p>
-        <BannerButton to="/shop" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
+        <BannerButton to="/kits" background="var(--forest)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
           Keep browsing
         </BannerButton>
       </div>
@@ -71,8 +71,8 @@ export default function Checkout() {
           Edit cart
         </BannerButton>
         <div style={{ marginTop: 16 }}>
-          <Link to="/shop" style={{ fontSize: 13, color: 'var(--rust)' }}>
-            ← Back to the shop
+          <Link to="/kits" style={{ fontSize: 13, color: 'var(--rust)' }}>
+            ← Back to the kits
           </Link>
         </div>
       </div>

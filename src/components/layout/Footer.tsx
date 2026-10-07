@@ -30,7 +30,6 @@ export function Footer() {
         <div style={headingStyle}>Shop</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginTop: 4, alignItems: 'center' }}>
           <Link to="/kits" style={linkStyle}>Shop kits</Link>
-          <Link to="/shop" style={linkStyle}>Shop all gear</Link>
           {USED_GEAR_ENABLED && (
             <>
               <Link to="/used-gear" style={linkStyle}>Used gear</Link>
@@ -61,7 +60,7 @@ export function Footer() {
           KettoOutdoors@gmail.com →
         </a>
         <p style={{ margin: 0, fontSize: 12, color: 'var(--cream)', opacity: 0.6, maxWidth: '28ch', lineHeight: 1.5 }}>
-          Questions, wholesale orders, or a lure request. We read every email.
+          Questions, wholesale orders, or an equipment request. We read every email.
         </p>
         <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 12, width: '100%', maxWidth: 280 }}>
           <div style={{ display: 'flex', gap: 8 }}>

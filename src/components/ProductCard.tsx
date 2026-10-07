@@ -5,6 +5,7 @@ import { BannerButton } from './ui/BannerButton';
 import { useCart } from '../state/CartContext';
 import { getProductImageSrc } from '../data/productImages';
 import type { ShopCatalogItem } from '../data/shop';
+import { formatPrice } from '../lib/format';
 
 const DIFFICULTY_COLOR: Record<string, string> = {
   Beginner: 'var(--forest)',
@@ -63,7 +64,7 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
         <p style={{ fontSize: 14, textWrap: 'pretty' as never }}>{item.description}</p>
 
         <div style={{ marginTop: 4 }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>${item.price.toFixed(2)}</span>
+          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>{formatPrice(item.price)}</span>
         </div>
 
         <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>

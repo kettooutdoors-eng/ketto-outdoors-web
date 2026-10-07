@@ -3,7 +3,6 @@ import { getBundle } from '../data/bundles';
 import { ALL_SHOP_ITEMS } from '../data/shop';
 import { ProductCard } from '../components/ProductCard';
 import { BundleCard } from '../components/BundleCard';
-import { BannerButton } from '../components/ui/BannerButton';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export default function BitingNow() {
@@ -38,15 +37,6 @@ export default function BitingNow() {
         })}
       </div>
 
-      <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Want the full picture instead?</div>
-        <p style={{ margin: '10px auto 0', maxWidth: '46ch', opacity: 0.85, fontSize: 14 }}>
-          Browse everything and filter by the exact fish, type, or difficulty you're after.
-        </p>
-        <BannerButton to="/shop" background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Shop all gear
-        </BannerButton>
-      </div>
     </div>
   );
 }

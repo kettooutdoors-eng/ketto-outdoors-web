@@ -7,6 +7,7 @@ import { TinFrame } from '../components/ui/TinFrame';
 import { useCart } from '../state/CartContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import NotFound from './NotFound';
+import { formatPrice } from '../lib/format';
 
 const SOURCE_LABEL: Record<string, string> = {
   'anchor-brand': 'Name-brand',
@@ -42,7 +43,7 @@ export default function Kit() {
           <p style={{ fontSize: 15, lineHeight: 1.6 }}>{bundle.tagline}</p>
           <p style={{ fontSize: 14, lineHeight: 1.6, opacity: 0.85 }}>{bundle.scenario}</p>
 
-          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>${bundle.price.toFixed(2)}</div>
+          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>{formatPrice(bundle.price)}</div>
 
           <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(bundle.id)} style={{ marginTop: 6 }}>
             Add to cart
@@ -92,7 +93,7 @@ export default function Kit() {
                       to={`/product/${linkedProduct.id}`}
                       style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, fontWeight: 700, color: 'var(--rust)' }}
                     >
-                      Buy this piece separately: ${linkedProduct.price.toFixed(2)} →
+                      Buy this piece separately: {formatPrice(linkedProduct.price)} →
                     </Link>
                   )}
                 </div>
@@ -169,7 +170,7 @@ export default function Kit() {
       <div style={{ background: 'var(--forest)', color: 'var(--cream)', padding: '56px 40px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28, letterSpacing: '-0.03em' }}>Ready to go fishing?</div>
         <BannerButton onClick={() => addToCart(bundle.id)} background="var(--rust)" color="var(--cream)" style={{ marginTop: 20, display: 'inline-flex' }}>
-          Add to cart: ${bundle.price.toFixed(2)}
+          Add to cart: {formatPrice(bundle.price)}
         </BannerButton>
       </div>
     </div>

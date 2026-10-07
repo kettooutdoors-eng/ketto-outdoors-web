@@ -5,11 +5,11 @@ export const PRODUCTS: Product[] = [
     "id": "deep-six",
     "name": "Deep Six",
     "displayNameFull": "Deep Six Squarebill Crankbait",
-    "price": 14.5,
+    "price": 15,
     "category": "Crankbait (Squarebill)",
     "kicker": "Squarebill / 2.5 in / 1/2 oz",
     "metaTitle": "Deep Six Squarebill Crankbait | Ketto Outdoors",
-    "metaDescription": "A crankbait that dives about 6 feet and bounces off rocks and logs instead of getting stuck. Cast it out and reel it back steady. $14.50.",
+    "metaDescription": "A crankbait that dives about 6 feet and bounces off rocks and logs instead of getting stuck. Cast it out and reel it back steady. $15.",
     "difficulty": null,
     "targetSpecies": "Largemouth & smallmouth bass",
     "shortDescription": "A crankbait that dives about 6 feet and bounces off rocks and logs instead of getting stuck. Cast it out and reel it back steady.",
@@ -111,13 +111,13 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Spare hooks sized for this lure.",
-        "price": 4.25
+        "price": 5
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
         "blurb": "A rattling lure that covers a lot of water fast.",
-        "price": 10.25
+        "price": 11
       }
     ],
     "reviewsSectionPresent": false
@@ -126,11 +126,11 @@ export const PRODUCTS: Product[] = [
     "id": "driftworm",
     "name": "Driftworm",
     "displayNameFull": "Driftworm Soft Plastic",
-    "price": 6.5,
+    "price": 7,
     "category": "Soft Plastic (Worm)",
     "kicker": "Soft plastic worm",
     "metaTitle": "Driftworm Soft Plastic | Ketto Outdoors",
-    "metaDescription": "A soft worm you drag slowly along the bottom. One of the easiest lures to fish, and a good first one. $6.50.",
+    "metaDescription": "A soft worm you drag slowly along the bottom. One of the easiest lures to fish, and a good first one. $7.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -192,13 +192,13 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Hooks sized for this bait.",
-        "price": 4.25
+        "price": 5
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A soft worm with a curled tail. Good for different water.",
-        "price": 5.25
+        "price": 6
       }
     ],
     "reviewsSectionPresent": true,
@@ -208,11 +208,11 @@ export const PRODUCTS: Product[] = [
     "id": "baithooks",
     "name": "Baithooks",
     "displayNameFull": "Baithooks",
-    "price": 4.25,
+    "price": 5,
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks",
     "metaTitle": "Baithooks | Ketto Outdoors",
-    "metaDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm. $4.25.",
+    "metaDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm. $5.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -277,13 +277,13 @@ export const PRODUCTS: Product[] = [
         "id": "driftworm",
         "name": "Driftworm",
         "blurb": "Another slow, easy bottom lure.",
-        "price": 6.5
+        "price": 7
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A soft worm with a curled tail. Good for different water.",
-        "price": 5.25
+        "price": 6
       },
     ],
     "reviewsSectionPresent": true,
@@ -297,7 +297,7 @@ export const PRODUCTS: Product[] = [
     "category": "Spinnerbait",
     "kicker": "Spinnerbait",
     "metaTitle": "Longshot | Ketto Outdoors",
-    "metaDescription": "A lure with two metal blades that flash and vibrate, so fish can find it in murky or cloudy water. Just reel it in steady. $11.00.",
+    "metaDescription": "A lure with two metal blades that flash and vibrate, so fish can find it in murky or cloudy water. Just reel it in steady. $11.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
@@ -358,13 +358,13 @@ export const PRODUCTS: Product[] = [
         "id": "chugger",
         "name": "Chugger",
         "blurb": "A surface lure for calm water.",
-        "price": 12.75
+        "price": 13
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
         "blurb": "Covers a lot of water fast.",
-        "price": 10.25
+        "price": 11
       }
     ],
     "reviewsSectionPresent": false
@@ -373,11 +373,11 @@ export const PRODUCTS: Product[] = [
     "id": "chugger",
     "name": "Chugger",
     "displayNameFull": "Chugger",
-    "price": 12.75,
+    "price": 13,
     "category": "Topwater (Popper)",
     "kicker": "Topwater",
     "metaTitle": "Chugger | Ketto Outdoors",
-    "metaDescription": "A topwater lure that splashes and pops on the surface when you twitch your rod. Fun to watch, but better once you have the basics down. $12.75.",
+    "metaDescription": "A topwater lure that splashes and pops on the surface when you twitch your rod. Fun to watch, but better once you have the basics down. $13.",
     "difficulty": {
       "label": "Intermediate",
       "number": 6,
@@ -438,7 +438,7 @@ export const PRODUCTS: Product[] = [
         "id": "padhopper",
         "name": "Padhopper",
         "blurb": "For fishing thicker weeds on the same trip.",
-        "price": 11.5
+        "price": 12
       },
       {
         "id": "buzzrunner",
@@ -453,11 +453,11 @@ export const PRODUCTS: Product[] = [
     "id": "ripple",
     "name": "Ripple",
     "displayNameFull": "Ripple",
-    "price": 13.25,
+    "price": 14,
     "category": "Jerkbait",
     "kicker": "Jerkbait",
     "metaTitle": "Ripple | Ketto Outdoors",
-    "metaDescription": "A lure you twitch, pause, and twitch again. It's a little harder to learn, but it works well on cold, slow fish. $13.25.",
+    "metaDescription": "A lure you twitch, pause, and twitch again. It's a little harder to learn, but it works well on cold, slow fish. $14.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
@@ -517,13 +517,13 @@ export const PRODUCTS: Product[] = [
         "id": "flutterspoon",
         "name": "Flutterspoon",
         "blurb": "A simple flashing lure for fish holding off the bottom.",
-        "price": 7.25
+        "price": 8
       },
       {
         "id": "tubehead",
         "name": "Tubehead",
         "blurb": "A lure for rocky bottoms.",
-        "price": 4.95
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -532,11 +532,11 @@ export const PRODUCTS: Product[] = [
     "id": "bottomjig",
     "name": "Bottomjig",
     "displayNameFull": "Bottomjig",
-    "price": 5.75,
+    "price": 6,
     "category": "Jig",
     "kicker": "Jig",
     "metaTitle": "Bottomjig | Ketto Outdoors",
-    "metaDescription": "A weighted lure you hop along the bottom. It takes some practice to feel the bites. $5.75.",
+    "metaDescription": "A weighted lure you hop along the bottom. It takes some practice to feel the bites. $6.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
@@ -596,13 +596,13 @@ export const PRODUCTS: Product[] = [
         "id": "crawdaddy",
         "name": "Crawdaddy",
         "blurb": "Put it on a jig head to fish the bottom.",
-        "price": 6.75
+        "price": 7
       },
       {
         "id": "tubehead",
         "name": "Tubehead",
         "blurb": "A lure for rocky bottoms.",
-        "price": 4.95
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -615,7 +615,7 @@ export const PRODUCTS: Product[] = [
     "category": "Topwater (Buzzbait)",
     "kicker": "Buzzbait",
     "metaTitle": "Buzzrunner | Ketto Outdoors",
-    "metaDescription": "A lure that churns across the surface and makes a lot of noise. Fish hit it hard. It takes some practice to find the right reeling speed. $12.00.",
+    "metaDescription": "A lure that churns across the surface and makes a lot of noise. Fish hit it hard. It takes some practice to find the right reeling speed. $12.",
     "difficulty": {
       "label": "Intermediate",
       "number": 6,
@@ -676,13 +676,13 @@ export const PRODUCTS: Product[] = [
         "id": "chugger",
         "name": "Chugger",
         "blurb": "A surface lure for calm water.",
-        "price": 12.75
+        "price": 13
       },
       {
         "id": "padhopper",
         "name": "Padhopper",
         "blurb": "For fishing thicker weeds on the same trip.",
-        "price": 11.5
+        "price": 12
       }
     ],
     "reviewsSectionPresent": false
@@ -691,11 +691,11 @@ export const PRODUCTS: Product[] = [
     "id": "swimshad",
     "name": "Swimshad",
     "displayNameFull": "Swimshad",
-    "price": 9.5,
+    "price": 10,
     "category": "Swimbait",
     "kicker": "Swimbait",
     "metaTitle": "Swimshad | Ketto Outdoors",
-    "metaDescription": "A soft lure with a paddle tail that swims on its own. Cast it out and reel it back steady. $9.50.",
+    "metaDescription": "A soft lure with a paddle tail that swims on its own. Cast it out and reel it back steady. $10.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
@@ -755,13 +755,13 @@ export const PRODUCTS: Product[] = [
         "id": "deep-six",
         "name": "Deep Six",
         "blurb": "A good lure to switch to when this one isn't working.",
-        "price": 14.5
+        "price": 15
       },
       {
         "id": "flukeshad",
         "name": "Flukeshad",
         "blurb": "A lighter lure for the same water.",
-        "price": 5.95
+        "price": 6
       }
     ],
     "reviewsSectionPresent": false
@@ -770,11 +770,11 @@ export const PRODUCTS: Product[] = [
     "id": "ratlin",
     "name": "Ratlin",
     "displayNameFull": "Ratlin",
-    "price": 10.25,
+    "price": 11,
     "category": "Crankbait (Lipless)",
     "kicker": "Lipless crankbait",
     "metaTitle": "Ratlin | Ketto Outdoors",
-    "metaDescription": "A lure with a loud rattle inside. Cast it far and reel steady to find where the fish are. $10.25.",
+    "metaDescription": "A lure with a loud rattle inside. Cast it far and reel steady to find where the fish are. $11.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
@@ -834,7 +834,7 @@ export const PRODUCTS: Product[] = [
         "id": "deep-six",
         "name": "Deep Six",
         "blurb": "A good lure to switch to when this one isn't working.",
-        "price": 14.5
+        "price": 15
       },
       {
         "id": "longshot",
@@ -849,11 +849,11 @@ export const PRODUCTS: Product[] = [
     "id": "padhopper",
     "name": "Padhopper",
     "displayNameFull": "Padhopper",
-    "price": 11.5,
+    "price": 12,
     "category": "Topwater (Frog)",
     "kicker": "Topwater frog",
     "metaTitle": "Padhopper | Ketto Outdoors",
-    "metaDescription": "A frog lure that slides over lily pads and thick weeds without snagging. It takes practice to know when to set the hook. $11.50.",
+    "metaDescription": "A frog lure that slides over lily pads and thick weeds without snagging. It takes practice to know when to set the hook. $12.",
     "difficulty": {
       "label": "Advanced",
       "number": 7,
@@ -918,7 +918,7 @@ export const PRODUCTS: Product[] = [
         "id": "chugger",
         "name": "Chugger",
         "blurb": "A surface lure for calm water.",
-        "price": 12.75
+        "price": 13
       }
     ],
     "reviewsSectionPresent": false
@@ -927,11 +927,11 @@ export const PRODUCTS: Product[] = [
     "id": "flutterspoon",
     "name": "Flutterspoon",
     "displayNameFull": "Flutterspoon",
-    "price": 7.25,
+    "price": 8,
     "category": "Spoon",
     "kicker": "Spoon",
     "metaTitle": "Flutterspoon | Ketto Outdoors",
-    "metaDescription": "A metal spoon that wobbles and flashes as it sinks and as you reel it back. Cast, let it sink, and reel in. $7.25.",
+    "metaDescription": "A metal spoon that wobbles and flashes as it sinks and as you reel it back. Cast, let it sink, and reel in. $8.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -992,13 +992,13 @@ export const PRODUCTS: Product[] = [
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A soft worm with a curled tail. Good for different water.",
-        "price": 5.25
+        "price": 6
       },
       {
         "id": "ripple",
         "name": "Ripple",
         "blurb": "A twitch-and-pause lure for slow fish.",
-        "price": 13.25
+        "price": 14
       }
     ],
     "reviewsSectionPresent": false
@@ -1011,7 +1011,7 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Drop-shot Rig)",
     "kicker": "Drop-shot rig",
     "metaTitle": "Finesse Drop | Ketto Outdoors",
-    "metaDescription": "A light setup that lets you keep your bait at an exact depth. It takes more practice, but it works when fish are hard to catch. $8.00.",
+    "metaDescription": "A light setup that lets you keep your bait at an exact depth. It takes more practice, but it works when fish are hard to catch. $8.",
     "difficulty": {
       "label": "Advanced",
       "number": 7,
@@ -1072,13 +1072,13 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Hooks sized for this bait.",
-        "price": 4.25
+        "price": 5
       },
       {
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A soft worm with a curled tail. Good for different water.",
-        "price": 5.25
+        "price": 6
       }
     ],
     "reviewsSectionPresent": false
@@ -1087,11 +1087,11 @@ export const PRODUCTS: Product[] = [
     "id": "ribtail",
     "name": "Ribtail",
     "displayNameFull": "Ribtail",
-    "price": 5.25,
+    "price": 6,
     "category": "Soft Plastic (Curl-tail Worm)",
     "kicker": "Soft plastic: curl-tail worm",
     "metaTitle": "Ribtail | Ketto Outdoors",
-    "metaDescription": "A soft lure with a curled tail that kicks as it falls and as you reel. Easy to use, and you can rig it many ways as you learn. $5.25.",
+    "metaDescription": "A soft lure with a curled tail that kicks as it falls and as you reel. Easy to use, and you can rig it many ways as you learn. $6.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -1151,13 +1151,13 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Hooks sized for this bait.",
-        "price": 4.25
+        "price": 5
       },
       {
         "id": "driftworm",
         "name": "Driftworm",
         "blurb": "Another slow, easy bottom lure.",
-        "price": 6.5
+        "price": 7
       },
     ],
     "reviewsSectionPresent": false
@@ -1166,11 +1166,11 @@ export const PRODUCTS: Product[] = [
     "id": "crawdaddy",
     "name": "Crawdaddy",
     "displayNameFull": "Crawdaddy",
-    "price": 6.75,
+    "price": 7,
     "category": "Soft Plastic (Creature Bait)",
     "kicker": "Soft plastic: creature bait",
     "metaTitle": "Crawdaddy | Ketto Outdoors",
-    "metaDescription": "A soft lure with claws that flap like a crawfish on the bottom. A good partner for a jig once you're ready to feel bites on the bottom. $6.75.",
+    "metaDescription": "A soft lure with claws that flap like a crawfish on the bottom. A good partner for a jig once you're ready to feel bites on the bottom. $7.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
@@ -1230,13 +1230,13 @@ export const PRODUCTS: Product[] = [
         "id": "bottomjig",
         "name": "Bottomjig",
         "blurb": "A classic match for fishing the bottom.",
-        "price": 5.75
+        "price": 6
       },
       {
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Hooks sized for this bait.",
-        "price": 4.25
+        "price": 5
       },
     ],
     "reviewsSectionPresent": false
@@ -1245,11 +1245,11 @@ export const PRODUCTS: Product[] = [
     "id": "flukeshad",
     "name": "Flukeshad",
     "displayNameFull": "Flukeshad",
-    "price": 5.95,
+    "price": 6,
     "category": "Soft Plastic (Weightless Jerkbait)",
     "kicker": "Soft plastic: weightless jerkbait",
     "metaTitle": "Flukeshad | Ketto Outdoors",
-    "metaDescription": "A soft lure that darts side to side just under the surface. Twitch it, pause, and repeat. $5.95.",
+    "metaDescription": "A soft lure that darts side to side just under the surface. Twitch it, pause, and repeat. $6.",
     "difficulty": {
       "label": "Beginner",
       "number": 3,
@@ -1309,13 +1309,13 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Hooks sized for this bait.",
-        "price": 4.25
+        "price": 5
       },
       {
         "id": "swimshad",
         "name": "Swimshad",
         "blurb": "A steady-swimming lure to switch to.",
-        "price": 9.5
+        "price": 10
       }
     ],
     "reviewsSectionPresent": false
@@ -1324,11 +1324,11 @@ export const PRODUCTS: Product[] = [
     "id": "tubehead",
     "name": "Tubehead",
     "displayNameFull": "Tubehead",
-    "price": 4.95,
+    "price": 5,
     "category": "Soft Plastic (Tube Bait)",
     "kicker": "Soft plastic: tube bait",
     "metaTitle": "Tubehead | Ketto Outdoors",
-    "metaDescription": "A tube lure with a skirt that flares open as it sinks. A classic for rocky bottoms. $4.95.",
+    "metaDescription": "A tube lure with a skirt that flares open as it sinks. A classic for rocky bottoms. $5.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
@@ -1388,13 +1388,13 @@ export const PRODUCTS: Product[] = [
         "id": "bottomjig",
         "name": "Bottomjig",
         "blurb": "A classic match for fishing the bottom.",
-        "price": 5.75
+        "price": 6
       },
       {
         "id": "ripple",
         "name": "Ripple",
         "blurb": "A twitch-and-pause lure for slow fish.",
-        "price": 13.25
+        "price": 14
       }
     ],
     "reviewsSectionPresent": false
@@ -1403,11 +1403,11 @@ export const PRODUCTS: Product[] = [
     "id": "flipping-jig",
     "name": "Flipping Jig",
     "displayNameFull": "Flipping Jig",
-    "price": 5.5,
+    "price": 6,
     "category": "Jig",
     "kicker": "Jig",
     "metaTitle": "Flipping Jig | Ketto Outdoors",
-    "metaDescription": "The jig to tie on when you don’t know what else to throw. It works almost anywhere near cover. $5.50.",
+    "metaDescription": "The jig to tie on when you don’t know what else to throw. It works almost anywhere near cover. $6.",
     "difficulty": {
       "label": "Intermediate",
       "number": 5,
@@ -1468,13 +1468,13 @@ export const PRODUCTS: Product[] = [
         "id": "crawdaddy",
         "name": "Crawdaddy",
         "blurb": "A good soft bait to add to this jig.",
-        "price": 6.75
+        "price": 7
       },
       {
         "id": "bottomjig",
         "name": "Bottomjig",
         "blurb": "A lighter jig for open bottom.",
-        "price": 5.75
+        "price": 6
       }
     ],
     "reviewsSectionPresent": false
@@ -1483,11 +1483,11 @@ export const PRODUCTS: Product[] = [
     "id": "medium-crankbait",
     "name": "Medium Crankbait",
     "displayNameFull": "Medium Crankbait",
-    "price": 8.5,
+    "price": 9,
     "category": "Crankbait",
     "kicker": "Crankbait",
     "metaTitle": "Medium Crankbait | Ketto Outdoors",
-    "metaDescription": "Cast it out and reel it back steady. The rattle and wobble get a bass’s attention. $8.50.",
+    "metaDescription": "Cast it out and reel it back steady. The rattle and wobble get a bass’s attention. $9.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -1543,13 +1543,13 @@ export const PRODUCTS: Product[] = [
         "id": "deep-six",
         "name": "Deep Six",
         "blurb": "A crankbait for shallow water with lots of snags.",
-        "price": 14.5
+        "price": 15
       },
       {
         "id": "ratlin",
         "name": "Ratlin",
         "blurb": "A rattling lure that covers water fast.",
-        "price": 10.25
+        "price": 11
       }
     ],
     "reviewsSectionPresent": false
@@ -1558,11 +1558,11 @@ export const PRODUCTS: Product[] = [
     "id": "wacky-worm",
     "name": "Wacky Worm",
     "displayNameFull": "Wacky Worm",
-    "price": 6.25,
+    "price": 7,
     "category": "Soft Plastic (Wacky Worm)",
     "kicker": "Soft plastic: wacky-rigged worm",
     "metaTitle": "Wacky Worm | Ketto Outdoors",
-    "metaDescription": "Rig it, cast it, and let it sink. One of the easiest soft plastics to fish. $6.25.",
+    "metaDescription": "Rig it, cast it, and let it sink. One of the easiest soft plastics to fish. $7.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -1618,13 +1618,13 @@ export const PRODUCTS: Product[] = [
         "id": "ribtail",
         "name": "Ribtail",
         "blurb": "A curl-tail worm to try something different.",
-        "price": 5.25
+        "price": 6
       },
       {
         "id": "driftworm",
         "name": "Driftworm",
         "blurb": "A slower worm you drag along the bottom.",
-        "price": 6.5
+        "price": 7
       }
     ],
     "reviewsSectionPresent": false
@@ -1633,11 +1633,11 @@ export const PRODUCTS: Product[] = [
     "id": "chatterbait",
     "name": "Chatterbait",
     "displayNameFull": "Chatterbait",
-    "price": 7.75,
+    "price": 8,
     "category": "Bladed Jig",
     "kicker": "Chatterbait / bladed jig",
     "metaTitle": "Chatterbait | Ketto Outdoors",
-    "metaDescription": "It vibrates as you reel, so fish can find it in cloudy water. $7.75.",
+    "metaDescription": "It vibrates as you reel, so fish can find it in cloudy water. $8.",
     "difficulty": {
       "label": "Intermediate",
       "number": 4,
@@ -1699,7 +1699,7 @@ export const PRODUCTS: Product[] = [
         "id": "ratlin",
         "name": "Ratlin",
         "blurb": "A rattling lure that covers more water.",
-        "price": 10.25
+        "price": 11
       }
     ],
     "reviewsSectionPresent": false
@@ -1708,11 +1708,11 @@ export const PRODUCTS: Product[] = [
     "id": "urchin-finesse-bait",
     "name": "Urchin Finesse Bait",
     "displayNameFull": "Urchin Finesse Bait",
-    "price": 4.95,
+    "price": 5,
     "category": "Soft Plastic (Finesse)",
     "kicker": "Soft plastic: small and subtle",
     "metaTitle": "Urchin Finesse Bait | Ketto Outdoors",
-    "metaDescription": "A small, subtle bait for the days other lures don’t get bit. Easy to drop next to cover. $4.95.",
+    "metaDescription": "A small, subtle bait for the days other lures don’t get bit. Easy to drop next to cover. $5.",
     "difficulty": {
       "label": "Advanced",
       "number": 6,
@@ -1773,7 +1773,7 @@ export const PRODUCTS: Product[] = [
         "id": "flukeshad",
         "name": "Flukeshad",
         "blurb": "A lighter lure for cover this one can’t reach.",
-        "price": 5.95
+        "price": 6
       }
     ],
     "reviewsSectionPresent": false
@@ -1782,11 +1782,11 @@ export const PRODUCTS: Product[] = [
     "id": "bulk-sinkers",
     "name": "Bulk Sinkers",
     "displayNameFull": "Bulk Fishing Weights",
-    "price": 4.5,
+    "price": 5,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
     "metaTitle": "Bulk Sinkers | Ketto Outdoors",
-    "metaDescription": "Basic weights that get your bait down to where the fish are. $4.50.",
+    "metaDescription": "Basic weights that get your bait down to where the fish are. $5.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Basic weights that get your bait down to where the fish are.",
@@ -1823,7 +1823,7 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Pair these weights with a hook for any rig.",
-        "price": 4.25
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -1832,11 +1832,11 @@ export const PRODUCTS: Product[] = [
     "id": "bobbers",
     "name": "Bobbers",
     "displayNameFull": "Snap-On Bobbers",
-    "price": 4.75,
+    "price": 5,
     "category": "Terminal Tackle (Float)",
     "kicker": "Float",
     "metaTitle": "Bobbers | Ketto Outdoors",
-    "metaDescription": "A bobber going under is the easiest bite to read. You can tell it’s a fish. $4.75.",
+    "metaDescription": "A bobber going under is the easiest bite to read. You can tell it’s a fish. $5.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -1890,7 +1890,7 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Small hooks for a bobber setup.",
-        "price": 4.25
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -1899,11 +1899,11 @@ export const PRODUCTS: Product[] = [
     "id": "split-shot-weights",
     "name": "Split Shot Weights",
     "displayNameFull": "Split Shot Weights",
-    "price": 3.95,
+    "price": 4,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights",
     "metaTitle": "Split Shot Weights | Ketto Outdoors",
-    "metaDescription": "Pinch one on above the hook so your bait sinks and hangs under the bobber. $3.95.",
+    "metaDescription": "Pinch one on above the hook so your bait sinks and hangs under the bobber. $4.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Pinch one on above the hook so your bait sinks and hangs under the bobber.",
@@ -1947,7 +1947,7 @@ export const PRODUCTS: Product[] = [
         "id": "bobbers",
         "name": "Bobbers",
         "blurb": "Use these weights with a bobber.",
-        "price": 4.75
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -1956,11 +1956,11 @@ export const PRODUCTS: Product[] = [
     "id": "scented-soft-bait",
     "name": "Scented Soft Bait",
     "displayNameFull": "Scented Soft Bait",
-    "price": 5.25,
+    "price": 6,
     "category": "Soft Plastic (Scented)",
     "kicker": "Scented bait: no live bait needed",
     "metaTitle": "Scented Soft Bait | Ketto Outdoors",
-    "metaDescription": "Works like a real worm without digging for one. Thread it on and go. $5.25.",
+    "metaDescription": "Works like a real worm without digging for one. Thread it on and go. $6.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -2008,7 +2008,7 @@ export const PRODUCTS: Product[] = [
         "id": "baithooks",
         "name": "Baithooks",
         "blurb": "Small hooks for this bait.",
-        "price": 4.25
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2017,11 +2017,11 @@ export const PRODUCTS: Product[] = [
     "id": "bobber-stops",
     "name": "Bobber Stops & Beads",
     "displayNameFull": "Bobber Stops & Beads",
-    "price": 3.5,
+    "price": 4,
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
     "metaTitle": "Bobber Stops & Beads | Ketto Outdoors",
-    "metaDescription": "Set how deep your bait hangs, and move it up or down as you find the fish. $3.50.",
+    "metaDescription": "Set how deep your bait hangs, and move it up or down as you find the fish. $4.",
     "difficulty": null,
     "targetSpecies": "Any species",
     "shortDescription": "Set how deep your bait hangs, and move it up or down as you find the fish.",
@@ -2064,7 +2064,7 @@ export const PRODUCTS: Product[] = [
         "id": "bobbers",
         "name": "Bobbers",
         "blurb": "Use these stops with a bobber.",
-        "price": 4.75
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2073,11 +2073,11 @@ export const PRODUCTS: Product[] = [
     "id": "circle-hooks",
     "name": "Circle Hooks",
     "displayNameFull": "Circle Hooks",
-    "price": 5.95,
+    "price": 6,
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks: circle style",
     "metaTitle": "Circle Hooks | Ketto Outdoors",
-    "metaDescription": "Circle hooks catch catfish in the corner of the mouth on their own, so you aren’t gut-hooking fish while you learn the bite. $5.95.",
+    "metaDescription": "Circle hooks catch catfish in the corner of the mouth on their own, so you aren’t gut-hooking fish while you learn the bite. $6.",
     "difficulty": {
       "label": "Beginner",
       "number": 2,
@@ -2136,7 +2136,7 @@ export const PRODUCTS: Product[] = [
         "id": "sliding-egg-sinkers",
         "name": "Sliding Egg Sinkers",
         "blurb": "The usual weight to use with these hooks.",
-        "price": 4.5
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2145,11 +2145,11 @@ export const PRODUCTS: Product[] = [
     "id": "dip-bait-treble-hooks",
     "name": "Dip Bait Treble Hooks",
     "displayNameFull": "Dip Bait Treble Hooks",
-    "price": 5.5,
+    "price": 6,
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks: treble, bait-holder spring",
     "metaTitle": "Dip Bait Treble Hooks | Ketto Outdoors",
-    "metaDescription": "Stink bait needs a hook that holds paste. A regular hook lets it slide off when you cast. $5.50.",
+    "metaDescription": "Stink bait needs a hook that holds paste. A regular hook lets it slide off when you cast. $6.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -2202,7 +2202,7 @@ export const PRODUCTS: Product[] = [
         "id": "catfish-stink-bait",
         "name": "Catfish Stink Bait",
         "blurb": "The bait these hooks are made for.",
-        "price": 6.5
+        "price": 7
       }
     ],
     "reviewsSectionPresent": false
@@ -2211,11 +2211,11 @@ export const PRODUCTS: Product[] = [
     "id": "sliding-egg-sinkers",
     "name": "Sliding Egg Sinkers",
     "displayNameFull": "Sliding Egg Sinkers",
-    "price": 4.5,
+    "price": 5,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights: slip-sinker rig",
     "metaTitle": "Sliding Egg Sinkers | Ketto Outdoors",
-    "metaDescription": "Lets a catfish take the bait and swim off without feeling the weight. Best in calm water. $4.50.",
+    "metaDescription": "Lets a catfish take the bait and swim off without feeling the weight. Best in calm water. $5.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Lets a catfish take the bait and swim off without feeling the weight. Best in calm water.",
@@ -2261,7 +2261,7 @@ export const PRODUCTS: Product[] = [
         "id": "no-roll-bank-sinkers",
         "name": "No-Roll Bank Sinkers",
         "blurb": "The weight to use in moving water.",
-        "price": 4.75
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2270,11 +2270,11 @@ export const PRODUCTS: Product[] = [
     "id": "no-roll-bank-sinkers",
     "name": "No-Roll Bank Sinkers",
     "displayNameFull": "No-Roll Bank Sinkers",
-    "price": 4.75,
+    "price": 5,
     "category": "Terminal Tackle (Weights)",
     "kicker": "Weights: current fishing",
     "metaTitle": "No-Roll Bank Sinkers | Ketto Outdoors",
-    "metaDescription": "Flat sinkers that stay put in current. Use these on a river bank. $4.75.",
+    "metaDescription": "Flat sinkers that stay put in current. Use these on a river bank. $5.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Flat sinkers that stay put in current. Use these on a river bank.",
@@ -2320,7 +2320,7 @@ export const PRODUCTS: Product[] = [
         "id": "sliding-egg-sinkers",
         "name": "Sliding Egg Sinkers",
         "blurb": "The weight to use in still water.",
-        "price": 4.5
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2329,11 +2329,11 @@ export const PRODUCTS: Product[] = [
     "id": "barrel-swivels",
     "name": "Barrel Swivels",
     "displayNameFull": "Heavy-Duty Barrel Swivels",
-    "price": 4.25,
+    "price": 5,
     "category": "Terminal Tackle (Rigging)",
     "kicker": "Rigging",
     "metaTitle": "Barrel Swivels | Ketto Outdoors",
-    "metaDescription": "Stops your leader from twisting and joins the rig without a bulky knot. $4.25.",
+    "metaDescription": "Stops your leader from twisting and joins the rig without a bulky knot. $5.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Stops your leader from twisting and joins the rig without a bulky knot.",
@@ -2377,7 +2377,7 @@ export const PRODUCTS: Product[] = [
         "id": "fluorocarbon-leader",
         "name": "Fluorocarbon Leader Line",
         "blurb": "Use with these swivels for a full catfish rig.",
-        "price": 8.5
+        "price": 9
       }
     ],
     "reviewsSectionPresent": false
@@ -2386,11 +2386,11 @@ export const PRODUCTS: Product[] = [
     "id": "fluorocarbon-leader",
     "name": "Fluorocarbon Leader Line",
     "displayNameFull": "Fluorocarbon Leader Line",
-    "price": 8.5,
+    "price": 9,
     "category": "Terminal Tackle (Line)",
     "kicker": "Line: 30 lb leader",
     "metaTitle": "Fluorocarbon Leader Line | Ketto Outdoors",
-    "metaDescription": "Tough enough to survive being dragged over rocks on the bottom. $8.50.",
+    "metaDescription": "Tough enough to survive being dragged over rocks on the bottom. $9.",
     "difficulty": null,
     "targetSpecies": "Catfish",
     "shortDescription": "Tough enough to survive being dragged over rocks on the bottom.",
@@ -2434,7 +2434,7 @@ export const PRODUCTS: Product[] = [
         "id": "barrel-swivels",
         "name": "Barrel Swivels",
         "blurb": "Connects this leader to your main line.",
-        "price": 4.25
+        "price": 5
       }
     ],
     "reviewsSectionPresent": false
@@ -2443,11 +2443,11 @@ export const PRODUCTS: Product[] = [
     "id": "catfish-stink-bait",
     "name": "Catfish Stink Bait",
     "displayNameFull": "Prepared Catfish Dip Bait",
-    "price": 6.5,
+    "price": 7,
     "category": "Natural Bait / Prepared Bait",
     "kicker": "Bait: prepared dip/paste",
     "metaTitle": "Catfish Stink Bait | Ketto Outdoors",
-    "metaDescription": "No cut bait or chicken liver needed. Dip the hook and cast. $6.50.",
+    "metaDescription": "No cut bait or chicken liver needed. Dip the hook and cast. $7.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
@@ -2498,7 +2498,7 @@ export const PRODUCTS: Product[] = [
         "id": "dip-bait-treble-hooks",
         "name": "Dip Bait Treble Hooks",
         "blurb": "The hook this bait is built for.",
-        "price": 5.5
+        "price": 6
       }
     ],
     "reviewsSectionPresent": false

@@ -97,9 +97,9 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     endCta: {
       heading: 'Ready to pick one?',
-      body: 'Browse gear filtered by difficulty and target fish, or let a kit make the decision for you.',
-      buttonLabel: 'Shop all gear →',
-      href: '/shop',
+      body: 'Let a kit make the decision for you.',
+      buttonLabel: 'Shop kits →',
+      href: '/kits',
     },
   },
   {
@@ -132,8 +132,8 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     endCta: {
       heading: 'Want the exact pace for your lure?',
       body: 'Every product page lists the retrieve speed and what a strike feels like under "How to Fish It."',
-      buttonLabel: 'Browse gear →',
-      href: '/shop',
+      buttonLabel: 'Shop kits →',
+      href: '/kits',
     },
   },
   {
@@ -168,10 +168,10 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
     endCta: {
-      heading: 'Know your water, not sure about your state?',
-      body: 'See the freshwater species and gear beginners in your state typically start with.',
-      buttonLabel: 'Find gear for your state →',
-      href: '/gear-by-state',
+      heading: 'Ready to try it?',
+      body: 'Let a kit make the decision for you.',
+      buttonLabel: 'Shop kits →',
+      href: '/kits',
     },
   },
 ];

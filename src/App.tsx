@@ -9,7 +9,9 @@ import Home from './pages/Home';
 const Kits = lazy(() => import('./pages/Kits'));
 const Kit = lazy(() => import('./pages/Kit'));
 const BitingNow = lazy(() => import('./pages/BitingNow'));
-const GearByState = lazy(() => import('./pages/GearByState'));
+// HIDDEN for the kits-only test run. The page is fully built at src/pages/GearByState.tsx.
+// Uncomment this import and the matching <Route> below (and the sitemap entry) to bring it back.
+// const GearByState = lazy(() => import('./pages/GearByState'));
 const UsedGear = lazy(() => import('./pages/UsedGear'));
 const TradeIn = lazy(() => import('./pages/TradeIn'));
 // PHASE 2 - Upgrade Credit program (rod & reel combo trade-in), disabled until launch is
@@ -44,7 +46,7 @@ function App() {
                   <Route path="kits" element={<Kits />} />
                   <Route path="kits/:slug" element={<Kit />} />
                   <Route path="biting-now" element={<BitingNow />} />
-                  <Route path="gear-by-state" element={<GearByState />} />
+                  {/* <Route path="gear-by-state" element={<GearByState />} /> */}
                   <Route path="used-gear" element={<UsedGearGate><UsedGear /></UsedGearGate>} />
                   <Route path="trade-in" element={<UsedGearGate><TradeIn /></UsedGearGate>} />
                   {/* PHASE 2 - Upgrade Credit program, disabled until launch is stable. See src/pages/UpgradeCredit.tsx */}

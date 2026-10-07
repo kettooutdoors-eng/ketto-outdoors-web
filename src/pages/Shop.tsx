@@ -116,9 +116,6 @@ export default function Shop() {
           <Link to="/biting-now" style={{ fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}>
             Or see what's biting right now →
           </Link>
-          <Link to="/gear-by-state" style={{ fontSize: 13, fontWeight: 700, color: 'var(--cream)', textDecoration: 'underline' }}>
-            Or find gear for your state →
-          </Link>
         </p>
       </div>
     </div>

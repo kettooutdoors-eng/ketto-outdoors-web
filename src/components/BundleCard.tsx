@@ -1,11 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '../state/CartContext';
 import { TinFrame } from './ui/TinFrame';
 import { ImagePlaceholder } from './ui/ImagePlaceholder';
 import { PillSeal } from './ui/Seal';
 import { BannerButton } from './ui/BannerButton';
 import type { Bundle } from '../data/types';
+import { formatPrice } from '../lib/format';
 
 export function BundleCard({ bundle }: { bundle: Bundle }) {
+  const { addToCart, closeCart } = useCart();
+  const navigate = useNavigate();
+  const buyNow = () => {
+    addToCart(bundle.id);
+    closeCart();
+    navigate('/checkout');
+  };
   return (
     <TinFrame shadow="lg" innerClassName="card-lift">
       <div style={{ padding: 32, display: 'flex', flexDirection: 'column', gap: 14, position: 'relative', width: '100%' }}>
@@ -15,8 +24,11 @@ export function BundleCard({ bundle }: { bundle: Bundle }) {
           {bundle.name}
         </Link>
         <p style={{ fontSize: 14, margin: 0 }}>{bundle.tagline}</p>
-        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22 }}>${bundle.price.toFixed(2)}</div>
-        <BannerButton to={`/kits/${bundle.slug}`} fill background="var(--forest)" color="var(--cream)" style={{ marginTop: 'auto' }}>
+        <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22 }}>{formatPrice(bundle.price)}</div>
+        <BannerButton fill background="var(--rust)" color="#fff" onClick={buyNow} style={{ marginTop: 'auto', padding: '20px 22px', fontSize: 20 }}>
+          Buy now
+        </BannerButton>
+        <BannerButton to={`/kits/${bundle.slug}`} fill background="var(--forest)" color="var(--cream)">
           View the kit
         </BannerButton>
       </div>

@@ -68,13 +68,19 @@ Actions tab.
 Until both Shopify variables are set, the site runs with checkout closed: the
 cart works, and `/checkout` says online orders open soon.
 
-1. **Create the products in Shopify.** Each product's **handle** (the URL slug
-   in Shopify's product editor, under "Search engine listing") must exactly
-   match the item's `id` on this site, e.g. `deep-six`, `first-bass-kit`,
-   `never-fished-before-starter-kit`, `first-catfish-kit`. See the ids in
-   `src/data/products.ts` and `src/data/bundles.ts`. Products with sizes need a
-   Shopify option named **Size** with the same values as `sizeOptions`.
-   Products must be published to the **Headless** sales channel.
+1. **Import the products.** In Shopify admin go to Products → Import and
+   upload [`shopify/products.csv`](shopify/products.csv). It has all 3 kits and
+   every product, with titles, descriptions, prices, sizes, photos, and SEO
+   text. Each product's **handle** matches its `id` on this site, which is how
+   the site finds it in Shopify, so don't change handles. After editing
+   products or prices in `src/data/`, run `npm run shopify:csv` to rebuild the
+   file (re-importing with "Overwrite products with matching handles" updates
+   them).
+   - Everything imports with **0 stock**, so nothing can be bought yet. Set
+     real quantities under Products → Inventory once gear is in hand.
+   - Shipping weights are blank. Add them if you charge shipping by weight.
+   - Select all products → **Include in sales channels** → **Headless**, or
+     the site can't see them.
 2. **Get a Storefront API token.** Install the **Headless** app from the
    Shopify App Store, create a storefront, and copy its **public access
    token**. (It's a read-only token made to live in browser code.)
