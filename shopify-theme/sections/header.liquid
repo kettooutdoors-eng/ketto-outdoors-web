@@ -1,5 +1,6 @@
 {%- liquid
   assign menu = section.settings.menu
+  assign cta_link = section.settings.cta_link | default: '/#kits'
 -%}
 {%- if section.settings.announcement != blank -%}
   <div class="announcement">
@@ -27,7 +28,7 @@
   {%- endfor -%}
 
   {%- if section.settings.cta_label != blank -%}
-    <a href="{{ section.settings.cta_link | default: '/collections/kits' }}" class="btn header-cta">{{ section.settings.cta_label }}</a>
+    <a href="{{ cta_link }}" class="btn header-cta">{{ section.settings.cta_label }}</a>
   {%- endif -%}
 
   <form action="{{ routes.search_url }}" method="get" role="search" class="header-search" id="HeaderSearch">
@@ -57,7 +58,7 @@
   <button type="button" class="mobile-menu__close" aria-label="Close menu" data-menu-close>&times;</button>
   <a href="{{ routes.root_url }}">Home</a>
   {%- if section.settings.cta_label != blank -%}
-    <a href="{{ section.settings.cta_link | default: '/collections/kits' }}">{{ section.settings.cta_label }}</a>
+    <a href="{{ cta_link }}">{{ section.settings.cta_label }}</a>
   {%- endif -%}
   {%- for link in menu.links -%}
     <a href="{{ link.url }}">{{ link.title }}</a>
@@ -88,9 +89,11 @@
       "default": "Shop Kits"
     },
     {
-      "type": "url",
+      "type": "text",
       "id": "cta_link",
-      "label": "Button link"
+      "label": "Button link",
+      "default": "/#kits",
+      "info": "/#kits scrolls to the kit grid on the home page. Or use a page address like /collections/kits."
     },
     {
       "type": "header",
