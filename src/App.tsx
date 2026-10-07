@@ -1,5 +1,6 @@
 import { lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { SELL_SINGLE_PRODUCTS } from './lib/featureFlags';
 import { CartProvider } from './state/CartContext';
 import { InventoryProvider } from './state/InventoryContext';
 import { SiteLayout } from './components/layout/SiteLayout';
@@ -55,7 +56,7 @@ function App() {
                   <Route path="bass" element={<KitCard path="bass" />} />
                   <Route path="catfish" element={<KitCard path="catfish" />} />
                   <Route path="starter" element={<KitCard path="starter" />} />
-                  <Route path="shop" element={<Shop />} />
+                  <Route path="shop" element={SELL_SINGLE_PRODUCTS ? <Shop /> : <Navigate to="/kits" replace />} />
                   <Route path="product/:id" element={<ProductPage />} />
                   <Route path="new-to-fishing" element={<NewToFishing />} />
                   <Route path="blog" element={<BlogIndex />} />

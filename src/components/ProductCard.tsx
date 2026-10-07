@@ -6,6 +6,7 @@ import { useCart } from '../state/CartContext';
 import { getProductImageSrc } from '../data/productImages';
 import type { ShopCatalogItem } from '../data/shop';
 import { formatPrice } from '../lib/format';
+import { SELL_SINGLE_PRODUCTS } from '../lib/featureFlags';
 
 const DIFFICULTY_COLOR: Record<string, string> = {
   Beginner: 'var(--forest)',
@@ -63,13 +64,21 @@ export function ProductCard({ item }: { item: ShopCatalogItem }) {
         <div style={{ fontSize: 12, letterSpacing: '.04em', color: 'var(--ink)', opacity: 0.7 }}>Target fish: {item.targetFish}</div>
         <p style={{ fontSize: 14, textWrap: 'pretty' as never }}>{item.description}</p>
 
-        <div style={{ marginTop: 4 }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>{formatPrice(item.price)}</span>
-        </div>
+        {SELL_SINGLE_PRODUCTS ? (
+          <>
+            <div style={{ marginTop: 4 }}>
+              <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 18 }}>{formatPrice(item.price)}</span>
+            </div>
 
-        <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>
-          Add to cart
-        </BannerButton>
+            <BannerButton fill background="var(--forest)" color="var(--cream)" onClick={() => addToCart(item.id)} style={{ marginTop: 'auto' }}>
+              Add to cart
+            </BannerButton>
+          </>
+        ) : (
+          <BannerButton fill to={`/product/${item.id}`} background="var(--forest)" color="var(--cream)" style={{ marginTop: 'auto' }}>
+            How to use it
+          </BannerButton>
+        )}
       </div>
     </TinFrame>
   );

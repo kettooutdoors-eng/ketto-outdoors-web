@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { PRODUCTS } from '../data/products';
 import { fetchProducts, type ShopifyProduct } from '../lib/shopify';
+import { SELL_SINGLE_PRODUCTS } from '../lib/featureFlags';
 
 // Stock comes live from Shopify. Until it loads (or if Shopify isn't set up yet),
 // every product shows as out of stock.
@@ -18,6 +19,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Record<string, ShopifyProduct>>({});
 
   useEffect(() => {
+    if (!SELL_SINGLE_PRODUCTS) return;
     fetchProducts(PRODUCTS.map((p) => p.id))
       .then(setProducts)
       .catch(() => {});

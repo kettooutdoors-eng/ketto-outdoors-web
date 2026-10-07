@@ -16,6 +16,7 @@ import { submitLead } from '../lib/leads';
 import { getProductImageSrc } from '../data/productImages';
 import NotFound from './NotFound';
 import { formatPrice } from '../lib/format';
+import { SELL_SINGLE_PRODUCTS } from '../lib/featureFlags';
 
 function NotifyWhenBackForm({ productId, productName }: { productId: string; productName: string }) {
   const [email, setEmail] = useState('');
@@ -89,8 +90,8 @@ export default function ProductPage() {
   return (
     <div>
       <div style={{ padding: '18px 40px 0', fontSize: 12, opacity: 0.65 }}>
-        <Link to="/shop" style={{ color: 'var(--ink)' }}>
-          Shop
+        <Link to={SELL_SINGLE_PRODUCTS ? '/shop' : '/kits'} style={{ color: 'var(--ink)' }}>
+          {SELL_SINGLE_PRODUCTS ? 'Shop' : 'Kits'}
         </Link>{' '}
         / {product.name}
       </div>
@@ -109,76 +110,89 @@ export default function ProductPage() {
 
           <p style={{ fontSize: 15, lineHeight: 1.6 }}>{product.shortDescription}</p>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>{formatPrice(product.price)}</span>
-            <StockLabel inStock={inStock} />
-          </div>
-
-          {product.colorOptions && (
-            <div>
-              <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 8 }}>Color</div>
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {product.colorOptions.map((c) => (
-                  <button
-                    key={c}
-                    type="button"
-                    aria-pressed={selectedColor === c}
-                    onClick={() => setSelectedColor(c)}
-                    style={{
-                      padding: '8px 14px',
-                      fontSize: 13,
-                      fontWeight: 700,
-                      border: `2px solid ${selectedColor === c ? 'var(--rust)' : 'var(--ink)'}`,
-                      background: selectedColor === c ? 'var(--rust)' : 'var(--cream)',
-                      color: selectedColor === c ? 'var(--cream)' : 'var(--ink)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {c}
-                  </button>
-                ))}
+          {SELL_SINGLE_PRODUCTS ? (
+            <>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 28 }}>{formatPrice(product.price)}</span>
+                <StockLabel inStock={inStock} />
               </div>
+  
+              {product.colorOptions && (
+                <div>
+                  <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 8 }}>Color</div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {product.colorOptions.map((c) => (
+                      <button
+                        key={c}
+                        type="button"
+                        aria-pressed={selectedColor === c}
+                        onClick={() => setSelectedColor(c)}
+                        style={{
+                          padding: '8px 14px',
+                          fontSize: 13,
+                          fontWeight: 700,
+                          border: `2px solid ${selectedColor === c ? 'var(--rust)' : 'var(--ink)'}`,
+                          background: selectedColor === c ? 'var(--rust)' : 'var(--cream)',
+                          color: selectedColor === c ? 'var(--cream)' : 'var(--ink)',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {c}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+  
+              {product.sizeOptions && (
+                <div>
+                  <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 8 }}>Size</div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {product.sizeOptions.map((s) => (
+                      <button
+                        key={s}
+                        type="button"
+                        aria-pressed={selectedSize === s}
+                        onClick={() => setSelectedSize(s)}
+                        style={{
+                          padding: '8px 14px',
+                          fontSize: 13,
+                          fontWeight: 700,
+                          border: `2px solid ${selectedSize === s ? 'var(--rust)' : 'var(--ink)'}`,
+                          background: selectedSize === s ? 'var(--rust)' : 'var(--cream)',
+                          color: selectedSize === s ? 'var(--cream)' : 'var(--ink)',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+  
+              <BannerButton
+                fill
+                background={inStock && !needsSelection ? 'var(--forest)' : 'rgba(36,26,16,.3)'}
+                color="var(--cream)"
+                onClick={() => inStock && !needsSelection && addToCart(product.id, 1, selectedSize)}
+                style={{ marginTop: 6, opacity: inStock ? 1 : 0.6, cursor: inStock && !needsSelection ? 'pointer' : 'not-allowed' }}
+              >
+                {!inStock ? 'Out of stock' : needsSelection ? 'Select options' : 'Add to cart'}
+              </BannerButton>
+  
+              {!inStock && <NotifyWhenBackForm productId={product.id} productName={product.name} />}
+            </>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 6 }}>
+              <p style={{ fontSize: 14, lineHeight: 1.6, margin: 0 }}>
+                Sold as part of our starter kits for now, with everything else you need to start catching fish.
+              </p>
+              <BannerButton fill to="/kits" background="var(--forest)" color="var(--cream)">
+                Shop starter kits
+              </BannerButton>
             </div>
           )}
-
-          {product.sizeOptions && (
-            <div>
-              <div style={{ fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--kicker)', fontWeight: 700, marginBottom: 8 }}>Size</div>
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {product.sizeOptions.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    aria-pressed={selectedSize === s}
-                    onClick={() => setSelectedSize(s)}
-                    style={{
-                      padding: '8px 14px',
-                      fontSize: 13,
-                      fontWeight: 700,
-                      border: `2px solid ${selectedSize === s ? 'var(--rust)' : 'var(--ink)'}`,
-                      background: selectedSize === s ? 'var(--rust)' : 'var(--cream)',
-                      color: selectedSize === s ? 'var(--cream)' : 'var(--ink)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <BannerButton
-            fill
-            background={inStock && !needsSelection ? 'var(--forest)' : 'rgba(36,26,16,.3)'}
-            color="var(--cream)"
-            onClick={() => inStock && !needsSelection && addToCart(product.id, 1, selectedSize)}
-            style={{ marginTop: 6, opacity: inStock ? 1 : 0.6, cursor: inStock && !needsSelection ? 'pointer' : 'not-allowed' }}
-          >
-            {!inStock ? 'Out of stock' : needsSelection ? 'Select options' : 'Add to cart'}
-          </BannerButton>
-
-          {!inStock && <NotifyWhenBackForm productId={product.id} productName={product.name} />}
 
           <div style={{ display: 'flex', gap: 16, marginTop: 8, fontSize: 12, opacity: 0.7 }}>
             {product.trustBadges.map((b) => (

@@ -69,9 +69,10 @@ Until both Shopify variables are set, the site runs with checkout closed: the
 cart works, and `/checkout` says online orders open soon.
 
 1. **Import the products.** In Shopify admin go to Products → Import and
-   upload [`shopify/products.csv`](shopify/products.csv). It has all 3 kits and
-   every product, with titles, descriptions, prices, sizes, photos, and SEO
-   text. Each product's **handle** matches its `id` on this site, which is how
+   upload [`shopify/products.csv`](shopify/products.csv). It has the 3 starter
+   kits with titles, descriptions, prices, and SEO text. (Launch sells kits
+   only; set `SELL_SINGLE_PRODUCTS` in `src/lib/featureFlags.ts` to `true` to
+   add every single product to the site's cart and to this file.) Each product's **handle** matches its `id` on this site, which is how
    the site finds it in Shopify, so don't change handles. After editing
    products or prices in `src/data/`, run `npm run shopify:csv` to rebuild the
    file (re-importing with "Overwrite products with matching handles" updates

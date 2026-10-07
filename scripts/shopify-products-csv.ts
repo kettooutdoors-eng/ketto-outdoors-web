@@ -1,5 +1,5 @@
-// Generates shopify/products.csv: every product and kit on the site, ready for
-// Shopify admin > Products > Import. Handles match the site's ids, which is how the
+// Generates shopify/products.csv: the kits (plus every product, once SELL_SINGLE_PRODUCTS
+// is on), ready for Shopify admin > Products > Import. Handles match the site's ids, which is how the
 // site finds each product in Shopify (see src/lib/shopify.ts).
 //
 // Run with: npm run shopify:csv
@@ -8,6 +8,7 @@ import { PRODUCTS } from '../src/data/products.ts';
 import { BUNDLES } from '../src/data/bundles.ts';
 import { ALL_SHOP_ITEMS } from '../src/data/shop.ts';
 import { PRODUCT_IMAGES } from '../src/data/productImages.ts';
+import { SELL_SINGLE_PRODUCTS } from '../src/lib/featureFlags.ts';
 
 // Shopify downloads product photos from a public URL, so point at the live site.
 const IMAGE_BASE = 'https://kettooutdoors-eng.github.io/ketto-outdoors-web/assets/products/';
@@ -43,7 +44,8 @@ const variant = (sku: string, price: number): Row => ({
 
 const rows: Row[] = [];
 
-for (const p of PRODUCTS) {
+// Single products are only exported once the site sells them (see src/lib/featureFlags.ts).
+for (const p of SELL_SINGLE_PRODUCTS ? PRODUCTS : []) {
   const shop = ALL_SHOP_ITEMS.find((s) => s.id === p.id);
   const image = PRODUCT_IMAGES[p.id];
   const base: Row = {
@@ -94,4 +96,4 @@ for (const b of BUNDLES) {
 
 const csv = [HEADERS.join(','), ...rows.map((r) => HEADERS.map((h) => csvCell(r[h])).join(','))].join('\n') + '\n';
 writeFileSync(new URL('../shopify/products.csv', import.meta.url), csv);
-console.log(`Wrote shopify/products.csv: ${PRODUCTS.length} products, ${BUNDLES.length} kits, ${rows.length} rows.`);
+console.log(`Wrote shopify/products.csv: ${SELL_SINGLE_PRODUCTS ? PRODUCTS.length : 0} products, ${BUNDLES.length} kits, ${rows.length} rows.`);
