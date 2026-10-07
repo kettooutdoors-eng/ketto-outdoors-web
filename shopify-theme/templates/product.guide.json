@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "kit-guide", "settings": {} }
+  },
+  "order": ["main"]
+}

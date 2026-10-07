@@ -1,0 +1,98 @@
+{%- liquid
+  assign shop_menu = linklists[section.settings.shop_menu]
+  assign support_menu = linklists[section.settings.support_menu]
+  assign email = section.settings.email | default: shop.email
+-%}
+<footer class="site-footer">
+  <div class="footer-col">
+    <h2>{{ section.settings.shop_heading }}</h2>
+    <ul>
+      {%- for link in shop_menu.links -%}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {%- else -%}
+        <li><a href="{{ routes.collections_url }}/kits">Shop kits</a></li>
+        <li><a href="/pages/new-to-fishing">New to fishing guide</a></li>
+        <li><a href="/blogs/journal">Blog</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h2>{{ section.settings.support_heading }}</h2>
+    <ul>
+      {%- for link in support_menu.links -%}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {%- else -%}
+        <li><a href="/pages/about">About us</a></li>
+        <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="/pages/contact">Contact us</a></li>
+        <li><a href="/policies/shipping-policy">Shipping policy</a></li>
+        <li><a href="/policies/refund-policy">Returns &amp; refunds</a></li>
+        <li><a href="/policies/privacy-policy">Privacy policy</a></li>
+        <li><a href="/policies/terms-of-service">Terms of service</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <div class="footer-col footer-col--wide">
+    <h2>{{ section.settings.contact_heading }}</h2>
+    {%- if email != blank -%}
+      <a class="footer-email" href="mailto:{{ email }}">{{ email }} &rarr;</a>
+    {%- endif -%}
+    {%- if section.settings.contact_text != blank -%}
+      <p class="footer-small">{{ section.settings.contact_text }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.show_newsletter -%}
+      {%- form 'customer', id: 'FooterNewsletter', class: 'footer-news' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        {%- if form.posted_successfully? -%}
+          <p class="footer-small" style="color: var(--rust); opacity: 1;">Subscribed! Thanks.</p>
+        {%- else -%}
+          <div class="footer-news__row">
+            <label for="FooterNewsletterEmail" class="visually-hidden">Email for tips and drops</label>
+            <input type="email" id="FooterNewsletterEmail" name="contact[email]" autocomplete="email" placeholder="Email for tips &amp; drops" required>
+            <button type="submit">Sign up</button>
+          </div>
+          <label class="check">
+            <input type="checkbox" required>
+            <span>I'd like occasional emails about new gear and fishing tips. Unsubscribe anytime.</span>
+          </label>
+          {%- if form.errors -%}
+            <p class="form-error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endform -%}
+    {%- endif -%}
+
+    <div class="socials">
+      {%- if settings.social_youtube != blank -%}
+        <a href="{{ settings.social_youtube }}" target="_blank" rel="noopener" aria-label="YouTube">{% render 'icon', name: 'youtube' %}</a>
+      {%- endif -%}
+      {%- if settings.social_instagram != blank -%}
+        <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{% render 'icon', name: 'instagram' %}</a>
+      {%- endif -%}
+      {%- if settings.social_facebook != blank -%}
+        <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener" aria-label="Facebook">{% render 'icon', name: 'facebook' %}</a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <p class="footer-legal">&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "shop_heading", "label": "First column heading", "default": "Shop" },
+    { "type": "link_list", "id": "shop_menu", "label": "First column menu", "default": "footer" },
+    { "type": "text", "id": "support_heading", "label": "Second column heading", "default": "Support" },
+    { "type": "link_list", "id": "support_menu", "label": "Second column menu", "default": "footer-support" },
+    { "type": "text", "id": "contact_heading", "label": "Contact heading", "default": "Contact & Follow" },
+    { "type": "text", "id": "email", "label": "Contact email", "default": "KettoOutdoors@gmail.com", "info": "Leave empty to use the store's email." },
+    { "type": "text", "id": "contact_text", "label": "Contact text", "default": "Questions, wholesale orders, or a lure request. We read every email." },
+    { "type": "checkbox", "id": "show_newsletter", "label": "Show newsletter sign-up", "default": true, "info": "Sign-ups are saved to Customers in Shopify, tagged newsletter, and subscribed to email marketing." }
+  ]
+}
+{% endschema %}

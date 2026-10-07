@@ -1,0 +1,24 @@
+{%- comment -%}
+  Rounded photo frame. Falls back to a labeled placeholder until a photo is added in Shopify.
+  Usage: {% render 'media', image: product.featured_image, alt: product.title, width: 800, height: 420, eager: true %}
+{%- endcomment -%}
+{%- liquid
+  assign w = width | default: 800
+  assign style = ''
+  if height
+    assign style = 'height:' | append: height | append: 'px'
+  endif
+-%}
+{%- if image != blank -%}
+  <div class="media"{% if style != '' %} style="{{ style }}"{% endif %}>
+    {%- if eager -%}
+      {{ image | image_url: width: w | image_tag: alt: alt, loading: 'eager', fetchpriority: 'high' }}
+    {%- else -%}
+      {{ image | image_url: width: w | image_tag: alt: alt, loading: 'lazy' }}
+    {%- endif -%}
+  </div>
+{%- else -%}
+  <div class="media media--placeholder"{% if style != '' %} style="{{ style }}"{% endif %}>
+    <span>{{ alt | default: 'Photo coming soon' }}</span>
+  </div>
+{%- endif -%}

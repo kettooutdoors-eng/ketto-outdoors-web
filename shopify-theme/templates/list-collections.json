@@ -1,0 +1,1 @@
+{ "sections": { "main": { "type": "featured-kits", "settings": { "heading": "Pick a kit.", "subheading": "Everything inside works together.", "limit": 12 } } }, "order": ["main"] }

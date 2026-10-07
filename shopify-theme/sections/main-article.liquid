@@ -1,0 +1,45 @@
+{%- liquid
+  assign cta_heading = article.metafields.custom.cta_heading.value | default: section.settings.cta_heading
+  assign cta_text = article.metafields.custom.cta_text.value | default: section.settings.cta_text
+  assign cta_label = article.metafields.custom.cta_label.value | default: section.settings.cta_label
+  assign cta_link = article.metafields.custom.cta_link.value | default: section.settings.cta_link | default: '/collections/kits'
+-%}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ blog.url }}">{{ blog.title }}</a> / {{ article.title }}
+</nav>
+
+<article class="narrow" style="max-width: 760px; padding-top: 24px;">
+  {%- if article.tags.size > 0 -%}<div class="eyebrow">{{ article.tags.first }}</div>{%- endif -%}
+  <h1 style="font-size: 34px; margin-top: 10px; margin-bottom: 8px;">{{ article.title }}</h1>
+  <div style="font-size: 13px; opacity: .6; margin-bottom: 24px;">
+    By {{ article.author }} &middot; {{ article.published_at | date: '%B %-d, %Y' }}
+  </div>
+  {%- if article.image -%}
+    <div style="margin-bottom: 28px;">{% render 'media', image: article.image, alt: article.title, width: 1200 %}</div>
+  {%- endif -%}
+  <div class="rte">{{ article.content }}</div>
+</article>
+
+<section class="cta-simple">
+  <h2>{{ cta_heading }}</h2>
+  {%- if cta_text != blank -%}<p>{{ cta_text }}</p>{%- endif -%}
+  {%- if cta_label != blank -%}
+    <a href="{{ cta_link }}" class="btn btn--rust" style="margin-top: 20px;">{{ cta_label }}</a>
+  {%- endif -%}
+  <p style="margin-top: 18px;">
+    <a href="{{ blog.url }}" style="font-size: 13px; font-weight: 700; color: var(--cream); text-decoration: underline;">&larr; More from {{ blog.title }}</a>
+  </p>
+</section>
+
+{% schema %}
+{
+  "name": "Blog post",
+  "settings": [
+    { "type": "paragraph", "content": "The bottom call-to-action can be set per post with the post's metafields; these are the defaults." },
+    { "type": "text", "id": "cta_heading", "label": "Bottom heading", "default": "Ready to go fishing?" },
+    { "type": "text", "id": "cta_text", "label": "Bottom text", "default": "Pick the kit that matches the fish you're after." },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Shop kits" },
+    { "type": "url", "id": "cta_link", "label": "Button link" }
+  ]
+}
+{% endschema %}

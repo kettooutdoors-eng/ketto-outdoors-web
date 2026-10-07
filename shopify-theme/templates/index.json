@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "heading": "Fishing gear,\nmade simple.",
+        "subheading": "We found what works. Here it is.",
+        "button_label": "Shop Kits",
+        "button_link": "#kits"
+      }
+    },
+    "kits": {
+      "type": "featured-kits",
+      "settings": {
+        "heading": "Pick a kit.",
+        "subheading": "Everything inside works together.",
+        "limit": 3,
+        "anchor": "kits"
+      }
+    },
+    "why": {
+      "type": "why-ketto",
+      "blocks": {
+        "point-1": { "type": "point", "settings": { "text": "We show you how to use everything, step by step." } },
+        "point-2": { "type": "point", "settings": { "text": "Every piece of equipment is matched to the fish you’re after." } },
+        "point-3": { "type": "point", "settings": { "text": "We check every piece of equipment before it ships." } }
+      },
+      "block_order": ["point-1", "point-2", "point-3"],
+      "settings": { "kicker": "Why Ketto", "heading": "Made for beginners." }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "style": "big",
+        "heading": "STOP GUESSING. START FISHING.",
+        "text": "One kit. Nothing to figure out.",
+        "button_label": "Shop kits",
+        "button_link": "#kits"
+      }
+    }
+  },
+  "order": ["hero", "kits", "why", "cta"]
+}

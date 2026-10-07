@@ -1,0 +1,31 @@
+<section class="page-hero">
+  <div class="eyebrow eyebrow--light">{{ section.settings.eyebrow }}</div>
+  <h1>{{ collection.title }}</h1>
+  {%- if collection.description != blank -%}
+    <div class="rte" style="margin: 14px auto 0; max-width: 56ch; font-size: 15px; color: var(--cream); opacity: .85;">{{ collection.description }}</div>
+  {%- endif -%}
+</section>
+
+{%- paginate collection.products by 24 -%}
+  {%- if collection.products.size > 0 -%}
+    <div class="grid-3 kit-grid" style="margin: 48px auto 56px;">
+      {%- for product in collection.products -%}
+        {% render 'kit-card', product: product %}
+      {%- endfor -%}
+    </div>
+    {%- if paginate.pages > 1 -%}
+      <div class="center" style="padding-bottom: 48px;">{{ paginate | default_pagination }}</div>
+    {%- endif -%}
+  {%- else -%}
+    <div class="center" style="padding: 64px var(--gutter);"><p>More kits coming soon.</p></div>
+  {%- endif -%}
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "Beginner kits" }
+  ]
+}
+{% endschema %}
