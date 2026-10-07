@@ -1,18 +1,17 @@
 {%- comment -%}
-  The page a kit's QR sticker opens (product URL + ?view=guide): what's in the box,
-  what each piece is for, setup steps, and the setup video.
+  The rigging guide for a kit (product URL + ?view=guide), opened by the QR sticker
+  in the box and the "How to set it up" link on the kit page: setup video and steps.
 {%- endcomment -%}
 {%- liquid
-  assign components = product.metafields.custom.kit_components.value
   assign steps = product.metafields.custom.setup_steps.value
   assign setup_note = product.metafields.custom.setup_note.value
   assign video = product.metafields.custom.setup_video.value
   assign email = section.settings.email | default: shop.email
 -%}
 <section class="page-hero" style="padding: 44px 24px 40px;">
-  <div class="eyebrow eyebrow--light">Your kit</div>
+  <div class="eyebrow eyebrow--light">How to rig it</div>
   <h1 style="font-size: 36px;">{{ product.title }}</h1>
-  <p style="max-width: 38ch; font-size: 16px;">Here is everything in your box and how to set it up.</p>
+  <p style="max-width: 38ch; font-size: 16px;">Step-by-step setup, from tying on to your first cast.</p>
   <div style="margin-top: 24px;">
     {%- if video != blank -%}
       <a href="{{ video }}" class="btn btn--rust" style="padding: 16px 28px; font-size: 15px;">Watch the setup video</a>
@@ -22,28 +21,9 @@
   </div>
 </section>
 
-{%- if components.size > 0 -%}
-  <section style="max-width: 640px; margin: 0 auto; padding: 40px 20px 8px;">
-    <h2 style="font-size: 26px; margin-bottom: 6px;">What's in your box</h2>
-    <p class="muted" style="font-size: 14px; margin-bottom: 22px;">{{ components.size }} pieces</p>
-    <ol class="steps" style="gap: 16px;">
-      {%- for c in components -%}
-        <li class="card card--sm step" style="padding: 18px; gap: 14px;">
-          <span class="step__num step__num--solid">{{ forloop.index }}</span>
-          <div>
-            <div class="step__title" style="font-size: 18px; margin: 0;">{{ c.label }}</div>
-            {%- if c.detail != blank -%}<div style="font-size: 13px; opacity: .65; margin-top: 2px;">{{ c.detail }}</div>{%- endif -%}
-            {%- if c.why != blank -%}<p style="font-size: 15px; line-height: 1.55; margin-top: 8px;">{{ c.why }}</p>{%- endif -%}
-          </div>
-        </li>
-      {%- endfor -%}
-    </ol>
-  </section>
-{%- endif -%}
-
 {%- if steps.size > 0 -%}
   <section style="max-width: 640px; margin: 0 auto; padding: 40px 20px 8px;">
-    <h2 style="font-size: 26px; margin-bottom: 6px;">Set it up</h2>
+    <h2 style="font-size: 26px; margin-bottom: 6px;">Rig it step by step</h2>
     {%- if setup_note != blank -%}
       <p style="font-size: 15px; line-height: 1.55; opacity: .8; margin-bottom: 22px;">{{ setup_note }}</p>
     {%- endif -%}
