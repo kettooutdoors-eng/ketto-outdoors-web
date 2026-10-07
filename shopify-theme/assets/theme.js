@@ -5,7 +5,7 @@
     try {
       if (action === 'get') return window.localStorage.getItem(key);
       window.localStorage.setItem(key, value);
-    } catch (e) {
+    } catch {
       /* storage blocked: the site still works, the pop-up just may show again */
     }
     return null;
