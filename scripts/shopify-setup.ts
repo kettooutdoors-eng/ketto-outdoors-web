@@ -17,7 +17,11 @@ import {
 
 const API_VERSION = '2026-07';
 const DRY_RUN = process.argv.includes('--dry-run');
-const UPDATE = process.argv.includes('--update');
+// --only=content refreshes just the words: pages, blog posts, how-to guides, and each kit's
+// text fields (tagline, contents, setup steps). Prices, stock, photos, menus, policies,
+// the discount, and redirects are left alone. Implies --update for those.
+const CONTENT_ONLY = process.argv.includes('--only=content');
+const UPDATE = process.argv.includes('--update') || CONTENT_ONLY;
 
 const shopInput = (process.env.SHOPIFY_SHOP ?? '').trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
 const SHOP = shopInput.endsWith('.myshopify.com') ? shopInput : shopInput ? `${shopInput}.myshopify.com` : '';
@@ -391,6 +395,25 @@ async function redirects() {
   log(`  ✓ ${created} added${skipped ? `, ${skipped} already there` : ''} (including /bass, /catfish, /starter for the QR stickers)`);
 }
 
+async function kitText() {
+  log('\nKit text (tagline, contents, setup steps)');
+  for (const kit of KIT_PRODUCTS) {
+    try {
+      const found = await gql<{ productByIdentifier: { id: string } | null }>(`query($h: String!) { productByIdentifier(identifier: { handle: $h }) { id } }`, { h: kit.handle });
+      if (!found.productByIdentifier) {
+        log(`  · ${kit.title} (not in the store, skipped)`);
+        continue;
+      }
+      await mutate('metafieldsSet', `mutation($m: [MetafieldsSetInput!]!) { metafieldsSet(metafields: $m) { metafields { id } userErrors { message } } }`, {
+        m: kit.metafields.map((m) => ({ ownerId: found.productByIdentifier!.id, namespace: 'custom', ...m })),
+      });
+      log(`  ✓ ${kit.title}`);
+    } catch (e) {
+      fail(kit.title, e);
+    }
+  }
+}
+
 // ---------- Main ----------
 
 function dryRun() {
@@ -409,10 +432,20 @@ function dryRun() {
 async function main() {
   if (DRY_RUN) return dryRun();
   if (!SHOP) throw new Error('Set SHOPIFY_SHOP to your store address, like ketto-outdoors.myshopify.com.');
-  log(`Setting up ${SHOP}${UPDATE ? ' (overwriting existing content)' : ''}`);
+  log(`Setting up ${SHOP}${CONTENT_ONLY ? ' (refreshing text only)' : UPDATE ? ' (overwriting existing content)' : ''}`);
 
   const shop = await gql<{ shop: { name: string } }>(`{ shop { name } }`);
   log(`Store: ${shop.shop.name}`);
+  if (CONTENT_ONLY) {
+    await kitText();
+    await pages();
+    await blog(GUIDES_BLOG, 'How-To Guides', GUIDE_ARTICLES);
+    await blog(JOURNAL_BLOG, 'The Ketto Journal', JOURNAL_ARTICLES);
+    log(failures ? `\nFinished with ${failures} problem(s) above.` : '\nAll done.');
+    if (failures) process.exitCode = 1;
+    return;
+  }
+
   const publicationId = await onlineStorePublicationId().catch(() => null);
   if (!publicationId) log('Note: could not find the Online Store channel; kits may need publishing by hand.');
 
