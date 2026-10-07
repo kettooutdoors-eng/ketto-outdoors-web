@@ -1,0 +1,89 @@
+name: Sync Shopify theme
+
+# Copies shopify-theme/ from main to the root of the `shopify-theme` branch, which the
+# Shopify store is connected to (Online Store > Themes > Connect from GitHub). Shopify
+# picks up each push to that branch within a minute or two.
+#
+# Shopify also commits to that branch: edits made in the theme editor (Customize) are
+# saved to config/settings_data.json and templates/*.json there. Those files are only
+# replaced when they've changed on main since the last sync, so editor changes aren't
+# wiped by unrelated code updates. Templates created in the editor are never deleted.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shopify-theme/**'
+      - '.github/workflows/shopify-theme-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shopify-theme-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync shopify-theme/ to the shopify-theme branch
+        run: |
+          set -euo pipefail
+          SRC_SHA=$(git rev-parse HEAD)
+          SRC="$PWD/shopify-theme"
+          DEST=$(mktemp -d)
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin shopify-theme >/dev/null; then
+            git fetch origin shopify-theme
+            git worktree add "$DEST" origin/shopify-theme
+            git -C "$DEST" checkout -B shopify-theme
+          else
+            git worktree add --orphan -b shopify-theme "$DEST"
+          fi
+
+          # The last synced main commit is recorded in the sync commit's message.
+          LAST_SHA=$(git -C "$DEST" log -1 --format=%B --grep='^Sync theme from main @' 2>/dev/null | sed -n 's/^Sync theme from main @ \([0-9a-f]\{40\}\).*/\1/p' || true)
+          if [ -n "$LAST_SHA" ] && ! git cat-file -e "$LAST_SHA^{commit}" 2>/dev/null; then LAST_SHA=""; fi
+
+          # Files the theme editor writes to.
+          is_editor_file() {
+            case "$1" in
+              config/settings_data.json|templates/*.json|sections/*.json|locales/*.json) return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
+          # Copy every source file, except editor files that main hasn't touched since
+          # the last sync and that already exist on the branch.
+          (cd "$SRC" && find . -type f | sed 's|^\./||') | while read -r f; do
+            if is_editor_file "$f" && [ -f "$DEST/$f" ] && [ -n "$LAST_SHA" ] \
+               && git diff --quiet "$LAST_SHA" "$SRC_SHA" -- "shopify-theme/$f"; then
+              continue
+            fi
+            mkdir -p "$DEST/$(dirname "$f")"
+            cp "$SRC/$f" "$DEST/$f"
+          done
+
+          # Remove code files that no longer exist on main. Editor files are kept, since
+          # some are created in the theme editor and only exist on the branch.
+          (cd "$DEST" && find . -type f -not -path './.git/*' -not -name '.git' | sed 's|^\./||') | while read -r f; do
+            if [ ! -f "$SRC/$f" ] && ! is_editor_file "$f"; then rm -f "$DEST/$f"; fi
+          done
+
+          cd "$DEST"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Theme branch already up to date."
+          else
+            git commit -q -m "Sync theme from main @ $SRC_SHA"
+            git push origin shopify-theme
+            echo "Pushed theme to the shopify-theme branch."
+          fi

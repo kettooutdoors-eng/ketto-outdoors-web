@@ -18,11 +18,27 @@ stock, and photos under **Products**; each kit's contents, setup steps, and setu
 video under **Products > (kit) > Metafields**; pages and blog posts under
 **Online Store**; text and layout under **Online Store > Themes > Customize**.
 
+### How theme changes reach Shopify
+
+The store's theme is connected to the `shopify-theme` branch of this repo
+(Shopify admin > **Online Store > Themes > Add theme > Connect from GitHub**).
+That branch is kept up to date by
+[`.github/workflows/shopify-theme-sync.yml`](.github/workflows/shopify-theme-sync.yml):
+every change to `shopify-theme/` merged into `main` is copied there, and
+Shopify picks it up within a couple of minutes. Don't edit the branch by hand.
+
+Edits made in the theme editor (**Customize**) are saved by Shopify to that
+branch too. The sync only replaces those settings files
+(`config/settings_data.json`, `templates/*.json`) when they've changed on
+`main`, so editor changes survive code updates. Before changing a template's
+JSON on `main`, copy over any editor changes from the branch first.
+
 ### Setting up the store (one time)
 
-1. **Upload the theme.** Run `npm run shopify:theme-zip` (or use the zip you were
-   sent), then in Shopify admin go to **Online Store > Themes > Add theme > Upload
-   zip file**. Click **Publish** on it when you're ready.
+1. **Connect the theme.** In Shopify admin go to **Online Store > Themes > Add
+   theme > Connect from GitHub**, pick this repo and the `shopify-theme` branch,
+   then **Publish** it. (Without GitHub: `npm run shopify:theme-zip` and use
+   **Upload zip file** instead.)
 2. **Create a setup app** so the script can write to the store:
    1. Open the Dev Dashboard ([dev.shopify.com/dashboard](https://dev.shopify.com/dashboard),
       or click your store name in Shopify admin > **Dev Dashboard**).
