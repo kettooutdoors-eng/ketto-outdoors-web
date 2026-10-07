@@ -9,7 +9,7 @@
         "settings": {
           "menu": "main-menu",
           "cta_label": "Shop Kits",
-          "cta_link": "/collections/kits"
+          "cta_link": "/#kits"
         }
       },
       "footer": {

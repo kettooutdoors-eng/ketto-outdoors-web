@@ -97,14 +97,17 @@
     });
   });
 
-  // --- Smooth scroll for in-page buttons (e.g. "Shop kits" on the home page) ---
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  // --- Smooth scroll for links to a spot on the current page (e.g. "Shop Kits" -> /#kits on the home page) ---
+  document.querySelectorAll('a[href*="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
-      var target = document.getElementById(link.getAttribute('href').slice(1));
+      if (link.pathname !== window.location.pathname || !link.hash) return;
+      var target = document.getElementById(link.hash.slice(1));
       if (!target) return;
       e.preventDefault();
+      if (menu && !menu.hidden) setMenu(false);
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      history.replaceState(null, '', link.hash);
     });
   });
 
