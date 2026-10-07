@@ -1,6 +1,6 @@
 {%- liquid
-  assign shop_menu = linklists[section.settings.shop_menu]
-  assign support_menu = linklists[section.settings.support_menu]
+  assign shop_menu = section.settings.shop_menu
+  assign support_menu = section.settings.support_menu
   assign email = section.settings.email | default: shop.email
 -%}
 <footer class="site-footer">
@@ -12,6 +12,7 @@
       {%- else -%}
         <li><a href="{{ routes.collections_url }}/kits">Shop kits</a></li>
         <li><a href="/pages/new-to-fishing">New to fishing guide</a></li>
+        <li><a href="/blogs/guides">How-to guides</a></li>
         <li><a href="/blogs/journal">Blog</a></li>
       {%- endfor -%}
     </ul>
@@ -86,9 +87,9 @@
   "name": "Footer",
   "settings": [
     { "type": "text", "id": "shop_heading", "label": "First column heading", "default": "Shop" },
-    { "type": "link_list", "id": "shop_menu", "label": "First column menu", "default": "footer" },
+    { "type": "link_list", "id": "shop_menu", "label": "First column menu", "info": "Leave empty to show Shop kits, New to fishing guide, How-to guides, and Blog." },
     { "type": "text", "id": "support_heading", "label": "Second column heading", "default": "Support" },
-    { "type": "link_list", "id": "support_menu", "label": "Second column menu", "default": "footer-support" },
+    { "type": "link_list", "id": "support_menu", "label": "Second column menu", "info": "Leave empty to show About, FAQ, Contact, and the store policies." },
     { "type": "text", "id": "contact_heading", "label": "Contact heading", "default": "Contact & Follow" },
     { "type": "text", "id": "email", "label": "Contact email", "default": "KettoOutdoors@gmail.com", "info": "Leave empty to use the store's email." },
     { "type": "text", "id": "contact_text", "label": "Contact text", "default": "Questions, wholesale orders, or a lure request. We read every email." },
