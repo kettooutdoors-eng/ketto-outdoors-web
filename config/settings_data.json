@@ -42,8 +42,8 @@
           "enabled": true,
           "code": "WELCOME15",
           "percent": 15,
-          "eyebrow": "Welcome to Ketto",
-          "delay": 8,
+          "eyebrow": "Your next adventure starts here",
+          "delay": 12,
           "shop_link": ""
         }
       }
