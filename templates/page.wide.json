@@ -1,1 +1,80 @@
-{ "sections": { "main": { "type": "main-page", "settings": { "wide": true } }, "cta": { "type": "cta-band", "settings": { "style": "simple", "heading": "Ready to go fishing?", "text": "Pick the kit that matches the fish you're after. Everything inside works together.", "button_label": "Shop kits", "button_link": "/collections/kits" } } }, "order": ["main", "cta"] }
+{
+  "sections": {
+    "header": {
+      "type": "page-header",
+      "settings": {
+        "eyebrow": "New to fishing?",
+        "heading": "Start here.",
+        "text": "You need three things. Here they are."
+      }
+    },
+    "need": {
+      "type": "simple-steps",
+      "blocks": {
+        "rod": {
+          "type": "step",
+          "settings": {
+            "title": "Your own rod and reel",
+            "text": "We don't sell rods, so bring your own. A basic spinning rod and reel is the easiest to learn on, and any sporting goods store has one."
+          }
+        },
+        "kit": {
+          "type": "step",
+          "settings": {
+            "title": "A Ketto kit",
+            "text": "Hooks, weights, bait, and lures, already matched to the fish you're after. Nothing else to buy.",
+            "link_label": "Pick a kit",
+            "link_url": "#kits"
+          }
+        },
+        "license": {
+          "type": "step",
+          "settings": {
+            "title": "A fishing license",
+            "text": "Most states require one. Check your state's fish and game website before you go."
+          }
+        }
+      },
+      "block_order": ["rod", "kit", "license"],
+      "settings": { "heading": "What you need", "tinted": false }
+    },
+    "kits": {
+      "type": "featured-kits",
+      "settings": {
+        "heading": "Pick your kit.",
+        "subheading": "Each one has everything except the rod and reel.",
+        "limit": 3,
+        "anchor": "kits"
+      }
+    },
+    "go": {
+      "type": "simple-steps",
+      "blocks": {
+        "setup": {
+          "type": "step",
+          "settings": {
+            "title": "Set it up",
+            "text": "Scan the sticker in your kit. It walks you through rigging, step by step."
+          }
+        },
+        "time": {
+          "type": "step",
+          "settings": {
+            "title": "Go early or late",
+            "text": "Fish bite best around sunrise and sunset. Cast near docks, logs, and weeds."
+          }
+        },
+        "reel": {
+          "type": "step",
+          "settings": {
+            "title": "Reel slow and steady",
+            "text": "When you feel a tug, keep reeling. That's it."
+          }
+        }
+      },
+      "block_order": ["setup", "time", "reel"],
+      "settings": { "heading": "Then go fishing", "tinted": false }
+    }
+  },
+  "order": ["header", "need", "kits", "go"]
+}

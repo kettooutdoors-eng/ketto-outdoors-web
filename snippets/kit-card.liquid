@@ -19,7 +19,7 @@
     {%- form 'product', product, class: 'kit-card__form' -%}
       <input type="hidden" name="id" value="{{ variant.id }}">
       <input type="hidden" name="return_to" value="/checkout">
-      <button type="submit" class="btn btn--rust btn--block btn--big"{% unless product.available %} disabled{% endunless %}>
+      <button type="submit" name="add" class="btn btn--rust btn--block btn--big product-form__submit"{% unless product.available %} disabled{% endunless %}>
         {%- if product.available -%}Buy now{%- else -%}Sold out{%- endif -%}
       </button>
     {%- endform -%}

@@ -1,5 +1,7 @@
 {%- comment -%}
   The kit page, kept deliberately simple: photo, name, one line, price, and one button.
+  STOQ (app embed) takes over the button: "Preorder" while a kit is on a preorder offer,
+  or its "Notify me" button when a kit is sold out and not preorderable.
   What's in the box and the setup steps live on the QR sticker page (?view=guide),
   linked from here.
 {%- endcomment -%}
@@ -36,14 +38,10 @@
     {%- form 'product', product, class: 'kit-simple__form' -%}
       <input type="hidden" name="id" value="{{ variant.id }}">
       <input type="hidden" name="return_to" value="/checkout">
-      <button type="submit" class="btn btn--rust btn--block btn--big"{% unless product.available %} disabled{% endunless %}>
+      <button type="submit" name="add" class="btn btn--rust btn--block btn--big product-form__submit"{% unless product.available %} disabled{% endunless %}>
         {%- if product.available -%}{{ section.settings.button_label }}{%- else -%}Sold out{%- endif -%}
       </button>
     {%- endform -%}
-
-    {%- unless product.available -%}
-      {% render 'notify-form', product: product %}
-    {%- endunless -%}
 
     {%- if section.settings.note != blank -%}
       <p class="kit-simple__note">{{ section.settings.note }}</p>
@@ -62,7 +60,7 @@
 {
   "name": "Kit page",
   "settings": [
-    { "type": "text", "id": "button_label", "label": "Button label", "default": "Buy now", "info": "Takes the customer straight to checkout." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Buy now", "info": "Shown when the kit is in stock. While a kit is on a STOQ preorder offer, STOQ shows its Preorder button instead." },
     { "type": "text", "id": "note", "label": "Note under the button", "default": "Bring your own rod and reel." },
     { "type": "checkbox", "id": "show_setup_link", "label": "Show \"How to set it up\" link", "default": true, "info": "Opens the same page as the QR sticker in the kit." }
   ]
