@@ -9,10 +9,10 @@ export const ABOUT_CONTENT = {
   heading: 'About Us',
   intro: [
     "Ketto Outdoors started with a simple frustration: ask what gear to buy in any fishing forum and you'll get fifty replies and forty conflicting opinions. Most tackle shops aren't much better. They sell gear to people who already know what they're doing, and leave everyone else to figure it out alone.",
-    "So we built something different: complete kits matched by scenario, what you're targeting, where you're fishing, how much you already know, so you get one confident answer instead of a shopping list of guesses. Every piece inside is chosen and labeled for exactly who it's for, with a real difficulty score and a full beginner's guide behind it. No jargon, no gatekeeping, no forty-dollar box of gear you'll never use.",
+    "So we built something different: complete kits matched by scenario, what you're targeting, where you're fishing, how much you already know, so you get one confident answer instead of a shopping list of guesses. Every piece inside is chosen for exactly who it's for, with a plain-English how-to guide behind it. No jargon, no gatekeeping, no forty-dollar box of gear you'll never use.",
   ],
   sections: [
-    { heading: 'One confident answer', body: "We'd rather hand you a kit that's already matched, lures, hooks, weights, bait, than a wall of options and a difficulty score you have to decode yourself. Buy the kit, follow the rigging guide, go fishing. That's the whole idea." },
+    { heading: 'One confident answer', body: "We'd rather hand you a kit that's already matched, lures, hooks, weights, bait, than a wall of options you have to decode yourself. Buy the kit, follow the rigging guide, go fishing. That's the whole idea." },
     { heading: 'How we pick what goes in the box', body: "Every piece in a kit is something we source and label ourselves. Always disclosed, never dressed up as something it's not. The goal isn't to sell you the most expensive tackle on the wall; it's to sell you the gear that actually works for what you're doing." },
     { heading: 'Freshwater first', body: "Right now we're all in on lakes, streams, and freshwater fishing, bass, catfish, panfish, and the water most beginners actually start on. We'd rather do freshwater right than do everything halfway." },
     { heading: 'Who we are', body: "We're a small team of anglers who got tired of watching new fishermen get overwhelmed at the tackle counter. Ketto Outdoors is our answer, gear that works, explained plainly." },

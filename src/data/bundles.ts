@@ -20,7 +20,7 @@ export const BUNDLES: Bundle[] = [
       { title: 'Wacky-rig the worm', detail: 'Roll the O-ring onto the middle of the worm and hook through the ring, not the worm. This is the one bait that doesn’t tie straight to your line.' },
       { title: 'Add a trailer to the jig or chatterbait', detail: 'Thread a soft plastic onto the hook for extra bulk. Both work without one, but better with.' },
       { title: 'Test every knot', detail: 'Give the line a firm tug after every knot. If it slips, retie it.' },
-      { title: 'Match your retrieve to the lure', detail: 'Each lure’s page has its own "How to Fish It". Reel steady for the crankbait and swimbait, hop and pause for the jig, twitch and pause for the wacky worm and finesse bait.' },
+      { title: 'Match your retrieve to the lure', detail: 'Reel steady for the crankbait and swimbait. Hop and pause the jig. Twitch and pause the wacky worm and finesse bait.' },
     ],
     imagePlaceholderAlt: 'First Bass Kit, full contents laid out',
     components: [

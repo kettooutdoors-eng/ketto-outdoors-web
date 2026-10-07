@@ -5,7 +5,6 @@
 import { BUNDLES } from '../../src/data/bundles.ts';
 import { PRODUCTS } from '../../src/data/products.ts';
 import { BLOG_ARTICLES, BLOG_CATEGORY_NAV } from '../../src/data/blog.ts';
-import { GUIDE_HERO, GUIDE_SECTIONS } from '../../src/data/guide.ts';
 import { KIT_CARDS } from '../../src/data/kitCards.ts';
 import { ABOUT_CONTENT, CONTACT_CONTENT, FAQ_ENTRIES, SHIPPING_RETURNS_CONTENT, TERMS_CONTENT } from '../../src/data/legal.ts';
 import type { Product } from '../../src/data/types.ts';
@@ -184,23 +183,23 @@ function faqBody(): string {
     .join('');
 }
 
+// The New to Fishing page is laid out by the theme (templates/page.wide.json); this body
+// mirrors that text so the page's search result and admin copy say the same thing.
 function newToFishingBody(): string {
-  const jump = `<ul class="jump-links">${GUIDE_HERO.jumpLinks.map((j) => `<li><a href="#${j.anchor}">${esc(j.label)}</a></li>`).join('')}</ul>`;
-  const sections = GUIDE_SECTIONS.map((s) => {
-    const parts = [
-      `<h2 id="${s.id}"><small class="eyebrow" style="display:block;">${esc(s.eyebrow)}</small>${esc(s.heading)}</h2>`,
-      p(s.intro),
-      p(s.body),
-      s.steps ? steps(s.steps) : '',
-      s.qa ? s.qa.map((q) => `<blockquote><strong>${esc(q.q)}</strong><br>${esc(q.a)}</blockquote>`).join('') : '',
-      s.checklist ? ul(s.checklist, 'checklist') : '',
-      s.listItems ? ul(s.listItems) : '',
-      s.cards ? s.cards.map((c) => `<h3>${esc(c.heading)}</h3>${p(c.body)}`).join('') : '',
-      s.note ? `<div class="callout"><strong>Good to know:</strong> ${esc(s.note)}</div>` : '',
-    ];
-    return parts.join('');
-  }).join('');
-  return jump + sections;
+  return [
+    '<h2>What you need</h2>',
+    ul([
+      "Your own rod and reel. We don't sell rods, so bring your own. A basic spinning rod and reel is the easiest to learn on.",
+      "A Ketto kit: hooks, weights, bait, and lures, already matched to the fish you're after.",
+      "A fishing license, if your state requires one.",
+    ]),
+    '<h2>Then go fishing</h2>',
+    ul([
+      'Set it up: scan the sticker in your kit for step-by-step rigging.',
+      'Go early or late: fish bite best around sunrise and sunset. Cast near docks, logs, and weeds.',
+      "Reel slow and steady: when you feel a tug, keep reeling.",
+    ]),
+  ].join('');
 }
 
 export const PAGES: PageContent[] = [
@@ -222,10 +221,10 @@ export const PAGES: PageContent[] = [
   },
   {
     handle: 'new-to-fishing',
-    title: GUIDE_HERO.heading,
+    title: 'New to Fishing? Start Here.',
     templateSuffix: 'wide',
-    eyebrow: GUIDE_HERO.eyebrow,
-    subtitle: GUIDE_HERO.intro,
+    eyebrow: 'New to fishing?',
+    subtitle: 'You need three things. Here they are.',
     body: newToFishingBody(),
   },
 ];

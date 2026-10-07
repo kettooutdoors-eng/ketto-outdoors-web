@@ -80,15 +80,15 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
       {
         heading: "Forgiving beats \"advanced\" every time",
-        body: "Every lure has a difficulty score for a reason: some genuinely fish themselves (cast, reel steady, done), and some take months of practice to work a bite out of. A squarebill crankbait or a wacky-rigged worm will out-fish a finesse jig in your hands on week one, even if the finesse jig catches more fish in an expert's hands. Buy for where you are now, not where you'll be in a year.",
+        body: "Some lures genuinely fish themselves (cast, reel steady, done), and some take months of practice to work a bite out of. A squarebill crankbait or a wacky-rigged worm will out-fish a finesse jig in your hands on week one, even if the finesse jig catches more fish in an expert's hands. Buy for where you are now, not where you'll be in a year.",
       },
       {
         heading: 'One good lure beats a tackle box of maybes',
         body: "You don't need six colors of the same crankbait or a lure for every condition on day one. A single beginner-friendly crankbait or soft plastic, fished confidently, will out-fish an overstuffed box you're afraid to actually use. Add variety once you know what you're doing with the first one.",
       },
       {
-        heading: "Read the \"How to Fish It\" section before you buy, not after",
-        body: "Every product page on our site tells you the retrieve speed, what a strike feels like, and the most common beginner mistake with that specific lure, before you've spent a dollar. If a product page can't tell you exactly how to fish it, that's a sign to keep looking.",
+        heading: 'Know how to fish it before you buy it',
+        body: "Before you spend a dollar on a lure, find out the retrieve speed, what a strike feels like, and the most common beginner mistake with it. Every piece in our kits comes with a how-to guide that covers exactly that. If a seller can't tell you how to fish something, that's a sign to keep looking.",
       },
       {
         heading: 'Still stuck? Let a kit make the call',
@@ -114,7 +114,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     sections: [
       {
         heading: 'Every lure has a "right" speed, and it\'s not a guess',
-        body: 'A crankbait needs a steady pace that keeps its bill digging and wobbling, too slow and it just drags, too fast and it blows out of the strike zone. A soft plastic worm wants the opposite: slow, patient, almost boring. We list the exact recommended pace on every product page precisely because "reel it in" isn\'t specific enough to actually work.',
+        body: 'A crankbait needs a steady pace that keeps its bill digging and wobbling, too slow and it just drags, too fast and it blows out of the strike zone. A soft plastic worm wants the opposite: slow, patient, almost boring. Every piece in our kits has a how-to guide with its exact pace, because "reel it in" isn\'t specific enough to actually work.',
       },
       {
         heading: "The rod tip tells you if you're doing it right",
@@ -130,8 +130,8 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
     endCta: {
-      heading: 'Want the exact pace for your lure?',
-      body: 'Every product page lists the retrieve speed and what a strike feels like under "How to Fish It."',
+      heading: 'Want the exact pace for every piece?',
+      body: 'Every Ketto kit comes with a how-to guide for each piece: retrieve speed, what a strike feels like, and the common mistakes.',
       buttonLabel: 'Shop kits →',
       href: '/kits',
     },

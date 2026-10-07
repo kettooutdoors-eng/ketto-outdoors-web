@@ -212,15 +212,15 @@ export const PRODUCTS: Product[] = [
     "category": "Terminal Tackle (Hooks)",
     "kicker": "Hooks",
     "metaTitle": "Baithooks | Ketto Outdoors",
-    "metaDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm. $5.",
+    "metaDescription": "A basic pack of hooks for soft plastic worms and live bait. $5.",
     "difficulty": {
       "label": "Beginner",
       "number": 1,
       "outOf": 10
     },
     "targetSpecies": "Any species. Pick a size to match your bait",
-    "shortDescription": "A basic pack of hooks for soft plastic worms and live bait. Start here if you need hooks for the Driftworm.",
-    "longDescription": "For rigging soft plastic worms like the Driftworm, or adding a live worm.",
+    "shortDescription": "A basic pack of hooks for soft plastic worms and live bait.",
+    "longDescription": "For rigging soft plastic worms, or adding a live worm.",
     "guide": {
       "gearNeeded": [
         "Whatever soft plastic or live bait you’re rigging",
@@ -230,7 +230,7 @@ export const PRODUCTS: Product[] = [
       "steps": [
         {
           "title": "Match the size to your bait",
-          "detail": "Use a smaller hook (1/0) for thin baits like the Driftworm. Use a bigger one (3/0-4/0) for thicker soft baits or live bait."
+          "detail": "Use a smaller hook (1/0) for thin soft plastic worms. Use a bigger one (3/0-4/0) for thicker soft baits or live bait."
         },
         {
           "title": "Hide the hook in soft baits",

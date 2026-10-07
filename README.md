@@ -18,6 +18,10 @@ stock, and photos under **Products**; each kit's contents, setup steps, and setu
 video under **Products > (kit) > Metafields**; pages and blog posts under
 **Online Store**; text and layout under **Online Store > Themes > Customize**.
 
+The welcome email for new subscribers is in
+[`shopify/welcome-email.md`](shopify/welcome-email.md), with setup steps for
+Shopify Email.
+
 ### How theme changes reach Shopify
 
 The store's theme is connected to the `shopify-theme` branch of this repo
@@ -59,6 +63,8 @@ JSON on `main`, copy over any editor changes from the branch first.
    code (15% off, once per customer), and redirects from the old site's
    addresses, including `/bass`, `/catfish`, and `/starter` for the QR stickers.
    It never overwrites things that already exist unless you tick **Overwrite**.
+   To push wording changes later (pages, blog posts, how-to guides, kit setup
+   steps) without touching prices, stock, or photos, tick **Text only**.
    Preview without a store: `npm run shopify:setup -- --dry-run`.
 5. **Finish in Shopify admin:**
    - **Products:** add photos and real stock quantities for each kit.

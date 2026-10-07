@@ -10,6 +10,10 @@ on:
         description: Overwrite kits, pages, and posts that already exist with the content from the code
         type: boolean
         default: false
+      text_only:
+        description: "Only refresh text: pages, blog posts, how-to guides, and kit setup steps (leaves prices, stock, and photos alone)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -30,4 +34,4 @@ jobs:
           SHOPIFY_SHOP: ${{ vars.SHOPIFY_SHOP }}
           SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
           SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
-        run: node --experimental-strip-types scripts/shopify-setup.ts ${{ inputs.overwrite && '--update' || '' }}
+        run: node --experimental-strip-types scripts/shopify-setup.ts ${{ inputs.text_only && '--only=content' || '' }} ${{ inputs.overwrite && '--update' || '' }}
