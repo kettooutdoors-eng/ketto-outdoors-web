@@ -1,56 +1,34 @@
-import { createContext, useCallback, useContext, useState, type ReactNode } from 'react';
-import { INVENTORY_DEFAULTS, stockColor, stockLabel } from '../data/inventory';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { PRODUCTS } from '../data/products';
+import { fetchProducts, type ShopifyProduct } from '../lib/shopify';
+import { SELL_SINGLE_PRODUCTS } from '../lib/featureFlags';
 
-const INVENTORY_KEY = 'ketto-inventory';
-
-function loadInventory(): Record<string, number> {
-  try {
-    const raw = JSON.parse(localStorage.getItem(INVENTORY_KEY) || 'null');
-    return raw && typeof raw === 'object' ? { ...INVENTORY_DEFAULTS, ...raw } : { ...INVENTORY_DEFAULTS };
-  } catch {
-    return { ...INVENTORY_DEFAULTS };
-  }
-}
-
-function saveInventory(inv: Record<string, number>) {
-  try {
-    localStorage.setItem(INVENTORY_KEY, JSON.stringify(inv));
-  } catch {
-    /* ignore */
-  }
-}
+// Stock comes live from Shopify. Until it loads (or if Shopify isn't set up yet),
+// every product shows as out of stock.
 
 interface InventoryContextValue {
-  inventory: Record<string, number>;
-  get: (id: string) => number;
-  label: (id: string) => string;
-  color: (id: string) => string;
+  /** True once Shopify says this product can be bought. */
   isInStock: (id: string) => boolean;
-  decrement: (id: string, n?: number) => void;
+  /** True if this size of the product can be bought. Sizes missing from Shopify count as out of stock. */
+  isSizeInStock: (id: string, size: string) => boolean;
 }
 
 const InventoryContext = createContext<InventoryContextValue | null>(null);
 
 export function InventoryProvider({ children }: { children: ReactNode }) {
-  const [inventory, setInventory] = useState<Record<string, number>>(() => loadInventory());
+  const [products, setProducts] = useState<Record<string, ShopifyProduct>>({});
 
-  const get = useCallback((id: string) => inventory[id] ?? 0, [inventory]);
-
-  const decrement = useCallback((id: string, n = 1) => {
-    setInventory((prev) => {
-      const next = { ...prev, [id]: Math.max(0, (prev[id] || 0) - n) };
-      saveInventory(next);
-      return next;
-    });
+  useEffect(() => {
+    if (!SELL_SINGLE_PRODUCTS) return;
+    fetchProducts(PRODUCTS.map((p) => p.id))
+      .then(setProducts)
+      .catch(() => {});
   }, []);
 
   const value: InventoryContextValue = {
-    inventory,
-    get,
-    label: (id: string) => stockLabel(get(id)),
-    color: (id: string) => stockColor(get(id)),
-    isInStock: (id: string) => get(id) > 0,
-    decrement,
+    isInStock: (id) => products[id]?.availableForSale ?? false,
+    isSizeInStock: (id, size) =>
+      products[id]?.variants.some((v) => v.availableForSale && v.selectedOptions.some((o) => o.name.toLowerCase() === 'size' && o.value === size)) ?? false,
   };
 
   return <InventoryContext.Provider value={value}>{children}</InventoryContext.Provider>;

@@ -2,10 +2,21 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import { PRODUCTS } from '../data/products';
 import { BUNDLES } from '../data/bundles';
 import { USED_GEAR } from '../data/usedGear';
+import { pendingCheckoutCompleted } from '../lib/shopify';
 
 const CART_KEY = 'ketto-cart';
 
+// Keyed by item id, or "id|size" for a product bought in a specific size.
 type CartMap = Record<string, number>;
+
+function cartKey(id: string, size?: string | null): string {
+  return size ? `${id}|${size}` : id;
+}
+
+function parseKey(key: string): { id: string; size?: string } {
+  const [id, size] = key.split('|');
+  return { id, size };
+}
 
 function loadCart(): CartMap {
   try {
@@ -25,7 +36,11 @@ function saveCart(cart: CartMap) {
 }
 
 export interface CartLineItem {
+  /** Cart key: pass this to increment/decrement/removeFromCart. */
   id: string;
+  /** The product/kit id, which is also its Shopify handle. */
+  productId: string;
+  size?: string | undefined;
   name: string;
   price: number;
   qty: number;
@@ -42,7 +57,7 @@ interface CartContextValue {
   toggleCart: () => void;
   openCart: () => void;
   closeCart: () => void;
-  addToCart: (id: string, qty?: number) => void;
+  addToCart: (id: string, qty?: number, size?: string | null) => void;
   increment: (id: string) => void;
   decrement: (id: string) => void;
   removeFromCart: (id: string) => void;
@@ -59,8 +74,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     saveCart(cart);
   }, [cart]);
 
-  const addToCart = useCallback((id: string, qty = 1) => {
-    setCart((prev) => ({ ...prev, [id]: (prev[id] || 0) + qty }));
+  // Coming back from a finished Shopify checkout: the order went through, so empty the cart.
+  useEffect(() => {
+    pendingCheckoutCompleted()
+      .then((done) => done && setCart({}))
+      .catch(() => {});
+  }, []);
+
+  const addToCart = useCallback((id: string, qty = 1, size?: string | null) => {
+    const key = cartKey(id, size);
+    setCart((prev) => ({ ...prev, [key]: (prev[key] || 0) + qty }));
     setCartOpen(true);
   }, []);
 
@@ -90,12 +113,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const items = useMemo<CartLineItem[]>(() => {
     return Object.entries(cart)
-      .map(([id, qty]) => {
+      .map(([key, qty]): CartLineItem | null => {
+        const { id, size } = parseKey(key);
         const product = PRODUCTS.find((p) => p.id === id) ?? BUNDLES.find((b) => b.id === id) ?? USED_GEAR.find((u) => u.id === id);
         if (!product) return null;
         return {
-          id,
-          name: product.name,
+          id: key,
+          productId: id,
+          size,
+          name: size ? `${product.name} (${size})` : product.name,
           price: product.price,
           qty,
           lineTotal: Math.round(product.price * qty * 100) / 100,

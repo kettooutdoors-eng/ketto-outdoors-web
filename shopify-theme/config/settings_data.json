@@ -1,0 +1,15 @@
+{
+  "current": {
+    "social_youtube": "https://www.youtube.com/@KettoOutdoors",
+    "social_instagram": "https://www.instagram.com/kettooutdoors/",
+    "social_facebook": "https://www.facebook.com/profile.php?id=61592438567565",
+    "sections": {
+      "header": { "type": "header", "settings": { "menu": "main-menu", "cta_label": "Shop Kits", "cta_link": "/collections/kits" } },
+      "footer": { "type": "footer", "settings": { "shop_menu": "footer", "support_menu": "footer-support" } },
+      "welcome-popup": { "type": "welcome-popup", "settings": { "enabled": true, "code": "WELCOME15", "percent": 15, "delay": 8 } }
+    }
+  },
+  "presets": {
+    "Default": {}
+  }
+}

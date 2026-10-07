@@ -1,0 +1,33 @@
+name: Set up Shopify store
+
+# Fills the Shopify store with the kits, pages, guides, blog posts, policies, menus,
+# WELCOME15 discount, and redirects (scripts/shopify-setup.ts). Run it by hand from
+# the Actions tab. Anything already in the store is left alone unless "Overwrite" is ticked.
+on:
+  workflow_dispatch:
+    inputs:
+      overwrite:
+        description: Overwrite kits, pages, and posts that already exist with the content from the code
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Set up the store
+        env:
+          # Settings > Secrets and variables > Actions:
+          #   Variables tab: SHOPIFY_SHOP (e.g. ketto-outdoors.myshopify.com)
+          #   Secrets tab:   SHOPIFY_CLIENT_ID and SHOPIFY_CLIENT_SECRET (from the app's Settings page in Shopify's Dev Dashboard)
+          SHOPIFY_SHOP: ${{ vars.SHOPIFY_SHOP }}
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+        run: node --experimental-strip-types scripts/shopify-setup.ts ${{ inputs.overwrite && '--update' || '' }}

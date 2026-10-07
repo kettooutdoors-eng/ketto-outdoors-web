@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../state/CartContext';
 import { useEscapeKey } from '../../hooks/useEscapeKey';
+import { SELL_SINGLE_PRODUCTS } from '../../lib/featureFlags';
 
 interface MobileMenuProps {
   open: boolean;
@@ -23,7 +24,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         </button>
         <Link to="/" onClick={onClose} style={linkStyle}>Home</Link>
         <Link to="/kits" onClick={onClose} style={linkStyle}>Shop Kits</Link>
-        <Link to="/shop" onClick={onClose} style={linkStyle}>All Gear</Link>
+        {SELL_SINGLE_PRODUCTS && <Link to="/shop" onClick={onClose} style={linkStyle}>All Gear</Link>}
         <Link to="/new-to-fishing" onClick={onClose} style={linkStyle}>New to Fishing</Link>
         <button
           onClick={() => {

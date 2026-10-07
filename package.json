@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "shopify:csv": "node --experimental-strip-types scripts/shopify-products-csv.ts",
+    "shopify:setup": "node --experimental-strip-types scripts/shopify-setup.ts",
+    "shopify:theme-zip": "rm -f shopify/ketto-outdoors-theme.zip && cd shopify-theme && zip -qr ../shopify/ketto-outdoors-theme.zip . -x \".*\""
   },
   "dependencies": {
     "react": "^19.2.8",

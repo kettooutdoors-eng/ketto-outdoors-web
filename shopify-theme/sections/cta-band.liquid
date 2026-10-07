@@ -1,0 +1,42 @@
+{%- if section.settings.style == 'big' -%}
+  <section class="cta-band">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="cta-band__side">
+      {%- if section.settings.text != blank -%}<div class="cta-band__kicker">{{ section.settings.text }}</div>{%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link | default: '/collections/kits' }}" class="btn btn--rust" style="padding: 16px 28px;">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+    </div>
+  </section>
+{%- else -%}
+  <section class="cta-simple">
+    <h2>{{ section.settings.heading }}</h2>
+    {%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '/collections/kits' }}" class="btn btn--rust" style="margin-top: 20px;">{{ section.settings.button_label }}</a>
+    {%- endif -%}
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Call to action",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "options": [
+        { "value": "big", "label": "Big headline" },
+        { "value": "simple", "label": "Centered" }
+      ],
+      "default": "simple"
+    },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Ready to go fishing?" },
+    { "type": "text", "id": "text", "label": "Text" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop kits" },
+    { "type": "text", "id": "button_link", "label": "Button link", "info": "A page address like /collections/kits, or #kits to scroll to the kit grid on the same page." }
+  ],
+  "presets": [{ "name": "Call to action" }]
+}
+{% endschema %}

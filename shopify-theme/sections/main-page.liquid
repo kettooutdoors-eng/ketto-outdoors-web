@@ -1,0 +1,23 @@
+{%- liquid
+  assign eyebrow = page.metafields.custom.eyebrow.value | default: section.settings.eyebrow
+  assign subtitle = page.metafields.custom.subtitle.value
+-%}
+<section class="page-hero">
+  {%- if eyebrow != blank -%}<div class="eyebrow eyebrow--light">{{ eyebrow }}</div>{%- endif -%}
+  <h1>{{ page.title }}</h1>
+  {%- if subtitle != blank -%}<p>{{ subtitle }}</p>{%- endif -%}
+</section>
+
+<div class="{% if section.settings.wide %}container section{% else %}narrow{% endif %}">
+  <div class="rte">{{ page.content }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "info": "Used when the page doesn't set its own." },
+    { "type": "checkbox", "id": "wide", "label": "Wide layout", "default": false }
+  ]
+}
+{% endschema %}

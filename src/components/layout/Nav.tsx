@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BannerButton } from '../ui/BannerButton';
 import { useCart } from '../../state/CartContext';
+import { SELL_SINGLE_PRODUCTS } from '../../lib/featureFlags';
 
 export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
   const { hasItems, cartCount, toggleCart } = useCart();
@@ -31,6 +32,7 @@ export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
         <img src={`${import.meta.env.BASE_URL}assets/ketto-lockup.png`} alt="Ketto Outdoors" className="nav-logo-img" style={{ height: 56, display: 'block' }} />
       </Link>
 
+      {SELL_SINGLE_PRODUCTS && (
       <Link
         to="/shop"
         className="nav-link-desktop"
@@ -44,6 +46,7 @@ export function Nav({ onMenuOpen }: { onMenuOpen: () => void }) {
       >
         All Gear
       </Link>
+      )}
 
       <Link
         to="/new-to-fishing"

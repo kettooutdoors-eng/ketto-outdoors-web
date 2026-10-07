@@ -8,6 +8,7 @@ import { useCart } from '../state/CartContext';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import NotFound from './NotFound';
 import { formatPrice } from '../lib/format';
+import { SELL_SINGLE_PRODUCTS } from '../lib/featureFlags';
 
 const SOURCE_LABEL: Record<string, string> = {
   'anchor-brand': 'Name-brand',
@@ -93,7 +94,7 @@ export default function Kit() {
                       to={`/product/${linkedProduct.id}`}
                       style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, fontWeight: 700, color: 'var(--rust)' }}
                     >
-                      Buy this piece separately: {formatPrice(linkedProduct.price)} →
+                      {SELL_SINGLE_PRODUCTS ? `Buy this piece separately: ${formatPrice(linkedProduct.price)} →` : 'How to use it →'}
                     </Link>
                   )}
                 </div>

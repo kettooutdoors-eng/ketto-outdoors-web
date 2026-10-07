@@ -28,9 +28,9 @@ export function SectionKicker({ children }: { children: ReactNode }) {
   );
 }
 
-export function StockLabel({ qty }: { qty: number }) {
-  const label = qty <= 0 ? 'Out of stock' : qty <= 5 ? `Only ${qty} left` : 'In stock';
-  const color = qty <= 0 ? 'var(--stock-out)' : qty <= 5 ? 'var(--stock-low)' : 'var(--stock-in)';
+export function StockLabel({ inStock }: { inStock: boolean }) {
+  const label = inStock ? 'In stock' : 'Out of stock';
+  const color = inStock ? 'var(--stock-in)' : 'var(--stock-out)';
   return (
     <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '.02em' }}>{label}</span>
   );

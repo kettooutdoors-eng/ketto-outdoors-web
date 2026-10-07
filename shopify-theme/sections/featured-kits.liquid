@@ -1,0 +1,44 @@
+{%- liquid
+  assign source = section.settings.collection
+  if source == blank
+    assign source = collections['kits']
+  endif
+  if source == blank or source.products_count == 0
+    assign source = collections['all']
+  endif
+-%}
+<section id="{{ section.settings.anchor | default: 'kits' }}" class="bg-sage" style="padding-bottom: 56px;">
+  <div class="center" style="padding: 56px var(--gutter) 0;">
+    <h2 style="font-size: 44px; letter-spacing: -0.03em;">{{ section.settings.heading }}</h2>
+    {%- if section.settings.subheading != blank -%}
+      <p class="muted" style="margin: 12px auto 0; font-size: 16px;">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+    <div class="rule"></div>
+  </div>
+  {%- assign products = source.products | sort: 'price' -%}
+  {%- if products.size > 0 -%}
+    <div class="grid-3 kit-grid">
+      {%- for product in products limit: section.settings.limit -%}
+        <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
+          {% render 'kit-card', product: product %}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <p class="center muted" style="margin-top: 28px;">Kits coming soon.</p>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Kit grid",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Pick a kit." },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Everything inside works together." },
+    { "type": "collection", "id": "collection", "label": "Collection", "info": "Defaults to the Kits collection." },
+    { "type": "range", "id": "limit", "label": "Kits to show", "min": 1, "max": 12, "step": 1, "default": 3 },
+    { "type": "text", "id": "anchor", "label": "Anchor name", "default": "kits", "info": "Buttons linking to #kits scroll here." }
+  ],
+  "presets": [{ "name": "Kit grid" }]
+}
+{% endschema %}
