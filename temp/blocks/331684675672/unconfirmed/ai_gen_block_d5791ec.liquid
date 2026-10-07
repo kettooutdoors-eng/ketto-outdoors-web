@@ -1,6 +1,223 @@
+{% doc %}
+  @prompt
+    Create a bold, polished animated storefront block for Ketto Outdoors with an adventurous outdoor feel. Use smooth staggered text and image reveals as the block enters view, subtle depth and motion, and responsive hover effects. Keep the movement tasteful, fast, and fluid rather than distracting. Make it work well on mobile and respect visitors’ reduced-motion preferences. Provide customizable text, imagery, and motion intensity.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-outdoor-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    overflow: hidden;
+    background: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    border-radius: {{ block.settings.corner_radius }}px;
+    perspective: 1000px;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: stretch;
+    min-height: 400px;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(28px, 6vw, 76px);
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__eyebrow,
+  .ai-outdoor-{{ ai_gen_id }}__title,
+  .ai-outdoor-{{ ai_gen_id }}__description,
+  .ai-outdoor-{{ ai_gen_id }}__cta,
+  .ai-outdoor-{{ ai_gen_id }}__media {
+    opacity: 0;
+    transform: translateY(calc(16px * {{ block.settings.motion_intensity | divided_by: 100.0 }}));
+    transition: opacity {{ block.settings.motion_intensity | times: 2.4 | plus: 100 }}ms ease, transform {{ block.settings.motion_intensity | times: 2.4 | plus: 100 }}ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}.is-visible .ai-outdoor-{{ ai_gen_id }}__eyebrow { opacity: 1; transform: translateY(0); transition-delay: 30ms; }
+  .ai-outdoor-{{ ai_gen_id }}.is-visible .ai-outdoor-{{ ai_gen_id }}__title { opacity: 1; transform: translateY(0); transition-delay: 90ms; }
+  .ai-outdoor-{{ ai_gen_id }}.is-visible .ai-outdoor-{{ ai_gen_id }}__description { opacity: 1; transform: translateY(0); transition-delay: 150ms; }
+  .ai-outdoor-{{ ai_gen_id }}.is-visible .ai-outdoor-{{ ai_gen_id }}__cta { opacity: 1; transform: translateY(0); transition-delay: 210ms; }
+  .ai-outdoor-{{ ai_gen_id }}.is-visible .ai-outdoor-{{ ai_gen_id }}__media { opacity: 1; transform: translateY(0); transition-delay: 120ms; }
+
+  .ai-outdoor-{{ ai_gen_id }}__eyebrow {
+    margin: 0 0 14px;
+    color: {{ block.settings.accent_color }};
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__title {
+    max-width: 12ch;
+    margin: 0 0 18px;
+    font-size: clamp(34px, 5vw, {{ block.settings.heading_size }}px);
+    font-weight: 800;
+    letter-spacing: -.045em;
+    line-height: .98;
+    text-wrap: balance;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__description {
+    max-width: 42ch;
+    margin: 0 0 26px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 2px solid {{ block.settings.button_color }};
+    border-radius: 3px;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-decoration: none;
+    transition-property: opacity, transform, background-color, color, border-color;
+    transition-duration: {{ block.settings.motion_intensity | plus: 80 }}ms;
+    transition-timing-function: ease;
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__cta:hover {
+    transform: translateY(-2px);
+    background: transparent;
+    color: {{ block.settings.text_color }};
+    border-color: {{ block.settings.text_color }};
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__cta:focus-visible { outline: 3px solid {{ block.settings.accent_color }}; outline-offset: 4px; }
+
+  .ai-outdoor-{{ ai_gen_id }}__media {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    transform: translateY(calc(12px * {{ block.settings.motion_intensity | divided_by: 100.0 }})) scale(.985);
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}__media img,
+  .ai-outdoor-{{ ai_gen_id }}__placeholder svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    transition: transform {{ block.settings.motion_intensity | times: 5 | plus: 200 }}ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ai-outdoor-{{ ai_gen_id }}:hover .ai-outdoor-{{ ai_gen_id }}__media img { transform: scale(1.035); }
+  .ai-outdoor-{{ ai_gen_id }}__placeholder { height: 100%; min-height: 400px; background: #d8ded5; }
+  .ai-outdoor-{{ ai_gen_id }}__placeholder svg { color: #465447; }
+
+  @media (max-width: 749px) {
+    .ai-outdoor-{{ ai_gen_id }} { width: 100%; }
+    .ai-outdoor-{{ ai_gen_id }}__inner { grid-template-columns: 1fr; min-height: 0; }
+    .ai-outdoor-{{ ai_gen_id }}__copy { padding: 32px 24px; }
+    .ai-outdoor-{{ ai_gen_id }}__media,
+    .ai-outdoor-{{ ai_gen_id }}__media img,
+    .ai-outdoor-{{ ai_gen_id }}__placeholder,
+    .ai-outdoor-{{ ai_gen_id }}__placeholder svg { min-height: 260px; }
+    .ai-outdoor-{{ ai_gen_id }}__title { font-size: clamp(34px, 11vw, {{ block.settings.heading_size }}px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-outdoor-{{ ai_gen_id }}__eyebrow,
+    .ai-outdoor-{{ ai_gen_id }}__title,
+    .ai-outdoor-{{ ai_gen_id }}__description,
+    .ai-outdoor-{{ ai_gen_id }}__cta,
+    .ai-outdoor-{{ ai_gen_id }}__media,
+    .ai-outdoor-{{ ai_gen_id }}__media img { opacity: 1; transform: none; transition: none; }
+  }
+{% endstyle %}
+
+<outdoor-feature-{{ ai_gen_id }} class="ai-outdoor-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-outdoor-{{ ai_gen_id }}__inner">
+    <div class="ai-outdoor-{{ ai_gen_id }}__copy">
+      {% if block.settings.eyebrow != blank %}<p class="ai-outdoor-{{ ai_gen_id }}__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+      {% if block.settings.heading != blank %}<h2 class="ai-outdoor-{{ ai_gen_id }}__title">{{ block.settings.heading | escape }}</h2>{% endif %}
+      {% if block.settings.description != blank %}<div class="ai-outdoor-{{ ai_gen_id }}__description">{{ block.settings.description }}</div>{% endif %}
+      {% if block.settings.button_label != blank and block.settings.button_link != blank %}<a class="ai-outdoor-{{ ai_gen_id }}__cta" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>{% endif %}
+    </div>
+    <div class="ai-outdoor-{{ ai_gen_id }}__media">
+      {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
+      {% else %}
+        <div class="ai-outdoor-{{ ai_gen_id }}__placeholder">{{ 'hero-apparel-1' | placeholder_svg_tag }}</div>
+      {% endif %}
+    </div>
+  </div>
+</outdoor-feature-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    const tagName = 'outdoor-feature-{{ ai_gen_id }}';
+    if (customElements.get(tagName)) return;
+    class OutdoorFeature extends HTMLElement {
+      connectedCallback() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          this.classList.add('is-visible');
+          return;
+        }
+        if (!('IntersectionObserver' in window)) {
+          this.classList.add('is-visible');
+          return;
+        }
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.classList.add('is-visible');
+              this.observer.disconnect();
+            }
+          });
+        }, { threshold: 0.15 });
+        this.observer.observe(this);
+      }
+      disconnectedCallback() {
+        if (this.observer) this.observer.disconnect();
+      }
+    }
+    customElements.define(tagName, OutdoorFeature);
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Outdoor feature reveal",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Made for the open trail" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find your next wild place" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Gear up for the miles ahead with dependable essentials built for life outside.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Explore the collection" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "image_picker", "id": "image", "label": "Feature image" },
+    { "type": "header", "content": "Style and motion" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 36, "max": 72, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "motion_intensity", "label": "Motion intensity", "min": 0, "max": 100, "step": 10, "unit": "%", "default": 50 },
+    { "type": "range", "id": "corner_radius", "label": "Corner radius", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 8 },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#20291F" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#FFFFFF" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#D3A85B" },
+    { "type": "color", "id": "button_color", "label": "Button", "default": "#D3A85B" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#20291F" }
+  ],
+  "presets": [{ "name": "Outdoor feature reveal" }],
+  "tag": null,
+  "class": "outdoor-feature-block"
+}
 {% endschema %}
