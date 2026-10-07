@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "social_youtube": "https://www.youtube.com/@KettoOutdoors",
@@ -9,13 +18,22 @@
         "settings": {
           "menu": "main-menu",
           "cta_label": "Shop Kits",
-          "cta_link": "/#kits"
+          "cta_link": "/#kits",
+          "announcement": "",
+          "announcement_link": ""
         }
       },
       "footer": {
         "type": "footer",
         "settings": {
-          "support_menu": "footer-support"
+          "shop_heading": "Shop",
+          "shop_menu": "",
+          "support_heading": "Support",
+          "support_menu": "footer-support",
+          "contact_heading": "Contact & Follow",
+          "email": "KettoOutdoors@gmail.com",
+          "contact_text": "Questions, wholesale orders, or a lure request. We read every email.",
+          "show_newsletter": true
         }
       },
       "welcome-popup": {
@@ -24,8 +42,18 @@
           "enabled": true,
           "code": "WELCOME15",
           "percent": 15,
-          "delay": 8
+          "eyebrow": "Welcome to Ketto",
+          "delay": 8,
+          "shop_link": ""
         }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "8764476057892802672": {
+        "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

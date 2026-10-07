@@ -1,0 +1,44 @@
+{%- comment -%} A heading and a short numbered list. Each step is a block, editable in the theme editor. {%- endcomment -%}
+<section class="simple-steps{% if section.settings.tinted %} bg-sage{% endif %}">
+  <div class="simple-steps__inner">
+    {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+    <ol class="steps">
+      {%- for block in section.blocks -%}
+        <li class="step" {{ block.shopify_attributes }}>
+          <span class="step__num step__num--solid">{{ forloop.index }}</span>
+          <div>
+            <div class="step__title">{{ block.settings.title }}</div>
+            {%- if block.settings.text != blank -%}<p>{{ block.settings.text }}</p>{%- endif -%}
+            {%- if block.settings.link_label != blank -%}
+              <a class="simple-steps__link" href="{{ block.settings.link_url | default: '/#kits' }}">{{ block.settings.link_label }} &rarr;</a>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Numbered steps",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "checkbox", "id": "tinted", "label": "Light green background", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "text", "label": "Text" },
+        { "type": "text", "id": "link_label", "label": "Link label" },
+        { "type": "text", "id": "link_url", "label": "Link address", "info": "A page address like /#kits or /collections/kits." }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "Numbered steps" }]
+}
+{% endschema %}
