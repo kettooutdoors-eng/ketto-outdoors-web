@@ -1,19 +1,17 @@
+{%- comment -%}
+  The kit page, kept deliberately simple: photo, name, one line, price, and one button.
+  What's in the box and the setup steps live on the QR sticker page (?view=guide),
+  linked from here.
+{%- endcomment -%}
 {%- liquid
-  assign components = product.metafields.custom.kit_components.value
-  assign tagline = product.metafields.custom.tagline.value
-  assign reassurance = product.metafields.custom.reassurance.value
+  assign tagline = product.metafields.custom.tagline.value | default: product.description | strip_html | truncatewords: 24
   assign variant = product.selected_or_first_available_variant
-  assign kits_url = section.settings.back_link | default: '/collections/kits'
 -%}
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="{{ kits_url }}">{{ section.settings.back_label }}</a> / {{ product.title }}
-</nav>
-
-<div class="kit-hero grid-2">
-  <div data-gallery>
+<div class="kit-simple">
+  <div class="kit-simple__media" data-gallery>
     {%- if product.featured_media -%}
       {%- assign main_alt = product.featured_media.alt | default: product.title -%}
-      <div class="media" style="height: 420px;">
+      <div class="media">
         {{ product.featured_media.preview_image | image_url: width: 1100 | image_tag: alt: main_alt, loading: 'eager', fetchpriority: 'high', class: 'gallery-main' }}
       </div>
       {%- if product.media.size > 1 -%}
@@ -26,63 +24,32 @@
         </div>
       {%- endif -%}
     {%- else -%}
-      {% render 'media', alt: product.title, height: 420 %}
+      {% render 'media', alt: product.title %}
     {%- endif -%}
   </div>
 
-  <div class="stack">
-    {%- if components.size > 0 -%}
-      <div class="kicker">{{ components.size }}-piece kit</div>
-    {%- endif -%}
+  <div class="kit-simple__info">
     <h1>{{ product.title }}</h1>
-    {%- if tagline != blank -%}
-      <p style="font-size: 15px; line-height: 1.6;">{{ tagline }}</p>
-    {%- endif -%}
-    {%- if product.description != blank -%}
-      <div class="rte" style="font-size: 14px; line-height: 1.6; opacity: .85;">{{ product.description }}</div>
-    {%- endif -%}
+    {%- if tagline != blank -%}<p class="kit-simple__tagline">{{ tagline }}</p>{%- endif -%}
+    <div class="price price--lg">{{ variant.price | money_without_trailing_zeros }}</div>
 
-    <div style="display: flex; align-items: center; gap: 16px;">
-      <span class="price price--lg">{{ variant.price | money_without_trailing_zeros }}</span>
-      {%- if variant.compare_at_price > variant.price -%}
-        <s class="muted">{{ variant.compare_at_price | money_without_trailing_zeros }}</s>
-      {%- endif -%}
-      {%- if variant.available -%}
-        <span class="stock">In stock</span>
-      {%- else -%}
-        <span class="stock stock--out">Sold out</span>
-      {%- endif -%}
-    </div>
-
-    {%- form 'product', product, id: 'ProductForm', class: 'stack product-form' -%}
-      {%- if product.has_only_default_variant -%}
-        <input type="hidden" name="id" value="{{ variant.id }}">
-      {%- else -%}
-        <div class="field">
-          <label for="ProductVariant">{{ product.options | join: ' / ' }}</label>
-          <select id="ProductVariant" name="id" class="input">
-            {%- for v in product.variants -%}
-              <option value="{{ v.id }}"{% if v == variant %} selected{% endif %}{% unless v.available %} disabled{% endunless %}>
-                {{ v.title }}{% unless v.available %} (sold out){% endunless %}
-              </option>
-            {%- endfor -%}
-          </select>
-        </div>
-      {%- endif -%}
-      <button type="submit" class="btn btn--block"{% unless product.available %} disabled{% endunless %}>
-        {%- if product.available -%}Add to cart{%- else -%}Sold out{%- endif -%}
+    {%- form 'product', product, class: 'kit-simple__form' -%}
+      <input type="hidden" name="id" value="{{ variant.id }}">
+      <input type="hidden" name="return_to" value="/checkout">
+      <button type="submit" class="btn btn--rust btn--block btn--big"{% unless product.available %} disabled{% endunless %}>
+        {%- if product.available -%}{{ section.settings.button_label }}{%- else -%}Sold out{%- endif -%}
       </button>
-      {%- if section.settings.show_dynamic_checkout and product.available -%}
-        {{ form | payment_button }}
-      {%- endif -%}
     {%- endform -%}
 
     {%- unless product.available -%}
       {% render 'notify-form', product: product %}
     {%- endunless -%}
 
-    {%- if reassurance != blank -%}
-      <div class="note" style="margin-top: 8px;">{{ reassurance | newline_to_br }}</div>
+    {%- if section.settings.note != blank -%}
+      <p class="kit-simple__note">{{ section.settings.note }}</p>
+    {%- endif -%}
+    {%- if section.settings.show_setup_link -%}
+      <a class="kit-simple__setup" href="{{ product.url }}?view=guide">How to set it up &rarr;</a>
     {%- endif -%}
   </div>
 </div>
@@ -93,11 +60,11 @@
 
 {% schema %}
 {
-  "name": "Kit details (top)",
+  "name": "Kit page",
   "settings": [
-    { "type": "text", "id": "back_label", "label": "Breadcrumb label", "default": "Kits" },
-    { "type": "url", "id": "back_link", "label": "Breadcrumb link" },
-    { "type": "checkbox", "id": "show_dynamic_checkout", "label": "Show express checkout button (Shop Pay, Apple Pay)", "default": true }
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Buy now", "info": "Takes the customer straight to checkout." },
+    { "type": "text", "id": "note", "label": "Note under the button", "default": "Bring your own rod and reel." },
+    { "type": "checkbox", "id": "show_setup_link", "label": "Show \"How to set it up\" link", "default": true, "info": "Opens the same page as the QR sticker in the kit." }
   ]
 }
 {% endschema %}

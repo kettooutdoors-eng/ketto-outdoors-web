@@ -1,7 +1,15 @@
 {
   "sections": {
-    "main": { "type": "main-product", "settings": { "back_label": "Kits", "show_dynamic_checkout": true } },
-    "details": { "type": "kit-details", "settings": {} }
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "button_label": "Buy now",
+        "note": "Bring your own rod and reel.",
+        "show_setup_link": true
+      }
+    }
   },
-  "order": ["main", "details"]
+  "order": [
+    "main"
+  ]
 }
