@@ -1,0 +1,32 @@
+<section class="center" style="padding: 36px var(--gutter);">
+  <div style="color: var(--ink);">{% render 'icon', name: 'hook' %}</div>
+  <div class="eyebrow" style="font-weight: 400; margin-top: 6px;">{{ section.settings.kicker }}</div>
+  <h2 style="font-size: 27px; letter-spacing: -0.03em; margin-top: 8px;">{{ section.settings.heading }}</h2>
+  <div class="grid-3" style="margin: 28px auto 0; text-align: left; max-width: 920px;">
+    {%- for block in section.blocks -%}
+      <div class="reveal stack" style="gap: 10px;" {{ block.shopify_attributes }}>
+        <span class="seal">{{ forloop.index }}</span>
+        <p style="font-size: 16px; line-height: 1.6; opacity: .85;">{{ block.settings.text }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Why Ketto",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Small heading", "default": "Why Ketto" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Made for beginners." }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [{ "type": "textarea", "id": "text", "label": "Text" }]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "Why Ketto" }]
+}
+{% endschema %}

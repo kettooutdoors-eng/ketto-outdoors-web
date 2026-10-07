@@ -1,0 +1,1 @@
+{ "sections": { "main": { "type": "main-page", "settings": { "wide": true } }, "cta": { "type": "cta-band", "settings": { "style": "simple", "heading": "Ready to go fishing?", "text": "Pick the kit that matches the fish you're after. Everything inside works together.", "button_label": "Shop kits", "button_link": "/collections/kits" } } }, "order": ["main", "cta"] }

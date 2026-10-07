@@ -1,0 +1,25 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Ketto Outdoors",
+    "theme_version": "1.0.0",
+    "theme_author": "Ketto Outdoors",
+    "theme_documentation_url": "https://github.com/kettooutdoors-eng/ketto-outdoors-web",
+    "theme_support_url": "https://github.com/kettooutdoors-eng/ketto-outdoors-web"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      { "type": "image_picker", "id": "favicon", "label": "Browser tab icon", "info": "Square image, at least 64 x 64. Leave empty to use the Ketto badge." },
+      { "type": "image_picker", "id": "share_image", "label": "Social sharing image", "info": "Shown when the site is shared on social media. Leave empty to use the Ketto banner." }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      { "type": "url", "id": "social_youtube", "label": "YouTube" },
+      { "type": "url", "id": "social_instagram", "label": "Instagram" },
+      { "type": "url", "id": "social_facebook", "label": "Facebook" }
+    ]
+  }
+]

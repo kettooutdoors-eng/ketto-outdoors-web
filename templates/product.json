@@ -1,0 +1,7 @@
+{
+  "sections": {
+    "main": { "type": "main-product", "settings": { "back_label": "Kits", "show_dynamic_checkout": true } },
+    "details": { "type": "kit-details", "settings": {} }
+  },
+  "order": ["main", "details"]
+}

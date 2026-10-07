@@ -1,0 +1,47 @@
+{%- assign email = section.settings.email | default: shop.email -%}
+<div class="narrow" style="max-width: 560px; padding-top: 0;">
+  {%- form 'contact', id: 'ContactForm', class: 'stack contact-form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="center">
+        <h2 style="font-size: 24px;">Message sent.</h2>
+        <p class="muted" style="margin-top: 10px;">Thanks for reaching out. We'll get back to you soon.</p>
+      </div>
+    {%- else -%}
+      {%- if form.errors -%}
+        <p class="form-error">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
+      <div class="field">
+        <label for="ContactName">Name</label>
+        <input class="input" type="text" id="ContactName" name="contact[name]" autocomplete="name" placeholder="Your name" value="{{ form.name }}" required>
+      </div>
+      <div class="field">
+        <label for="ContactEmail">Email</label>
+        <input class="input" type="email" id="ContactEmail" name="contact[email]" autocomplete="email" placeholder="you@example.com" value="{{ form.email }}" required>
+      </div>
+      <div class="field">
+        <label for="ContactBody">Message</label>
+        <textarea class="input" id="ContactBody" name="contact[body]" rows="6" placeholder="How can we help?" required>{{ form.body }}</textarea>
+      </div>
+      <button type="submit" class="btn btn--block">Send message</button>
+    {%- endif -%}
+  {%- endform -%}
+
+  <div class="center stack" style="margin-top: 40px; gap: 6px;">
+    {%- if email != blank -%}<a href="mailto:{{ email }}" style="font-weight: 700;">{{ email }}</a>{%- endif -%}
+    {%- if section.settings.response_time != blank -%}
+      <div style="font-size: 13px; opacity: .65;">Response time: {{ section.settings.response_time }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact form",
+  "settings": [
+    { "type": "paragraph", "content": "Messages are emailed to the store's sender email (Settings > Notifications)." },
+    { "type": "text", "id": "email", "label": "Email shown", "default": "KettoOutdoors@gmail.com" },
+    { "type": "text", "id": "response_time", "label": "Response time", "default": "Within 1-2 business days" }
+  ],
+  "presets": [{ "name": "Contact form" }]
+}
+{% endschema %}

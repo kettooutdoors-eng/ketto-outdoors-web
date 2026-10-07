@@ -1,0 +1,96 @@
+{%- liquid
+  assign components = product.metafields.custom.kit_components.value
+  assign steps = product.metafields.custom.setup_steps.value
+  assign setup_note = product.metafields.custom.setup_note.value
+  assign sourcing = product.metafields.custom.sourcing_note.value
+  assign variant = product.selected_or_first_available_variant
+-%}
+
+{%- if components.size > 0 -%}
+  <section class="bg-sage section">
+    <div class="center" style="margin-bottom: 36px;">
+      <div class="eyebrow">In the box</div>
+      <h2 style="font-size: 32px; margin-top: 8px;">What's Inside</h2>
+    </div>
+    <div class="stack" style="max-width: 800px; margin: 0 auto; gap: 20px;">
+      {%- for c in components -%}
+        <div class="card card--sm component">
+          <div class="component__head">
+            <div class="component__title">{{ c.label }}</div>
+            {%- if c.sourced == 'anchor-brand' -%}
+              <span class="tag tag--rust">Name-brand</span>
+            {%- elsif c.sourced == 'private-label' -%}
+              <span class="tag">Ketto-tested</span>
+            {%- endif -%}
+          </div>
+          {%- if c.detail != blank -%}<div class="component__detail">{{ c.detail }}</div>{%- endif -%}
+          {%- if c.why != blank -%}<p>{{ c.why }}</p>{%- endif -%}
+          {%- if c.guide != blank -%}
+            <a class="component__link" href="{{ c.guide }}">How to use it &rarr;</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{%- if sourcing != blank -%}
+  <section class="narrow">
+    <h2 style="font-size: 22px; margin-bottom: 12px;">Where this gear comes from</h2>
+    <p style="font-size: 14px; line-height: 1.7;">{{ sourcing }}</p>
+  </section>
+{%- endif -%}
+
+{%- if steps.size > 0 -%}
+  <section class="bg-sage section">
+    <div class="center" style="margin-bottom: 36px;">
+      <div class="eyebrow">Step by step</div>
+      <h2 style="font-size: 32px; margin-top: 8px;">Setting It Up</h2>
+      {%- if setup_note != blank -%}
+        <p class="muted" style="margin: 12px auto 0; max-width: 60ch; font-size: 14px;">{{ setup_note }}</p>
+      {%- endif -%}
+    </div>
+    <div class="grid-2" style="max-width: 900px; margin: 0 auto; grid-template-columns: 1.6fr 1fr; gap: 40px;">
+      <ol class="steps">
+        {%- for step in steps -%}
+          <li class="step">
+            <span class="step__num">{{ forloop.index }}</span>
+            <div>
+              <div class="step__title">{{ step.title }}</div>
+              <p>{{ step.detail }}</p>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ol>
+      {%- if section.settings.sticker_text != blank -%}
+        <div class="stack center" style="align-items: center; gap: 12px;">
+          <div class="qr-box">
+            <span class="kicker" style="line-height: 1.4;">Scan the sticker in your kit</span>
+          </div>
+          <p style="font-size: 12.5px; opacity: .7; max-width: 24ch;">{{ section.settings.sticker_text }}</p>
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+<section class="cta-simple">
+  <h2>{{ section.settings.cta_heading }}</h2>
+  {%- form 'product', product -%}
+    <input type="hidden" name="id" value="{{ variant.id }}">
+    <button type="submit" class="btn btn--rust" style="margin-top: 20px;"{% unless product.available %} disabled{% endunless %}>
+      {%- if product.available -%}Add to cart: {{ variant.price | money_without_trailing_zeros }}{%- else -%}Sold out{%- endif -%}
+    </button>
+  {%- endform -%}
+</section>
+
+{% schema %}
+{
+  "name": "Kit details (contents)",
+  "settings": [
+    { "type": "paragraph", "content": "Shows the kit's contents, setup steps, and sourcing note. Edit those per kit in Shopify admin under Products > (kit) > Metafields." },
+    { "type": "text", "id": "sticker_text", "label": "Sticker note", "default": "Every kit comes with a waterproof sticker that opens these steps and the setup video on your phone." },
+    { "type": "text", "id": "cta_heading", "label": "Bottom heading", "default": "Ready to go fishing?" }
+  ]
+}
+{% endschema %}

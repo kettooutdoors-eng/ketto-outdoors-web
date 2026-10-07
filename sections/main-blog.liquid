@@ -1,0 +1,44 @@
+<section class="page-hero">
+  <div class="eyebrow eyebrow--light">{{ section.settings.eyebrow }}</div>
+  <h1>{{ blog.title }}</h1>
+  {%- if section.settings.intro != blank -%}<p>{{ section.settings.intro }}</p>{%- endif -%}
+  {%- if blog.all_tags.size > 0 -%}
+    <nav class="tag-links" aria-label="Topics">
+      <a href="{{ blog.url }}"{% unless current_tags %} aria-current="page"{% endunless %}>All</a>
+      {%- for tag in blog.all_tags -%}
+        <a href="{{ blog.url }}/tagged/{{ tag | handleize }}"{% if current_tags contains tag %} aria-current="page"{% endif %}>{{ tag }}</a>
+      {%- endfor -%}
+    </nav>
+  {%- endif -%}
+</section>
+
+{%- paginate blog.articles by 12 -%}
+  <div class="grid-3 kit-grid" style="margin: 48px auto 56px;">
+    {%- for article in blog.articles -%}
+      <article class="card card--sm card-lift article-card">
+        {%- if article.image -%}
+          <a href="{{ article.url }}" tabindex="-1" aria-hidden="true">{% render 'media', image: article.image, alt: article.title, width: 600 %}</a>
+        {%- endif -%}
+        {%- if article.tags.size > 0 -%}<div class="eyebrow">{{ article.tags.first }}</div>{%- endif -%}
+        <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <p style="font-size: 14px; opacity: .8;">{{ article.excerpt_or_content | strip_html | truncatewords: 28 }}</p>
+        <a href="{{ article.url }}" style="margin-top: auto; font-weight: 700; font-size: 13px;">Read it &rarr;</a>
+      </article>
+    {%- else -%}
+      <p class="center muted">Posts coming soon.</p>
+    {%- endfor -%}
+  </div>
+  {%- if paginate.pages > 1 -%}
+    <div class="center" style="padding-bottom: 48px;">{{ paginate | default_pagination }}</div>
+  {%- endif -%}
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Blog",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "The Ketto Journal" },
+    { "type": "text", "id": "intro", "label": "Intro", "default": "Straight talk on lures, technique, and getting started fishing." }
+  ]
+}
+{% endschema %}

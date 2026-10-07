@@ -1,0 +1,1 @@
+{ "sections": { "main": { "type": "main-page", "settings": {} }, "cta": { "type": "cta-band", "settings": { "style": "simple", "heading": "Ready to stop guessing?", "text": "Pick the kit that matches what you're after. Every piece inside is already chosen to work together.", "button_label": "Shop kits →", "button_link": "/collections/kits" } } }, "order": ["main", "cta"] }

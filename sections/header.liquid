@@ -1,0 +1,112 @@
+{%- liquid
+  assign menu = linklists[section.settings.menu]
+-%}
+{%- if section.settings.announcement != blank -%}
+  <div class="announcement">
+    {%- if section.settings.announcement_link != blank -%}
+      <a href="{{ section.settings.announcement_link }}">{{ section.settings.announcement }}</a>
+    {%- else -%}
+      {{ section.settings.announcement }}
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+<header class="site-header">
+  <a href="{{ routes.root_url }}" class="site-header__logo">
+    {%- if section.settings.logo != blank -%}
+      {{ section.settings.logo | image_url: width: 480 | image_tag: alt: shop.name }}
+    {%- else -%}
+      <img src="{{ 'ketto-lockup.png' | asset_url }}" alt="{{ shop.name }}" width="165" height="56">
+    {%- endif -%}
+  </a>
+
+  {%- for link in menu.links -%}
+    <a href="{{ link.url }}" class="nav-link"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+  {%- else -%}
+    <a href="{{ pages['new-to-fishing'].url | default: '/pages/new-to-fishing' }}" class="nav-link">New to Fishing</a>
+  {%- endfor -%}
+
+  {%- if section.settings.cta_label != blank -%}
+    <a href="{{ section.settings.cta_link | default: '/collections/kits' }}" class="btn header-cta">{{ section.settings.cta_label }}</a>
+  {%- endif -%}
+
+  <form action="{{ routes.search_url }}" method="get" role="search" class="header-search" id="HeaderSearch">
+    <label for="HeaderSearchInput" class="visually-hidden">Search</label>
+    <input type="search" id="HeaderSearchInput" name="q" placeholder="Search..." value="{{ search.terms | escape }}">
+    <input type="hidden" name="options[prefix]" value="last">
+  </form>
+  <button type="button" class="icon-btn" aria-label="Search" aria-controls="HeaderSearch" aria-expanded="false" data-search-toggle>
+    {% render 'icon', name: 'search' %}
+  </button>
+
+  <a href="{{ routes.cart_url }}" class="icon-btn" aria-label="Cart, {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}">
+    {% render 'icon', name: 'cart' %}
+    {%- if cart.item_count > 0 -%}
+      <span class="cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+    {%- endif -%}
+  </a>
+
+  <button type="button" class="icon-btn menu-toggle" aria-label="Menu" aria-controls="MobileMenu" aria-expanded="false" data-menu-open>
+    {% render 'icon', name: 'menu' %}
+  </button>
+</header>
+<div class="header-rule"></div>
+
+<div class="drawer-backdrop" data-menu-close hidden></div>
+<nav class="mobile-menu" id="MobileMenu" aria-label="Menu" hidden>
+  <button type="button" class="mobile-menu__close" aria-label="Close menu" data-menu-close>&times;</button>
+  <a href="{{ routes.root_url }}">Home</a>
+  {%- if section.settings.cta_label != blank -%}
+    <a href="{{ section.settings.cta_link | default: '/collections/kits' }}">{{ section.settings.cta_label }}</a>
+  {%- endif -%}
+  {%- for link in menu.links -%}
+    <a href="{{ link.url }}">{{ link.title }}</a>
+  {%- endfor -%}
+  <a href="{{ routes.cart_url }}">Cart{% if cart.item_count > 0 %} ({{ cart.item_count }}){% endif %}</a>
+</nav>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Leave empty to use the Ketto Outdoors logo built into the theme."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Shop Kits"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Announcement bar"
+    },
+    {
+      "type": "text",
+      "id": "announcement",
+      "label": "Text",
+      "info": "Shows a thin bar above the header. Leave empty to hide it."
+    },
+    {
+      "type": "url",
+      "id": "announcement_link",
+      "label": "Link"
+    }
+  ]
+}
+{% endschema %}

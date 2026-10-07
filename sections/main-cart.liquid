@@ -1,0 +1,65 @@
+<div class="narrow" style="max-width: 800px;">
+  <h1 style="font-size: 34px; margin-bottom: 8px;">Your Cart</h1>
+
+  {%- if cart.item_count > 0 -%}
+    <form action="{{ routes.cart_url }}" method="post" id="CartForm" novalidate>
+      {%- for item in cart.items -%}
+        <div class="cart-line">
+          <a href="{{ item.url }}" tabindex="-1" aria-hidden="true">{% render 'media', image: item.image, alt: item.product.title, width: 200 %}</a>
+          <div>
+            <a href="{{ item.url }}" style="font-weight: 800; color: var(--ink);">{{ item.product.title }}</a>
+            {%- unless item.product.has_only_default_variant -%}
+              <div style="font-size: 13px; opacity: .7;">{{ item.variant.title }}</div>
+            {%- endunless -%}
+            {%- for discount in item.line_level_discount_allocations -%}
+              <div style="font-size: 12px; color: var(--forest); font-weight: 700;">{{ discount.discount_application.title }} (-{{ discount.amount | money }})</div>
+            {%- endfor -%}
+            <div class="qty">
+              <label for="Qty-{{ forloop.index }}" class="visually-hidden">Quantity for {{ item.product.title }}</label>
+              <input type="number" id="Qty-{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" min="0">
+              <a class="linkish" href="{{ item.url_to_remove }}">Remove</a>
+            </div>
+          </div>
+          <div style="font-weight: 800; text-align: right;">
+            {%- if item.original_line_price != item.final_line_price -%}
+              <s class="muted" style="font-weight: 400; font-size: 13px;">{{ item.original_line_price | money }}</s><br>
+            {%- endif -%}
+            {{ item.final_line_price | money }}
+          </div>
+        </div>
+      {%- endfor -%}
+
+      {%- for discount in cart.cart_level_discount_applications -%}
+        <div style="display: flex; justify-content: space-between; margin-top: 12px; font-size: 14px; color: var(--forest); font-weight: 700;">
+          <span>{{ discount.title }}</span><span>-{{ discount.total_allocated_amount | money }}</span>
+        </div>
+      {%- endfor -%}
+
+      <div class="totals"><span>Subtotal</span><span>{{ cart.total_price | money }}</span></div>
+      <p style="font-size: 13px; opacity: .7; margin-top: 6px;">Shipping, taxes, and discount codes are added at checkout.</p>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+        <button type="submit" name="update" class="btn btn--outline">Update cart</button>
+        <button type="submit" name="checkout" class="btn btn--rust" style="flex: 1;">Check out</button>
+      </div>
+      {%- if additional_checkout_buttons -%}
+        <div style="margin-top: 12px;">{{ content_for_additional_checkout_buttons }}</div>
+      {%- endif -%}
+    </form>
+    <p style="margin-top: 28px;"><a href="{{ section.settings.continue_link | default: '/collections/kits' }}" style="font-size: 13px;">&larr; Continue shopping</a></p>
+  {%- else -%}
+    <div class="center" style="padding: 32px 0;">
+      <p class="muted">Your cart is empty.</p>
+      <a href="{{ section.settings.continue_link | default: '/collections/kits' }}" class="btn" style="margin-top: 20px;">Shop kits</a>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "settings": [
+    { "type": "url", "id": "continue_link", "label": "Continue shopping link" }
+  ]
+}
+{% endschema %}

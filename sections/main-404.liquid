@@ -1,0 +1,26 @@
+<div class="center" style="min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 64px var(--gutter);">
+  <div style="max-width: 480px;">
+    <div style="font-weight: 900; font-size: 96px; color: var(--forest); line-height: 1;">404</div>
+    <h1 style="font-size: 30px; margin-top: 16px;">{{ section.settings.heading }}</h1>
+    <p class="muted" style="margin-top: 10px;">{{ section.settings.body }}</p>
+    <form action="{{ routes.search_url }}" method="get" role="search" style="display: flex; gap: 8px; margin-top: 24px;">
+      <label for="NotFoundSearch" class="visually-hidden">Search</label>
+      <input class="input" type="search" id="NotFoundSearch" name="q" placeholder="Search for gear..." style="border-color: var(--forest);">
+      <button type="submit" class="btn">Go</button>
+    </form>
+    <div style="display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap;">
+      <a href="{{ routes.root_url }}" class="btn">Back home</a>
+      <a href="{{ routes.collections_url }}/kits" class="btn btn--rust">Shop kits</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page not found",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "This one got away." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "The page you're looking for doesn't exist, moved, or never got hooked in the first place." }
+  ]
+}
+{% endschema %}
