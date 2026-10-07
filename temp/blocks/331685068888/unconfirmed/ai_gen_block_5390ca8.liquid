@@ -1,6 +1,273 @@
+{% doc %}
+  @prompt
+    Create a bold, polished animated storefront for Ketto Outdoors with an adventurous outdoor feel. Use smooth staggered text and image reveals as the block enters view, subtle depth and motion, and responsive hover effects. Keep the movement tasteful, fast, and fluid rather than distracting. Make it work well on mobile and respect visitors’ reduced-motion preferences. Provide customizable text, imagery, and motion intensity. edit what is already here with those animations!
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ketto-feature-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    overflow: hidden;
+    color: {{ block.settings.text_color }};
+    background: {{ block.settings.background_color }};
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 72px);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(32px, 6vw, 88px);
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__content {
+    position: relative;
+    z-index: 1;
+    transition: transform 220ms ease;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__eyebrow {
+    margin: 0 0 14px;
+    color: {{ block.settings.accent_color }};
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__heading {
+    max-width: 680px;
+    margin: 0;
+    font-size: clamp(38px, 5.5vw, {{ block.settings.heading_size }}px);
+    font-weight: 800;
+    letter-spacing: -.045em;
+    line-height: .98;
+    text-wrap: balance;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__body {
+    max-width: 510px;
+    margin-top: 20px;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.65;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__body p { margin: 0; }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__cta {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 12px 22px;
+    border: 2px solid {{ block.settings.accent_color }};
+    border-radius: 3px;
+    background: {{ block.settings.accent_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__cta:hover {
+    transform: translateY(-2px);
+    background: transparent;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__cta:focus-visible {
+    outline: 3px solid {{ block.settings.text_color }};
+    outline-offset: 4px;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__arrow { transition: transform 180ms ease; }
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__cta:hover .ai-ketto-feature__arrow { transform: translateX(3px); }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__media {
+    position: relative;
+    min-height: 280px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #dfe5df;
+    transform: translateZ(0);
+    transition: transform 220ms ease;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__media img,
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__placeholder svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__media img {
+    transition: transform 280ms ease;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__media:hover img { transform: scale(1.025); }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__placeholder {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    place-items: center;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__placeholder svg { background: #e5e9e4; }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__empty {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+    padding: 9px 12px;
+    background: rgba(255,255,255,.94);
+    color: #26332c;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }}[data-motion="on"] .ai-ketto-feature__reveal {
+    opacity: 0;
+    transform: translateY(calc(18px * {{ block.settings.motion_intensity | divided_by: 100.0 }}));
+    transition: opacity 420ms ease, transform 420ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }}[data-motion="on"] .ai-ketto-feature__media.ai-ketto-feature__reveal {
+    transform: translateY(calc(18px * {{ block.settings.motion_intensity | divided_by: 100.0 }})) scale(.985);
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }}[data-motion="on"].is-visible .ai-ketto-feature__reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__reveal--second { transition-delay: 90ms !important; }
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__reveal--third { transition-delay: 170ms !important; }
+  .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__reveal--fourth { transition-delay: 240ms !important; }
+
+  @media (hover: hover) and (min-width: 750px) {
+    .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__inner:hover .ai-ketto-feature__content { transform: translateY(-2px); }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-ketto-feature-{{ ai_gen_id }} { width: 100%; }
+    .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__inner {
+      grid-template-columns: 1fr;
+      gap: 26px;
+      padding: 32px 20px;
+    }
+    .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__media,
+    .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__placeholder { min-height: 220px; }
+    .ai-ketto-feature-{{ ai_gen_id }} .ai-ketto-feature__heading { font-size: clamp(36px, 10vw, {{ block.settings.heading_size }}px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-ketto-feature-{{ ai_gen_id }} *,
+    .ai-ketto-feature-{{ ai_gen_id }} *::before,
+    .ai-ketto-feature-{{ ai_gen_id }} *::after {
+      scroll-behavior: auto !important;
+      transition-duration: .01ms !important;
+      transition-delay: 0ms !important;
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transform: none !important;
+    }
+    .ai-ketto-feature-{{ ai_gen_id }}[data-motion="on"] .ai-ketto-feature__reveal { opacity: 1; }
+  }
+{% endstyle %}
+
+<ketto-feature-{{ ai_gen_id }} class="ai-ketto-feature-{{ ai_gen_id }}" style="width: {{ block.settings.desktop_width_percent }}%;" data-motion="{% if block.settings.enable_motion %}on{% else %}off{% endif %}" {{ block.shopify_attributes }}>
+  <div class="ai-ketto-feature__inner">
+    <div class="ai-ketto-feature__content">
+      {% if block.settings.eyebrow != blank %}<p class="ai-ketto-feature__eyebrow ai-ketto-feature__reveal">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+      {% if block.settings.heading != blank %}<h2 class="ai-ketto-feature__heading ai-ketto-feature__reveal ai-ketto-feature__reveal--second">{{ block.settings.heading | escape | newline_to_br }}</h2>{% endif %}
+      {% if block.settings.description != blank %}<div class="ai-ketto-feature__body ai-ketto-feature__reveal ai-ketto-feature__reveal--third">{{ block.settings.description }}</div>{% endif %}
+      {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+        <a class="ai-ketto-feature__cta ai-ketto-feature__reveal ai-ketto-feature__reveal--fourth" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}<span class="ai-ketto-feature__arrow" aria-hidden="true">→</span></a>
+      {% endif %}
+    </div>
+    <div class="ai-ketto-feature__media ai-ketto-feature__reveal ai-ketto-feature__reveal--third">
+      {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
+      {% else %}
+        <div class="ai-ketto-feature__placeholder">{{ 'hero-apparel-1' | placeholder_svg_tag }}<p class="ai-ketto-feature__empty">Add an outdoor image to bring this feature to life.</p></div>
+      {% endif %}
+    </div>
+  </div>
+</ketto-feature-{{ ai_gen_id }}>
+
+<script>
+  (() => {
+    const tagName = 'ketto-feature-{{ ai_gen_id }}';
+    if (!customElements.get(tagName)) {
+      customElements.define(tagName, class extends HTMLElement {
+        connectedCallback() {
+          if (this.dataset.motion !== 'on' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            this.classList.add('is-visible');
+            return;
+          }
+          if (!('IntersectionObserver' in window)) {
+            this.classList.add('is-visible');
+            return;
+          }
+          this.observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                this.classList.add('is-visible');
+                this.observer.disconnect();
+              }
+            });
+          }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+          this.observer.observe(this);
+        }
+        disconnectedCallback() {
+          if (this.observer) this.observer.disconnect();
+        }
+      });
+    }
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Ketto adventure feature",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "MADE FOR THE OUTSIDE" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your next adventure starts here" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Gear up for the miles, moments, and wild places waiting just beyond the trailhead.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Explore the collection" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "image_picker", "id": "image", "label": "Outdoor image" },
+    { "type": "header", "content": "Style" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 36, "max": 72, "step": 4, "unit": "px", "default": 60 },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#F3F2EC" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#18231C" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#345C3B" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#FFFFFF" },
+    { "type": "header", "content": "Motion" },
+    { "type": "checkbox", "id": "enable_motion", "label": "Enable entrance reveals", "default": true },
+    { "type": "range", "id": "motion_intensity", "label": "Motion intensity", "min": 20, "max": 100, "step": 10, "unit": "%", "default": 60 }
+  ],
+  "presets": [
+    { "name": "Ketto adventure feature" }
+  ],
+  "tag": null,
+  "class": "ketto-adventure-feature"
+}
 {% endschema %}
