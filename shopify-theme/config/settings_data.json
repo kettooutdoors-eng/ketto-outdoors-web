@@ -17,7 +17,7 @@
         "type": "header",
         "settings": {
           "menu": "main-menu",
-          "cta_label": "Shop Kits",
+          "cta_label": "Shop kits",
           "cta_link": "/#kits",
           "announcement": "",
           "announcement_link": ""
@@ -32,7 +32,7 @@
           "support_menu": "footer-support",
           "contact_heading": "Contact & Follow",
           "email": "KettoOutdoors@gmail.com",
-          "contact_text": "Questions, wholesale orders, or a lure request. We read every email.",
+          "contact_text": "Questions about a kit or an order? We read every email.",
           "show_newsletter": true
         }
       },
@@ -42,8 +42,8 @@
           "enabled": true,
           "code": "WELCOME15",
           "percent": 15,
-          "eyebrow": "Welcome to Ketto",
-          "delay": 8,
+          "eyebrow": "Your next adventure starts here",
+          "delay": 12,
           "shop_link": ""
         }
       }

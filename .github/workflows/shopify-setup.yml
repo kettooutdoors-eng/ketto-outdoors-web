@@ -11,7 +11,7 @@ on:
         type: boolean
         default: false
       text_only:
-        description: "Only refresh text: pages, blog posts, how-to guides, and kit setup steps (leaves prices, stock, and photos alone)"
+        description: "Only refresh text: pages, blog posts, how-to guides, kit text, shipping/refund/terms policies, and menus (leaves prices, stock, and photos alone)"
         type: boolean
         default: false
 

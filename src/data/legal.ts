@@ -26,10 +26,10 @@ export const ABOUT_CONTENT = {
 };
 
 export const CONTACT_CONTENT = {
-  meta: { title: 'Contact Us | Ketto Outdoors', description: 'Questions about gear, an order, or a lure request. Send it our way.' },
+  meta: { title: 'Contact Us | Ketto Outdoors', description: 'Questions about a kit or an order? Send it our way.' },
   eyebrow: 'We read every message',
   heading: 'Get in Touch',
-  subheading: 'Questions about gear, an order, or a lure request. Send it our way.',
+  subheading: 'Questions about a kit or an order? Send it our way.',
   validationErrorMessage: 'Please fill in your name, email, and a message.',
   success: {
     heading: 'Message sent.',
@@ -54,13 +54,13 @@ export interface FaqEntry {
 }
 
 export const FAQ_ENTRIES: FaqEntry[] = [
-  { question: 'How long does shipping take?', answer: 'Orders ship within 1-2 business days, and typically arrive in 4-7 business days within the continental US. See our Shipping & Returns page for full details.', links: [{ text: 'Shipping & Returns', target: '/shipping-returns' }] },
-  { question: "Can I return a lure I didn't like?", answer: "Unused, unopened gear can be returned within 30 days. Once a lure's been in the water, it's yours, but we're happy to help you pick something better suited next time.", links: [] },
+  { question: 'How long does shipping take?', answer: "Kits are on preorder right now, so there's no set ship date yet. We'll email you the moment your order ships, and you can cancel for a full refund anytime before then. Once kits are in stock, orders ship within 1-2 business days and typically arrive in 4-7 business days within the continental US.", links: [{ text: 'Shipping & Returns', target: '/shipping-returns' }] },
+  { question: 'Can I return a kit?', answer: "Yes. Unused, unopened kits can be returned within 30 days of delivery for a full refund. Once the gear's been in the water, it's yours, but we're happy to help if something isn't working.", links: [] },
   { question: "I'm brand new to fishing, where do I start?", answer: 'Start with a kit. Pick the one that matches what you want to fish for, and every piece inside is already matched to work together. Our New to Fishing guide covers the basics if you want the background too.', links: [{ text: 'Shop kits', target: '/kits' }, { text: 'New to Fishing guide', target: '/new-to-fishing' }] },
-  { question: "What's the difference between the three kits?", answer: 'First Bass Kit is a full lure-casting setup for bass. Never Fished Before Starter Kit is the simplest possible entry point, bait and a bobber, no casting technique or live bait required. First Catfish Kit uses genuinely different gear (circle hooks, heavier sinkers, prepared bait) built specifically for catfish. Pick the one that matches what you’re actually after.', links: [{ text: 'Shop kits', target: '/kits' }] },
+  { question: "What's the difference between the three kits?", answer: 'First Bass Kit is a full lure-casting setup for bass. First Fish Starter Kit is the simplest possible entry point, bait and a bobber, no casting technique or live bait required. First Catfish Kit uses genuinely different gear (circle hooks, heavier sinkers, prepared bait) built specifically for catfish. Pick the one that matches what you’re actually after.', links: [{ text: 'Shop kits', target: '/kits' }] },
   { question: 'Can I customize what’s inside a kit?', answer: 'Not at checkout. Each kit is priced and matched as a set. But every piece inside is also sold on its own, so you can swap something out, buy a replacement, or top off a kit after the fact without buying a whole second one.', links: [] },
   { question: 'Do I need my own rod and reel?', answer: 'Yes, bring your own. We don’t sell rods or reels. A basic spinning rod and reel is the easiest to learn on.', links: [{ text: 'New to Fishing guide', target: '/new-to-fishing' }] },
-  { question: 'How do I know which lure to buy?', answer: 'Every lure page lists the target species, a difficulty score, and how to fish it, retrieve speed, technique, and what a strike feels like. Not sure where to start? Ask us directly.', links: [{ text: 'Ask us directly', target: '/contact' }] },
+  { question: 'How do I know which lure to buy?', answer: "You don't have to. Pick the kit for the fish you're after and every piece inside is already matched. Not sure which kit? Ask us directly.", links: [{ text: 'Ask us directly', target: '/contact' }] },
   { question: 'Do you ship internationally?', answer: "Right now we only ship within the continental US. If that changes, we'll post it here.", links: [] },
   { question: 'How do I track my order?', answer: 'Your order confirmation email has a link to check your order status and tracking. Lost it? Email us your order number.', links: [] },
   { question: 'How does the used gear trade-in work?', answer: "Tell us what you're sending in, we'll email you a prepaid shipping label if it sounds like a fit, and once it passes a real function check, you get store credit for it. Good toward anything on the site. It costs you nothing to send something in.", links: [{ text: 'See how trade-ins work', target: '/trade-in' }], usedGear: true },
@@ -109,9 +109,9 @@ export const TERMS_CONTENT = {
   sections: [
     { heading: 'Using this site', body: 'By browsing or ordering from Ketto Outdoors, you agree to use this site for lawful purposes only and to provide accurate information when placing an order. You must be at least 18, or have a parent or guardian place the order on your behalf, to buy from us.' },
     { heading: 'Orders & pricing', body: 'All prices are listed in USD and are subject to change without notice. We reserve the right to limit quantities, refuse an order, or correct pricing errors.' },
-    { heading: 'Returns & refunds', body: 'See our Shipping & Returns page for the full return window and process. The short version is 30 days on unused, unopened gear.' },
+    { heading: 'Returns & refunds', body: 'See our Refund policy for the full return window and process. The short version is 30 days on unused, unopened kits.' },
     { heading: 'Trade-ins & store credit', body: "When you send in gear through our trade-in program, we inspect it before issuing anything. We can decline gear that doesn't pass a function check or isn't something we can resell, and we're not responsible for items lost in transit before they reach us. Store credit we issue has no cash value, doesn't expire, can't be transferred to another person, and can be used toward any purchase on this site." },
-    { heading: 'Product information', body: 'We do our best to describe each lure and its performance accurately, but actual results depend on conditions, technique, and a little luck. Difficulty scores and depth ratings are estimates, not guarantees.' },
+    { heading: 'Product information', body: 'We do our best to describe each kit accurately, but actual results depend on conditions, technique, and a little luck.' },
     { heading: 'Intellectual property', body: 'All content on this site, text, photos, and branding, belongs to Ketto Outdoors and may not be reproduced without permission.' },
     { heading: 'Limitation of liability', body: 'Ketto Outdoors is not liable for any damages arising from the use of our products, including but not limited to snagged hooks, lost lures, or the one that got away.' },
     { heading: 'Contact us', body: 'Questions about these terms? Reach us at KettoOutdoors@gmail.com.' },
@@ -124,9 +124,9 @@ export const SHIPPING_RETURNS_CONTENT = {
   heading: 'Shipping, Returns & Refunds',
   lastUpdated: 'Last updated September 2026',
   sections: [
-    { heading: 'Shipping', body: "Orders ship within 1-2 business days. Standard shipping typically arrives in 4-7 business days within the continental US. You'll receive a confirmation once your order ships." },
-    { heading: 'Shipping costs', body: 'Shipping is calculated by weight, package size, and distance from our Provo, UT warehouse. Orders of $35 or more ship free.' },
-    { heading: 'Returns', body: "Unused, unopened gear can be returned within 30 days of delivery for a full refund. Lures that show signs of use (scuffs, hook damage, missing packaging) aren't eligible for return. We get it, sometimes a lure just doesn't match your water, but once it's wet it's yours." },
+    { heading: 'Shipping', body: "Kits are on preorder right now, so there's no set ship date yet. Preorders ship as soon as stock arrives, and we'll email you when your order ships. You can cancel a preorder for a full refund anytime before it ships: just email us. Once kits are in stock, orders ship within 1-2 business days, and standard shipping typically arrives in 4-7 business days within the continental US." },
+    { heading: 'Shipping costs', body: 'Orders of $35 or more ship free. Orders under $35 pay a flat shipping rate, shown at checkout before you pay.' },
+    { heading: 'Returns', body: "Unused, unopened gear can be returned within 30 days of delivery for a full refund. Gear that shows signs of use (scuffs, hook damage, missing packaging) isn't eligible for return. Once it's wet, it's yours." },
     { heading: 'How to start a return', body: "Email KettoOutdoors@gmail.com with your order number and we'll send return instructions within 1-2 business days." },
     { heading: 'Refund timing', body: "Once we receive your returned item, we'll inspect it and issue your refund to the original payment method within 5-10 business days. You'll get an email confirmation when it's processed. Your bank or card issuer may take a few extra days to post it." },
     { heading: 'Damaged or incorrect items', body: "If your order arrives damaged or you received the wrong item, contact us right away with a photo and we'll send a replacement at no cost." },
