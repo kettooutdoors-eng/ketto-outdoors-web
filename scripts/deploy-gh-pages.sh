@@ -19,6 +19,11 @@ cp -r dist/. "$WORKTREE"/
 
 cd "$WORKTREE"
 git add -A
+# Merges that only touch the Shopify theme leave the built site unchanged.
+if git diff --cached --quiet; then
+  echo "Site unchanged; nothing to deploy."
+  exit 0
+fi
 git commit -m "Deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty-message -q
 git push origin gh-pages
 
