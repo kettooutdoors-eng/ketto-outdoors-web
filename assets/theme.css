@@ -192,12 +192,14 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--rust); outl
 
 /* --- Simple kit page --- */
 .kit-simple { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; max-width: 1000px; margin: 0 auto; padding: 48px var(--gutter) 72px; }
-.kit-simple__media .media { aspect-ratio: 1 / 1; }
+.kit-simple__media .media { aspect-ratio: 4 / 3; }
+.kit-simple__media .media img { object-fit: cover; }
 .kit-simple__info { display: flex; flex-direction: column; gap: 16px; }
 .kit-simple__info h1 { font-size: 42px; letter-spacing: -0.03em; }
 .kit-simple__tagline { font-size: 17px; line-height: 1.5; opacity: 0.85; }
 .kit-simple__form { margin-top: 8px; }
 .kit-simple__note { font-size: 14px; opacity: 0.75; }
+.kit-simple__note--preorder { color: var(--rust); font-weight: 700; opacity: 1; }
 .kit-simple__setup { font-size: 14px; font-weight: 700; }
 
 /* --- Forms --- */
