@@ -86,7 +86,7 @@ export const BUNDLES: Bundle[] = [
     id: 'never-fished-before-starter-kit',
     slug: 'never-fished-before-starter-kit',
     name: 'First Fish Starter Kit',
-    tagline: 'Bobbers, hooks, and bait for your first fish.',
+    tagline: 'Everything you need to set up for your first fish.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
     price: 19,
