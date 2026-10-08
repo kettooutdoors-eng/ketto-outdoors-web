@@ -160,7 +160,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--rust); outl
 .kit-card { display: flex; flex-direction: column; gap: 14px; padding: 32px; height: 100%; }
 .kit-card__title { font-weight: 800; font-size: 24px; letter-spacing: -0.02em; color: var(--ink); }
 .kit-card__title:hover { color: var(--rust); }
-.kit-card .media { height: 190px; }
+.kit-card .media { aspect-ratio: 4 / 3; }
+.kit-card .media img { object-fit: cover; }
 .kit-card__actions { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
 
 /* --- Product (kit) page --- */
