@@ -18,7 +18,7 @@ import {
 const API_VERSION = '2026-07';
 const DRY_RUN = process.argv.includes('--dry-run');
 // --only=content refreshes just the words: pages, blog posts, how-to guides, each kit's
-// text fields (tagline, contents, setup steps), the shipping/refund/terms policies, and the
+// name, description, and text fields (tagline, contents, setup steps), the shipping/refund/terms policies, and the
 // menus. Prices, stock, photos, the discount, and redirects are left alone. Implies --update
 // for those.
 const CONTENT_ONLY = process.argv.includes('--only=content');
@@ -398,7 +398,7 @@ async function redirects() {
 }
 
 async function kitText() {
-  log('\nKit text (tagline, contents, setup steps)');
+  log('\nKit text (name, description, tagline, contents, setup steps)');
   for (const kit of KIT_PRODUCTS) {
     try {
       const found = await gql<{ productByIdentifier: { id: string } | null }>(`query($h: String!) { productByIdentifier(identifier: { handle: $h }) { id } }`, { h: kit.handle });
@@ -406,6 +406,10 @@ async function kitText() {
         log(`  · ${kit.title} (not in the store, skipped)`);
         continue;
       }
+      // The handle stays the same, so links and the QR stickers keep working after a rename.
+      await mutate('productUpdate', `mutation($p: ProductUpdateInput!) { productUpdate(product: $p) { product { id } userErrors { message } } }`, {
+        p: { id: found.productByIdentifier.id, title: kit.title, descriptionHtml: kit.descriptionHtml, seo: { title: kit.seoTitle, description: kit.seoDescription } },
+      });
       await mutate('metafieldsSet', `mutation($m: [MetafieldsSetInput!]!) { metafieldsSet(metafields: $m) { metafields { id } userErrors { message } } }`, {
         m: kit.metafields.map((m) => ({ ownerId: found.productByIdentifier!.id, namespace: 'custom', ...m })),
       });

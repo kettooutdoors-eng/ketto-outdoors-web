@@ -85,16 +85,16 @@ export const BUNDLES: Bundle[] = [
   {
     id: 'never-fished-before-starter-kit',
     slug: 'never-fished-before-starter-kit',
-    name: 'Never Fished Before Starter Kit',
-    tagline: 'A bobber, hooks, and bait. The easiest way to catch your first fish.',
+    name: 'First Fish Starter Kit',
+    tagline: 'Bobbers, hooks, and bait for your first fish.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
     price: 19,
-    metaTitle: 'Never Fished Before Starter Kit | Ketto Outdoors',
-    metaDescription: 'The simplest way to catch your first fish: a bobber, hooks, and bait with no worms to dig. Bring your own rod and reel.',
-    scenario: 'You’ve never fished before and you don’t know the terms. You just want to stand by the water with a friend or your kid and catch something.',
-    reassurance: 'This is the whole setup. Tie on a hook, clip on a bobber, drop it near a dock or weeds, and wait for the bobber to go under. Bring your own rod and reel.',
-    sourcingNote: 'Everything here is ours. The hooks are sized small, and the soft bait is scented, so you don’t have to dig for worms.',
+    metaTitle: 'First Fish Starter Kit | Ketto Outdoors',
+    metaDescription: 'Beginner bobber tackle: bobbers, hooks, weights, and scented bait that work together. Bring your own rod and reel.',
+    scenario: 'You want to catch your first fish from a pond, lake, or dock, and you want the simplest setup there is. No casting skills, no digging for worms.',
+    reassurance: 'This is all the tackle you need to start. Bring your own rod and reel.',
+    sourcingNote: 'The hooks, bobbers, and bait are ours. The hooks are sized for panfish and trout, and the soft bait is scented, so you don’t have to dig for worms.',
     riggingNote: 'One rig, one knot, five steps. That’s the whole setup.',
     riggingSteps: [
       { title: 'Tie on the hook', detail: 'Thread the line through the hook’s eye and tie an improved clinch knot. Wrap the tag end around the line 5-6 times, pass it back through the loop, wet it, and pull tight.' },
@@ -103,7 +103,7 @@ export const BUNDLES: Bundle[] = [
       { title: 'Bait the hook', detail: 'Thread the scented soft bait onto the hook, or use a live worm.' },
       { title: 'Cast near cover and wait', detail: 'Cast near a dock, weeds, or a drop-off and watch the bobber. When it goes under and stays down, reel and set the hook.' },
     ],
-    imagePlaceholderAlt: 'Never Fished Before Starter Kit, full contents laid out',
+    imagePlaceholderAlt: 'First Fish Starter Kit, full contents laid out',
     components: [
       {
         label: 'Bobbers',

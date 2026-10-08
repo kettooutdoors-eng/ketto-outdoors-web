@@ -92,7 +92,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
       {
         heading: 'Still stuck? Let a kit make the call',
-        body: "If you genuinely don't know where to start, that's what our kits are for. Every piece already matched to a specific scenario (first bass, first catfish, never fished before) so you're not making six separate gear decisions before your first cast.",
+        body: "If you genuinely don't know where to start, that's what our kits are for. Every piece already matched to a specific scenario (first fish, first bass, first catfish) so you're not making six separate gear decisions before your first cast.",
       },
     ],
     endCta: {
