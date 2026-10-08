@@ -36,11 +36,7 @@
     <div class="price price--lg">{{ variant.price | money_without_trailing_zeros }}</div>
 
     {%- form 'product', product, class: 'kit-simple__form' -%}
-      <input type="hidden" name="id" value="{{ variant.id }}">
-      <input type="hidden" name="return_to" value="/checkout">
-      <button type="submit" name="add" class="btn btn--rust btn--block btn--big product-form__submit"{% unless product.available %} disabled{% endunless %}>
-        {%- if product.available -%}{{ section.settings.button_label }}{%- else -%}Sold out{%- endif -%}
-      </button>
+      {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
     {%- endform -%}
 
     {%- if section.settings.note != blank -%}

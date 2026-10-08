@@ -11,6 +11,9 @@
             {%- unless item.product.has_only_default_variant -%}
               <div style="font-size: 13px; opacity: .7;">{{ item.variant.title }}</div>
             {%- endunless -%}
+            {%- if item.selling_plan_allocation -%}
+              <div style="font-size: 12px; font-weight: 700; color: var(--rust); text-transform: uppercase; letter-spacing: .06em;">{{ item.selling_plan_allocation.selling_plan.name }}</div>
+            {%- endif -%}
             {%- for discount in item.line_level_discount_allocations -%}
               <div style="font-size: 12px; color: var(--forest); font-weight: 700;">{{ discount.discount_application.title }} (-{{ discount.amount | money }})</div>
             {%- endfor -%}
