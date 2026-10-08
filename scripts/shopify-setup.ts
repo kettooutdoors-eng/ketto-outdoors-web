@@ -17,9 +17,10 @@ import {
 
 const API_VERSION = '2026-07';
 const DRY_RUN = process.argv.includes('--dry-run');
-// --only=content refreshes just the words: pages, blog posts, how-to guides, and each kit's
-// text fields (tagline, contents, setup steps). Prices, stock, photos, menus, policies,
-// the discount, and redirects are left alone. Implies --update for those.
+// --only=content refreshes just the words: pages, blog posts, how-to guides, each kit's
+// text fields (tagline, contents, setup steps), the shipping/refund/terms policies, and the
+// menus. Prices, stock, photos, the discount, and redirects are left alone. Implies --update
+// for those.
 const CONTENT_ONLY = process.argv.includes('--only=content');
 const UPDATE = process.argv.includes('--update') || CONTENT_ONLY;
 
@@ -291,7 +292,8 @@ async function policies() {
     try {
       const current = await gql<{ shop: { shopPolicies: { type: string; body: string }[] } }>(`{ shop { shopPolicies { type body } } }`);
       const existing = current.shop.shopPolicies.find((s) => s.type === pol.type);
-      if (existing?.body?.trim() && !UPDATE) {
+      // The privacy policy is the store's own (Shopify's generator): only filled in if empty.
+      if (existing?.body?.trim() && (!UPDATE || pol.type === 'PRIVACY_POLICY')) {
         log(`  · ${pol.type} (already written)`);
         continue;
       }
@@ -441,6 +443,8 @@ async function main() {
     await pages();
     await blog(GUIDES_BLOG, 'How-To Guides', GUIDE_ARTICLES);
     await blog(JOURNAL_BLOG, 'The Ketto Journal', JOURNAL_ARTICLES);
+    await policies();
+    await menus();
     log(failures ? `\nFinished with ${failures} problem(s) above.` : '\nAll done.');
     if (failures) process.exitCode = 1;
     return;

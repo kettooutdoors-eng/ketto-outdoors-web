@@ -1,13 +1,17 @@
 {%- comment -%}
   The kit page, kept deliberately simple: photo, name, one line, price, and one button.
-  STOQ (app embed) takes over the button: "Preorder" while a kit is on a preorder offer,
-  or its "Notify me" button when a kit is sold out and not preorderable.
+  The button says "Preorder" (with a note under it) while a kit is out of stock but still
+  sellable on the STOQ preorder offer; see snippets/buy-button.liquid.
   What's in the box and the setup steps live on the QR sticker page (?view=guide),
   linked from here.
 {%- endcomment -%}
 {%- liquid
   assign tagline = product.metafields.custom.tagline.value | default: product.description | strip_html | truncatewords: 24
   assign variant = product.selected_or_first_available_variant
+  assign preorder = false
+  if variant.available and variant.inventory_management != blank and variant.inventory_quantity <= 0
+    assign preorder = true
+  endif
 -%}
 <div class="kit-simple">
   <div class="kit-simple__media" data-gallery>
@@ -38,7 +42,9 @@
     {%- form 'product', product, class: 'kit-simple__form' -%}
       {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
     {%- endform -%}
-
+    {%- if preorder and section.settings.preorder_note != blank -%}
+      <p class="kit-simple__note kit-simple__note--preorder">{{ section.settings.preorder_note }}</p>
+    {%- endif -%}
     {%- if section.settings.note != blank -%}
       <p class="kit-simple__note">{{ section.settings.note }}</p>
     {%- endif -%}
@@ -56,7 +62,8 @@
 {
   "name": "Kit page",
   "settings": [
-    { "type": "text", "id": "button_label", "label": "Button label", "default": "Buy now", "info": "Shown when the kit is in stock. While a kit is on a STOQ preorder offer, STOQ shows its Preorder button instead." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Buy now", "info": "Shown when the kit is in stock. While a kit is out of stock and on preorder, the button says Preorder." },
+    { "type": "text", "id": "preorder_note", "label": "Preorder note", "default": "Preorder. We'll email you when it ships.", "info": "Shown under the button while a kit is out of stock and on preorder." },
     { "type": "text", "id": "note", "label": "Note under the button", "default": "Bring your own rod and reel." },
     { "type": "checkbox", "id": "show_setup_link", "label": "Show \"How to set it up\" link", "default": true, "info": "Opens the same page as the QR sticker in the kit." }
   ]

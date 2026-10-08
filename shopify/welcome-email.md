@@ -42,8 +42,7 @@ Here's 15% off your first order:
   way to catch your first fish.
 - **First Catfish Kit, $35.** Heavier tackle and bigger bait for catfish from the
   bank or a dock.
-- **First Bass Kit, $45.** Pieces of equipment, hooks, and weights for your first
-  bass.
+- **First Bass Kit, $45.** Lures, hooks, and weights for your first bass.
 
 Every kit comes with a sticker you scan for step-by-step setup. The only thing you
 bring is a rod and reel.

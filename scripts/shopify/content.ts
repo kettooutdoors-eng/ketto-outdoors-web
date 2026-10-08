@@ -168,7 +168,6 @@ export interface PageContent {
 // reworded here rather than changed in src/data/legal.ts.
 const FAQ_OVERRIDES: Record<string, string> = {
   'Can I customize what’s inside a kit?': 'Not right now. Each kit is priced and matched as a set, so every piece works with the others.',
-  'How do I know which lure to buy?': "Start with a kit: every piece inside is already matched to the fish you're after, and each one has a how-to guide that covers retrieve speed, technique, and what a strike feels like. Not sure which kit? Ask us directly.",
 };
 
 function faqBody(): string {
@@ -291,7 +290,6 @@ export const MENUS: { handle: string; title: string; items: MenuItem[] }[] = [
     items: [
       { title: 'Shop kits', kind: 'collection', handle: KITS_COLLECTION },
       { title: 'New to fishing guide', kind: 'page', handle: 'new-to-fishing' },
-      { title: 'How-to guides', kind: 'blog', handle: GUIDES_BLOG },
       { title: 'Blog', kind: 'blog', handle: JOURNAL_BLOG },
     ],
   },

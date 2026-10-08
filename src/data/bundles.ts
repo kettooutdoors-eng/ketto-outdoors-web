@@ -5,7 +5,7 @@ export const BUNDLES: Bundle[] = [
     id: 'first-bass-kit',
     slug: 'first-bass-kit',
     name: 'First Bass Kit',
-    tagline: 'Pieces of equipment, hooks, and weights for your first bass.',
+    tagline: 'Lures, hooks, and weights for your first bass.',
     // Priced about 12% under the sum of the individual pieces — confirm against
     // real costs before launch.
     price: 45,
