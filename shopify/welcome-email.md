@@ -38,7 +38,7 @@ Here's 15% off your first order:
 
 **Three kits. Pick the fish you're after.**
 
-- **First Fish Starter Kit, $19.** Bobbers, hooks, and bait for your first fish.
+- **First Fish Starter Kit, $19.** Everything you need to set up for your first fish.
 - **First Catfish Kit, $35.** Heavier tackle and bigger bait for catfish from the
   bank or a dock.
 - **First Bass Kit, $45.** Lures, hooks, and weights for your first bass.
