@@ -4,13 +4,16 @@
   While a kit is out of stock but still sellable (STOQ preorder offer with "continue
   selling" on), the variant carries STOQ's Shopify purchase option. Attaching it here
   marks the line as a preorder in the cart, at checkout, and on the order, even if
-  STOQ's storefront script hasn't taken over the button.
+  STOQ's storefront script hasn't taken over the button. A "Preorder" line item
+  property is added too, so checkout says so even if no purchase option is published.
 
   Usage: {% render 'buy-button', product: product, variant: variant, label: 'Buy now' %}
 {%- endcomment -%}
 {%- liquid
+  assign preorder = false
   assign preorder_plan = nil
   if variant.available and variant.inventory_management != blank and variant.inventory_quantity <= 0
+    assign preorder = true
     assign preorder_plan = variant.selling_plan_allocations.first.selling_plan
   endif
 -%}
@@ -18,7 +21,10 @@
 {%- if preorder_plan -%}
   <input type="hidden" name="selling_plan" value="{{ preorder_plan.id }}">
 {%- endif -%}
+{%- if preorder -%}
+  <input type="hidden" name="properties[Preorder]" value="Ships when in stock">
+{%- endif -%}
 <input type="hidden" name="return_to" value="/checkout">
 <button type="submit" name="add" class="btn btn--rust btn--block btn--big product-form__submit"{% unless product.available %} disabled{% endunless %}>
-  {%- if preorder_plan -%}Preorder{%- elsif product.available -%}{{ label }}{%- else -%}Sold out{%- endif -%}
+  {%- if preorder -%}Preorder{%- elsif product.available -%}{{ label }}{%- else -%}Sold out{%- endif -%}
 </button>
