@@ -14,26 +14,28 @@
         <button type="button" class="modal__close" aria-label="Close" data-welcome-close>&times;</button>
         {%- if claimed -%}
           <h2 id="WelcomeHeading">Your code is ready.</h2>
-          <p class="muted" style="margin-top: 10px; font-size: 14px;">Use it at checkout for {{ section.settings.percent }}% off your first order.</p>
+          <p class="welcome__lede">Use it at checkout for {{ section.settings.percent }}% off your first order.</p>
           <div class="code-box">{{ code }}</div>
           <a class="btn btn--block" href="/discount/{{ code | url_encode }}?redirect={{ shop_url | url_encode }}">Apply my code and shop</a>
         {%- else -%}
           <div class="eyebrow">{{ section.settings.eyebrow }}</div>
           <h2 id="WelcomeHeading">Get {{ section.settings.percent }}% off your first purchase.</h2>
-          <p class="muted" style="margin-top: 10px; font-size: 14px;">Enter your email and we'll show you your code.</p>
-          <input type="hidden" name="contact[tags]" value="newsletter,welcome-discount">
-          <label for="WelcomeEmail" class="visually-hidden">Your email</label>
-          <input class="input" type="email" id="WelcomeEmail" name="contact[email]" autocomplete="email" placeholder="you@example.com" required>
-          <label class="check">
-            <input type="checkbox" required>
-            <span>I'd like occasional emails about new gear and fishing tips. Unsubscribe anytime. <a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Privacy policy</a></span>
-          </label>
-          {%- if form.errors -%}
-            <p class="form-error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
-          {%- endif -%}
-          <button type="submit" class="btn btn--rust btn--block">Get my {{ section.settings.percent }}% off</button>
-          <button type="button" class="linkish" style="margin-top: 4px; color: var(--ink); opacity: .65; align-self: center;" data-welcome-close>No thanks</button>
-          <p style="font-size: 11px; opacity: .55; text-align: center;">{{ section.settings.percent }}% off your first order. One use per customer.</p>
+          <p class="welcome__lede">Enter your email and we'll show you your code.</p>
+          <div class="welcome__fields">
+            <input type="hidden" name="contact[tags]" value="newsletter,welcome-discount">
+            <label for="WelcomeEmail" class="visually-hidden">Your email</label>
+            <input class="input welcome__input" type="email" id="WelcomeEmail" name="contact[email]" autocomplete="email" placeholder="you@example.com" required>
+            <label class="check welcome__check">
+              <input type="checkbox" required>
+              <span>Send me occasional emails about new gear and fishing tips. Unsubscribe anytime. <a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Privacy policy</a></span>
+            </label>
+            {%- if form.errors -%}
+              <p class="form-error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+            {%- endif -%}
+            <button type="submit" class="btn btn--rust btn--block welcome__submit">Get my {{ section.settings.percent }}% off</button>
+          </div>
+          <button type="button" class="linkish welcome__skip" data-welcome-close>No thanks</button>
+          <p class="welcome__fine">{{ section.settings.percent }}% off your first order. One use per customer.</p>
         {%- endif -%}
       </div>
     </div>
