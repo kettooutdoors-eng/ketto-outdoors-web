@@ -22,6 +22,14 @@
     ]
   },
   {
+    "name": "Kit QR code",
+    "settings": [
+      { "type": "paragraph", "content": "A small note on each kit page and contents page about the QR code that comes in every kit. Leave both empty to hide it." },
+      { "type": "text", "id": "kit_qr_title", "label": "Bold line", "default": "A QR code comes with every kit." },
+      { "type": "textarea", "id": "kit_qr_note", "label": "Note", "default": "It's made for the pieces in your kit, so you'll know how to use every single thing inside." }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       { "type": "url", "id": "social_youtube", "label": "YouTube" },
