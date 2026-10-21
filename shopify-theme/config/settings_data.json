@@ -40,11 +40,10 @@
         "type": "welcome-popup",
         "settings": {
           "enabled": true,
-          "code": "WELCOME15",
-          "percent": 15,
-          "eyebrow": "Your next adventure starts here",
-          "delay": 12,
-          "shop_link": ""
+          "delay": 20,
+          "eyebrow": "Kits are coming",
+          "heading": "Get notified when kits are in stock.",
+          "button_label": "Notify me"
         }
       }
     },
