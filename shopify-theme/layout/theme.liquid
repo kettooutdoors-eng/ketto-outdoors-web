@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#1b4332">
-    <link rel="canonical" href="{{ canonical_url }}">
+    {%- comment -%}
+      The setup guide view (product URL + ?view=guide, opened by the QR sticker) is a working page,
+      not a second product page: it points back to the product and stays out of search results.
+    {%- endcomment -%}
+    {%- if template.name == 'product' and template.suffix == 'guide' -%}
+      <link rel="canonical" href="{{ request.origin }}{{ product.url }}">
+      <meta name="robots" content="noindex, follow">
+    {%- else -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 64, height: 64 }}">
     {%- else -%}

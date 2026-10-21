@@ -1,9 +1,18 @@
+{%- comment -%}
+  The rest of the kit page, under the photo and Buy now button: what's in the kit piece by
+  piece, which fish and water it suits, where the gear comes from, a mini FAQ, reviews (only
+  once a kit has some), and links to the how-to guides. Each part hides itself when the
+  kit's matching field in Shopify admin (Products > kit > Metafields) is empty.
+  The step-by-step rigging lives on the setup guide view (?view=guide) and is linked, not copied.
+{%- endcomment -%}
 {%- liquid
   assign components = product.metafields.custom.kit_components.value
-  assign steps = product.metafields.custom.setup_steps.value
-  assign setup_note = product.metafields.custom.setup_note.value
+  assign good_for = product.metafields.custom.good_for.value
   assign sourcing = product.metafields.custom.sourcing_note.value
+  assign faq = product.metafields.custom.faq.value
+  assign reviews = product.metafields.custom.reviews.value
   assign variant = product.selected_or_first_available_variant
+  assign guides_url = blogs.guides.url | default: '/blogs/guides'
 -%}
 
 {%- if components.size > 0 -%}
@@ -11,12 +20,13 @@
     <div class="center" style="margin-bottom: 36px;">
       <div class="eyebrow">In the box</div>
       <h2 style="font-size: 32px; margin-top: 8px;">What's Inside</h2>
+      <p class="muted" style="margin: 12px auto 0; max-width: 56ch; font-size: 14px;">{{ components.size }} pieces, picked to work together.</p>
     </div>
     <div class="stack" style="max-width: 800px; margin: 0 auto; gap: 20px;">
       {%- for c in components -%}
         <div class="card card--sm component">
           <div class="component__head">
-            <div class="component__title">{{ c.label }}</div>
+            <h3 class="component__title">{{ c.label }}</h3>
             {%- if c.sourced == 'anchor-brand' -%}
               <span class="tag tag--rust">Name-brand</span>
             {%- elsif c.sourced == 'private-label' -%}
@@ -34,63 +44,100 @@
   </section>
 {%- endif -%}
 
-{%- if sourcing != blank -%}
+{%- if good_for.fish.size > 0 or good_for.water != blank -%}
   <section class="narrow">
-    <h2 style="font-size: 22px; margin-bottom: 12px;">Where this gear comes from</h2>
-    <p style="font-size: 14px; line-height: 1.7;">{{ sourcing }}</p>
-  </section>
-{%- endif -%}
-
-{%- if steps.size > 0 -%}
-  <section class="bg-sage section">
-    <div class="center" style="margin-bottom: 36px;">
-      <div class="eyebrow">Step by step</div>
-      <h2 style="font-size: 32px; margin-top: 8px;">Setting It Up</h2>
-      {%- if setup_note != blank -%}
-        <p class="muted" style="margin: 12px auto 0; max-width: 60ch; font-size: 14px;">{{ setup_note }}</p>
+    <h2 style="font-size: 26px; margin-bottom: 18px;">What it's good for</h2>
+    <div class="grid-2" style="gap: 20px;">
+      {%- if good_for.fish.size > 0 -%}
+        <div class="card card--sm" style="padding: 20px;">
+          <div class="eyebrow">Fish</div>
+          <ul style="margin: 10px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.7;">
+            {%- for f in good_for.fish -%}<li>{{ f }}</li>{%- endfor -%}
+          </ul>
+        </div>
       {%- endif -%}
-    </div>
-    <div class="grid-2" style="max-width: 900px; margin: 0 auto; grid-template-columns: 1.6fr 1fr; gap: 40px;">
-      <ol class="steps">
-        {%- for step in steps -%}
-          <li class="step">
-            <span class="step__num">{{ forloop.index }}</span>
-            <div>
-              <div class="step__title">{{ step.title }}</div>
-              <p>{{ step.detail }}</p>
-            </div>
-          </li>
-        {%- endfor -%}
-      </ol>
-      {%- if section.settings.sticker_text != blank -%}
-        <div class="stack center" style="align-items: center; gap: 12px;">
-          <div class="qr-box">
-            <span class="kicker" style="line-height: 1.4;">Scan the sticker in your kit</span>
-          </div>
-          <p style="font-size: 12.5px; opacity: .7; max-width: 24ch;">{{ section.settings.sticker_text }}</p>
+      {%- if good_for.water != blank -%}
+        <div class="card card--sm" style="padding: 20px;">
+          <div class="eyebrow">Water</div>
+          <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.7;">{{ good_for.water }}</p>
         </div>
       {%- endif -%}
     </div>
   </section>
 {%- endif -%}
 
+{%- if sourcing != blank -%}
+  <section class="narrow" style="padding-top: 0;">
+    <h2 style="font-size: 22px; margin-bottom: 12px;">Where this gear comes from</h2>
+    <p style="font-size: 14px; line-height: 1.7;">{{ sourcing }}</p>
+  </section>
+{%- endif -%}
+
+{%- if faq.size > 0 -%}
+  <section class="narrow" style="padding-top: 0;">
+    <h2 style="font-size: 26px; margin-bottom: 14px;">Questions about this kit</h2>
+    <div class="rte">
+      {%- for f in faq -%}
+        <details>
+          <summary>{{ f.question }}</summary>
+          <p>{{ f.answer }}</p>
+        </details>
+      {%- endfor -%}
+    </div>
+  </section>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {%- for f in faq -%}
+      {"@type":"Question","name":{{ f.question | json }},"acceptedAnswer":{"@type":"Answer","text":{{ f.answer | json }}}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]}
+  </script>
+{%- endif -%}
+
+{%- if reviews.size > 0 -%}
+  <section class="narrow" style="padding-top: 0;">
+    <h2 style="font-size: 26px; margin-bottom: 14px;">What customers say</h2>
+    <div class="stack" style="gap: 12px;">
+      {%- for r in reviews -%}
+        <figure class="card card--sm" style="margin: 0; padding: 16px 18px;">
+          <blockquote style="margin: 0; font-size: 14.5px; line-height: 1.65;">{{ r.text }}</blockquote>
+          <figcaption style="margin-top: 8px; font-size: 12.5px; font-weight: 700; opacity: .7;">{{ r.name }}</figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}
+
+<section class="narrow" style="padding-top: 0;">
+  <h2 style="font-size: 26px; margin-bottom: 14px;">Learn how to use it</h2>
+  <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.9;">
+    <li><a href="{{ product.url }}?view=guide" style="font-weight: 700;">How to set up this kit, step by step &rarr;</a></li>
+    {%- for c in components -%}
+      {%- if c.guide != blank -%}
+        <li><a href="{{ c.guide }}" style="font-weight: 700;">How to use the {{ c.label | downcase }} &rarr;</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+    <li><a href="{{ guides_url }}" style="font-weight: 700;">All How-To Guides &rarr;</a></li>
+    <li><a href="/pages/new-to-fishing" style="font-weight: 700;">New to fishing? Start here &rarr;</a></li>
+  </ul>
+</section>
+
 <section class="cta-simple">
   <h2>{{ section.settings.cta_heading }}</h2>
-  {%- form 'product', product -%}
-    <input type="hidden" name="id" value="{{ variant.id }}">
-    <button type="submit" class="btn btn--rust" style="margin-top: 20px;"{% unless product.available %} disabled{% endunless %}>
-      {%- if product.available -%}Add to cart: {{ variant.price | money_without_trailing_zeros }}{%- else -%}Sold out{%- endif -%}
-    </button>
-  {%- endform -%}
+  <div style="max-width: 320px; margin: 20px auto 0;">
+    {%- form 'product', product, class: 'kit-simple__form' -%}
+      {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
+    {%- endform -%}
+  </div>
 </section>
 
 {% schema %}
 {
   "name": "Kit details (contents)",
   "settings": [
-    { "type": "paragraph", "content": "Shows the kit's contents, setup steps, and sourcing note. Edit those per kit in Shopify admin under Products > (kit) > Metafields." },
-    { "type": "text", "id": "sticker_text", "label": "Sticker note", "default": "Every kit comes with a waterproof sticker that opens these steps and the setup video on your phone." },
-    { "type": "text", "id": "cta_heading", "label": "Bottom heading", "default": "Ready to go fishing?" }
+    { "type": "paragraph", "content": "Shows the kit's contents, what it's good for, FAQ, reviews, and guide links. Edit those per kit in Shopify admin under Products > (kit) > Metafields. Each part hides itself when its field is empty." },
+    { "type": "text", "id": "cta_heading", "label": "Bottom heading", "default": "Ready to go fishing?" },
+    { "type": "text", "id": "button_label", "label": "Bottom button label", "default": "Buy now", "info": "While a kit is out of stock and on preorder, the button says Preorder." }
   ],
   "enabled_on": { "templates": ["product"] },
   "presets": [{ "name": "Kit details (contents)" }]

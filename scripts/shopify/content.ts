@@ -77,6 +77,8 @@ export const KIT_PRODUCTS: KitProduct[] = BUNDLES.map((b) => {
     { key: 'setup_note', type: 'multi_line_text_field', value: b.riggingNote },
     { key: 'kit_components', type: 'json', value: JSON.stringify(components) },
     { key: 'setup_steps', type: 'json', value: JSON.stringify(b.riggingSteps) },
+    { key: 'good_for', type: 'json', value: JSON.stringify(b.goodFor) },
+    { key: 'faq', type: 'json', value: JSON.stringify(b.faq) },
   ];
   if (video) metafields.push({ key: 'setup_video', type: 'url', value: video });
   return {
@@ -98,6 +100,9 @@ export const PRODUCT_METAFIELD_DEFINITIONS = [
   { key: 'setup_note', name: 'Setup intro', type: 'multi_line_text_field', description: 'Short note above the setup steps.' },
   { key: 'setup_steps', name: 'Setup steps', type: 'json', description: 'Each step: title, detail.' },
   { key: 'sourcing_note', name: 'Sourcing note', type: 'multi_line_text_field', description: '"Where this gear comes from" paragraph.' },
+  { key: 'good_for', name: 'Good for', type: 'json', description: 'Which fish and water the kit suits: { "fish": ["Largemouth bass"], "water": "Ponds and slow rivers." }.' },
+  { key: 'faq', name: 'Kit FAQ', type: 'json', description: 'Questions and answers shown on the kit page: [{ "question": "...", "answer": "..." }].' },
+  { key: 'reviews', name: 'Reviews', type: 'json', description: 'Customer reviews, shown on the kit page only when this has entries: [{ "name": "Sam", "text": "..." }].' },
   { key: 'setup_video', name: 'Setup video', type: 'url', description: 'YouTube link shown on the QR sticker page. Leave empty for "coming soon".' },
 ];
 
@@ -290,6 +295,7 @@ export const MENUS: { handle: string; title: string; items: MenuItem[] }[] = [
     items: [
       { title: 'Shop kits', kind: 'collection', handle: KITS_COLLECTION },
       { title: 'New to fishing guide', kind: 'page', handle: 'new-to-fishing' },
+      { title: 'How-To Guides', kind: 'blog', handle: GUIDES_BLOG },
       { title: 'Blog', kind: 'blog', handle: JOURNAL_BLOG },
     ],
   },
