@@ -68,6 +68,10 @@ export interface Bundle {
   /** Full step-by-step rigging walkthrough for this specific kit. */
   riggingSteps: FishingStep[];
   imagePlaceholderAlt: string;
+  /** Which fish and what kind of water this kit suits. */
+  goodFor: { fish: string[]; water: string };
+  /** Short questions beginners ask about this kit. */
+  faq: { question: string; answer: string }[];
 }
 
 export interface Product {

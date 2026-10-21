@@ -1,0 +1,23 @@
+{%- comment -%}
+  A short paragraph of plain text, for a page's introduction. Used on the homepage so the
+  page says in words what Ketto Outdoors sells.
+{%- endcomment -%}
+{%- if section.settings.text != blank -%}
+  <section class="narrow center" style="padding-top: 8px; padding-bottom: 40px;">
+    {%- if section.settings.heading != blank -%}
+      <h2 style="font-size: 22px; margin-bottom: 12px;">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <p style="font-size: 15px; line-height: 1.75; opacity: .9;">{{ section.settings.text }}</p>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Text paragraph",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "textarea", "id": "text", "label": "Text" }
+  ],
+  "presets": [{ "name": "Text paragraph" }]
+}
+{% endschema %}

@@ -1,7 +1,23 @@
+{%- liquid
+  assign is_guides = false
+  if blog.handle == 'guides'
+    assign is_guides = true
+  endif
+  assign eyebrow = section.settings.eyebrow
+  assign intro = section.settings.intro
+  if is_guides
+    assign eyebrow = section.settings.guides_eyebrow
+    assign intro = section.settings.guides_intro
+  endif
+  assign guides_url = blogs.guides.url | default: '/blogs/guides'
+-%}
 <section class="page-hero">
-  <div class="eyebrow eyebrow--light">{{ section.settings.eyebrow }}</div>
+  <div class="eyebrow eyebrow--light">{{ eyebrow }}</div>
   <h1>{{ blog.title }}</h1>
-  {%- if section.settings.intro != blank -%}<p>{{ section.settings.intro }}</p>{%- endif -%}
+  {%- if intro != blank -%}<p>{{ intro }}</p>{%- endif -%}
+  {%- unless is_guides -%}
+    <p style="margin-top: 14px;"><a href="{{ guides_url }}" style="color: var(--cream); font-weight: 800; text-decoration: underline;">New here? Browse the How-To Guides &rarr;</a></p>
+  {%- endunless -%}
   {%- if blog.all_tags.size > 0 -%}
     <nav class="tag-links" aria-label="Topics">
       <a href="{{ blog.url }}"{% unless current_tags %} aria-current="page"{% endunless %}>All</a>
@@ -38,7 +54,9 @@
   "name": "Blog",
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "The Ketto Journal" },
-    { "type": "text", "id": "intro", "label": "Intro", "default": "Straight talk on lures, technique, and getting started fishing." }
+    { "type": "text", "id": "intro", "label": "Intro", "default": "Plain-spoken fishing tips: how to start fishing, pick your first lure, reel at the right speed, and read a new pond or lake." },
+    { "type": "text", "id": "guides_eyebrow", "label": "Small heading (How-To Guides blog)", "default": "Step by step" },
+    { "type": "text", "id": "guides_intro", "label": "Intro (How-To Guides blog)", "default": "A how-to guide for every piece of gear in our kits: how to rig it, how to fish it, and what a bite feels like." }
   ]
 }
 {% endschema %}

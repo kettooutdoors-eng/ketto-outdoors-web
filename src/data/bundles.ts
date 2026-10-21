@@ -23,6 +23,16 @@ export const BUNDLES: Bundle[] = [
       { title: 'Match your retrieve to the lure', detail: 'Reel steady for the crankbait and swimbait. Hop and pause the jig. Twitch and pause the wacky worm and finesse bait.' },
     ],
     imagePlaceholderAlt: 'First Bass Kit, full contents laid out',
+    goodFor: {
+      fish: ['Largemouth bass', 'Smallmouth bass'],
+      water: 'Ponds, small lakes, and slow rivers. Best where there are docks, weeds, rocks, or logs to cast next to.',
+    },
+    faq: [
+      { question: 'Do I need my own rod and reel?', answer: 'Yes. We don’t sell rods or reels, so bring your own. A basic spinning rod and reel is the easiest to learn on.' },
+      { question: 'What kind of line should I use?', answer: 'Plain monofilament line, about 10 to 12 lb. It is cheap, easy to tie, and forgiving.' },
+      { question: 'Do I have to learn a lot of knots?', answer: 'No. You only need one, the improved clinch knot. The steps are in the kit guide.' },
+      { question: 'What if I lose a lure?', answer: 'It happens to everyone. Bring a few spare hooks and weights, and tie on another from the kit.' },
+    ],
     components: [
       {
         label: 'Baitholder hooks',
@@ -104,6 +114,16 @@ export const BUNDLES: Bundle[] = [
       { title: 'Cast near cover and wait', detail: 'Cast near a dock, weeds, or a drop-off and watch the bobber. When it goes under and stays down, reel and set the hook.' },
     ],
     imagePlaceholderAlt: 'First Fish Starter Kit, full contents laid out',
+    goodFor: {
+      fish: ['Bluegill and other sunfish', 'Crappie', 'Small bass'],
+      water: 'Ponds, small lakes, and slow water. Easy to fish from the bank or a dock, near weeds or shade.',
+    },
+    faq: [
+      { question: 'Do I need my own rod and reel?', answer: 'Yes. We don’t sell rods or reels, so bring your own. A basic spinning rod and reel is the easiest to learn on.' },
+      { question: 'Do I need live bait?', answer: 'No. The soft bait in this kit is scented, so there are no worms to dig up.' },
+      { question: 'How do I know when I have a bite?', answer: 'Watch the bobber. When it moves around or goes under the water, lift the rod tip and start reeling.' },
+      { question: 'Is this okay for kids?', answer: 'Yes, it is the simplest setup we have. An adult should handle the hooks.' },
+    ],
     components: [
       {
         label: 'Bobbers',
@@ -166,6 +186,16 @@ export const BUNDLES: Bundle[] = [
       { title: 'Let the circle hook do the work', detail: 'When the rod loads up or line peels out steadily, don’t yank. Just start reeling. The circle hook sets itself as the fish turns.' },
     ],
     imagePlaceholderAlt: 'First Catfish Kit, full contents laid out',
+    goodFor: {
+      fish: ['Channel catfish', 'Bullheads', 'Other bottom-feeding catfish'],
+      water: 'River banks, lakes, and docks. Fish the bottom, and try dusk or after dark when catfish tend to feed more.',
+    },
+    faq: [
+      { question: 'Do I need my own rod and reel?', answer: 'Yes. We don’t sell rods or reels, so bring your own. A basic spinning rod and reel is the easiest to learn on.' },
+      { question: 'How is this different from the bass kit?', answer: 'Catfish feed on the bottom and find food by smell. So this kit has stink bait, heavier weights, and strong hooks instead of lures.' },
+      { question: 'Which weight do I use?', answer: 'Use the egg sinker in still water like a lake or pond. Use the flat bank sinker in a river, where it stays put in the current.' },
+      { question: 'Do I have to fish at night?', answer: 'No. You can catch catfish during the day. Dusk and after dark are often busier.' },
+    ],
     components: [
       {
         label: 'Circle hooks',

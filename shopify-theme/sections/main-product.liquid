@@ -54,8 +54,16 @@
   </div>
 </div>
 
+{%- comment -%}
+  Shopify's structured data says InStock whenever a kit can still be bought. While a kit is
+  out of stock and on preorder, tell search engines it's a PreOrder instead.
+{%- endcomment -%}
+{%- assign product_data = product | structured_data -%}
+{%- if preorder -%}
+  {%- assign product_data = product_data | replace: 'schema.org/InStock', 'schema.org/PreOrder' -%}
+{%- endif -%}
 <script type="application/ld+json">
-  {{ product | structured_data }}
+  {{ product_data }}
 </script>
 
 {% schema %}
