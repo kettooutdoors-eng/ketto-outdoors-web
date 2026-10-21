@@ -1,46 +1,24 @@
 {%- comment -%}
-  The rest of the kit page, under the photo and Buy now button: what's in the kit piece by
-  piece, which fish and water it suits, where the gear comes from, a mini FAQ, reviews (only
-  once a kit has some), and links to the how-to guides. Each part hides itself when the
+  The rest of the kit page, under the photo and reserve form: a short line about what's in the
+  kit (the full piece-by-piece list, where the gear comes from, and the how-to links are on their own
+  page, ?view=contents), which fish and water it suits, a mini FAQ, and reviews (only once a kit has some). Each part hides itself when the
   kit's matching field in Shopify admin (Products > kit > Metafields) is empty.
   The step-by-step rigging lives on the setup guide view (?view=guide) and is linked, not copied.
 {%- endcomment -%}
 {%- liquid
   assign components = product.metafields.custom.kit_components.value
   assign good_for = product.metafields.custom.good_for.value
-  assign sourcing = product.metafields.custom.sourcing_note.value
   assign faq = product.metafields.custom.faq.value
   assign reviews = product.metafields.custom.reviews.value
   assign variant = product.selected_or_first_available_variant
-  assign guides_url = blogs.guides.url | default: '/blogs/guides'
 -%}
 
 {%- if components.size > 0 -%}
-  <section class="bg-sage section">
-    <div class="center" style="margin-bottom: 36px;">
-      <div class="eyebrow">In the box</div>
-      <h2 style="font-size: 32px; margin-top: 8px;">What's Inside</h2>
-      <p class="muted" style="margin: 12px auto 0; max-width: 56ch; font-size: 14px;">{{ components.size }} pieces, picked to work together.</p>
-    </div>
-    <div class="stack" style="max-width: 800px; margin: 0 auto; gap: 20px;">
-      {%- for c in components -%}
-        <div class="card card--sm component">
-          <div class="component__head">
-            <h3 class="component__title">{{ c.label }}</h3>
-            {%- if c.sourced == 'anchor-brand' -%}
-              <span class="tag tag--rust">Name-brand</span>
-            {%- elsif c.sourced == 'private-label' -%}
-              <span class="tag">Ketto-tested</span>
-            {%- endif -%}
-          </div>
-          {%- if c.detail != blank -%}<div class="component__detail">{{ c.detail }}</div>{%- endif -%}
-          {%- if c.why != blank -%}<p>{{ c.why }}</p>{%- endif -%}
-          {%- if c.guide != blank -%}
-            <a class="component__link" href="{{ c.guide }}">How to use it &rarr;</a>
-          {%- endif -%}
-        </div>
-      {%- endfor -%}
-    </div>
+  <section class="narrow center" style="padding-bottom: 0;">
+    <div class="eyebrow">In the box</div>
+    <h2 style="font-size: 26px; margin-top: 8px;">What's inside</h2>
+    <p style="margin-top: 12px; font-size: 15px; line-height: 1.7;">{{ components.size }} pieces: {{ components | map: 'label' | join: ', ' }}.</p>
+    <p style="margin-top: 12px;"><a href="{{ product.url }}?view=contents" style="font-weight: 800;">See everything in the kit, where it comes from, and how to use it &rarr;</a></p>
   </section>
 {%- endif -%}
 
@@ -63,13 +41,6 @@
         </div>
       {%- endif -%}
     </div>
-  </section>
-{%- endif -%}
-
-{%- if sourcing != blank -%}
-  <section class="narrow" style="padding-top: 0;">
-    <h2 style="font-size: 22px; margin-bottom: 12px;">Where this gear comes from</h2>
-    <p style="font-size: 14px; line-height: 1.7;">{{ sourcing }}</p>
   </section>
 {%- endif -%}
 
@@ -107,20 +78,6 @@
     </div>
   </section>
 {%- endif -%}
-
-<section class="narrow" style="padding-top: 0;">
-  <h2 style="font-size: 26px; margin-bottom: 14px;">Learn how to use it</h2>
-  <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.9;">
-    <li><a href="{{ product.url }}?view=guide" style="font-weight: 700;">How to set up this kit, step by step &rarr;</a></li>
-    {%- for c in components -%}
-      {%- if c.guide != blank -%}
-        <li><a href="{{ c.guide }}" style="font-weight: 700;">How to use the {{ c.label | downcase }} &rarr;</a></li>
-      {%- endif -%}
-    {%- endfor -%}
-    <li><a href="{{ guides_url }}" style="font-weight: 700;">All How-To Guides &rarr;</a></li>
-    <li><a href="/pages/new-to-fishing" style="font-weight: 700;">New to fishing? Start here &rarr;</a></li>
-  </ul>
-</section>
 
 <section class="cta-simple">
   <h2>{{ section.settings.cta_heading }}</h2>

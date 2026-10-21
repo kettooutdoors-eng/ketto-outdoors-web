@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "kit-contents", "settings": {} }
+  },
+  "order": ["main"]
+}
