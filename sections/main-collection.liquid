@@ -3,6 +3,8 @@
   <h1>{{ collection.title }}</h1>
   {%- if collection.description != blank -%}
     <div class="rte" style="margin: 14px auto 0; max-width: 56ch; font-size: 15px; color: var(--cream); opacity: .85;">{{ collection.description }}</div>
+  {%- elsif section.settings.intro != blank -%}
+    <p style="margin: 14px auto 0; max-width: 56ch; font-size: 15px; color: var(--cream); opacity: .85;">{{ section.settings.intro }}</p>
   {%- endif -%}
 </section>
 
@@ -21,11 +23,21 @@
   {%- endif -%}
 {%- endpaginate -%}
 
+{%- if section.settings.help_text != blank -%}
+  <section class="narrow" style="padding-top: 0;">
+    <h2 style="font-size: 22px; margin-bottom: 12px;">{{ section.settings.help_heading }}</h2>
+    <p style="font-size: 14px; line-height: 1.7;">{{ section.settings.help_text }}</p>
+  </section>
+{%- endif -%}
+
 {% schema %}
 {
   "name": "Collection",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "Beginner kits" }
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "Beginner kits" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "info": "Shown under the heading when the collection has no description of its own (Products > Collections).", "default": "Beginner fishing kits with the hooks, weights, and bait already picked for you. Choose bass, catfish, or your very first fish, and bring your own rod and reel." },
+    { "type": "text", "id": "help_heading", "label": "Help heading", "default": "Which kit is right for me?" },
+    { "type": "textarea", "id": "help_text", "label": "Help text", "info": "A short paragraph under the kits. Leave empty to hide it.", "default": "Pick the First Bass Kit for ponds and lakes, the First Catfish Kit for river banks and docks, and the First Fish Starter Kit if you have never fished and just want the simplest setup. Every kit comes with a step-by-step guide and a how-to guide for each piece." }
   ]
 }
 {% endschema %}

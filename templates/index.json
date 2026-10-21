@@ -28,6 +28,13 @@
       "block_order": ["point-1", "point-2", "point-3"],
       "settings": { "kicker": "Why Ketto", "heading": "Made for beginners." }
     },
+    "intro": {
+      "type": "text-block",
+      "settings": {
+        "heading": "Beginner fishing kits, made simple",
+        "text": "Ketto Outdoors sells beginner fishing kits. Each kit is a box of tackle picked to work together for one kind of fishing: bass, catfish, or your very first fish from a pond or dock. Every kit comes with step-by-step setup instructions and a how-to guide for each piece. Bring your own rod and reel, and you are ready to fish."
+      }
+    },
     "cta": {
       "type": "cta-band",
       "settings": {
@@ -39,5 +46,5 @@
       }
     }
   },
-  "order": ["hero", "kits", "why", "cta"]
+  "order": ["hero", "kits", "why", "intro", "cta"]
 }

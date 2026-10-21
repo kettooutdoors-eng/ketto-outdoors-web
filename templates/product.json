@@ -16,9 +16,17 @@
         "note": "Bring your own rod and reel.",
         "show_setup_link": true
       }
+    },
+    "details": {
+      "type": "kit-details",
+      "settings": {
+        "cta_heading": "Ready to go fishing?",
+        "button_label": "Buy now"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "details"
   ]
 }
