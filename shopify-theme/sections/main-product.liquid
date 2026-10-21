@@ -52,6 +52,7 @@
     {%- if section.settings.note != blank -%}
       <p class="kit-simple__note">{{ section.settings.note }}</p>
     {%- endif -%}
+    {% render 'qr-note' %}
     {%- if section.settings.show_setup_link -%}
       <a class="kit-simple__setup" href="{{ product.url }}?view=guide">How to set it up &rarr;</a>
     {%- endif -%}

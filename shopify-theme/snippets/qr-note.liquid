@@ -1,0 +1,11 @@
+{%- comment -%}
+  A small note that every kit comes with a QR code made for the pieces in that kit.
+  The words are theme settings (Theme settings > Kit QR code), so they're edited in one place.
+  Usage: {% render 'qr-note' %}
+{%- endcomment -%}
+{%- if settings.kit_qr_title != blank or settings.kit_qr_note != blank -%}
+  <div class="note qr-note">
+    {%- if settings.kit_qr_title != blank -%}<strong>{{ settings.kit_qr_title }}</strong>{%- endif -%}
+    {%- if settings.kit_qr_note != blank -%}{{ settings.kit_qr_note }}{%- endif -%}
+  </div>
+{%- endif -%}
