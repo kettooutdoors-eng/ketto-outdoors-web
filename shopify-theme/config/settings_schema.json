@@ -15,6 +15,13 @@
     ]
   },
   {
+    "name": "Reservations",
+    "settings": [
+      { "type": "checkbox", "id": "reserve_kits", "label": "Reserve instead of buy", "default": true, "info": "On: kits show a Reserve your kit today form that collects name, email, and phone. No cart, no payment. Turn this off once kits are in stock to go back to Buy now and checkout." },
+      { "type": "text", "id": "reserve_button_label", "label": "Reserve button and form heading", "default": "Reserve your kit today" }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       { "type": "url", "id": "social_youtube", "label": "YouTube" },

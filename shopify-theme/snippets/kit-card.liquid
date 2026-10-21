@@ -1,5 +1,5 @@
 {%- comment -%}
-  A kit in a grid: photo, piece count, name, tagline, price, Buy now, View the kit.
+  A kit in a grid: photo, piece count, name, tagline, price, Reserve (or Buy now), View the kit.
   Usage: {% render 'kit-card', product: product %}
 {%- endcomment -%}
 {%- liquid
@@ -16,9 +16,13 @@
   {%- if tagline != blank -%}<p style="font-size: 14px;">{{ tagline }}</p>{%- endif -%}
   <div class="price">{{ product.price | money_without_trailing_zeros }}</div>
   <div class="kit-card__actions">
-    {%- form 'product', product, class: 'kit-card__form' -%}
-      {% render 'buy-button', product: product, variant: variant, label: 'Buy now' %}
-    {%- endform -%}
+    {%- if settings.reserve_kits -%}
+      {% render 'reserve-button', product: product %}
+    {%- else -%}
+      {%- form 'product', product, class: 'kit-card__form' -%}
+        {% render 'buy-button', product: product, variant: variant, label: 'Buy now' %}
+      {%- endform -%}
+    {%- endif -%}
     <a href="{{ product.url }}" class="btn btn--block">View the kit</a>
   </div>
 </div>

@@ -111,6 +111,16 @@
     });
   });
 
+  // --- Reserve form: Shopify's contact form takes one name, so join first + last on submit ---
+  document.querySelectorAll('#ReserveForm').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      var first = form.querySelector('[data-reserve-first]');
+      var last = form.querySelector('[data-reserve-last]');
+      var full = form.querySelector('[data-reserve-name]');
+      if (first && last && full) full.value = (first.value + ' ' + last.value).trim();
+    });
+  });
+
   // --- Scroll reveal ---
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
