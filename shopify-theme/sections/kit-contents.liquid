@@ -1,0 +1,91 @@
+{%- comment -%}
+  Everything about what's in a kit (product URL + ?view=contents): each piece, where the gear
+  comes from, and links to how to use it. The kit page only shows a short line and a link to
+  this page, so the kit page stays short.
+  Edit each piece in Shopify admin under Products > (kit) > Metafields > What's inside.
+{%- endcomment -%}
+{%- liquid
+  assign components = product.metafields.custom.kit_components.value
+  assign sourcing = product.metafields.custom.sourcing_note.value
+  assign guides_url = blogs.guides.url | default: '/blogs/guides'
+-%}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ product.url }}">{{ product.title }}</a> / What's inside
+</nav>
+
+<section class="page-hero" style="padding: 44px var(--gutter) 40px;">
+  <div class="eyebrow eyebrow--light">In the box</div>
+  <h1>What's inside the {{ product.title }}</h1>
+  {%- if components.size > 0 -%}
+    <p>{{ components.size }} pieces, picked to work together. Here is every one and why it's in the kit.</p>
+  {%- endif -%}
+</section>
+
+{%- if components.size > 0 -%}
+  <section class="section" style="padding-top: 40px;">
+    <div class="stack" style="max-width: 800px; margin: 0 auto; gap: 20px;">
+      {%- for c in components -%}
+        <div class="card card--sm component">
+          <div class="component__head">
+            <h2 class="component__title">{{ c.label }}</h2>
+            {%- if c.sourced == 'anchor-brand' -%}
+              <span class="tag tag--rust">Name-brand</span>
+            {%- elsif c.sourced == 'private-label' -%}
+              <span class="tag">Ketto-tested</span>
+            {%- endif -%}
+          </div>
+          {%- if c.detail != blank -%}<div class="component__detail">{{ c.detail }}</div>{%- endif -%}
+          {%- if c.why != blank -%}<p>{{ c.why }}</p>{%- endif -%}
+          {%- if c.guide != blank -%}
+            <a class="component__link" href="{{ c.guide }}">How to use it &rarr;</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{%- if sourcing != blank -%}
+  <section class="narrow" style="padding-top: 0;">
+    <h2 style="font-size: 22px; margin-bottom: 12px;">Where this gear comes from</h2>
+    <p style="font-size: 14px; line-height: 1.7;">{{ sourcing }}</p>
+  </section>
+{%- endif -%}
+
+<section class="narrow" style="padding-top: 0;">
+  <h2 style="font-size: 26px; margin-bottom: 14px;">Learn how to use it</h2>
+  <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.9;">
+    <li><a href="{{ product.url }}?view=guide" style="font-weight: 700;">How to set up this kit, step by step &rarr;</a></li>
+    {%- for c in components -%}
+      {%- if c.guide != blank -%}
+        <li><a href="{{ c.guide }}" style="font-weight: 700;">How to use the {{ c.label | downcase }} &rarr;</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+    <li><a href="{{ guides_url }}" style="font-weight: 700;">All How-To Guides &rarr;</a></li>
+    <li><a href="/pages/new-to-fishing" style="font-weight: 700;">New to fishing? Start here &rarr;</a></li>
+  </ul>
+</section>
+
+<section class="cta-simple">
+  <h2>{{ section.settings.cta_heading }}</h2>
+  <div style="max-width: 360px; margin: 20px auto 0;">
+    {%- if settings.reserve_kits -%}
+      {% render 'reserve-button', product: product %}
+    {%- else -%}
+      <a href="{{ product.url }}" class="btn btn--rust btn--block btn--big">Back to the kit</a>
+    {%- endif -%}
+  </div>
+  <p style="margin-top: 18px;">
+    <a href="{{ product.url }}" style="font-size: 13px; font-weight: 700; color: var(--cream); text-decoration: underline;">&larr; Back to the {{ product.title }}</a>
+  </p>
+</section>
+
+{% schema %}
+{
+  "name": "Kit contents page",
+  "settings": [
+    { "type": "paragraph", "content": "The full list of what's in a kit, opened from the link on the kit page. Edit the pieces per kit in Shopify admin under Products > (kit) > Metafields." },
+    { "type": "text", "id": "cta_heading", "label": "Bottom heading", "default": "Ready to go fishing?" }
+  ]
+}
+{% endschema %}
