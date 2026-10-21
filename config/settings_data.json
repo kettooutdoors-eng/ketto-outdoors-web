@@ -40,11 +40,10 @@
         "type": "welcome-popup",
         "settings": {
           "enabled": true,
-          "code": "WELCOME15",
-          "percent": 15,
-          "eyebrow": "Your next adventure starts here",
-          "delay": 12,
-          "shop_link": ""
+          "delay": 20,
+          "eyebrow": "Kits are coming",
+          "heading": "Get notified when kits are in stock.",
+          "button_label": "Notify me"
         }
       }
     },
@@ -52,7 +51,7 @@
     "blocks": {
       "8764476057892802672": {
         "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }

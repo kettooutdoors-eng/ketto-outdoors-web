@@ -1,0 +1,6 @@
+{%- comment -%}
+  The "Reserve your kit today" button shown on kit cards and in the kit page's closing banner.
+  It doesn't add anything to a cart. It jumps to the reservation form on the kit's page.
+  Usage: {% render 'reserve-button', product: product %}
+{%- endcomment -%}
+<a href="{{ product.url }}#reserve" class="btn btn--rust btn--block btn--big">{{ settings.reserve_button_label | default: 'Reserve your kit today' }}</a>

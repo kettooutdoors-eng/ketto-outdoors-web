@@ -39,11 +39,15 @@
     {%- if tagline != blank -%}<p class="kit-simple__tagline">{{ tagline }}</p>{%- endif -%}
     <div class="price price--lg">{{ variant.price | money_without_trailing_zeros }}</div>
 
-    {%- form 'product', product, class: 'kit-simple__form' -%}
-      {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
-    {%- endform -%}
-    {%- if preorder and section.settings.preorder_note != blank -%}
-      <p class="kit-simple__note kit-simple__note--preorder">{{ section.settings.preorder_note }}</p>
+    {%- if settings.reserve_kits -%}
+      {% render 'reserve-form', product: product %}
+    {%- else -%}
+      {%- form 'product', product, class: 'kit-simple__form' -%}
+        {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
+      {%- endform -%}
+      {%- if preorder and section.settings.preorder_note != blank -%}
+        <p class="kit-simple__note kit-simple__note--preorder">{{ section.settings.preorder_note }}</p>
+      {%- endif -%}
     {%- endif -%}
     {%- if section.settings.note != blank -%}
       <p class="kit-simple__note">{{ section.settings.note }}</p>
@@ -55,11 +59,14 @@
 </div>
 
 {%- comment -%}
-  Shopify's structured data says InStock whenever a kit can still be bought. While a kit is
-  out of stock and on preorder, tell search engines it's a PreOrder instead.
+  Shopify's structured data says InStock whenever a kit can still be bought. While reservations
+  are on (nothing can be bought), say OutOfStock. In normal selling, a preorder says PreOrder.
 {%- endcomment -%}
 {%- assign product_data = product | structured_data -%}
-{%- if preorder -%}
+{%- if settings.reserve_kits -%}
+  {%- comment -%} Kits can't be bought while reservations are on, so don't say they're in stock. {%- endcomment -%}
+  {%- assign product_data = product_data | replace: 'schema.org/InStock', 'schema.org/OutOfStock' | replace: 'schema.org/PreOrder', 'schema.org/OutOfStock' -%}
+{%- elsif preorder -%}
   {%- assign product_data = product_data | replace: 'schema.org/InStock', 'schema.org/PreOrder' -%}
 {%- endif -%}
 <script type="application/ld+json">
