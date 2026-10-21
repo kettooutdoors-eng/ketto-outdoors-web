@@ -1,0 +1,53 @@
+{%- comment -%}
+  Reserve-your-kit form. No payment and no cart: it collects a first name, last name, email,
+  and phone number, and says plainly that this only holds a spot until kits are in stock.
+
+  It is a Shopify contact form, so each reservation is emailed to the store's sender email
+  (Settings > Notifications) with every field below, and the shopper is added to Customers.
+  The kit's name is in the message so you know which kit they want.
+
+  Usage: {% render 'reserve-form', product: product %}
+{%- endcomment -%}
+<div class="reserve" id="reserve">
+  {%- form 'contact', id: 'ReserveForm', class: 'reserve__form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="reserve__done" role="status">
+        <h2>You're on the list.</h2>
+        <p>Your spot for the {{ product.title }} is saved. We'll email or call you when kits are in stock. <strong>You haven't paid anything.</strong></p>
+      </div>
+    {%- else -%}
+      <h2 class="reserve__title">{{ settings.reserve_button_label | default: 'Reserve your kit today' }}</h2>
+      <p class="reserve__lead"><strong>This is a reservation, not a purchase.</strong> You won't pay anything today. We'll save a spot for you and contact you when this kit is back in stock.</p>
+      {%- if form.errors -%}
+        <p class="form-error">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
+
+      <input type="hidden" name="contact[name]" value="" data-reserve-name>
+      <input type="hidden" name="contact[tags]" value="kit-reservation">
+      <input type="hidden" name="contact[Kit]" value="{{ product.title | escape }}">
+      <input type="hidden" name="contact[body]" value="KIT RESERVATION (no payment taken): {{ product.title | escape }}">
+
+      <div class="reserve__row">
+        <div class="field">
+          <label for="ReserveFirst">First name</label>
+          <input class="input" type="text" id="ReserveFirst" name="contact[First name]" autocomplete="given-name" required data-reserve-first>
+        </div>
+        <div class="field">
+          <label for="ReserveLast">Last name</label>
+          <input class="input" type="text" id="ReserveLast" name="contact[Last name]" autocomplete="family-name" required data-reserve-last>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ReserveEmail">Email</label>
+        <input class="input" type="email" id="ReserveEmail" name="contact[email]" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="ReservePhone">Phone</label>
+        <input class="input" type="tel" id="ReservePhone" name="contact[phone]" autocomplete="tel" placeholder="(555) 555-5555" required>
+      </div>
+
+      <button type="submit" class="btn btn--rust btn--block btn--big">Reserve my kit</button>
+      <p class="reserve__fine">No payment now. No obligation to buy. We'll only use your details to contact you about your reservation. <a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Privacy policy</a></p>
+    {%- endif -%}
+  {%- endform -%}
+</div>

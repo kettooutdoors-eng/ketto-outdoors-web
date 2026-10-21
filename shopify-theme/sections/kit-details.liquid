@@ -124,10 +124,14 @@
 
 <section class="cta-simple">
   <h2>{{ section.settings.cta_heading }}</h2>
-  <div style="max-width: 320px; margin: 20px auto 0;">
-    {%- form 'product', product, class: 'kit-simple__form' -%}
-      {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
-    {%- endform -%}
+  <div style="max-width: 360px; margin: 20px auto 0;">
+    {%- if settings.reserve_kits -%}
+      {% render 'reserve-button', product: product %}
+    {%- else -%}
+      {%- form 'product', product, class: 'kit-simple__form' -%}
+        {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
+      {%- endform -%}
+    {%- endif -%}
   </div>
 </section>
 

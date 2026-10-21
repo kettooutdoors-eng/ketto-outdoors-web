@@ -202,6 +202,17 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--rust); outl
 .kit-simple__note--preorder { color: var(--rust); font-weight: 700; opacity: 1; }
 .kit-simple__setup { font-size: 14px; font-weight: 700; }
 
+/* --- Reserve your kit (no payment) --- */
+.reserve { background: #fff; border-radius: 12px; box-shadow: var(--shadow-md); padding: 24px; margin-top: 4px; }
+.reserve__form { display: flex; flex-direction: column; gap: 14px; }
+.reserve__title { font-size: 24px; letter-spacing: -0.02em; }
+.reserve__lead { font-size: 14px; line-height: 1.6; background: var(--sage); border-radius: 10px; padding: 12px 14px; margin: 0; }
+.reserve__row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.reserve__fine { font-size: 12px; line-height: 1.5; opacity: 0.7; margin: 0; }
+.reserve__done h2 { font-size: 24px; letter-spacing: -0.02em; }
+.reserve__done p { margin-top: 10px; font-size: 15px; line-height: 1.6; }
+@media (max-width: 760px) { .reserve__row { grid-template-columns: 1fr; } }
+
 /* --- Forms --- */
 .product-form { gap: 10px; margin-top: 6px; }
 .notify-form { gap: 8px; margin-top: 4px; }

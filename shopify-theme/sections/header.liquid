@@ -40,12 +40,14 @@
     {% render 'icon', name: 'search' %}
   </button>
 
-  <a href="{{ routes.cart_url }}" class="icon-btn" aria-label="Cart, {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}">
-    {% render 'icon', name: 'cart' %}
-    {%- if cart.item_count > 0 -%}
-      <span class="cart-count" aria-hidden="true">{{ cart.item_count }}</span>
-    {%- endif -%}
-  </a>
+  {%- unless settings.reserve_kits -%}
+    <a href="{{ routes.cart_url }}" class="icon-btn" aria-label="Cart, {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}">
+      {% render 'icon', name: 'cart' %}
+      {%- if cart.item_count > 0 -%}
+        <span class="cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+      {%- endif -%}
+    </a>
+  {%- endunless -%}
 
   <button type="button" class="icon-btn menu-toggle" aria-label="Menu" aria-controls="MobileMenu" aria-expanded="false" data-menu-open>
     {% render 'icon', name: 'menu' %}
@@ -63,7 +65,9 @@
   {%- for link in menu.links -%}
     <a href="{{ link.url }}">{{ link.title }}</a>
   {%- endfor -%}
-  <a href="{{ routes.cart_url }}">Cart{% if cart.item_count > 0 %} ({{ cart.item_count }}){% endif %}</a>
+  {%- unless settings.reserve_kits -%}
+    <a href="{{ routes.cart_url }}">Cart{% if cart.item_count > 0 %} ({{ cart.item_count }}){% endif %}</a>
+  {%- endunless -%}
 </nav>
 
 {% schema %}
