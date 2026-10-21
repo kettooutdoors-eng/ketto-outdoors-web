@@ -202,6 +202,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--rust); outl
 .kit-simple__note { font-size: 14px; opacity: 0.75; }
 .kit-simple__note--preorder { color: var(--rust); font-weight: 700; opacity: 1; }
 .kit-simple__setup { font-size: 14px; font-weight: 700; }
+.qr-note { font-size: 13.5px; line-height: 1.55; }
+.qr-note strong { display: block; margin-bottom: 2px; }
 
 /* --- Under the kit photo and form: what's inside, good for, FAQ, reviews --- */
 .kit-more { max-width: 720px; margin: 0 auto; padding: 0 var(--gutter) 72px; display: flex; flex-direction: column; gap: 56px; }
