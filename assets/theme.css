@@ -228,6 +228,93 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--rust); outl
 .reserve__done p { margin-top: 10px; font-size: 15px; line-height: 1.6; }
 @media (max-width: 760px) { .reserve__row { grid-template-columns: 1fr; } }
 
+/* --- All Gear, gear pages, What's Biting --- */
+.btn--sm { padding: 8px 16px; font-size: 13px; }
+.pill--soft { background: var(--sage); color: var(--forest); }
+.page-hero__rte { margin: 14px auto 0; max-width: 56ch; font-size: 15px; color: var(--cream); opacity: 0.85; }
+.page-hero__wide { max-width: 64ch !important; }
+.gear-filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: center; padding: 32px var(--gutter) 0; }
+.gear-filters .gear-filters__search { width: 260px; border: 2px solid var(--forest); }
+.gear-filters select { padding: 10px 12px; border: 2px solid var(--forest); font-size: 13px; font-weight: 700; background: var(--cream); color: var(--ink); }
+.gear-grid { padding: 32px var(--gutter) 56px; }
+.gear-grid[hidden] { display: none; }
+.gear-card { display: flex; flex-direction: column; overflow: hidden; }
+.gear-card[hidden] { display: none; }
+.gear-card__media .media { aspect-ratio: 4 / 3; border: none; border-radius: 0; }
+.gear-card__media .media img { object-fit: cover; }
+.gear-card__body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 20px; flex: 1; }
+.gear-card__title { font-weight: 800; font-size: 19px; letter-spacing: -0.02em; color: var(--ink); }
+.gear-card__title:hover { color: var(--rust); }
+.gear-card__fish { font-size: 13px; opacity: 0.75; }
+.gear-card__foot { margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.gear-empty { padding: 64px var(--gutter); }
+.gear-empty[hidden] { display: none; }
+.gear-empty h2 { font-size: 24px; }
+.gear-empty p { max-width: 48ch; margin: 12px auto 20px; opacity: 0.8; }
+.gear-band { background: var(--forest); color: var(--cream); padding: 64px var(--gutter); }
+.gear-band h2 { font-size: 36px; letter-spacing: -0.03em; margin: 10px 0 20px; }
+.gear-band p { margin-top: 18px; }
+.gear-band__link { font-size: 13px; font-weight: 700; color: var(--cream); text-decoration: underline; }
+.gear-band__link:hover { color: var(--peach); }
+
+.crumbs { padding: 18px var(--gutter) 0; font-size: 12px; opacity: 0.7; max-width: 1100px; margin: 0 auto; }
+.crumbs a { color: var(--ink); }
+.gear-top { max-width: 1100px; margin: 0 auto; padding: 24px var(--gutter) 56px; align-items: start; }
+.gear-top__media .media, .gear-top__media.media { aspect-ratio: 4 / 3; }
+.gear-top__media img { object-fit: cover; }
+.gear-top__title { font-size: 38px; letter-spacing: -0.03em; }
+.gear-top__meta { font-size: 13px; opacity: 0.75; }
+.gear-top__lead { font-size: 15px; line-height: 1.6; }
+.gear-top__badges { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; opacity: 0.7; }
+.gear-top__kit { font-size: 14px; font-weight: 700; }
+
+.gear-howto { background: var(--sage); padding: 48px var(--gutter); }
+.gear-howto h2 { font-size: 32px; margin-top: 8px; }
+.gear-howto__grid { max-width: 1000px; margin: 36px auto 0; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+.gear-howto__need { margin-bottom: 28px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { font-size: 12.5px; font-weight: 600; background: #fff; border-radius: 20px; padding: 6px 12px; }
+.gear-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+.gear-steps li { display: flex; gap: 16px; align-items: flex-start; }
+.gear-steps__num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+.gear-steps h3 { font-size: 16px; margin-bottom: 4px; }
+.gear-steps p { font-size: 14px; line-height: 1.65; }
+.gear-howto__card { padding: 20px; }
+.gear-howto__card h3 { font-size: 15px; margin-bottom: 8px; color: var(--rust); }
+.gear-howto__card p, .gear-howto__card li { font-size: 13.5px; line-height: 1.6; }
+.gear-howto__card ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+.gear-howto__tip { background: var(--forest); color: var(--cream); padding: 20px; border-top: 3px solid var(--rust); }
+.gear-howto__tip .kicker { color: var(--cream); opacity: 0.75; margin-bottom: 8px; }
+.gear-howto__tip p { font-size: 13.5px; line-height: 1.6; }
+
+.gear-details { max-width: 1100px; margin: 0 auto; padding: 48px var(--gutter); display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+.gear-details h2 { font-size: 22px; margin-bottom: 12px; }
+.gear-details > div > p { font-size: 14px; line-height: 1.7; }
+.gear-build { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+.gear-build h3 { font-size: 16px; margin-top: 4px; }
+.gear-build p { font-size: 13px; margin-top: 4px; }
+.gear-depth__title { font-size: 16px; margin: 28px 0 10px; }
+.gear-depth { display: flex; flex-direction: column; gap: 6px; }
+.gear-depth__row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; background: var(--sage); font-size: 13px; }
+.gear-depth__row.is-on { background: var(--rust); color: var(--cream); font-weight: 700; }
+.gear-specs { padding: 24px; }
+.gear-specs h3 { font-size: 16px; margin-bottom: 14px; }
+.gear-specs dl { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.gear-specs dl > div { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; border-bottom: 1px solid rgba(36, 26, 16, 0.12); padding-bottom: 8px; }
+.gear-specs dt { opacity: 0.65; }
+.gear-specs dd { margin: 0; font-weight: 700; text-align: right; }
+
+.biting-grid { padding: 48px var(--gutter) 56px; align-items: start; }
+.biting-pick { display: flex; flex-direction: column; gap: 12px; }
+.biting-pick__why { background: #fff; box-shadow: var(--shadow-sm); border-radius: 10px; padding: 10px 14px; font-size: 12.5px; line-height: 1.5; }
+.biting-pick__why span { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rust); }
+
+@media (max-width: 760px) {
+  .gear-howto__grid, .gear-details { grid-template-columns: 1fr; }
+  .gear-top__title { font-size: 30px; }
+  .gear-filters .gear-filters__search { width: 100%; }
+}
+
 /* --- Forms --- */
 .product-form { gap: 10px; margin-top: 6px; }
 .notify-form { gap: 8px; margin-top: 4px; }
