@@ -123,7 +123,7 @@ async function metafieldDefinitions() {
       });
       log(`  ✓ ${d.name}`);
     } catch (e) {
-      if (/taken|already/i.test(String(e))) log(`  · ${d.name} (already there)`);
+      if (/taken|already|in use/i.test(String(e))) log(`  · ${d.name} (already there)`);
       else fail(d.name, e);
     }
   }
