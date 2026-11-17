@@ -18,7 +18,7 @@
     {%- endif -%}
   </div>
 {%- else -%}
-  <div class="media media--placeholder"{% if style != '' %} style="{{ style }}"{% endif %}>
-    <span>{{ alt | default: 'Photo coming soon' }}</span>
+  <div class="media media--placeholder" role="img" aria-label="{{ alt | default: 'Photo' | escape }}: photo coming soon"{% if style != '' %} style="{{ style }}"{% endif %}>
+    <span aria-hidden="true">Photo coming soon</span>
   </div>
 {%- endif -%}
