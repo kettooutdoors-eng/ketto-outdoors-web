@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "main": {
+      "type": "biting-now",
+      "blocks": {
+        "pick-1": {
+          "type": "pick",
+          "settings": {
+            "product": "first-bass-kit",
+            "why": "The complete starter setup. Good timing to get outfitted right as the fall feeding window opens up."
+          }
+        },
+        "pick-2": {
+          "type": "pick",
+          "settings": {
+            "product": "medium-crankbait",
+            "why": "Reaction baits like this shine in early fall as bass feed aggressively ahead of winter."
+          }
+        },
+        "pick-3": {
+          "type": "pick",
+          "settings": {
+            "product": "ratlin",
+            "why": "A search bait built for exactly this. Fish are on the move, and a rattling lipless crank covers water fast to find them."
+          }
+        },
+        "pick-4": {
+          "type": "pick",
+          "settings": {
+            "product": "chatterbait",
+            "why": "Stained, cooling fall water plus a vibrating blade is a proven combination."
+          }
+        },
+        "pick-5": {
+          "type": "pick",
+          "settings": {
+            "product": "longshot",
+            "why": "Built for the murky, cooling-water conditions common on lakes and ponds this time of year."
+          }
+        },
+        "pick-6": {
+          "type": "pick",
+          "settings": {
+            "product": "first-catfish-kit",
+            "why": "Catfish stay very active well into fall. A good time to start if you haven’t yet."
+          }
+        },
+        "pick-7": {
+          "type": "pick",
+          "settings": {
+            "product": "flipping-jig",
+            "why": "As baitfish and vegetation thin out, fish tuck tighter to remaining cover. A jig flipped into it is a fall staple."
+          }
+        },
+        "pick-8": {
+          "type": "pick",
+          "settings": {
+            "product": "buzzrunner",
+            "why": "Still worth throwing during the low-light morning window before the water cools further."
+          }
+        },
+        "pick-9": {
+          "type": "pick",
+          "settings": {
+            "product": "never-fished-before-starter-kit",
+            "why": "Bait-and-bobber panfish action stays reliable into fall on most lakes and ponds."
+          }
+        },
+        "pick-10": {
+          "type": "pick",
+          "settings": {
+            "product": "swimshad",
+            "why": "Imitates baitfish schooling up in fall. Exactly what predators are keyed in on right now."
+          }
+        }
+      },
+      "block_order": [
+        "pick-1",
+        "pick-2",
+        "pick-3",
+        "pick-4",
+        "pick-5",
+        "pick-6",
+        "pick-7",
+        "pick-8",
+        "pick-9",
+        "pick-10"
+      ],
+      "settings": {}
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "style": "simple",
+        "heading": "Not sure where to start?",
+        "text": "Pick the kit that matches the fish you're after. Everything inside works together.",
+        "button_label": "Shop kits",
+        "button_link": "/collections/kits"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cta"
+  ]
+}

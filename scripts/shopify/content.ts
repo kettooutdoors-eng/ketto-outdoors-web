@@ -6,16 +6,24 @@ import { BUNDLES } from '../../src/data/bundles.ts';
 import { PRODUCTS } from '../../src/data/products.ts';
 import { BLOG_ARTICLES, BLOG_CATEGORY_NAV } from '../../src/data/blog.ts';
 import { KIT_CARDS } from '../../src/data/kitCards.ts';
+import { ALL_SHOP_ITEMS } from '../../src/data/shop.ts';
+import { PRODUCT_IMAGES } from '../../src/data/productImages.ts';
+import { BITING_NOW_INTRO, BITING_NOW_PICKS, BITING_NOW_SEASON } from '../../src/data/bitingNow.ts';
+import { GUIDE_HERO, GUIDE_SECTIONS } from '../../src/data/guide.ts';
 import { ABOUT_CONTENT, CONTACT_CONTENT, FAQ_ENTRIES, SHIPPING_RETURNS_CONTENT, TERMS_CONTENT } from '../../src/data/legal.ts';
 import type { Product } from '../../src/data/types.ts';
 
 export const KITS_COLLECTION = 'kits';
 export const KIT_TAG = 'kit';
+export const GEAR_COLLECTION = 'all-gear';
+export const GEAR_TAG = 'gear';
 export const JOURNAL_BLOG = 'journal';
 export const GUIDES_BLOG = 'guides';
 export const WELCOME_CODE = 'WELCOME15';
 export const WELCOME_PERCENT = 15;
 
+/** Shopify's handle for a tag, e.g. "Gear Guides" -> "gear-guides". */
+const handleize = (s: string) => s.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const p = (s?: string) => (s ? `<p>${esc(s)}</p>` : '');
 const ul = (items: string[], cls = '') => `<ul${cls ? ` class="${cls}"` : ''}>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
@@ -26,9 +34,10 @@ const steps = (list: { title: string; detail: string }[]) =>
 export function mapUrl(url: string): string {
   if (/^(https?:|mailto:)/.test(url)) return url;
   const [path] = url.split('?');
-  if (path === '/kits' || path.startsWith('/shop')) return `/collections/${KITS_COLLECTION}`;
+  if (path === '/kits') return `/collections/${KITS_COLLECTION}`;
+  if (path.startsWith('/shop')) return `/collections/${GEAR_COLLECTION}`;
   if (path.startsWith('/kits/')) return `/products/${path.slice(6)}`;
-  if (path.startsWith('/product/')) return `/blogs/${GUIDES_BLOG}/${path.slice(9)}`;
+  if (path.startsWith('/product/')) return `/products/${path.slice(9)}`;
   if (path === '/blog') return `/blogs/${JOURNAL_BLOG}`;
   if (path.startsWith('/blog/')) {
     const parts = path.split('/').filter(Boolean);
@@ -36,6 +45,7 @@ export function mapUrl(url: string): string {
   }
   const pages: Record<string, string> = {
     '/new-to-fishing': '/pages/new-to-fishing',
+    '/biting-now': '/pages/biting-now',
     '/about': '/pages/about',
     '/faq': '/pages/faq',
     '/contact': '/pages/contact',
@@ -67,7 +77,7 @@ export const KIT_PRODUCTS: KitProduct[] = BUNDLES.map((b) => {
     detail: c.detail,
     why: c.whyThis,
     sourced: c.sourced,
-    guide: c.productId && productById.has(c.productId) ? `/blogs/${GUIDES_BLOG}/${c.productId}` : '',
+    guide: c.productId && productById.has(c.productId) ? `/products/${c.productId}` : '',
   }));
   const video = KIT_CARDS.find((k) => k.slug === b.slug)?.videoUrl;
   const metafields = [
@@ -104,6 +114,85 @@ export const PRODUCT_METAFIELD_DEFINITIONS = [
   { key: 'faq', name: 'Kit FAQ', type: 'json', description: 'Questions and answers shown on the kit page: [{ "question": "...", "answer": "..." }].' },
   { key: 'reviews', name: 'Reviews', type: 'json', description: 'Customer reviews, shown on the kit page only when this has entries: [{ "name": "Sam", "text": "..." }].' },
   { key: 'setup_video', name: 'Setup video', type: 'url', description: 'YouTube link shown on the QR sticker page. Leave empty for "coming soon".' },
+];
+
+// ---------- Individual gear (every lure and piece of tackle) ----------
+
+export interface GearProduct {
+  handle: string;
+  title: string;
+  price: string;
+  productType: string;
+  tags: string[];
+  descriptionHtml: string;
+  seoTitle: string;
+  seoDescription: string;
+  /** "Size" values when the product comes in sizes; empty for a single variant. */
+  sizes: string[];
+  /** Photo in public/assets/products, uploaded to Shopify by the setup script. */
+  image?: { file: string; alt: string };
+  metafields: { key: string; type: string; value: string }[];
+}
+
+// "diveDepth" -> "Dive depth"
+const specLabel = (k: string) => k.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase()).replace(/ (\w)/g, (_, c: string) => ` ${c.toLowerCase()}`);
+
+export const GEAR_PRODUCTS: GearProduct[] = ALL_SHOP_ITEMS.flatMap((item) => {
+  const pr = productById.get(item.id);
+  if (!pr) return [];
+  const kits = BUNDLES.filter((b) => b.components.some((c) => c.productId === pr.id)).map((b) => ({ handle: b.id, title: b.name }));
+  const metafields = [
+    { key: 'tagline', type: 'single_line_text_field', value: item.kicker },
+    { key: 'kicker', type: 'single_line_text_field', value: pr.kicker },
+    { key: 'gear_type', type: 'single_line_text_field', value: item.type },
+    { key: 'difficulty', type: 'json', value: JSON.stringify({ label: item.difficultyLabel, score: item.difficultyScore, out_of: pr.difficulty?.outOf ?? 10 }) },
+    { key: 'species', type: 'json', value: JSON.stringify(item.species) },
+    { key: 'target_species', type: 'single_line_text_field', value: pr.targetSpecies ?? item.targetFish },
+    { key: 'short_description', type: 'multi_line_text_field', value: pr.shortDescription },
+    { key: 'long_description', type: 'multi_line_text_field', value: pr.longDescription },
+    { key: 'fishing_guide', type: 'json', value: JSON.stringify(pr.guide) },
+    { key: 'specs', type: 'json', value: JSON.stringify(Object.entries(pr.specs).map(([k, v]) => ({ label: specLabel(k), value: v }))) },
+    // The old site promised a ship time; the store doesn't (kits and gear ship when stock arrives).
+    { key: 'trust_badges', type: 'json', value: JSON.stringify(pr.trustBadges.map((b) => (/^Ships in/.test(b) ? 'Free shipping on orders $35+' : b))) },
+    { key: 'related', type: 'json', value: JSON.stringify(pr.relatedProducts.map((r) => r.id).filter((id) => productById.has(id))) },
+    { key: 'in_kits', type: 'json', value: JSON.stringify(kits) },
+  ];
+  if (pr.bestFor) metafields.push({ key: 'best_for', type: 'single_line_text_field', value: pr.bestFor });
+  if (pr.buildDetails?.length) metafields.push({ key: 'build_details', type: 'json', value: JSON.stringify(pr.buildDetails) });
+  if (pr.depthChart?.length) metafields.push({ key: 'depth_chart', type: 'json', value: JSON.stringify(pr.depthChart) });
+  const file = PRODUCT_IMAGES[pr.id];
+  return [{
+    handle: pr.id,
+    title: pr.displayNameFull,
+    price: pr.price.toFixed(2),
+    productType: item.type,
+    tags: [GEAR_TAG, item.difficultyLabel, ...item.species],
+    descriptionHtml: p(pr.shortDescription) + p(pr.longDescription),
+    seoTitle: pr.metaTitle,
+    seoDescription: pr.metaDescription,
+    sizes: pr.sizeOptions ?? [],
+    image: file ? { file, alt: pr.imagePlaceholderAlt } : undefined,
+    metafields,
+  }];
+});
+
+/** Metafield definitions for the individual gear, so each field is editable in Shopify admin. */
+export const GEAR_METAFIELD_DEFINITIONS = [
+  { key: 'kicker', name: 'Kicker', type: 'single_line_text_field', description: 'Small line above the product name, e.g. "Squarebill / 2.5 in / 1/2 oz".' },
+  { key: 'gear_type', name: 'Gear type', type: 'single_line_text_field', description: 'Type used by the All Gear filter, e.g. Crankbait, Soft Plastic, Hooks.' },
+  { key: 'difficulty', name: 'Difficulty', type: 'json', description: '{ "label": "Beginner", "score": 2, "out_of": 10 }. Beginner, Intermediate, or Advanced.' },
+  { key: 'species', name: 'Fish (for filters)', type: 'json', description: 'Fish names for the All Gear filter, e.g. ["Largemouth Bass", "Panfish"]. Empty means any fish.' },
+  { key: 'target_species', name: 'Target species', type: 'single_line_text_field', description: 'Shown on the product page, e.g. "Largemouth & smallmouth bass".' },
+  { key: 'best_for', name: 'Best for', type: 'single_line_text_field', description: 'Optional "Best for" line on the product page.' },
+  { key: 'short_description', name: 'Short description', type: 'multi_line_text_field', description: 'Lead paragraph next to the photo.' },
+  { key: 'long_description', name: 'The details', type: 'multi_line_text_field', description: '"The details" paragraph lower on the page.' },
+  { key: 'fishing_guide', name: 'How to fish it', type: 'json', description: '{ gearNeeded: [...], steps: [{ title, detail }], biteFeel, commonMistakes: [...], confidenceTip }.' },
+  { key: 'specs', name: 'Specs', type: 'json', description: '[{ "label": "Dive depth", "value": "6 ft" }].' },
+  { key: 'build_details', name: 'Build details', type: 'json', description: '[{ part, title, description }]. Optional.' },
+  { key: 'depth_chart', name: 'Depth chart', type: 'json', description: '[{ depth, note, highlight }]. Optional.' },
+  { key: 'trust_badges', name: 'Trust badges', type: 'json', description: 'Short lines under the button, e.g. ["Free shipping over $35"].' },
+  { key: 'related', name: 'You might also like', type: 'json', description: 'Product handles, e.g. ["driftworm", "baithooks"].' },
+  { key: 'in_kits', name: 'Comes in these kits', type: 'json', description: '[{ "handle": "first-bass-kit", "title": "First Bass Kit" }].' },
 ];
 
 // ---------- How-to guides (one per piece that comes in a kit) ----------
@@ -187,23 +276,31 @@ function faqBody(): string {
     .join('');
 }
 
-// The New to Fishing page is laid out by the theme (templates/page.wide.json); this body
-// mirrors that text so the page's search result and admin copy say the same thing.
+// The full New to Fishing guide from the original site: jump links, then each section with
+// its steps, Q&A, checklists, and notes. Shown by templates/page.guide.json.
 function newToFishingBody(): string {
-  return [
-    '<h2>What you need</h2>',
-    ul([
-      "Your own rod and reel. We don't sell rods, so bring your own. A basic spinning rod and reel is the easiest to learn on.",
-      "A Ketto kit: hooks, weights, bait, and lures, already matched to the fish you're after.",
-      "A fishing license, if your state requires one.",
-    ]),
-    '<h2>Then go fishing</h2>',
-    ul([
-      'Set it up: scan the sticker in your kit for step-by-step rigging.',
-      'Go early or late: fish bite best around sunrise and sunset. Cast near docks, logs, and weeds.',
-      "Reel slow and steady: when you feel a tug, keep reeling.",
-    ]),
-  ].join('');
+  const jump = `<ul class="jump-links">${GUIDE_HERO.jumpLinks.map((j) => `<li><a href="#${j.anchor}">${esc(j.label)}</a></li>`).join('')}</ul>`;
+  const sections = GUIDE_SECTIONS.map((s) => {
+    const parts = [
+      `<h2 id="${s.id}"><small class="eyebrow" style="display:block;">${esc(s.eyebrow)}</small>${esc(s.heading)}</h2>`,
+      p(s.intro),
+      p(s.body),
+      s.steps ? steps(s.steps) : '',
+      s.qa ? s.qa.map((q) => `<blockquote><strong>${esc(q.q)}</strong><br>${esc(q.a)}</blockquote>`).join('') : '',
+      s.checklist ? ul(s.checklist, 'checklist') : '',
+      s.listItems ? ul(s.listItems) : '',
+      s.cards ? s.cards.map((c) => `<h3>${esc(c.heading)}</h3>${p(c.body)}`).join('') : '',
+      s.note ? `<div class="callout"><strong>Good to know:</strong> ${esc(s.note)}</div>` : '',
+    ];
+    return parts.join('');
+  }).join('');
+  return jump + sections;
+}
+
+// The Biting Now page's picks live in templates/page.biting-now.json (editable in the theme
+// editor); this body is the page's intro text and its search/admin copy.
+function bitingNowBody(): string {
+  return p(BITING_NOW_INTRO);
 }
 
 export const PAGES: PageContent[] = [
@@ -225,11 +322,19 @@ export const PAGES: PageContent[] = [
   },
   {
     handle: 'new-to-fishing',
-    title: 'New to Fishing? Start Here.',
-    templateSuffix: 'wide',
-    eyebrow: 'New to fishing?',
-    subtitle: 'You need three things. Here they are.',
+    title: GUIDE_HERO.heading,
+    templateSuffix: 'guide',
+    eyebrow: GUIDE_HERO.eyebrow,
+    subtitle: GUIDE_HERO.intro,
     body: newToFishingBody(),
+  },
+  {
+    handle: 'biting-now',
+    title: "What's Biting Now",
+    templateSuffix: 'biting-now',
+    eyebrow: `${BITING_NOW_SEASON} picks`,
+    subtitle: BITING_NOW_INTRO,
+    body: bitingNowBody(),
   },
 ];
 
@@ -265,11 +370,12 @@ export const REDIRECTS: { path: string; target: string }[] = [
   { path: '/kits', target: mapUrl('/kits') },
   ...BUNDLES.map((b) => ({ path: `/kits/${b.slug}`, target: `/products/${b.id}` })),
   { path: '/shop', target: mapUrl('/shop') },
-  ...PRODUCTS.map((pr) => ({ path: `/product/${pr.id}`, target: kitPieceIds.includes(pr.id) ? mapUrl(`/product/${pr.id}`) : `/collections/${KITS_COLLECTION}` })),
+  // Every product now has its own page in the store (see GEAR_PRODUCTS).
+  ...PRODUCTS.map((pr) => ({ path: `/product/${pr.id}`, target: GEAR_PRODUCTS.some((g) => g.handle === pr.id) ? mapUrl(`/product/${pr.id}`) : `/collections/${GEAR_COLLECTION}` })),
   { path: '/blog', target: mapUrl('/blog') },
-  ...BLOG_CATEGORY_NAV.map((c) => ({ path: `/blog/${c.slug}`, target: `/blogs/${JOURNAL_BLOG}` })),
+  ...BLOG_CATEGORY_NAV.map((c) => ({ path: `/blog/${c.slug}`, target: `/blogs/${JOURNAL_BLOG}/tagged/${handleize(c.label)}` })),
   ...BLOG_ARTICLES.map((a) => ({ path: `/blog/${a.category}/${a.slug}`, target: `/blogs/${JOURNAL_BLOG}/${a.slug}` })),
-  ...['/new-to-fishing', '/about', '/faq', '/contact', '/shipping-returns', '/privacy', '/terms', '/cookies'].map((path) => ({ path, target: mapUrl(path) })),
+  ...['/new-to-fishing', '/biting-now', '/about', '/faq', '/contact', '/shipping-returns', '/privacy', '/terms', '/cookies'].map((path) => ({ path, target: mapUrl(path) })),
   { path: '/orders', target: '/account' },
 ];
 
@@ -287,13 +393,19 @@ export const MENUS: { handle: string; title: string; items: MenuItem[] }[] = [
   {
     handle: 'main-menu',
     title: 'Main menu',
-    items: [{ title: 'New to Fishing', kind: 'page', handle: 'new-to-fishing' }],
+    items: [
+      { title: 'All Gear', kind: 'collection', handle: GEAR_COLLECTION },
+      { title: "What's Biting", kind: 'page', handle: 'biting-now' },
+      { title: 'New to Fishing', kind: 'page', handle: 'new-to-fishing' },
+    ],
   },
   {
     handle: 'footer',
     title: 'Footer menu',
     items: [
       { title: 'Shop kits', kind: 'collection', handle: KITS_COLLECTION },
+      { title: 'All gear', kind: 'collection', handle: GEAR_COLLECTION },
+      { title: "What's biting now", kind: 'page', handle: 'biting-now' },
       { title: 'New to fishing guide', kind: 'page', handle: 'new-to-fishing' },
       { title: 'How-To Guides', kind: 'blog', handle: GUIDES_BLOG },
       { title: 'Blog', kind: 'blog', handle: JOURNAL_BLOG },

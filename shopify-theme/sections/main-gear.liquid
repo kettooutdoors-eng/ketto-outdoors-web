@@ -1,0 +1,204 @@
+{%- comment -%}
+  A single lure or piece of tackle, laid out like the original site's product page: photo, name,
+  difficulty, price and buy (or reserve), then "How to fish it", the details and specs.
+  Everything comes from the product's custom metafields (Products > item > Metafields), set up
+  by the setup script; each part hides itself when its field is empty.
+{%- endcomment -%}
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign m = product.metafields.custom
+  assign difficulty = m.difficulty.value
+  assign guide = m.fishing_guide.value
+  assign specs = m.specs.value
+  assign build = m.build_details.value
+  assign depth = m.depth_chart.value
+  assign badges = m.trust_badges.value
+  assign kits = m.in_kits.value
+  assign lead = m.short_description.value | default: product.description | strip_html
+  assign shop_url = section.settings.shop_link | default: '/collections/all-gear'
+-%}
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="{{ shop_url }}">{{ section.settings.shop_label }}</a> / {{ product.title }}
+</nav>
+
+<div class="gear-top grid-2">
+  <div data-gallery>
+    {%- if product.featured_media -%}
+      {%- assign main_alt = product.featured_media.alt | default: product.title -%}
+      <div class="media gear-top__media">
+        {{ product.featured_media.preview_image | image_url: width: 1100 | image_tag: alt: main_alt, loading: 'eager', fetchpriority: 'high', class: 'gallery-main' }}
+      </div>
+      {%- if product.media.size > 1 -%}
+        <div class="kit-thumbs">
+          {%- for media in product.media -%}
+            <button type="button" data-gallery-thumb data-src="{{ media.preview_image | image_url: width: 1100 }}" data-alt="{{ media.alt | default: product.title | escape }}" aria-label="Show photo {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+              {{ media.preview_image | image_url: width: 140 | image_tag: alt: '' }}
+            </button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <div class="gear-top__media">{% render 'media', alt: product.title %}</div>
+    {%- endif -%}
+  </div>
+
+  <div class="stack gear-top__info">
+    {%- if m.kicker.value != blank -%}<div class="kicker">{{ m.kicker.value }}</div>{%- endif -%}
+    {%- if difficulty.label != blank -%}
+      <span class="pill">Difficulty: {{ difficulty.label }}{% if difficulty.score %} ({{ difficulty.score }}/{{ difficulty.out_of | default: 10 }}){% endif %}</span>
+    {%- endif -%}
+    <h1 class="gear-top__title">{{ product.title }}</h1>
+    {%- if m.target_species.value != blank -%}<div class="gear-top__meta">Target species: {{ m.target_species.value }}</div>{%- endif -%}
+    {%- if m.best_for.value != blank -%}<div class="gear-top__meta">Best for: {{ m.best_for.value }}</div>{%- endif -%}
+    {%- if lead != blank -%}<p class="gear-top__lead">{{ lead }}</p>{%- endif -%}
+
+    <div class="price price--lg">{{ variant.price | money_without_trailing_zeros }}</div>
+
+    {%- if settings.reserve_kits -%}
+      {% render 'reserve-form', product: product %}
+    {%- else -%}
+      {%- form 'product', product, class: 'kit-simple__form' -%}
+        {% render 'buy-button', product: product, variant: variant, label: section.settings.button_label %}
+      {%- endform -%}
+    {%- endif -%}
+
+    {%- if badges.size > 0 -%}
+      <div class="gear-top__badges">{%- for b in badges -%}<span>{{ b }}</span>{%- endfor -%}</div>
+    {%- endif -%}
+
+    {%- for k in kits -%}
+      <a class="gear-top__kit" href="/products/{{ k.handle }}">Also comes in the {{ k.title }} &rarr;</a>
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- if guide.steps.size > 0 -%}
+  <section class="gear-howto">
+    <div class="center">
+      <div class="eyebrow">{{ section.settings.howto_eyebrow }}</div>
+      <h2>{{ section.settings.howto_heading }}</h2>
+    </div>
+    <div class="gear-howto__grid">
+      <div>
+        {%- if guide.gearNeeded.size > 0 -%}
+          <div class="gear-howto__need">
+            <div class="kicker">What else you'll need</div>
+            <div class="chips">{%- for g in guide.gearNeeded -%}<span class="chip">{{ g }}</span>{%- endfor -%}</div>
+          </div>
+        {%- endif -%}
+        <ol class="gear-steps">
+          {%- for step in guide.steps -%}
+            <li>
+              <span class="gear-steps__num" aria-hidden="true">{{ forloop.index }}</span>
+              <div>
+                <h3>{{ step.title }}</h3>
+                <p>{{ step.detail }}</p>
+              </div>
+            </li>
+          {%- endfor -%}
+        </ol>
+      </div>
+      <div class="stack" style="gap: 20px;">
+        {%- if guide.biteFeel != blank -%}
+          <div class="card card--sm gear-howto__card">
+            <h3>What a bite feels like</h3>
+            <p>{{ guide.biteFeel }}</p>
+          </div>
+        {%- endif -%}
+        {%- if guide.commonMistakes.size > 0 -%}
+          <div class="card card--sm gear-howto__card">
+            <h3>Common beginner mistakes</h3>
+            <ul>{%- for mistake in guide.commonMistakes -%}<li>{{ mistake }}</li>{%- endfor -%}</ul>
+          </div>
+        {%- endif -%}
+        {%- if guide.confidenceTip != blank -%}
+          <div class="gear-howto__tip">
+            <div class="kicker">Confidence tip</div>
+            <p>{{ guide.confidenceTip }}</p>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{%- assign long = m.long_description.value -%}
+{%- if long != blank or specs.size > 0 or build.size > 0 or depth.size > 0 -%}
+  <section class="gear-details">
+    <div>
+      {%- if long != blank -%}
+        <h2>The details</h2>
+        <p>{{ long }}</p>
+      {%- endif -%}
+      {%- if build.size > 0 -%}
+        <div class="gear-build">
+          {%- for b in build -%}
+            <div>
+              <div class="eyebrow">{{ b.part }}</div>
+              <h3>{{ b.title }}</h3>
+              <p>{{ b.description }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if depth.size > 0 -%}
+        <h3 class="gear-depth__title">Dive depth</h3>
+        <div class="gear-depth">
+          {%- for d in depth -%}
+            <div class="gear-depth__row{% if d.highlight %} is-on{% endif %}"><span>{{ d.depth }}</span><span>{{ d.note }}</span></div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- if specs.size > 0 -%}
+      <div class="card card--sm gear-specs">
+        <h3>Specs</h3>
+        <dl>
+          {%- for s in specs -%}
+            <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+          {%- endfor -%}
+        </dl>
+      </div>
+    {%- endif -%}
+  </section>
+{%- endif -%}
+
+{%- assign related = m.related.value -%}
+{%- if related.size > 0 -%}
+  <section class="section">
+    <h2 class="center" style="font-size: 24px; margin-bottom: 20px;">{{ section.settings.related_heading }}</h2>
+    <div class="grid-3">
+      {%- for handle in related limit: 3 -%}
+        {%- assign rp = all_products[handle] -%}
+        {%- if rp != blank and rp.id != product.id -%}
+          {% render 'gear-card', product: rp, index: forloop.index %}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{%- liquid
+  assign product_data = product | structured_data
+  if settings.reserve_kits
+    assign product_data = product_data | replace: 'schema.org/InStock', 'schema.org/OutOfStock'
+  endif
+-%}
+<script type="application/ld+json">
+  {{ product_data }}
+</script>
+
+{% schema %}
+{
+  "name": "Gear page",
+  "settings": [
+    { "type": "text", "id": "shop_label", "label": "Breadcrumb label", "default": "All Gear" },
+    { "type": "text", "id": "shop_link", "label": "Breadcrumb link", "default": "/collections/all-gear" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Add to cart" },
+    { "type": "text", "id": "howto_eyebrow", "label": "How-to small heading", "default": "Cast it with confidence tomorrow" },
+    { "type": "text", "id": "howto_heading", "label": "How-to heading", "default": "How to Fish It" },
+    { "type": "text", "id": "related_heading", "label": "Related heading", "default": "You might also like" }
+  ]
+}
+{% endschema %}

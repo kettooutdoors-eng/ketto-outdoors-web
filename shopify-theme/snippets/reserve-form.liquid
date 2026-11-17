@@ -6,26 +6,49 @@
   (Settings > Notifications) with every field below, and the shopper is added to Customers.
   The kit's name is in the message so you know which kit they want.
 
+  Kits and single pieces of gear both use it: for gear (anything that isn't a kit) the wording
+  says "item" instead of "kit", and gear that comes in sizes gets a Size picker.
+
   Usage: {% render 'reserve-form', product: product %}
 {%- endcomment -%}
+{%- liquid
+  assign is_kit = false
+  if product.type == 'Kit' or product.tags contains 'kit'
+    assign is_kit = true
+  endif
+-%}
 <div class="reserve" id="reserve">
   {%- form 'contact', id: 'ReserveForm', class: 'reserve__form' -%}
     {%- if form.posted_successfully? -%}
       <div class="reserve__done" role="status">
         <h2>You're on the list.</h2>
-        <p>Your spot for the {{ product.title }} is saved. We'll email or call you when kits are in stock. <strong>You haven't paid anything.</strong></p>
+        <p>Your spot for the {{ product.title }} is saved. We'll email or call you when {% if is_kit %}kits are{% else %}it's{% endif %} in stock. <strong>You haven't paid anything.</strong></p>
       </div>
     {%- else -%}
-      <h2 class="reserve__title">{{ settings.reserve_button_label | default: 'Reserve your kit today' }}</h2>
-      <p class="reserve__lead"><strong>This is a reservation, not a purchase.</strong> You won't pay anything today. We'll save a spot for you and contact you when this kit is back in stock.</p>
+      <h2 class="reserve__title">{% if is_kit %}{{ settings.reserve_button_label | default: 'Reserve your kit today' }}{% else %}Reserve yours today{% endif %}</h2>
+      <p class="reserve__lead"><strong>This is a reservation, not a purchase.</strong> You won't pay anything today. We'll save a spot for you and contact you when this {% if is_kit %}kit{% else %}item{% endif %} is back in stock.</p>
       {%- if form.errors -%}
         <p class="form-error">{{ form.errors | default_errors }}</p>
       {%- endif -%}
 
       <input type="hidden" name="contact[name]" value="" data-reserve-name>
-      <input type="hidden" name="contact[tags]" value="kit-reservation">
-      <input type="hidden" name="contact[Kit]" value="{{ product.title | escape }}">
-      <input type="hidden" name="contact[body]" value="KIT RESERVATION (no payment taken): {{ product.title | escape }}">
+      {%- if is_kit -%}
+        <input type="hidden" name="contact[tags]" value="kit-reservation">
+        <input type="hidden" name="contact[Kit]" value="{{ product.title | escape }}">
+        <input type="hidden" name="contact[body]" value="KIT RESERVATION (no payment taken): {{ product.title | escape }}">
+      {%- else -%}
+        <input type="hidden" name="contact[tags]" value="gear-reservation">
+        <input type="hidden" name="contact[Item]" value="{{ product.title | escape }}">
+        <input type="hidden" name="contact[body]" value="GEAR RESERVATION (no payment taken): {{ product.title | escape }}">
+      {%- endif -%}
+      {%- unless product.has_only_default_variant -%}
+        <div class="field">
+          <label for="ReserveSize">{{ product.options.first }}</label>
+          <select class="input" id="ReserveSize" name="contact[{{ product.options.first | escape }}]" required>
+            {%- for v in product.variants -%}<option>{{ v.title }}</option>{%- endfor -%}
+          </select>
+        </div>
+      {%- endunless -%}
 
       <div class="reserve__row">
         <div class="field">
@@ -46,7 +69,7 @@
         <input class="input" type="tel" id="ReservePhone" name="contact[phone]" autocomplete="tel" placeholder="(555) 555-5555" required>
       </div>
 
-      <button type="submit" class="btn btn--rust btn--block btn--big">Reserve my kit</button>
+      <button type="submit" class="btn btn--rust btn--block btn--big">{% if is_kit %}Reserve my kit{% else %}Reserve it{% endif %}</button>
       <p class="reserve__fine">No payment now. No obligation to buy. We'll only use your details to contact you about your reservation. <a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Privacy policy</a></p>
     {%- endif -%}
   {%- endform -%}

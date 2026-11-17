@@ -9,10 +9,11 @@
 // Usually run from GitHub: Actions > "Set up Shopify store" > Run workflow. Locally:
 //   SHOPIFY_SHOP=your-store SHOPIFY_CLIENT_ID=... SHOPIFY_CLIENT_SECRET=... npm run shopify:setup
 //   npm run shopify:setup -- --dry-run   (prints what it would do, no store needed)
+import { readFileSync } from 'node:fs';
 import {
-  GUIDE_ARTICLES, GUIDES_BLOG, JOURNAL_ARTICLES, JOURNAL_BLOG, KIT_PRODUCTS, KIT_TAG, KITS_COLLECTION, MENUS, PAGES,
+  GEAR_COLLECTION, GEAR_METAFIELD_DEFINITIONS, GEAR_PRODUCTS, GEAR_TAG, GUIDE_ARTICLES, GUIDES_BLOG, JOURNAL_ARTICLES, JOURNAL_BLOG, KIT_PRODUCTS, KIT_TAG, KITS_COLLECTION, MENUS, PAGES,
   POLICIES, PRODUCT_METAFIELD_DEFINITIONS, REDIRECTS, WELCOME_CODE, WELCOME_PERCENT,
-  type ArticleContent, type MenuItem,
+  type ArticleContent, type GearProduct, type MenuItem,
 } from './shopify/content.ts';
 
 const API_VERSION = '2026-07';
@@ -22,6 +23,11 @@ const DRY_RUN = process.argv.includes('--dry-run');
 // menus. Prices, stock, photos, the discount, and redirects are left alone. Implies --update
 // for those.
 const CONTENT_ONLY = process.argv.includes('--only=content');
+// --only=catalog adds the full catalog from the original site: every individual lure and piece
+// of tackle (with photos where we have them), the All Gear collection, the Biting Now and full
+// New to Fishing pages, the menus, and redirects from the old /product/ and /shop addresses.
+// Gear already in the store is left alone unless --update is also passed.
+const CATALOG_ONLY = process.argv.includes('--only=catalog');
 const UPDATE = process.argv.includes('--update') || CONTENT_ONLY;
 
 const shopInput = (process.env.SHOPIFY_SHOP ?? '').trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
@@ -109,8 +115,8 @@ async function publish(id: string, publicationId: string | null, what: string) {
 }
 
 async function metafieldDefinitions() {
-  log('\nKit fields (metafield definitions)');
-  for (const d of PRODUCT_METAFIELD_DEFINITIONS) {
+  log('\nProduct fields (metafield definitions)');
+  for (const d of [...PRODUCT_METAFIELD_DEFINITIONS, ...GEAR_METAFIELD_DEFINITIONS]) {
     try {
       await mutate('metafieldDefinitionCreate', `mutation($d: MetafieldDefinitionInput!) { metafieldDefinitionCreate(definition: $d) { createdDefinition { id } userErrors { message } } }`, {
         d: { ...d, namespace: 'custom', ownerType: 'PRODUCT', pin: true },
@@ -166,6 +172,113 @@ async function kits(publicationId: string | null) {
   }
 }
 
+// Uploads a photo from public/assets/products to Shopify and returns a URL productSet can use.
+async function uploadImage(file: string): Promise<string> {
+  const bytes = readFileSync(new URL(`../public/assets/products/${file}`, import.meta.url));
+  const res = await mutate<{ stagedTargets: { url: string; resourceUrl: string; parameters: { name: string; value: string }[] }[] }>(
+    'stagedUploadsCreate',
+    `mutation($input: [StagedUploadInput!]!) { stagedUploadsCreate(input: $input) { stagedTargets { url resourceUrl parameters { name value } } userErrors { message } } }`,
+    { input: [{ resource: 'IMAGE', filename: file, mimeType: 'image/jpeg', httpMethod: 'POST' }] },
+  );
+  const target = res.stagedTargets[0];
+  const form = new FormData();
+  for (const p of target.parameters) form.append(p.name, p.value);
+  form.append('file', new Blob([bytes], { type: 'image/jpeg' }), file);
+  const up = await fetch(target.url, { method: 'POST', body: form });
+  if (!up.ok) throw new Error(`photo upload failed (${up.status})`);
+  return target.resourceUrl;
+}
+
+async function gearProduct(g: GearProduct, publicationId: string | null) {
+  const existing = await gql<{ productByIdentifier: { id: string } | null }>(`query($h: String!) { productByIdentifier(identifier: { handle: $h }) { id } }`, { h: g.handle });
+  if (existing.productByIdentifier && !UPDATE) {
+    log(`  · ${g.title} (already there)`);
+    return;
+  }
+  let files: { originalSource: string; alt: string; contentType: string }[] | undefined;
+  if (g.image) {
+    try {
+      files = [{ originalSource: await uploadImage(g.image.file), alt: g.image.alt, contentType: 'IMAGE' }];
+    } catch (e) {
+      fail(`${g.title} photo (the product is still added; add the photo in Shopify admin)`, e);
+    }
+  }
+  const optionName = g.sizes.length ? 'Size' : 'Title';
+  const values = g.sizes.length ? g.sizes : ['Default Title'];
+  const input = {
+    title: g.title,
+    handle: g.handle,
+    descriptionHtml: g.descriptionHtml,
+    vendor: 'Ketto Outdoors',
+    productType: g.productType,
+    tags: g.tags,
+    status: 'ACTIVE',
+    templateSuffix: 'gear',
+    seo: { title: g.seoTitle, description: g.seoDescription },
+    metafields: g.metafields.map((m) => ({ namespace: 'custom', ...m })),
+    productOptions: [{ name: optionName, values: values.map((name) => ({ name })) }],
+    // Starts at 0 in stock and doesn't sell past 0, so nothing is sold before it exists.
+    // Set real counts in Shopify once stock arrives.
+    variants: values.map((name) => ({
+      optionValues: [{ optionName, name }],
+      price: g.price,
+      inventoryPolicy: 'DENY',
+      taxable: true,
+      inventoryItem: { sku: g.sizes.length ? `${g.handle}-${name.replace(/[^a-z0-9]+/gi, '')}` : g.handle, tracked: true, requiresShipping: true },
+    })),
+    ...(files ? { files } : {}),
+  };
+  const res = await mutate<{ product: { id: string } }>(
+    'productSet',
+    `mutation($input: ProductSetInput!, $identifier: ProductSetIdentifiers) { productSet(synchronous: true, input: $input, identifier: $identifier) { product { id } userErrors { message } } }`,
+    { input, identifier: existing.productByIdentifier ? { handle: g.handle } : null },
+  );
+  await publish(res.product.id, publicationId, g.title);
+  log(`  ✓ ${g.title} ($${Number(g.price)}${g.sizes.length ? `, ${g.sizes.length} sizes` : ''}${files ? ', with photo' : ''})`);
+}
+
+async function gear(publicationId: string | null) {
+  log('\nIndividual gear');
+  for (const g of GEAR_PRODUCTS) {
+    try {
+      await gearProduct(g, publicationId);
+    } catch (e) {
+      fail(g.title, e);
+    }
+  }
+}
+
+async function gearCollection(publicationId: string | null) {
+  log('\nAll Gear collection');
+  try {
+    const found = await gql<{ collections: { nodes: { id: string; handle: string }[] } }>(`{ collections(first: 5, query: "handle:${GEAR_COLLECTION}") { nodes { id handle } } }`);
+    if (found.collections.nodes.some((c) => c.handle === GEAR_COLLECTION)) {
+      log('  · All Gear (already there)');
+      return;
+    }
+    const res = await mutate<{ collection: { id: string } }>(
+      'collectionCreate',
+      `mutation($input: CollectionInput!) { collectionCreate(input: $input) { collection { id } userErrors { message } } }`,
+      {
+        input: {
+          title: 'All Gear',
+          handle: GEAR_COLLECTION,
+          templateSuffix: 'all-gear',
+          descriptionHtml: '<p>Every item here is picked by us. Difficulty scores show how much skill each one takes.</p>',
+          // Oldest first, which is the order the setup script adds them: the live catalog, then the rest.
+          sortOrder: 'CREATED',
+          seo: { title: 'Shop All Gear | Ketto Outdoors', description: 'Browse every lure and piece of tackle, filtered by difficulty, species, and type.' },
+          ruleSet: { appliedDisjunctively: false, rules: [{ column: 'TAG', relation: 'EQUALS', condition: GEAR_TAG }] },
+        },
+      },
+    );
+    await publish(res.collection.id, publicationId, 'All Gear collection');
+    log(`  ✓ All Gear (every product tagged "${GEAR_TAG}" joins it automatically)`);
+  } catch (e) {
+    fail('All Gear collection', e);
+  }
+}
+
 async function kitsCollection(publicationId: string | null) {
   log('\nKits collection');
   try {
@@ -194,7 +307,8 @@ async function kitsCollection(publicationId: string | null) {
   }
 }
 
-async function pages() {
+// Pages listed in `force` are rewritten even without --update.
+async function pages(force: string[] = []) {
   log('\nPages');
   for (const page of PAGES) {
     try {
@@ -205,7 +319,7 @@ async function pages() {
         page.subtitle && { namespace: 'custom', key: 'subtitle', type: 'multi_line_text_field', value: page.subtitle },
       ].filter(Boolean);
       const fields = { title: page.title, body: page.body, templateSuffix: page.templateSuffix || null, isPublished: true, metafields };
-      if (existing && !UPDATE) {
+      if (existing && !UPDATE && !force.includes(page.handle)) {
         // Shopify creates a Contact page in new stores; point it at the contact template.
         if (page.handle === 'contact') {
           await mutate('pageUpdate', `mutation($id: ID!, $page: PageUpdateInput!) { pageUpdate(id: $id, page: $page) { page { id } userErrors { message } } }`, {
@@ -322,7 +436,7 @@ async function resolveMenuItem(item: MenuItem) {
   return b ? { title: item.title, type: 'BLOG', resourceId: b.id } : { title: item.title, type: 'HTTP', url: `/blogs/${item.handle}` };
 }
 
-async function menus() {
+async function menus(force = false) {
   log('\nMenus');
   const existing = await gql<{ menus: { nodes: { id: string; handle: string; items: { title: string }[] }[] } }>(`{ menus(first: 50) { nodes { id handle items { title } } } }`).then((d) => d.menus.nodes);
   for (const menu of MENUS) {
@@ -333,7 +447,7 @@ async function menus() {
       if (found) {
         // Shopify's starter menus are replaced; a menu that's already been customized is kept.
         const starter = found.items.every((i) => ['Home', 'Catalog', 'Contact', 'Search'].includes(i.title));
-        if (!starter && !UPDATE) {
+        if (!starter && !UPDATE && !force) {
           log(`  · ${menu.title} (already customized)`);
           continue;
         }
@@ -381,20 +495,41 @@ async function discount() {
   }
 }
 
-async function redirects() {
+// With retarget, a redirect that already exists but points somewhere else is pointed at the
+// new target (used when old /product/ and /shop addresses move to real product pages).
+async function redirects(retarget = false) {
   log('\nRedirects from the old site');
   let created = 0;
   let skipped = 0;
+  let moved = 0;
   for (const r of REDIRECTS) {
     try {
       await mutate('urlRedirectCreate', `mutation($r: UrlRedirectInput!) { urlRedirectCreate(urlRedirect: $r) { urlRedirect { id } userErrors { message } } }`, { r });
       created++;
     } catch (e) {
-      if (/taken|already/i.test(String(e))) skipped++;
-      else fail(`redirect ${r.path}`, e);
+      if (!/taken|already/i.test(String(e))) {
+        fail(`redirect ${r.path}`, e);
+        continue;
+      }
+      if (!retarget) {
+        skipped++;
+        continue;
+      }
+      try {
+        const found = await gql<{ urlRedirects: { nodes: { id: string; path: string; target: string }[] } }>(`query($q: String!) { urlRedirects(first: 5, query: $q) { nodes { id path target } } }`, { q: `path:${r.path}` });
+        const current = found.urlRedirects.nodes.find((n) => n.path === r.path);
+        if (current && current.target !== r.target) {
+          await mutate('urlRedirectUpdate', `mutation($id: ID!, $r: UrlRedirectInput!) { urlRedirectUpdate(id: $id, urlRedirect: $r) { urlRedirect { id } userErrors { message } } }`, { id: current.id, r });
+          moved++;
+        } else {
+          skipped++;
+        }
+      } catch (e2) {
+        fail(`redirect ${r.path}`, e2);
+      }
     }
   }
-  log(`  ✓ ${created} added${skipped ? `, ${skipped} already there` : ''} (including /bass, /catfish, /starter for the QR stickers)`);
+  log(`  ✓ ${created} added${moved ? `, ${moved} pointed at their new page` : ''}${skipped ? `, ${skipped} already there` : ''} (including /bass, /catfish, /starter for the QR stickers)`);
 }
 
 async function kitText() {
@@ -426,6 +561,8 @@ function dryRun() {
   log('Dry run: nothing is sent to Shopify.\n');
   log(`Kits: ${KIT_PRODUCTS.map((k) => `${k.title} ($${k.price})`).join(', ')}`);
   log(`Kits collection: /collections/${KITS_COLLECTION} (products tagged "${KIT_TAG}")`);
+  log(`Gear: ${GEAR_PRODUCTS.length} products (${GEAR_PRODUCTS.filter((g) => g.image).length} with photos), e.g. ${GEAR_PRODUCTS.slice(0, 3).map((g) => `${g.title} ($${Number(g.price)})`).join(', ')}`);
+  log(`All Gear collection: /collections/${GEAR_COLLECTION} (products tagged "${GEAR_TAG}")`);
   log(`Pages: ${PAGES.map((p) => `/pages/${p.handle}`).join(', ')}`);
   log(`How-to guides: ${GUIDE_ARTICLES.length} posts in /blogs/${GUIDES_BLOG}`);
   log(`Journal: ${JOURNAL_ARTICLES.length} posts in /blogs/${JOURNAL_BLOG}`);
@@ -438,7 +575,7 @@ function dryRun() {
 async function main() {
   if (DRY_RUN) return dryRun();
   if (!SHOP) throw new Error('Set SHOPIFY_SHOP to your store address, like ketto-outdoors.myshopify.com.');
-  log(`Setting up ${SHOP}${CONTENT_ONLY ? ' (refreshing text only)' : UPDATE ? ' (overwriting existing content)' : ''}`);
+  log(`Setting up ${SHOP}${CONTENT_ONLY ? ' (refreshing text only)' : CATALOG_ONLY ? ' (adding the full gear catalog)' : UPDATE ? ' (overwriting existing content)' : ''}`);
 
   const shop = await gql<{ shop: { name: string } }>(`{ shop { name } }`);
   log(`Store: ${shop.shop.name}`);
@@ -457,9 +594,24 @@ async function main() {
   const publicationId = await onlineStorePublicationId().catch(() => null);
   if (!publicationId) log('Note: could not find the Online Store channel; kits may need publishing by hand.');
 
+  if (CATALOG_ONLY) {
+    await metafieldDefinitions();
+    await gear(publicationId);
+    await gearCollection(publicationId);
+    await kitText();
+    await pages(['new-to-fishing', 'biting-now']);
+    await menus(true);
+    await redirects(true);
+    log(failures ? `\nFinished with ${failures} problem(s) above.` : '\nAll done.');
+    if (failures) process.exitCode = 1;
+    return;
+  }
+
   await metafieldDefinitions();
   await kits(publicationId);
   await kitsCollection(publicationId);
+  await gear(publicationId);
+  await gearCollection(publicationId);
   await pages();
   await blog(GUIDES_BLOG, 'How-To Guides', GUIDE_ARTICLES);
   await blog(JOURNAL_BLOG, 'The Ketto Journal', JOURNAL_ARTICLES);

@@ -18,6 +18,8 @@
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
       {%- else -%}
         <li><a href="{{ routes.collections_url }}/kits">Shop kits</a></li>
+        <li><a href="{{ routes.collections_url }}/all-gear">All gear</a></li>
+        <li><a href="/pages/biting-now">What's biting now</a></li>
         <li><a href="/pages/new-to-fishing">New to fishing guide</a></li>
         <li><a href="{{ guides_url }}">How-To Guides</a></li>
         <li><a href="/blogs/journal">Blog</a></li>
@@ -97,7 +99,7 @@
   "name": "Footer",
   "settings": [
     { "type": "text", "id": "shop_heading", "label": "First column heading", "default": "Shop" },
-    { "type": "link_list", "id": "shop_menu", "label": "First column menu", "info": "Leave empty to show Shop kits, New to fishing guide, How-To Guides, and Blog. A How-To Guides link is always added if the menu doesn't have one." },
+    { "type": "link_list", "id": "shop_menu", "label": "First column menu", "info": "Leave empty to show Shop kits, All gear, What's biting now, New to fishing guide, How-To Guides, and Blog. A How-To Guides link is always added if the menu doesn't have one." },
     { "type": "text", "id": "support_heading", "label": "Second column heading", "default": "Support" },
     { "type": "link_list", "id": "support_menu", "label": "Second column menu", "info": "Leave empty to show About, FAQ, Contact, and the store policies." },
     { "type": "text", "id": "contact_heading", "label": "Contact heading", "default": "Contact & Follow" },

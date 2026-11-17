@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "gear-collection", "settings": {} }
+  },
+  "order": ["main"]
+}

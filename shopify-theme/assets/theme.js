@@ -136,4 +136,56 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  // --- All Gear: search, filters, and sort (sections/gear-collection.liquid) ---
+  var gear = document.querySelector('[data-gear-filters]');
+  if (gear) {
+    var grid = gear.querySelector('[data-gear-grid]');
+    var empty = gear.querySelector('[data-gear-empty]');
+    var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('[data-gear-card]')) : [];
+    var controls = {};
+    gear.querySelectorAll('[data-filter]').forEach(function (el) { controls[el.getAttribute('data-filter')] = el; });
+
+    // Start from the address, e.g. /collections/all-gear?fish=Catfish (old /shop?fish= links).
+    var params = new URLSearchParams(window.location.search);
+    Object.keys(controls).forEach(function (key) {
+      var value = params.get(key);
+      if (value) controls[key].value = value;
+    });
+
+    var sorters = {
+      'price-asc': function (a, b) { return a.dataset.price - b.dataset.price; },
+      'price-desc': function (a, b) { return b.dataset.price - a.dataset.price; },
+      easy: function (a, b) { return a.dataset.score - b.dataset.score; },
+      hard: function (a, b) { return b.dataset.score - a.dataset.score; },
+      name: function (a, b) { return a.dataset.name.localeCompare(b.dataset.name); },
+      '': function (a, b) { return a.dataset.index - b.dataset.index; },
+    };
+
+    var applyGear = function () {
+      var q = (controls.q.value || '').trim().toLowerCase();
+      var difficulty = controls.difficulty.value;
+      var type = controls.type.value;
+      var fish = controls.fish.value;
+      var shown = 0;
+      cards.forEach(function (card) {
+        var d = card.dataset;
+        // Gear with no fish listed (hooks, weights) works for any fish, so it always matches.
+        var ok = (!q || d.search.indexOf(q) !== -1) &&
+          (!difficulty || d.difficulty === difficulty) &&
+          (!type || d.type === type) &&
+          (!fish || !d.fish || d.fish.split('|').indexOf(fish) !== -1);
+        card.hidden = !ok;
+        if (ok) shown++;
+      });
+      cards.slice().sort(sorters[controls.sort.value] || sorters['']).forEach(function (card) { grid.appendChild(card); });
+      if (empty) empty.hidden = shown > 0;
+      if (grid) grid.hidden = shown === 0;
+    };
+
+    Object.keys(controls).forEach(function (key) {
+      controls[key].addEventListener(key === 'q' ? 'input' : 'change', applyGear);
+    });
+    applyGear();
+  }
 })();

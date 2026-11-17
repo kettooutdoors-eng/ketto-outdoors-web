@@ -1,0 +1,38 @@
+{%- comment -%}
+  One piece of gear in a grid: photo, kicker, difficulty, name, target fish, price, View.
+  The data-* attributes feed the All Gear filters (sections/gear-collection.liquid).
+  Usage: {% render 'gear-card', product: product, index: forloop.index %}
+{%- endcomment -%}
+{%- liquid
+  assign difficulty = product.metafields.custom.difficulty.value
+  assign species = product.metafields.custom.species.value
+  assign tagline = product.metafields.custom.tagline.value | default: product.type
+  assign target = product.metafields.custom.target_species.value
+  assign gear_type = product.metafields.custom.gear_type.value | default: product.type
+-%}
+<div class="card card-lift gear-card"
+  data-gear-card
+  data-index="{{ index | default: 0 }}"
+  data-name="{{ product.title | escape }}"
+  data-search="{{ product.title | append: ' ' | append: tagline | append: ' ' | append: gear_type | downcase | escape }}"
+  data-type="{{ gear_type | escape }}"
+  data-difficulty="{{ difficulty.label | escape }}"
+  data-score="{{ difficulty.score | default: 0 }}"
+  data-fish="{% if species.size > 0 %}{{ species | join: '|' | escape }}{% endif %}"
+  data-price="{{ product.price }}">
+  <a href="{{ product.url }}" class="gear-card__media" tabindex="-1" aria-hidden="true">
+    {% render 'media', image: product.featured_image, alt: product.title, width: 600 %}
+  </a>
+  <div class="gear-card__body">
+    <div class="kicker">{{ tagline }}</div>
+    <a href="{{ product.url }}" class="gear-card__title">{{ product.title }}</a>
+    {%- if difficulty.label != blank -%}
+      <span class="pill pill--soft">{{ difficulty.label }}{% if difficulty.score %} &middot; {{ difficulty.score }}/{{ difficulty.out_of | default: 10 }}{% endif %}</span>
+    {%- endif -%}
+    {%- if target != blank -%}<p class="gear-card__fish">{{ target }}</p>{%- endif -%}
+    <div class="gear-card__foot">
+      <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
+      <a href="{{ product.url }}" class="btn btn--sm">View</a>
+    </div>
+  </div>
+</div>

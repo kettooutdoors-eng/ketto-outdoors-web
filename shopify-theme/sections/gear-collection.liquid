@@ -1,0 +1,109 @@
+{%- comment -%}
+  All Gear: every lure and piece of tackle, with search, difficulty / type / fish filters, and
+  sorting, like the original site's shop page. Filtering runs in the browser (assets/theme.js,
+  [data-gear-filters]) on the cards' data-* attributes, so it needs no apps.
+{%- endcomment -%}
+<section class="page-hero">
+  {%- if section.settings.eyebrow != blank -%}<div class="eyebrow eyebrow--light">{{ section.settings.eyebrow }}</div>{%- endif -%}
+  <h1>{{ collection.title }}</h1>
+  {%- if collection.description != blank -%}
+    <div class="rte page-hero__rte">{{ collection.description }}</div>
+  {%- elsif section.settings.intro != blank -%}
+    <p>{{ section.settings.intro }}</p>
+  {%- endif -%}
+</section>
+
+{%- paginate collection.products by 100 -%}
+{%- liquid
+  assign types = ''
+  assign fish = ''
+  for product in collection.products
+    assign t = product.metafields.custom.gear_type.value | default: product.type
+    if t != blank
+      assign types = types | append: t | append: '|'
+    endif
+    assign species = product.metafields.custom.species.value
+    for f in species
+      assign fish = fish | append: f | append: '|'
+    endfor
+  endfor
+  assign types = types | split: '|' | uniq | sort
+  assign fish = fish | split: '|' | uniq | sort
+-%}
+
+<div data-gear-filters>
+  <form class="gear-filters" role="search" onsubmit="return false;">
+    <label class="visually-hidden" for="GearSearch">Search gear</label>
+    <input class="input gear-filters__search" type="search" id="GearSearch" placeholder="Search gear..." data-filter="q">
+    <label class="visually-hidden" for="GearDifficulty">Filter by difficulty</label>
+    <select id="GearDifficulty" data-filter="difficulty">
+      <option value="">All difficulties</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+    <label class="visually-hidden" for="GearType">Filter by type</label>
+    <select id="GearType" data-filter="type">
+      <option value="">All types</option>
+      {%- for t in types -%}{%- if t != blank -%}<option>{{ t }}</option>{%- endif -%}{%- endfor -%}
+    </select>
+    <label class="visually-hidden" for="GearFish">Filter by target fish</label>
+    <select id="GearFish" data-filter="fish">
+      <option value="">All fish</option>
+      {%- for f in fish -%}{%- if f != blank -%}<option>{{ f }}</option>{%- endif -%}{%- endfor -%}
+    </select>
+    <label class="visually-hidden" for="GearSort">Sort by</label>
+    <select id="GearSort" data-filter="sort">
+      <option value="">Featured</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="easy">Difficulty: Easiest First</option>
+      <option value="hard">Difficulty: Hardest First</option>
+      <option value="name">Name: A-Z</option>
+    </select>
+  </form>
+
+  {%- if collection.products.size > 0 -%}
+    <div class="grid-3 gear-grid" data-gear-grid>
+      {%- for product in collection.products -%}
+        {% render 'gear-card', product: product, index: forloop.index %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  <div class="center gear-empty" data-gear-empty{% if collection.products.size > 0 %} hidden{% endif %}>
+    <h2>Nothing matches those filters.</h2>
+    <p>Try a different filter, or tell us what you're looking for.</p>
+    <a class="btn" href="{{ section.settings.request_link | default: '/pages/contact' }}">Contact us &amp; request a lure</a>
+  </div>
+</div>
+{%- endpaginate -%}
+
+{%- if section.settings.band_heading != blank -%}
+  <section class="gear-band center">
+    <div class="eyebrow eyebrow--light">{{ section.settings.band_eyebrow }}</div>
+    <h2>{{ section.settings.band_heading }}</h2>
+    <a class="btn btn--rust" href="{{ section.settings.band_link | default: '/pages/new-to-fishing' }}">{{ section.settings.band_button }}</a>
+    {%- if section.settings.band_link_2_label != blank -%}
+      <p><a class="gear-band__link" href="{{ section.settings.band_link_2 | default: '/pages/biting-now' }}">{{ section.settings.band_link_2_label }}</a></p>
+    {%- endif -%}
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "All Gear",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "info": "Shown under the heading when the collection has no description of its own.", "default": "Every item here is picked by us. Difficulty scores show how much skill each one takes." },
+    { "type": "text", "id": "request_link", "label": "\"Request a lure\" link", "default": "/pages/contact" },
+    { "type": "header", "content": "Bottom banner" },
+    { "type": "text", "id": "band_eyebrow", "label": "Small heading", "default": "Ketto Outdoors: Beginner guide" },
+    { "type": "text", "id": "band_heading", "label": "Heading", "default": "NOT SURE WHICH ONE TO PICK?", "info": "Leave empty to hide the banner." },
+    { "type": "text", "id": "band_button", "label": "Button label", "default": "See how to start" },
+    { "type": "text", "id": "band_link", "label": "Button link", "default": "/pages/new-to-fishing" },
+    { "type": "text", "id": "band_link_2_label", "label": "Second link label", "default": "Or see what's biting right now →" },
+    { "type": "text", "id": "band_link_2", "label": "Second link", "default": "/pages/biting-now" }
+  ]
+}
+{% endschema %}
