@@ -14,6 +14,10 @@ on:
         description: "Only refresh text: pages, blog posts, how-to guides, kit text, shipping/refund/terms policies, and menus (leaves prices, stock, and photos alone)"
         type: boolean
         default: false
+      catalog:
+        description: "Add the full gear catalog: every individual lure and piece of tackle, the All Gear page, What's Biting, the full New to Fishing guide, menus, and old /product/ links"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,4 +38,4 @@ jobs:
           SHOPIFY_SHOP: ${{ vars.SHOPIFY_SHOP }}
           SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
           SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
-        run: node --experimental-strip-types scripts/shopify-setup.ts ${{ inputs.text_only && '--only=content' || '' }} ${{ inputs.overwrite && '--update' || '' }}
+        run: node --experimental-strip-types scripts/shopify-setup.ts ${{ inputs.text_only && '--only=content' || '' }} ${{ inputs.catalog && '--only=catalog' || '' }} ${{ inputs.overwrite && '--update' || '' }}

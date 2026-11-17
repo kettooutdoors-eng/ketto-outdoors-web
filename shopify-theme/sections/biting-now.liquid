@@ -1,0 +1,56 @@
+{%- comment -%}
+  What's Biting Now: seasonal picks, each a kit or a piece of gear with a "Why now" line.
+  The header uses the page's title, small heading, and intro (Online Store > Pages > What's
+  Biting Now, Metafields). Change the picks and the season in the theme editor as the seasons
+  change: these are general seasonal picks, not a live bite report.
+{%- endcomment -%}
+{%- liquid
+  assign eyebrow = page.metafields.custom.eyebrow.value | default: section.settings.eyebrow
+  assign intro = page.metafields.custom.subtitle.value | default: section.settings.intro
+-%}
+<section class="page-hero">
+  {%- if eyebrow != blank -%}<div class="eyebrow eyebrow--light">{{ eyebrow }}</div>{%- endif -%}
+  <h1>{{ page.title | default: section.settings.heading }}</h1>
+  {%- if intro != blank -%}<p class="page-hero__wide">{{ intro }}</p>{%- endif -%}
+</section>
+
+<div class="grid-3 biting-grid">
+  {%- for block in section.blocks -%}
+    {%- assign pick = block.settings.product -%}
+    {%- if pick != blank -%}
+      <div class="biting-pick" {{ block.shopify_attributes }}>
+        {%- if pick.type == 'Kit' or pick.tags contains 'kit' -%}
+          {% render 'kit-card', product: pick %}
+        {%- else -%}
+          {% render 'gear-card', product: pick, index: forloop.index %}
+        {%- endif -%}
+        {%- if block.settings.why != blank -%}
+          <div class="biting-pick__why"><span>Why now: </span>{{ block.settings.why }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "What's Biting Now",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "Seasonal picks", "info": "Used when the page doesn't set its own." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What's Biting Now" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "info": "Used when the page doesn't set its own." }
+  ],
+  "blocks": [
+    {
+      "type": "pick",
+      "name": "Pick",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Kit or gear" },
+        { "type": "textarea", "id": "why", "label": "Why now" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "What's Biting Now" }]
+}
+{% endschema %}

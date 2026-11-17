@@ -7,6 +7,8 @@
   STOQ's storefront script hasn't taken over the button. A "Preorder" line item
   property is added too, so checkout says so even if no purchase option is published.
 
+  Gear that comes in sizes (hooks) gets a Size picker instead of the hidden variant field.
+
   Usage: {% render 'buy-button', product: product, variant: variant, label: 'Buy now' %}
 {%- endcomment -%}
 {%- liquid
@@ -17,7 +19,18 @@
     assign preorder_plan = variant.selling_plan_allocations.first.selling_plan
   endif
 -%}
-<input type="hidden" name="id" value="{{ variant.id }}">
+{%- if product.has_only_default_variant -%}
+  <input type="hidden" name="id" value="{{ variant.id }}">
+{%- else -%}
+  <div class="field">
+    <label for="Size-{{ product.id }}">{{ product.options.first }}</label>
+    <select class="input" id="Size-{{ product.id }}" name="id">
+      {%- for v in product.variants -%}
+        <option value="{{ v.id }}"{% if v.id == variant.id %} selected{% endif %}{% unless v.available %} disabled{% endunless %}>{{ v.title }}{% unless v.available %} (sold out){% endunless %}</option>
+      {%- endfor -%}
+    </select>
+  </div>
+{%- endif -%}
 {%- if preorder_plan -%}
   <input type="hidden" name="selling_plan" value="{{ preorder_plan.id }}">
 {%- endif -%}
